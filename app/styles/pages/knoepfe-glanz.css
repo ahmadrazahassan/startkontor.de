@@ -1,0 +1,218 @@
+@layer pages {
+  /* Hochwertige Glanzknöpfe: Glasverlauf, Spiegelreflex, Lichtkante, Tiefenschatten, Glanzlauf.
+     Dieselben Variablen wie in components/knoepfe.css, damit dunkle Flächen nur Werte tauschen. */
+  .knopf { border-radius: 9px; letter-spacing: .005em; }
+  .herosuche__knopf { border-radius: 0 9px 9px 0; }
+
+  .knopf_primaer {
+    --k-oben: #3f92e8;
+    --k-mitte: #0b63c2;
+    --k-unten: #064891;
+    --k-rand: #043b7d;
+    --k-text: var(--white);
+    --k-textschatten: 0 1px 0 rgba(3, 28, 64, 0.5);
+    --k-kante: rgba(255, 255, 255, 0.6);
+    --k-tiefe: rgba(3, 28, 64, 0.4);
+    --k-glanz: rgba(255, 255, 255, 0.26);
+    --k-glow: rgba(9, 95, 187, 0.62);
+    --k-schein: rgba(255, 255, 255, 0.7);
+
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background-color: var(--k-mitte);
+    background-image:
+      radial-gradient(120% 150% at 14% -30%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0) 56%),
+      linear-gradient(180deg, var(--k-oben) 0%, var(--k-mitte) 52%, var(--k-unten) 100%);
+    border-color: var(--k-rand);
+    color: var(--k-text);
+    text-shadow: var(--k-textschatten);
+    box-shadow:
+      inset 0 1px 0 var(--k-kante),
+      inset 0 -1px 0 var(--k-tiefe),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+      0 1px 2px rgba(7, 46, 99, 0.38),
+      0 12px 24px -10px var(--k-glow);
+    transition: filter 180ms ease-out, transform 180ms ease-out, box-shadow 240ms ease-out;
+  }
+
+  /* Glasfläche in der oberen Hälfte */
+  .knopf_primaer::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0 0 50% 0;
+    z-index: -1;
+    background: linear-gradient(180deg, var(--k-glanz) 0%, rgba(255, 255, 255, 0.02) 100%);
+    pointer-events: none;
+  }
+
+  /* Glanzband: läuft beim Überfahren und bei Tastaturfokus einmal, bei großen Knöpfen zusätzlich selten im Ruhezustand */
+  .knopf_primaer::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -35%;
+    bottom: -35%;
+    left: -55%;
+    width: 34%;
+    z-index: -1;
+    background: linear-gradient(100deg, transparent 0%, var(--k-schein) 50%, transparent 100%);
+    transform: skewX(-22deg) translateX(0);
+    pointer-events: none;
+  }
+
+  .knopf_primaer:not(.knopf_klein)::after {
+    animation: knopf-glanz-ruhe 7s ease-in-out 1.5s infinite;
+  }
+
+  .knopf_primaer:hover::after,
+  .knopf_primaer:focus-visible::after {
+    animation: knopf-glanz-lauf 900ms cubic-bezier(0.2, 0.7, 0.2, 1) 1 forwards;
+  }
+
+  @keyframes knopf-glanz-ruhe {
+    0%, 62% { transform: skewX(-22deg) translateX(0); }
+    90%, 100% { transform: skewX(-22deg) translateX(560%); }
+  }
+
+  @keyframes knopf-glanz-lauf {
+    from { transform: skewX(-22deg) translateX(0); }
+    to { transform: skewX(-22deg) translateX(560%); }
+  }
+
+  .knopf_primaer > * { position: relative; z-index: 1; }
+
+  .knopf_primaer:hover {
+    background-color: var(--k-mitte);
+    border-color: var(--k-rand);
+    color: var(--k-text);
+    filter: brightness(1.08) saturate(1.08);
+    transform: translateY(-2px);
+    box-shadow:
+      inset 0 1px 0 var(--k-kante),
+      inset 0 -1px 0 var(--k-tiefe),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.09),
+      0 2px 4px rgba(7, 46, 99, 0.4),
+      0 18px 30px -10px var(--k-glow);
+  }
+
+  .knopf_primaer:active {
+    filter: brightness(0.95);
+    transform: translateY(1px);
+    box-shadow:
+      inset 0 2px 6px rgba(3, 28, 64, 0.5),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.14),
+      0 1px 1px rgba(7, 46, 99, 0.3);
+  }
+
+  .knopf_primaer:focus-visible,
+  .knopf_sekundaer:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+  }
+
+  /* Dunkle Flächen: weißer Glanzknopf */
+  .band_nacht .knopf_primaer,
+  .band_primaer .knopf_primaer,
+  .fuss .knopf_primaer {
+    --k-oben: #ffffff;
+    --k-mitte: #eef5fb;
+    --k-unten: #cfe1f1;
+    --k-rand: #ffffff;
+    --k-text: var(--night);
+    --k-textschatten: none;
+    --k-kante: rgba(255, 255, 255, 1);
+    --k-tiefe: rgba(9, 95, 187, 0.2);
+    --k-glanz: rgba(255, 255, 255, 0.8);
+    --k-glow: rgba(122, 172, 220, 0.7);
+    --k-schein: rgba(9, 95, 187, 0.3);
+  }
+
+  /* Sekundärknopf: helles Glas mit feiner Kante */
+  .knopf_sekundaer,
+  .softwarekarte__profil,
+  .softwarekarte:is(:hover, :focus-within) .softwarekarte__profil {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background-color: var(--white);
+    background-image:
+      radial-gradient(120% 150% at 14% -40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 60%),
+      linear-gradient(180deg, #ffffff 0%, #e8f2fb 100%);
+    border: 1px solid #a5c4e2;
+    color: var(--primary);
+    box-shadow:
+      inset 0 1px 0 #ffffff,
+      inset 0 -1px 0 rgba(9, 95, 187, 0.1),
+      0 1px 2px rgba(7, 46, 99, 0.12),
+      0 8px 16px -10px rgba(9, 95, 187, 0.4);
+    transition: border-color 180ms ease-out, transform 180ms ease-out, box-shadow 240ms ease-out, background-image 180ms ease-out;
+  }
+
+  .knopf_sekundaer:hover,
+  .softwarekarte__profil:hover {
+    background-image:
+      radial-gradient(120% 150% at 14% -40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 60%),
+      linear-gradient(180deg, #f6fbff 0%, #d6e8f7 100%);
+    border-color: var(--primary);
+    color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow:
+      inset 0 1px 0 #ffffff,
+      inset 0 -1px 0 rgba(9, 95, 187, 0.12),
+      0 2px 4px rgba(7, 46, 99, 0.14),
+      0 14px 24px -12px rgba(9, 95, 187, 0.55);
+  }
+
+  .knopf_sekundaer:active,
+  .softwarekarte__profil:active {
+    transform: translateY(1px);
+    box-shadow: inset 0 2px 5px rgba(9, 95, 187, 0.28);
+  }
+
+  .band_nacht .knopf_sekundaer,
+  .fuss .knopf_sekundaer {
+    background-color: rgba(255, 255, 255, 0.08);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: var(--white);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 8px 18px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .band_nacht .knopf_sekundaer:hover,
+  .fuss .knopf_sekundaer:hover {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.08) 100%);
+    border-color: var(--white);
+    color: var(--white);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .knopf_primaer:not(.knopf_klein)::after,
+    .knopf_primaer:hover::after,
+    .knopf_primaer:focus-visible::after { animation: none; }
+    .knopf_primaer, .knopf_sekundaer, .softwarekarte__profil { transition: none; }
+    .knopf_primaer:hover, .knopf_primaer:active, .knopf_sekundaer:hover, .knopf_sekundaer:active, .softwarekarte__profil:hover, .softwarekarte__profil:active { transform: none; }
+  }
+
+  /* Software entdecken: größere Karten */
+  .entdecken > .huelle { max-width: 1360px; }
+  .entdecken__karten { gap: 24px; }
+  .entdecken__karten .softwarekarte { padding: 32px 30px 28px; gap: 16px; border-radius: 14px; }
+  .entdecken__karten .softwarekarte__oben { gap: 18px; }
+  .entdecken__karten .softwarekarte__logo { width: 76px; height: 76px; }
+  .entdecken__karten .softwarekarte__logo img { max-height: 60px; }
+  .entdecken__karten .softwarekarte__name { font-size: 1.375rem; }
+  .entdecken__karten .softwarekarte__kategorie { font-size: .8125rem; }
+  .entdecken__karten .softwarekarte__kurz { font-size: 1rem; line-height: 1.65; -webkit-line-clamp: 5; }
+  .entdecken__karten .softwarekarte__fakt { padding: 5px 12px; font-size: .8125rem; }
+  .entdecken__karten .softwarekarte__fuss { margin-top: 10px; }
+  .entdecken__karten .softwarekarte__website,
+  .entdecken__karten .softwarekarte__profil { min-height: 46px; font-size: .875rem; }
+  .entdecken__karten .softwarekarte__aktionen { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .entdecken__karten .softwarekarte__hersteller { order: -1; }
+  .entdecken__karten .softwarekarte__website,
+  .entdecken__karten .softwarekarte__profil { width: 100%; }
+  .entdecken__karten .softwarekarte__werbung { font-size: .75rem; }
+  .entdecken { padding-block: 56px 72px; }
+}

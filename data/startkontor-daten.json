@@ -1539,9 +1539,8 @@
           "id": "angaben",
           "titel": "Angaben nach § 5 Digitale Dienste Gesetz",
           "absaetze": [
-            "{{BETREIBER_NAME}}, {{RECHTSFORM}}",
-            "{{STRASSE_UND_HAUSNUMMER}}, {{POSTLEITZAHL}} {{ORT}}",
-            "Vertretungsberechtigt: {{VERTRETUNGSBERECHTIGTE_PERSON}}"
+            "{{BETREIBER_NAME}}",
+            "{{STRASSE_UND_HAUSNUMMER}}, {{POSTLEITZAHL}} {{ORT}}"
           ]
         },
         {
@@ -1557,15 +1556,14 @@
           "titel": "Register und Umsatzsteuer",
           "absaetze": [
             "Handelsregister: {{HANDELSREGISTER_UND_NUMMER_FALLS_VORHANDEN}}",
-            "Umsatzsteueridentifikationsnummer: {{UMSATZSTEUER_ID_FALLS_VORHANDEN}}",
-            "Nur ausweisen, was tatsächlich vorhanden ist. Nicht zutreffende Zeilen entfernen."
+            "Umsatzsteueridentifikationsnummer: {{UMSATZSTEUER_ID_FALLS_VORHANDEN}}"
           ]
         },
         {
           "id": "verantwortlich",
           "titel": "Verantwortlich für journalistisch redaktionelle Inhalte",
           "absaetze": [
-            "Nach § 18 Absatz 2 Medienstaatsvertrag: {{NAME_UND_ANSCHRIFT_DER_INHALTLICH_VERANTWORTLICHEN_PERSON}}"
+            "Nach § 18 Absatz 2 Medienstaatsvertrag: {{BETREIBER_NAME}}, {{STRASSE_UND_HAUSNUMMER}}, {{POSTLEITZAHL}} {{ORT}}"
           ]
         },
         {
@@ -1620,7 +1618,8 @@
           "id": "kurz",
           "titel": "Das Wichtigste in Kürze",
           "liste": [
-            "Wir setzen keine Cookies zur Wiedererkennung, Reichweitenmessung oder Werbung.",
+            "Wir setzen keine Cookies zur Wiedererkennung oder Werbung.",
+          "Die Nutzung messen wir mit Vercel Web Analytics, ohne Cookies und ohne Profilbildung.",
             "Schriftarten und Bilder liefern wir von unserem eigenen Server aus.",
             "Suche, Bausteinplaner und Checklisten arbeiten in Ihrem Browser. Ihre Eingaben dort senden wir nicht an uns.",
             "Personenbezogene Daten geben Sie nur an, wenn Sie uns schreiben oder sich für den Monatsbrief anmelden.",
@@ -1697,12 +1696,12 @@
               [
                 "{{HOSTER_NAME_UND_LAND}}",
                 "Betrieb der Website und Server Protokolle",
-                "{{ANGABE_ZUM_STANDORT}}"
+                "Weltweites Servernetz, Übermittlung in die USA möglich"
               ],
               [
                 "{{NEWSLETTER_DIENST}}",
                 "Bestätigungsmail und Versand des Monatsbriefs",
-                "{{ANGABE_ZUM_STANDORT}}"
+                "Übermittlung in die USA möglich"
               ]
             ]
           },

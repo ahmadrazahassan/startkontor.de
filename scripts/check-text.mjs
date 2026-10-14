@@ -21,6 +21,7 @@ const ERLAUBT = [
   "Haufe-Lexware",
   "Grand-Rosière",
   "JTL-Wawi",
+  "Gustav-Stresemann-Ring",
 ];
 
 const VERBOTEN = ["nahtlos", "ganzheitlich", "maßgeschneidert", "revolutionär", "Game Changer", "Synergien", "eintauchen", "entfesseln", "Hier erfahren Sie", "Klicken Sie hier"];

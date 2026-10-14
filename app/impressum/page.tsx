@@ -14,6 +14,10 @@ export default function ImpressumSeite() {
       abschnitte={s.abschnitte}
       entwurfHinweis={s.entwurfHinweis}
       inhaltLabel={ui.abschnitte.allgemein.inhalt}
+      eyebrow="Rechtliches"
+      lead="Wer hinter Startkontor steht, wie Sie uns erreichen und was für unsere Inhalte, Links und Logos gilt."
+      motiv="vertragscheck"
+      schluss="Haben Sie Fragen zu diesen Angaben, schreiben Sie uns."
     />
   );
 }
