@@ -34,6 +34,7 @@ import "./styles/pages/portal-erweiterungen.css";
 import "./styles/pages/zahlen.css";
 import "./styles/pages/recht.css";
 import "./styles/pages/knoepfe-glanz.css";
+import "./styles/pages/kat.css";
 import "./styles/utilities.css";
 import "./styles/print.css";
 import { Analytics } from "@vercel/analytics/react";

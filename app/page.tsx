@@ -10,7 +10,8 @@ import { Icon } from "@/components/icons";
 import { Inline } from "@/components/inline";
 import { Illustration } from "@/components/illustration";
 import { JsonLd } from "@/components/json-ld";
-import { KategorieTabs } from "@/components/kategorie-tabs";
+import { KategorieKarte } from "@/components/kategorie-karte";
+import { KategorienBereich } from "@/components/kategorien-bereich";
 import { KnopfLink } from "@/components/knopf";
 import { NewsletterBlock } from "@/components/newsletter-block";
 import { SoftwareKarte } from "@/components/software-karte";
@@ -185,22 +186,33 @@ export default function Startseite() {
       <ZahlenBereich />
 
       {/* 3. Programme nach Kategorie */}
-      <section id="kategorien" className="band kategorienbereich" aria-labelledby="kategorien-titel">
+      <section id="kategorien" className="band kategorienbereich kat-bereich" aria-labelledby="kategorien-titel">
         <div className="huelle">
-          <div className="kategorienintro">
-            <div className="startkopf startkopf_breit">
-              <p className="eyebrow">{h.kategorien.eyebrow}</p>
-              <h2 id="kategorien-titel">
-                <Inline text={h.kategorien.titel} />
-              </h2>
-              <p className="lead">
-                <Inline text={h.kategorien.text} />
-              </p>
-            </div>
-          </div>
-
-          <KategorieTabs
+          <KategorienBereich
             beschriftung={h.kategorien.titel}
+            kopf={
+              <>
+                <p className="eyebrow">{h.kategorien.eyebrow}</p>
+                <h2 id="kategorien-titel">
+                  <Inline text={h.kategorien.titel} />
+                </h2>
+                <p className="lead">
+                  <Inline text={h.kategorien.text} />
+                </p>
+              </>
+            }
+            fuss={
+              <>
+                <Link href="/bausteine" className="textlink">
+                  Alle Kategorien ansehen
+                  <Icon name="arrowRight" groesse={18} />
+                </Link>
+                <Link href="/anbieter" className="textlink">
+                  Alle {kennzahlen.anbieter} Programme
+                  <Icon name="arrowRight" groesse={18} />
+                </Link>
+              </>
+            }
             eintraege={bausteine.map((b) => {
               const liste = anbieterFuerBaustein(b.slug);
               return {
@@ -208,29 +220,30 @@ export default function Startseite() {
                 label: b.kurzname,
                 beschreibung: b.name,
                 icon: KATEGORIE_ICON[b.slug] ?? "file",
-                anzahl: `${liste.length} ${liste.length === 1 ? h.kategorien.review : h.kategorien.reviews}`,
+                anzahl: liste.length,
+                einheit: liste.length === 1 ? h.kategorien.review : h.kategorien.reviews,
                 inhalt: (
                   <>
-                    <div className="kategoriekopf">
-                      <div className="kategoriekopf__text">
-                        <h3 className="kategoriekopf__titel">{b.name}</h3>
+                    <div className="kat-panelkopf">
+                      <div className="kat-panelkopf__text">
+                        <h3 className="kat-panelkopf__titel">{b.name}</h3>
                         <p>
                           <Inline text={b.teaser} />
                         </p>
                       </div>
-                      <div className="kategoriekopf__links">
-                        <Link href={`/anbieter?baustein=${b.slug}`} className="textlink kategoriekopf__alle">
-                          {h.kategorien.alleKategorie.replace("{n}", String(liste.length))}
-                          <Icon name="arrowRight" groesse={18} />
+                      <div className="kat-panelkopf__links">
+                        <Link href={`/anbieter?baustein=${b.slug}`} className="knopf knopf_sekundaer knopf_klein">
+                          <span className="knopf__text">{h.kategorien.alleKategorie.replace("{n}", String(liste.length))}</span>
+                          <Icon name="arrowRight" groesse={16} />
                         </Link>
-                        <Link href={`/bausteine/${b.slug}`} className="kategoriekopf__kriterien">
+                        <Link href={`/bausteine/${b.slug}`} className="kat-panelkopf__kriterien">
                           {h.kategorien.kriterien}
                         </Link>
                       </div>
                     </div>
-                    <div className="kartenraster kategorienprogramme">
-                      {liste.slice(0, 4).map((a) => (
-                        <SoftwareKarte key={a.slug} karte={softwareKarte(a, `start-kategorie-${b.slug}`)} texte={softwareKarteTexte} ebene={4} />
+                    <div className="kat-raster">
+                      {liste.map((a) => (
+                        <KategorieKarte key={a.slug} karte={softwareKarte(a, `start-kategorie-${b.slug}`)} />
                       ))}
                     </div>
                   </>

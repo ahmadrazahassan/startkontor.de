@@ -1,0 +1,107 @@
+@layer pages {
+  /* Kategorien der Startseite: Liste links, Programme rechts */
+  .kat-bereich { padding-block: 88px 96px; background: linear-gradient(180deg, #ffffff 0%, #f3f8fc 100%); }
+  .kat-bereich > .huelle { max-width: 1360px; }
+  .band:has(+ .kat-bereich) { padding-bottom: 24px; }
+
+  .kat { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .kat__seite { display: flex; flex-direction: column; gap: 32px; min-width: 0; }
+  .kat__kopf { display: grid; gap: 14px; }
+  .kat__kopf .eyebrow { margin: 0; }
+  .kat__kopf h2 { margin: 0; font-size: clamp(2.125rem, 3.6vw, 3rem); line-height: 1.06; font-weight: 700; letter-spacing: -.035em; color: var(--ink); text-wrap: balance; }
+  .kat__kopf .lead { margin: 0; font-size: 1.0625rem; line-height: 1.6; color: var(--ink-soft); }
+  .kat__fuss { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .kat__panels { min-width: 0; }
+  .kat__panel[hidden] { display: none; }
+  .kat[data-erweitert="nein"] .kat__panel + .kat__panel { margin-top: 64px; }
+
+  /* Liste */
+  .kat__liste { display: flex; flex-direction: column; gap: 8px; }
+  .kat-punkt { position: relative; display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 14px; width: 100%; padding: 12px 16px 12px 12px; border: 1px solid transparent; border-radius: 16px; background: transparent; color: var(--ink); font: inherit; text-align: left; text-decoration: none; cursor: pointer; transition: background-color 200ms ease-out, border-color 200ms ease-out, transform 200ms ease-out, box-shadow 200ms ease-out; }
+  .kat-punkt:hover { background: #ffffffcc; border-color: #d6e4f0; transform: translateX(4px); }
+  .kat-punkt:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+  .kat-punkt__icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: var(--mist); color: var(--primary); transition: background 200ms ease-out, color 200ms ease-out, box-shadow 200ms ease-out; }
+  .kat-punkt__icon .icon { stroke-linecap: round; stroke-linejoin: round; }
+  .kat-punkt__name { font-size: 1.125rem; font-weight: 600; line-height: 1.25; letter-spacing: -.01em; }
+  .kat-punkt__zahl { min-width: 32px; padding: 3px 10px; border-radius: 999px; background: var(--mist); color: var(--ink-soft); font-size: .8125rem; font-weight: 600; text-align: center; font-variant-numeric: tabular-nums; }
+  .kat-punkt[aria-selected="true"] { background: linear-gradient(90deg, #e3f0fa 0%, #ffffff 100%); border-color: #bcd5ea; box-shadow: 0 14px 28px -20px rgba(9, 95, 187, 0.6); color: var(--primary); }
+  .kat-punkt[aria-selected="true"]::before { content: ""; position: absolute; left: -1px; top: 14px; bottom: 14px; width: 4px; border-radius: 0 4px 4px 0; background: linear-gradient(180deg, var(--sky), var(--primary)); }
+  .kat-punkt[aria-selected="true"] .kat-punkt__icon { background-image: linear-gradient(180deg, #3f92e8 0%, #095fbb 55%, #064891 100%); color: var(--white); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 10px 18px -8px rgba(9, 95, 187, 0.7); }
+  .kat-punkt[aria-selected="true"] .kat-punkt__zahl { background: var(--primary); color: var(--white); }
+
+  /* Kopf des Panels */
+  .kat-panelkopf { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 40px; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid #d6e4f0; }
+  .kat-panelkopf__text { max-width: 46rem; }
+  .kat-panelkopf__titel { margin: 0; font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.15; font-weight: 700; letter-spacing: -.025em; }
+  .kat-panelkopf__text p { margin: 10px 0 0; font-size: 1rem; line-height: 1.6; color: var(--ink-soft); }
+  .kat-panelkopf__links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+  .kat-panelkopf__kriterien { font-size: .875rem; color: var(--primary); text-decoration: underline; text-underline-offset: 4px; }
+
+  /* Raster und Karten */
+  .kat-raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 215px), 1fr)); gap: 20px; }
+  .kat-karte { position: relative; isolation: isolate; display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 30px 20px 22px; border: 1px solid #dde8f1; border-radius: 20px; background: var(--white); text-align: center; box-shadow: 0 1px 2px rgba(10, 37, 64, 0.04), 0 10px 24px -18px rgba(10, 37, 64, 0.35); transition: transform 240ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 240ms ease-out, border-color 240ms ease-out; }
+  .kat-karte::before { content: ""; position: absolute; inset: -1px; z-index: -1; padding: 2px; border-radius: inherit; background: linear-gradient(140deg, #9cc4ec 0%, #095fbb 48%, #7aacdc 100%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); opacity: 0; transition: opacity 240ms ease-out; pointer-events: none; }
+  .kat-karte:hover, .kat-karte:focus-within { transform: translateY(-6px); border-color: transparent; box-shadow: 0 2px 4px rgba(10, 37, 64, 0.05), 0 28px 44px -22px rgba(9, 95, 187, 0.5); }
+  .kat-karte:hover::before, .kat-karte:focus-within::before { opacity: 1; }
+
+  .kat-karte__logo { display: grid; place-items: center; width: 104px; height: 104px; border-radius: 50%; background: radial-gradient(circle at 30% 22%, #ffffff 0%, #f1f7fc 100%); border: 1px solid #e1ebf3; box-shadow: inset 0 0 0 7px #ffffff, 0 14px 26px -16px rgba(9, 95, 187, 0.55); transition: transform 240ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .kat-karte:hover .kat-karte__logo { transform: scale(1.05); }
+  .kat-karte__logo img { display: block; width: auto; max-width: 62%; height: auto; max-height: 52px; object-fit: contain; }
+  .kat-karte__initial { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--mist); color: var(--primary); font-size: 1.5rem; font-weight: 700; }
+
+  .kat-karte__name { margin: 0; min-height: 2.6em; display: grid; align-items: center; font-size: 1.125rem; line-height: 1.3; font-weight: 600; letter-spacing: -.01em; }
+  .kat-karte__link { color: var(--ink); text-decoration: none; }
+  .kat-karte__link:hover { color: var(--primary); text-decoration: none; }
+  .kat-karte__link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+  .kat-karte__link:focus-visible { outline: none; }
+  .kat-karte:has(.kat-karte__link:focus-visible) { outline: 2px solid var(--primary); outline-offset: 3px; }
+
+  .kat-karte__fakten { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 0; padding: 0; min-height: 2.9em; align-content: flex-start; }
+  .kat-karte__fakt { padding: 4px 10px; border-radius: 999px; background: var(--mist); color: var(--ink); font-size: .75rem; font-weight: 600; line-height: 1.3; }
+  .kat-karte__fakt_ok { background: var(--ok-fill); color: var(--ok); }
+
+  .kat-karte__aktionen { position: relative; z-index: 2; display: grid; gap: 6px; width: 100%; margin-top: auto; padding-top: 4px; }
+  .kat-karte__website { display: grid; grid-template-rows: auto 16px; justify-items: center; align-content: start; gap: 4px; }
+  .kat-karte__website .knopf { width: 100%; min-height: 44px; font-size: .875rem; }
+  .kat-karte__werbung { font-size: .6875rem; line-height: 16px; color: var(--ink-soft); }
+  .kat-karte__profil { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 32px; font-size: .875rem; font-weight: 600; color: var(--primary); text-decoration: none; }
+  .kat-karte__profil:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .kat-karte__profil .icon { transition: transform 180ms ease-out; }
+  .kat-karte__profil:hover .icon { transform: translateX(4px); }
+
+  @media (min-width: 900px) {
+    .kat { grid-template-columns: 330px minmax(0, 1fr); gap: 64px; align-items: start; }
+    .kat__seite { position: sticky; top: calc(var(--kopf-hoehe, 80px) + 24px); }
+  }
+
+  @media (max-width: 899px) {
+    .kat-bereich { padding-block: 56px 64px; }
+    .kat__liste { flex-direction: row; gap: 10px; margin-inline: calc(-1 * var(--rand, 20px)); padding: 4px var(--rand, 20px) 10px; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding-inline: var(--rand, 20px); scrollbar-width: none; }
+    .kat__liste::-webkit-scrollbar { display: none; }
+    .kat-punkt { flex: none; width: auto; grid-template-columns: 32px auto auto; gap: 10px; padding: 8px 14px 8px 8px; border-color: #d6e4f0; border-radius: 999px; background: var(--white); scroll-snap-align: start; }
+    .kat-punkt:hover { transform: none; }
+    .kat-punkt__icon { width: 32px; height: 32px; border-radius: 50%; }
+    .kat-punkt__icon .icon { width: 18px; height: 18px; }
+    .kat-punkt__name { font-size: .9375rem; white-space: nowrap; }
+    .kat-punkt[aria-selected="true"]::before { display: none; }
+    .kat-punkt[aria-selected="true"] { background: var(--white); border-color: var(--primary); }
+    .kat__fuss { flex-direction: row; flex-wrap: wrap; gap: 8px 24px; }
+  }
+
+  @media (max-width: 639px) {
+    .kat-raster { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .kat-karte { padding: 22px 12px 16px; gap: 10px; border-radius: 16px; }
+    .kat-karte__logo { width: 80px; height: 80px; box-shadow: inset 0 0 0 5px #fff, 0 10px 20px -14px rgba(9, 95, 187, 0.55); }
+    .kat-karte__logo img { max-height: 40px; }
+    .kat-karte__name { font-size: .9375rem; }
+    .kat-karte__fakten { min-height: 0; }
+    .kat-karte__fakt { font-size: .6875rem; padding: 3px 8px; }
+    .kat-karte__website .knopf { padding-inline: 8px; font-size: .8125rem; min-height: 40px; }
+    .kat-panelkopf { margin-bottom: 20px; padding-bottom: 18px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .kat-punkt, .kat-karte, .kat-karte__logo, .kat-karte::before, .kat-karte__profil .icon { transition: none; }
+    .kat-punkt:hover, .kat-karte:hover, .kat-karte:focus-within, .kat-karte:hover .kat-karte__logo, .kat-karte__profil:hover .icon { transform: none; }
+  }
+}
