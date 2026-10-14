@@ -33,7 +33,7 @@ import "./styles/pages/portal.css";
 import "./styles/pages/portal-erweiterungen.css";
 import "./styles/utilities.css";
 import "./styles/print.css";
-import Analytics from "@/components/analytics";
+import { Analytics } from "@vercel/analytics/react";
 import { Fuss } from "@/components/fuss";
 import { Kopf, Mobilleiste } from "@/components/kopf/kopf";
 import { marke, seo, ui } from "@/lib/daten";
