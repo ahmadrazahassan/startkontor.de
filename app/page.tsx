@@ -10,7 +10,7 @@ import { Icon } from "@/components/icons";
 import { Inline } from "@/components/inline";
 import { Illustration } from "@/components/illustration";
 import { JsonLd } from "@/components/json-ld";
-import { KategorieKarte } from "@/components/kategorie-karte";
+import { KategorieKarte, type KarteChip } from "@/components/kategorie-karte";
 import { KategorienBereich } from "@/components/kategorien-bereich";
 import { KnopfLink } from "@/components/knopf";
 import { NewsletterBlock } from "@/components/newsletter-block";
@@ -33,8 +33,24 @@ import { KATEGORIE_ICON } from "@/lib/kategorie-icons";
 import { organisationUndWebsite } from "@/lib/jsonld";
 import { metaFuer } from "@/lib/seo";
 import { softwareKarte, softwareKarteTexte } from "@/lib/software-ansicht";
+import type { Anbieter } from "@/lib/typen";
 
 export const metadata: Metadata = metaFuer({ seo: seiten.start.seo, pfad: "/", absoluterTitel: true });
+
+/** Warme Iconfarben der Kategorien: Gelb, Rot und Orange, ohne Hintergrund. */
+const KATEGORIE_AKZENT: Record<string, string> = {
+  finanzen: "#f2a900",
+  lohn: "#e5484d",
+  personal: "#f97316",
+  vertrieb: "#d6336c",
+  betrieb: "#d68a00",
+};
+
+/** Kurze Chips der Kategorienkarten: Preisstatus und, wenn belegt, monatliche Kündbarkeit. */
+function karteChips(a: Anbieter): KarteChip[] {
+  const preis = { veroeffentlicht: "Preis veröffentlicht", anfrage: "Preis auf Anfrage", nichtVerifiziert: "Preis nicht verifiziert" }[a.preis.status];
+  return a.monatlichKuendbar === true ? [{ text: preis }, { text: "Monatlich kündbar", ton: "ok" }] : [{ text: preis }];
+}
 
 const PFAD_MOTIVE = ["softwarevergleich", "software-planung", "vertragscheck"] as const;
 
@@ -220,6 +236,7 @@ export default function Startseite() {
                 label: b.kurzname,
                 beschreibung: b.name,
                 icon: KATEGORIE_ICON[b.slug] ?? "file",
+                akzent: KATEGORIE_AKZENT[b.slug] ?? "#e5484d",
                 anzahl: liste.length,
                 einheit: liste.length === 1 ? h.kategorien.review : h.kategorien.reviews,
                 inhalt: (
@@ -243,7 +260,7 @@ export default function Startseite() {
                     </div>
                     <div className="kat-raster">
                       {liste.map((a) => (
-                        <KategorieKarte key={a.slug} karte={softwareKarte(a, `start-kategorie-${b.slug}`)} />
+                        <KategorieKarte key={a.slug} karte={softwareKarte(a, `start-kategorie-${b.slug}`)} chips={karteChips(a)} />
                       ))}
                     </div>
                   </>

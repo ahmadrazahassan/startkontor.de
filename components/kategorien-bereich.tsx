@@ -10,6 +10,8 @@ export type KategorienEintrag = {
   label: string;
   beschreibung: string;
   icon: IconName;
+  /** Farbe des Icons, z. B. #f2a900 */
+  akzent: string;
   /** Anzahl der Programme als Zahl */
   anzahl: number;
   /** Beschriftung der Anzahl, z. B. "Programme" */
@@ -50,8 +52,8 @@ export function KategorienBereich({ eintraege, beschriftung, kopf, fuss }: { ein
 
   const inhaltPunkt = (e: KategorienEintrag) => (
     <>
-      <span className="kat-punkt__icon" aria-hidden="true">
-        <Icon name={e.icon} groesse={24} />
+      <span className="kat-punkt__icon" aria-hidden="true" style={{ color: e.akzent }}>
+        <Icon name={e.icon} groesse={28} />
       </span>
       <span className="kat-punkt__name">{e.label}</span>
       <span className="kat-punkt__zahl" aria-hidden="true">{e.anzahl}</span>

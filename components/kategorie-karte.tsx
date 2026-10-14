@@ -2,8 +2,10 @@ import Link from "next/link";
 import { Icon } from "@/components/icons";
 import type { SoftwareKarteDaten } from "@/components/software-karte";
 
-/** Kompakte Programmkarte der Kategorienansicht: Logo im Kreis, Name, zwei Fakten, Website und Profil. */
-export function KategorieKarte({ karte }: { karte: SoftwareKarteDaten }) {
+export type KarteChip = { text: string; ton?: "ok" };
+
+/** Kompakte Programmkarte der Kategorienansicht: Logo, Name, kurze Chips, Website und Profil. */
+export function KategorieKarte({ karte, chips }: { karte: SoftwareKarteDaten; chips: KarteChip[] }) {
   const logo = karte.logo;
   const werbung = karte.hersteller?.werbung === true;
   return (
@@ -11,7 +13,7 @@ export function KategorieKarte({ karte }: { karte: SoftwareKarteDaten }) {
       <div className="kat-karte__logo">
         {logo ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={logo.src} alt="" width={Math.max(1, Math.round((56 * logo.breite) / logo.hoehe))} height={56} loading="lazy" decoding="async" />
+          <img src={logo.src} alt="" width={Math.max(1, Math.round((48 * logo.breite) / logo.hoehe))} height={48} loading="lazy" decoding="async" />
         ) : (
           <span className="kat-karte__initial" aria-hidden="true">{karte.name.charAt(0)}</span>
         )}
@@ -19,9 +21,9 @@ export function KategorieKarte({ karte }: { karte: SoftwareKarteDaten }) {
       <h4 className="kat-karte__name">
         <Link href={karte.href} className="kat-karte__link">{karte.name}</Link>
       </h4>
-      <ul className="kat-karte__fakten liste_ohne">
-        {karte.fakten.slice(0, 2).map((f) => (
-          <li key={f.text} className={f.ton ? `kat-karte__fakt kat-karte__fakt_${f.ton}` : "kat-karte__fakt"}>{f.text}</li>
+      <ul className="kat-karte__chips liste_ohne">
+        {chips.map((c) => (
+          <li key={c.text} className={c.ton === "ok" ? "chip chip_ok" : "chip chip_nebel"}>{c.text}</li>
         ))}
       </ul>
       <div className="kat-karte__aktionen">
@@ -40,8 +42,8 @@ export function KategorieKarte({ karte }: { karte: SoftwareKarteDaten }) {
             {werbung ? <span className="kat-karte__werbung">Werbung</span> : null}
           </div>
         ) : null}
-        <Link href={karte.href} className="kat-karte__profil">
-          Profil ansehen
+        <Link href={karte.href} className="knopf knopf_sekundaer knopf_klein kat-karte__profil">
+          <span className="knopf__text">Profil ansehen</span>
           <Icon name="arrowRight" groesse={16} />
         </Link>
       </div>
