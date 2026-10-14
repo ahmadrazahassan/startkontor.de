@@ -50,6 +50,7 @@ export const metadata: Metadata = {
   title: { default: seo.startTitel, template: seo.titelMuster },
   description: marke.metaStandardBeschreibung,
   applicationName: marke.name,
+  verification: { google: "juEqkX2eS5muLpBur6gp-nnnf9JR5b6GEc8gW6xWVN4" },
   robots: { index: true, follow: true },
   formatDetection: { telephone: false, email: false, address: false },
 };
