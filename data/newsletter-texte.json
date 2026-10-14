@@ -1,0 +1,30 @@
+{
+  "bestaetigung": {
+    "vorschau": "Ein Klick fehlt noch: Bestätigen Sie Ihre Anmeldung zum Startkontor Monatsbrief.",
+    "rubrik": "Ihr Startkontor Monatsbrief",
+    "titel": "Gute Softwareentscheidungen beginnen mit gutem Wissen.",
+    "hinweis": "Nach Ihrer Bestätigung erhalten Sie einmal im Monat Softwarewissen, hilfreiche Leitfäden und Hinweise auf relevante Änderungen."
+  },
+  "willkommen": {
+    "betreff": "Willkommen beim Startkontor Monatsbrief",
+    "vorschau": "Ihre Anmeldung ist bestätigt. Entdecken Sie die nächsten Schritte zur passenden Software.",
+    "rubrik": "Schön, dass Sie dabei sind",
+    "titel": "Willkommen bei Startkontor.",
+    "einleitung": "Ihre Anmeldung zum Monatsbrief ist bestätigt. Ab jetzt erhalten Sie einmal im Monat eine übersichtliche Auswahl zu Software, Kosten und dem nächsten Schritt für Ihr Unternehmen.",
+    "knopf": "Software entdecken",
+    "schritte": [
+      {"titel": "Programme kennenlernen", "text": "Funktionen, Preise und Grenzen der Software für Ihren Arbeitsalltag nachvollziehen.", "link": "/anbieter", "knopf": "Zum Softwareverzeichnis"},
+      {"titel": "Den Bedarf eingrenzen", "text": "Die Auswahlhilfe zeigt, welche Softwarebereiche jetzt für Ihr Unternehmen wichtig sind.", "link": "/planer", "knopf": "Auswahlhilfe starten"},
+      {"titel": "Entscheidungen vorbereiten", "text": "Unsere Ratgeber und Checklisten helfen beim Gespräch mit dem Anbieter und bei der Vertragsprüfung.", "link": "/wissen", "knopf": "Ratgeber lesen"}
+    ]
+  },
+  "fuss": {
+    "claim": "Die richtige Software zur richtigen Zeit.",
+    "beschreibung": "Softwarewissen für Unternehmen in Deutschland.",
+    "kontakt": "Fragen oder Hinweise? Antworten Sie einfach auf diese E-Mail.",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "werbung": "Werbung und Partner",
+    "bestaetigung": "Diese E-Mail bestätigt nur Ihre Anfrage. Ohne Bestätigung erhalten Sie keinen Monatsbrief."
+  }
+}

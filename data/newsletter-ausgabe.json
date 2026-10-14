@@ -1,0 +1,12 @@
+{
+  "schluessel": "2026-10-softwareauswahl",
+  "betreff": "Ihr Startkontor Monatsbrief: Software sicher auswählen",
+  "vorschau": "E-Rechnung, Gesamtkosten und Verträge: drei Ratgeber für Ihre nächste Softwareentscheidung.",
+  "titel": "Klar entscheiden. Besser arbeiten.",
+  "einleitung": "Welche Software passt zu Ihrem Unternehmen und worauf kommt es vor dem Abschluss an? Diese Ausgabe hilft Ihnen, Anforderungen zu klären, Kosten einzuordnen und Verträge sorgfältig zu prüfen.",
+  "artikel": [
+    {"rubrik": "Finanzen", "titel": "E-Rechnung: den nächsten Schritt planen", "text": "Unser Fahrplan erklärt die Einführung der E-Rechnung und welche Anforderungen Sie mit Ihrem Softwareanbieter besprechen sollten.", "pfad": "/wissen/leitfaeden/e-rechnung-fahrplan"},
+    {"rubrik": "Budget", "titel": "Die Gesamtkosten im Blick behalten", "text": "Lizenz, Einrichtung, Schulung und laufender Aufwand: Berechnen Sie das Jahresbudget, bevor Sie sich für ein Programm entscheiden.", "pfad": "/wissen/leitfaeden/gesamtkosten-rechnen"},
+    {"rubrik": "Verträge", "titel": "Vor dem Abschluss die richtigen Fragen stellen", "text": "Laufzeit, Daten und Ausstieg: Unsere Checkliste zeigt, welche Vertragsdetails Sie vor der Unterschrift klären sollten.", "pfad": "/wissen/leitfaeden/vertraege-lesen"}
+  ]
+}

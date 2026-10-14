@@ -215,6 +215,16 @@
       "pfad": "seiten.bausteine.seo.titel",
       "alt": "Bausteine: fünf Softwarebereiche mit Kriterien",
       "neu": "Software nach Kategorie: Programme und Auswahlhilfen"
+    },
+    {
+      "pfad": "ui.newsletter.erfolg",
+      "alt": "Fast geschafft. Wir haben Ihnen eine E-Mail mit einem Bestätigungslink geschickt. Erst nach dem Klick sind Sie angemeldet.",
+      "neu": "Fast geschafft. Wir haben Ihnen eine E-Mail mit einem Bestätigungslink geschickt. Öffnen Sie den Link und bestätigen Sie Ihre Anmeldung auf der folgenden Seite."
+    },
+    {
+      "pfad": "seiten.brief.verfahren",
+      "alt": "Sie tragen Ihre Adresse ein und bekommen daraufhin eine Nachricht mit einem Bestätigungslink. Die Anmeldung gilt erst, wenn Sie ihn angeklickt haben. Jede Ausgabe führt auch zur Abmeldung.",
+      "neu": "Sie tragen Ihre Adresse ein und erhalten eine E-Mail mit einem Bestätigungslink. Öffnen Sie den Link und bestätigen Sie Ihre Anmeldung auf der folgenden Seite. Jede Ausgabe enthält einen Abmeldelink."
     }
   ]
 }

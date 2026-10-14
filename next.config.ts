@@ -34,6 +34,10 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   trailingSlash: false,
+  // Inline-Mailbilder müssen auch im Dateisystem der Vercel Function liegen.
+  outputFileTracingIncludes: {
+    "/api/**": ["./public/marke/startkontor-email-logo.png"],
+  },
   images: {
     qualities: [75, 90],
     formats: ["image/avif", "image/webp"],

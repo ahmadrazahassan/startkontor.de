@@ -1,6 +1,6 @@
 # Startkontor deployen
 
-Die öffentliche Hauptadresse ist `https://startkontor.de`. Die Website benötigt Node.js 22 oder neuer und einen Next.js kompatiblen Hoster. Ein reiner HTML Export reicht wegen der Kontakt- und Newsletter-API nicht aus.
+Die öffentliche Hauptadresse ist `https://startkontor.de`. Die Website verwendet Node.js 24.x und Next.js auf Vercel. Ein reiner HTML Export reicht wegen der Kontakt- und Newsletter-API nicht aus.
 
 ## Umgebungsvariablen
 
@@ -19,6 +19,10 @@ Schlüssel und Geheimnisse gehören weder in GitHub noch in `NEXT_PUBLIC_` Varia
 
 ## Build und Betrieb
 
+In Vercel das GitHub-Repository `ahmadrazahassan/startkontor.de` importieren. Framework: Next.js; Root Directory: Projektwurzel; Build Command: `npm run build`; Output Directory: Framework-Standard. Die privaten Variablen aus `.env.local` oder der lokalen Importdatei `.env.vercel` unter Project Settings → Environment Variables für Production hinterlegen. Für funktionierende Formulare auf Vorschauen dieselben Variablen auch für Preview setzen. Danach neu deployen: Änderungen gelten für neue Deployments.
+
+`public/fonts/` enthält die mit Git übertragenen DM Sans Dateien einschließlich Open Font License. Nur der ungenutzte Lieferordner `/fonts/` in der Projektwurzel wird ignoriert. Das Newsletterlogo ist ausdrücklich im File Tracing der API-Funktionen enthalten.
+
 ```sh
 npm ci
 npm test
@@ -32,3 +36,7 @@ Vor der öffentlichen Freigabe `config/betreiber.json` mit den echten Betreibera
 Im DNS die Website auf den gewählten Hoster zeigen lassen, HTTPS aktivieren und die alternative `www` Adresse auf die Hauptadresse umleiten. Bestehende Mail-DNS-Einträge von IONOS und Resend erhalten.
 
 Nach dem Deployment Canonical, Sitemap, Kontaktzustellung, Double Opt in und Abmeldung mit einer eigenen Testadresse überprüfen. Affiliate-Links im jeweiligen Partnerkonto auf die Domain und das eigene Konto prüfen. Eine GitHub-Veröffentlichung ist keine Website-Veröffentlichung und keine Affiliate-Freigabe.
+
+## Monatsbrief
+
+`npm run newsletter:setup` prüft alle sechs benötigten Variablen, die Resend-Gruppe und die Einwilligungsfelder. `npm run newsletter:preview` erzeugt drei lokale HTML-Vorschauen. `npm run newsletter:test` sendet die Monatsbrief-Vorschau nur an `MAIL_TO`. Die redaktionelle Ausgabe liegt in `data/newsletter-ausgabe.json`. `npm run newsletter:send` versendet diese Ausgabe ausschließlich an bestätigte, nicht abgemeldete Kontakte der Gruppe und verlangt echte Betreiberangaben. Kein automatischer monatlicher Versandplan ist eingerichtet.

@@ -1,6 +1,6 @@
 // Gemeinsame Hilfen der API Routen: Herkunftsprüfung, Begrenzung, Eingabegrenzen, Antworten.
 
-import { NextResponse } from "next/server";
+import { NextResponse } from "next/server.js";
 import type { NextRequest } from "next/server";
 import { SITE_URL } from "../site.ts";
 

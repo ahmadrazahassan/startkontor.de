@@ -15,7 +15,7 @@ npm run build        # production build, must finish with zero warnings
 npm start            # serve the production build
 ```
 
-Requires Node 22 or newer. `npm run dev` and `npm run build` first regenerate `public/suche-index.json` (search index) and `lib/client-texte.json` from `data/startkontor-daten.json`.
+Requires Node 24.x. `npm run dev` and `npm run build` first regenerate `public/suche-index.json` (search index) and `lib/client-texte.json` from the merged editorial content.
 
 ## Where things live
 
@@ -101,11 +101,13 @@ The Impressum and Datenschutz texts are **templates**. Have them reviewed legall
 ## Newsletter and contact
 
 * `POST /api/newsletter`: validates, checks honeypot and fill time (3 seconds), limits per IP (in memory, **best effort only** on serverless hosts because each instance has its own memory), sends a confirmation mail. The address is **not** stored yet and the response is always the same.
-* `GET /api/newsletter/bestaetigen?token=…`: verifies the signed token (HMAC SHA 256, valid 48 hours), adds the contact, redirects to `/brief/bestaetigt`. Invalid or expired links go to `/brief?link=ungueltig`.
-* `GET /api/newsletter/abmelden?token=…`: unsubscribes, token never expires.
+* `GET /api/newsletter/bestaetigen?token=…`: displays a confirmation page for the signed token (valid 48 hours). Its `POST` confirms the address, saves the signup time, confirmation time and consent version, adds the Resend contact to the group and sends a welcome email.
+* `GET /api/newsletter/abmelden?token=…`: displays a confirmation page; `POST` unsubscribes. One Click unsubscribe requests are supported. Old signup links cannot reverse a later unsubscribe.
 * `POST /api/kontakt`: one mail to `MAIL_TO`, no auto reply, no storage.
-* The service sits behind `lib/newsletter/store.ts` (`NewsletterSpeicher`, `MailVersand`). The default is Resend. To swap services, replace that file only. Check the field names of the Resend contacts API against current documentation before launch. State the service you use in `NEWSLETTER_DIENST`.
+* The service uses Resend's current Contacts and Segments API. `npm run newsletter:setup` verifies the private environment and creates missing contact properties without changing an existing signing secret.
 * Every newsletter issue you send must contain the unsubscribe link built with `erzeugeAbmeldeToken(email, NEWSLETTER_SECRET)` from `lib/newsletter/token.ts` and the sentence from `ui.mails.monatsbrief`.
+
+Mail templates use the website colors, the real inline Startkontor logo, a dark footer and a plain-text alternative. `npm run newsletter:preview` creates previews. `npm run newsletter:test` sends the design preview to `MAIL_TO`. Edit `data/newsletter-ausgabe.json` and use `npm run newsletter:send` to send an approved issue to confirmed subscribers. Public sending requires the real operator name and postal address. No recurring campaign is scheduled automatically.
 
 ## Partner links and banners
 
