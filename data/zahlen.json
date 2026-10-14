@@ -1,5 +1,5 @@
 {
-  "_hinweis": "Kennzahlen der Startseite. Externe Werte stammen vom Statistischen Bundesamt und stehen mit Quelle und Berichtsjahr hier. Alle Werte zum Verzeichnis und zu Sage werden in lib/zahlen.ts aus den Softwareprofilen berechnet. Die Sage Einstiegspreise sind den Preisangaben der jeweiligen Profile entnommen (Herstellerangaben, Prüfdatum im Profil). Es gibt keine geschätzten oder erfundenen Werte.",
+  "_hinweis": "Kennzahlen der Startseite. Externe Werte stammen vom Statistischen Bundesamt und stehen mit Quelle und Berichtsjahr hier. Alle Werte zum Verzeichnis werden in lib/zahlen.ts aus den Softwareprofilen berechnet. Die Einstiegspreise sind den Preisangaben (Feld preis.anker) der Profile entnommen. Herstellerangaben, Prüfdatum im jeweiligen Profil. Keine geschätzten oder erfundenen Werte.",
   "markt": {
     "kleinUndMittel": {
       "wert": "99,3 %",
@@ -25,25 +25,203 @@
       "quelle": "Statistisches Bundesamt, Berichtsjahr 2025",
       "url": "https://www.presseportal.de/pm/32102/6164556",
       "werte": [
-        { "label": "Klein", "klasse": "10 bis 49 Beschäftigte", "prozent": 51 },
-        { "label": "Mittel", "klasse": "50 bis 249 Beschäftigte", "prozent": 65 },
-        { "label": "Groß", "klasse": "ab 250 Beschäftigten", "prozent": 86 }
+        {
+          "label": "Klein",
+          "klasse": "10 bis 49 Beschäftigte",
+          "prozent": 51
+        },
+        {
+          "label": "Mittel",
+          "klasse": "50 bis 249 Beschäftigte",
+          "prozent": 65
+        },
+        {
+          "label": "Groß",
+          "klasse": "ab 250 Beschäftigten",
+          "prozent": 86
+        }
       ]
     }
   },
-  "sage": {
-    "_hinweis": "Einstiegspreise je Programm, wörtlich aus den Preisangaben der Profile. Pauschal: Betrag je Monat für das genannte Paket. Je Nutzer: Betrag je Nutzer oder Beschäftigtem und Monat.",
+  "preise": {
+    "_hinweis": "Erstes bezahltes Paket laut Preisangabe im Profil, netto beziehungsweise wie vom Hersteller angegeben. Pauschal: Betrag je Monat. Je Nutzer: Betrag je Nutzer und Monat. Gratis: Programme mit kostenlosem Einstieg oder kostenloser Edition. Darüber: Beträge, die die Skala der Pauschalpreise sprengen.",
     "pauschal": [
-      { "slug": "sage-50-handwerk", "paket": "Essential, 1 Benutzer", "betrag": 19.9 },
-      { "slug": "sage-payroll", "paket": "Essentials, 5 Beschäftigte", "betrag": 20 },
-      { "slug": "sage-active", "paket": "Starter, 5 Nutzer", "betrag": 25 },
-      { "slug": "sage-hr-payroll", "paket": "Essentials, 5 Beschäftigte", "betrag": 40 }
+      {
+        "slug": "fastbill",
+        "paket": "Solo",
+        "betrag": 10
+      },
+      {
+        "slug": "lexware-office",
+        "paket": "S",
+        "betrag": 7.9
+      },
+      {
+        "slug": "sevdesk",
+        "paket": "Rechnung",
+        "betrag": 12.9
+      },
+      {
+        "slug": "easybill",
+        "paket": "Starter",
+        "betrag": 12
+      },
+      {
+        "slug": "billomat",
+        "paket": "Professional",
+        "betrag": 29
+      },
+      {
+        "slug": "orgamax-buchhaltung",
+        "paket": "S",
+        "betrag": 25.9
+      },
+      {
+        "slug": "accountable",
+        "paket": "Buchhaltung",
+        "betrag": 24.9
+      },
+      {
+        "slug": "papierkram",
+        "paket": "S",
+        "betrag": 12.9
+      },
+      {
+        "slug": "sage-active",
+        "paket": "Starter",
+        "betrag": 25
+      },
+      {
+        "slug": "lexware-office-lohn-gehalt",
+        "paket": "Einstieg",
+        "betrag": 12.9
+      },
+      {
+        "slug": "datev-lohn-und-gehalt",
+        "paket": "Einstieg",
+        "betrag": 15.86
+      },
+      {
+        "slug": "sage-payroll",
+        "paket": "Essentials, 5 Beschäftigte",
+        "betrag": 20
+      },
+      {
+        "slug": "sage-hr-payroll",
+        "paket": "Essentials, 5 Beschäftigte",
+        "betrag": 40
+      },
+      {
+        "slug": "agenda-personalwesen",
+        "paket": "Komplettsystem",
+        "betrag": 50
+      },
+      {
+        "slug": "sage-50-handwerk",
+        "paket": "Essential, 1 Benutzer",
+        "betrag": 19.9
+      },
+      {
+        "slug": "plentyone",
+        "paket": "Lite",
+        "betrag": 59
+      },
+      {
+        "slug": "xentral",
+        "paket": "Launch, bis 500.000 Euro Jahresumsatz",
+        "betrag": 99
+      }
     ],
     "jeNutzer": [
-      { "slug": "sage-hr", "paket": "Basis, je Beschäftigtem", "betrag": 4.5 },
-      { "slug": "sage-sales-management", "paket": "Professional, ab 5 Nutzern", "betrag": 55 },
-      { "slug": "sage-100", "paket": "Warenwirtschaft", "betrag": 56 }
+      {
+        "slug": "absence-io",
+        "paket": "Starter",
+        "betrag": 2.99
+      },
+      {
+        "slug": "clockodo",
+        "paket": "Basic",
+        "betrag": 4
+      },
+      {
+        "slug": "sage-hr",
+        "paket": "Basis",
+        "betrag": 4.5
+      },
+      {
+        "slug": "hrlab",
+        "paket": "Core, ab 30 Nutzern",
+        "betrag": 6
+      },
+      {
+        "slug": "hubspot-sales-hub",
+        "paket": "Starter",
+        "betrag": 7
+      },
+      {
+        "slug": "factorial",
+        "paket": "Einstieg",
+        "betrag": 8
+      },
+      {
+        "slug": "salesforce-sales-cloud",
+        "paket": "Starter Suite",
+        "betrag": 25
+      },
+      {
+        "slug": "cobra-crm",
+        "paket": "Cloud Essential",
+        "betrag": 36
+      },
+      {
+        "slug": "weclapp",
+        "paket": "Starter",
+        "betrag": 39
+      },
+      {
+        "slug": "cas-genesisworld",
+        "paket": "Premium, Referenzwert",
+        "betrag": 39.9
+      },
+      {
+        "slug": "superoffice-crm",
+        "paket": "Starter",
+        "betrag": 45
+      },
+      {
+        "slug": "sage-sales-management",
+        "paket": "Professional, ab 5 Nutzern",
+        "betrag": 55
+      },
+      {
+        "slug": "sage-100",
+        "paket": "Warenwirtschaft",
+        "betrag": 56
+      },
+      {
+        "slug": "microsoft-dynamics-365-business-central",
+        "paket": "Essentials",
+        "betrag": 69.3
+      }
     ],
-    "richtpreis": { "slug": "sage-intacct", "paket": "Standard, Richtpreis netto", "betrag": 1390 }
+    "gratis": [
+      "centralstationcrm",
+      "papierkram",
+      "jtl-wawi",
+      "zoho-crm",
+      "odoo"
+    ],
+    "darueber": [
+      {
+        "slug": "haufe-x360",
+        "paket": "Mindestbuchungsbetrag",
+        "betrag": 449
+      },
+      {
+        "slug": "sage-intacct",
+        "paket": "Standard, Richtpreis",
+        "betrag": 1390
+      }
+    ]
   }
 }
