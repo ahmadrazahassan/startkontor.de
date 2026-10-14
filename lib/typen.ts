@@ -241,6 +241,8 @@ export type Partner = {
   netzwerk: "direkt" | "Impact";
   aktiv: boolean;
   zielLink: string;
+  /** Nur bei Impact: true hängt Zielseite (u) und Platzierung (subId1) an. Standard ist der Link unverändert. */
+  tiefenlinks?: boolean;
   werbemittel?: PartnerWerbemittel;
 };
 

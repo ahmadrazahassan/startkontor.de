@@ -22,8 +22,9 @@ export function partnerFuer(anbieter: Pick<Anbieter, "partner">, partner: Partne
 
 /**
  * Baut den ausgehenden Link. Ohne live Partner ist das immer die direkte Herstellerseite (zielUrl).
- * Impact: Zielseite im Parameter u (URL kodiert), Platzierung als subId1.
- * Die genauen Parameter muss der Betreiber vor der Aktivierung beim Partnermanagement bestätigen.
+ * Impact: Standard ist der Trackinglink unverändert, so wie ihn das Partnerkonto liefert.
+ * Nur mit tiefenlinks === true werden Zielseite (u, URL kodiert) und Platzierung (subId1) angehängt.
+ * Das darf der Betreiber erst aktivieren, wenn das Partnerprogramm Tiefenlinks ausdrücklich erlaubt.
  */
 export function linkFuer(
   anbieter: Pick<Anbieter, "partner" | "zielUrl" | "slug">,
@@ -34,7 +35,7 @@ export function linkFuer(
   if (!p || !istLive(p)) {
     return { href: anbieter.zielUrl, werbung: false, partner: null };
   }
-  if (p.netzwerk === "Impact") {
+  if (p.netzwerk === "Impact" && p.tiefenlinks === true) {
     const trenner = p.zielLink.includes("?") ? "&" : "?";
     const href = `${p.zielLink}${trenner}u=${encodeURIComponent(anbieter.zielUrl)}&subId1=${encodeURIComponent(platzierung)}`;
     return { href, werbung: true, partner: p.schluessel };
@@ -61,9 +62,9 @@ export function bannerSatzFuer(platzierung: BannerPlatzierung, partner: Partner[
   return null;
 }
 
-/** Link eines Banners: Impact Tiefenlink auf die Landingpage des Bannersatzes. Nur bei live Partner aufrufen. */
+/** Link eines Banners: bei Impact mit erlaubten Tiefenlinks auf die Landingpage des Bannersatzes, sonst der Trackinglink. Nur bei live Partner aufrufen. */
 export function bannerLink(partner: Partner, landing: string, platzierung: string): string {
-  if (partner.netzwerk === "Impact") {
+  if (partner.netzwerk === "Impact" && partner.tiefenlinks === true) {
     const trenner = partner.zielLink.includes("?") ? "&" : "?";
     return `${partner.zielLink}${trenner}u=${encodeURIComponent(landing)}&subId1=${encodeURIComponent(platzierung)}`;
   }

@@ -1,6 +1,6 @@
 {
   "stand": "2026-10-14",
-  "freigabebasis": "Der Betreiber hat die Zulassung für diese drei Partnerprogramme bestätigt und die zu verwendenden Links bereitgestellt.",
+  "freigabebasis": "Der Betreiber hat die Zulassung für diese Partnerprogramme bestätigt und die zu verwendenden Links bereitgestellt.",
   "partner": [
     {
       "schluessel": "pipedrive",
@@ -31,6 +31,24 @@
       "netzwerk": "direkt",
       "aktiv": true,
       "zielLink": "https://www.odoo.com/r/trustpilot?utm_medium=company_profile&utm_source=startkontor.de&utm_campaign=domain_click"
+    },
+    {
+      "schluessel": "sage",
+      "name": "Sage",
+      "produkte": [
+        "sage-active",
+        "sage-payroll",
+        "sage-hr",
+        "sage-hr-payroll",
+        "sage-sales-management",
+        "sage-100",
+        "sage-50-handwerk",
+        "sage-intacct"
+      ],
+      "netzwerk": "Impact",
+      "aktiv": true,
+      "tiefenlinks": false,
+      "zielLink": "https://sagegmbh.sjv.io/X4qb2G"
     }
   ]
 }
