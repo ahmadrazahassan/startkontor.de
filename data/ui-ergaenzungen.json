@@ -1,0 +1,22 @@
+{
+  "_hinweis": "Ergänzende UI Texte, die in startkontor-daten.json fehlen. Sie werden beim Laden unter ui eingefügt. Die Originaldatei bleibt unverändert und austauschbar. Doppelte Schlüssel lassen den Build fehlschlagen.",
+  "ui": {
+    "barrierefreiheit": {
+      "hauptnavigation": "Hauptnavigation",
+      "menue": "Menü",
+      "fussnavigation": "Fußzeile",
+      "brotkrumen": "Brotkrumen",
+      "schnellzugriff": "Schnellzugriff",
+      "anfangsbuchstaben": "Anfangsbuchstaben",
+      "suchergebnisse": "Suchergebnisse",
+      "bildPlatzhalter": "Platzhalter für ein Bild"
+    },
+    "labels": {
+      "punkte": "Punkte",
+      "punkt": "Punkt"
+    },
+    "knoepfe": {
+      "neuLaden": "Seite neu laden"
+    }
+  }
+}

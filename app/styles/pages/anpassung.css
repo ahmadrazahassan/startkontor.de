@@ -1,0 +1,106 @@
+@layer pages {
+  /*
+   * Lange Wörter werden nie getrennt. Überschriften mit einem langen Wort (Eigenschaft --wl, gesetzt von den Komponenten)
+   * werden nur so weit verkleinert, dass das Wort in die Spalte passt. --abzug ist der horizontale Platz, den
+   * Seitenränder und Einrückungen im jeweiligen Zusammenhang belegen. Am Desktop gewinnt immer die normale Größe.
+   */
+  .prioritaet__titel {
+    --abzug: 100px;
+    font-size: min(1.375rem, calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.64)));
+  }
+
+  .akte__titel {
+    --abzug: 100px;
+    font-size: min(1.5rem, calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.64)));
+  }
+
+  .titelkarte__titel {
+    --abzug: 90px;
+    font-size: min(1.5rem, calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.64)));
+  }
+
+  .register__titel {
+    --abzug: 160px;
+    font-size: min(1.25rem, calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.6)));
+  }
+
+  .aktenzeile__name {
+    --abzug: 90px;
+    font-size: min(1.375rem, calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.6)));
+  }
+
+  .fristeintrag__titel {
+    --abzug: 150px;
+    font-size: min(1.25rem, calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.6)));
+  }
+
+  .fristkompakt__titel {
+    --abzug: 110px;
+    font-size: min(1.125rem, calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.6)));
+  }
+
+  .kriterium__titel {
+    --abzug: 60px;
+    font-size: min(1.375rem, calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.64)));
+  }
+
+  .artikel__h2 {
+    --abzug: 130px;
+    font-size: min(clamp(1.625rem, 1.25rem + 1.2vw, 2.25rem), calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.64)));
+  }
+
+  .abschnitt__inhalt > h2 {
+    --abzug: 60px;
+    font-size: min(var(--fs-h2), calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.64)));
+  }
+
+  .abschnitt_inline .abschnitt__inhalt > h2 {
+    font-size: min(clamp(1.5rem, 1.2rem + 1vw, 2rem), calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.64)));
+  }
+
+  .akkordeon__frage {
+    --abzug: 130px;
+    font-size: min(1.1875rem, calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.58)));
+  }
+
+  /* Einspaltige Grids dürfen nie breiter werden als ihr Container (verhindert Aufweiten durch lange Wörter) */
+  :where(
+      .fristenstrecke,
+      .akten_breit_liste,
+      .leitfadengruppen,
+      .glossarseite,
+      .faqseite,
+      .kontaktseite,
+      .briefseite,
+      .artikelfuss,
+      .nichtgefunden,
+      .bestaetigung,
+      .stationskopf,
+      .filterleiste,
+      .formular,
+      .feld,
+      .aktendeckel__daten,
+      .planer__liste,
+      .checkliste__kopf,
+      .abschlussband,
+      .leitfadengruppe,
+      .checklistenseite,
+      .dossier,
+      .eignung,
+      .kriterium,
+      .verwandt
+    ) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    .artikel__checkliste {
+      padding: var(--a-3);
+    }
+
+    .checkliste__text,
+    .checkliste__hinweis {
+      font-size: 0.9375rem;
+    }
+  }
+}

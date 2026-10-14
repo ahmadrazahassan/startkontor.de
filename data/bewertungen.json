@@ -1,0 +1,4 @@
+{
+  "_hinweis": "Redaktionelle Bewertungen. Schlüssel ist der Anbieter Slug aus startkontor-daten.json. Solange hier nichts steht, zeigt die Website keine Sterne und keine Noten: Es wird nie ein Wert erfunden. Pro Eintrag: gesamt (0 bis 5, eine Nachkommastelle), stand (ISO Datum der Bewertung) und kriterien (Liste aus label und wert, ebenfalls 0 bis 5). Die Kriterien und das Verfahren müssen auf der Seite Arbeitsweise erklärt sein, bevor Werte erscheinen. Beispiel: { \"billomat\": { \"gesamt\": 4.0, \"stand\": \"2026-10-13\", \"kriterien\": [ { \"label\": \"Funktionsumfang\", \"wert\": 4.0 } ] } }",
+  "bewertungen": {}
+}

@@ -1,0 +1,168 @@
+@layer components {
+  /* Akte: weiße Karte mit weichem Rand und farbigem Kopfbalken (liegt über dem Bild) */
+  .akte {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-4);
+    box-shadow: var(--schatten-karte);
+    transition:
+      box-shadow 220ms ease-out,
+      transform 220ms ease-out;
+  }
+
+  .akte::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 2;
+    height: 6px;
+    background: var(--sky);
+    transition: background-color var(--t-farbe);
+  }
+
+  .akte:hover,
+  .akte:focus-within,
+  .akte[data-aktuell="ja"] {
+    box-shadow: var(--schatten-hoch);
+  }
+
+  .akte:hover::before,
+  .akte:focus-within::before,
+  .akte[data-aktuell="ja"]::before {
+    background: var(--primary);
+  }
+
+  .akte[data-ton="warn"]::before {
+    background: var(--warn);
+  }
+
+  .akte__bild {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .akte__bild .bild {
+    border-radius: 0;
+  }
+
+  .akte__koerper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--a-3);
+    padding: var(--a-5);
+  }
+
+  .akte__kennung {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2.75rem;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--sky);
+    user-select: none;
+  }
+
+  .akte__titel {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .akte__link {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .akte__link:hover {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  .akte__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .akte__link:focus-visible {
+    outline: none;
+  }
+
+  .akte:has(.akte__link:focus-visible) {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  .akte__text {
+    font-size: var(--fs-small);
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: none;
+  }
+
+  .akte__fuss {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: var(--a-3);
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: var(--fs-button);
+    color: var(--primary);
+  }
+
+  .akte:hover .akte__fuss {
+    color: var(--primary-hover);
+  }
+
+  .akte:hover .akte__fuss .icon {
+    transform: translateX(3px);
+  }
+
+  .akte__fuss .icon {
+    transition: transform var(--t-farbe);
+  }
+
+  /* Raster für Akten */
+  .akten {
+    display: grid;
+    gap: var(--spalten-abstand);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  }
+
+  .akten_zwei {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+  }
+
+  .akten_fuenf {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  @media (min-width: 640px) {
+    .akten_fuenf {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .akten_fuenf {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .akten_fuenf .akte__koerper {
+      padding: var(--a-4);
+    }
+
+    .akten_fuenf .akte__titel {
+      font-size: 1.25rem;
+    }
+  }
+}

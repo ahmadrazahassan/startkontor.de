@@ -1,0 +1,305 @@
+{
+  "_hinweis": "Angaben zum Hersteller je Anbieter Slug: Unternehmen und Ort laut Impressum oder Herstellerseite, mit Quelle und Abrufdatum. Vor dem Start prüfen und bei Änderungen anpassen. Keine Angabe wird geschätzt: Fehlt ein Eintrag, zeigt die Review Seite den Abschnitt nur mit der Herstellerseite.",
+  "profile": {
+    "billomat": {
+      "unternehmen": "aifinyo AG",
+      "ort": "Berlin",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum von Billomat",
+        "url": "https://www.billomat.com/en/imprint/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "fastbill": {
+      "unternehmen": "FastBill GmbH",
+      "ort": "Frankfurt am Main",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der FastBill GmbH",
+        "url": "https://www.fastbill.com/impressum"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "lexware-office": {
+      "unternehmen": "Haufe-Lexware GmbH & Co. KG",
+      "ort": "Freiburg im Breisgau",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum von Lexware",
+        "url": "https://shop.lexware.de/Impressum"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "sage-active": {
+      "unternehmen": "Sage GmbH",
+      "ort": "Frankfurt am Main",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der Sage GmbH",
+        "url": "https://www.sage.com/de-de/impressum/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "sevdesk": {
+      "unternehmen": "sevdesk GmbH",
+      "ort": "Offenburg",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum von sevdesk",
+        "url": "https://sevdesk.de/impressum/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "agenda-personalwesen": {
+      "unternehmen": "Agenda Informationssysteme GmbH & Co. KG",
+      "ort": "Rosenheim",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum von Agenda",
+        "url": "https://www.agenda-software.de/impressum.php"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "datev-lohn-und-gehalt": {
+      "unternehmen": "DATEV eG",
+      "ort": "Nürnberg",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der DATEV eG",
+        "url": "https://www.datev.de/web/de/berufsgruppenuebergreifend/ueber-datev/impressum"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "lexware-office-lohn-gehalt": {
+      "unternehmen": "Haufe-Lexware GmbH & Co. KG",
+      "ort": "Freiburg im Breisgau",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum von Lexware",
+        "url": "https://shop.lexware.de/Impressum"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "personio-payroll": {
+      "unternehmen": "Personio SE & Co. KG",
+      "ort": "München",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Key Facts von Personio (Pressematerial)",
+        "url": "https://hr.personio.de/hubfs/Key_Facts_DE.pdf"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "sage-hr-payroll": {
+      "unternehmen": "Sage GmbH",
+      "ort": "Frankfurt am Main",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der Sage GmbH",
+        "url": "https://www.sage.com/de-de/impressum/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "sage-payroll": {
+      "unternehmen": "Sage GmbH",
+      "ort": "Frankfurt am Main",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der Sage GmbH",
+        "url": "https://www.sage.com/de-de/impressum/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "factorial": {
+      "unternehmen": "Everyday Software, S.L. (Marke Factorial)",
+      "ort": "Barcelona",
+      "land": "Spanien",
+      "quelle": {
+        "titel": "Rechtliche Hinweise von Factorial",
+        "url": "https://factorialhr.com/legal"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "hibob-bob": {
+      "unternehmen": "Hi Bob (DE) GmbH (deutsche Gesellschaft von HiBob)",
+      "ort": "Berlin",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Gesellschaften und Auftragsverarbeiter von HiBob",
+        "url": "https://www.hibob.com/privacy/hibob-subsidiaries-and-sub-processors/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "hr-works": {
+      "unternehmen": "HRworks GmbH",
+      "ort": "Freiburg im Breisgau",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum von HR WORKS",
+        "url": "https://www.hrworks.de/unternehmen/impressum/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "kenjo": {
+      "unternehmen": "Kenjo GmbH",
+      "ort": "Berlin",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum von Kenjo",
+        "url": "https://www.kenjo.io/de/legal/impressum"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "personio": {
+      "unternehmen": "Personio SE & Co. KG",
+      "ort": "München",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Key Facts von Personio (Pressematerial)",
+        "url": "https://hr.personio.de/hubfs/Key_Facts_DE.pdf"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "sage-hr": {
+      "unternehmen": "Sage GmbH",
+      "ort": "Frankfurt am Main",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der Sage GmbH",
+        "url": "https://www.sage.com/de-de/impressum/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "centralstationcrm": {
+      "unternehmen": "42he GmbH",
+      "ort": "Köln",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum von CentralStationCRM",
+        "url": "https://centralstationcrm.com/imprint"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "hubspot-sales-hub": {
+      "unternehmen": "HubSpot, Inc.",
+      "ort": "Cambridge, Massachusetts",
+      "land": "USA",
+      "quelle": {
+        "titel": "Kontaktseite von HubSpot",
+        "url": "https://www.hubspot.com/company/contact"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "pipedrive": {
+      "unternehmen": "Pipedrive OÜ",
+      "ort": "Tallinn",
+      "land": "Estland",
+      "quelle": {
+        "titel": "Impressum von Pipedrive",
+        "url": "https://www.pipedrive.com/de/impressum"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "sage-sales-management": {
+      "unternehmen": "Sage GmbH",
+      "ort": "Frankfurt am Main",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der Sage GmbH",
+        "url": "https://www.sage.com/de-de/impressum/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "superoffice-crm": {
+      "unternehmen": "SuperOffice AS",
+      "ort": "Oslo",
+      "land": "Norwegen",
+      "quelle": {
+        "titel": "Kontaktseite von SuperOffice",
+        "url": "https://www.superoffice.com/company/contact/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "zoho-crm": {
+      "unternehmen": "Zoho Corporation GmbH",
+      "ort": "Essen",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der Zoho Corporation GmbH",
+        "url": "https://www.zoho.com/de/impressum.html"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "microsoft-dynamics-365-business-central": {
+      "unternehmen": "Microsoft Corporation",
+      "ort": "Redmond, Washington",
+      "land": "USA",
+      "quelle": {
+        "titel": "Fakten zu Microsoft",
+        "url": "https://news.microsoft.com/facts-about-microsoft/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "odoo": {
+      "unternehmen": "Odoo S.A.",
+      "ort": "Grand-Rosière",
+      "land": "Belgien",
+      "quelle": {
+        "titel": "Standorte von Odoo",
+        "url": "https://odoo.com/fr_FR/help"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "sage-100": {
+      "unternehmen": "Sage GmbH",
+      "ort": "Frankfurt am Main",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der Sage GmbH",
+        "url": "https://www.sage.com/de-de/impressum/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "sage-50-handwerk": {
+      "unternehmen": "Sage GmbH",
+      "ort": "Frankfurt am Main",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der Sage GmbH",
+        "url": "https://www.sage.com/de-de/impressum/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "sage-intacct": {
+      "unternehmen": "Sage GmbH",
+      "ort": "Frankfurt am Main",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum der Sage GmbH",
+        "url": "https://www.sage.com/de-de/impressum/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "weclapp": {
+      "unternehmen": "weclapp GmbH",
+      "ort": "Kitzingen",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum von weclapp",
+        "url": "https://www.weclapp.com/en/credits-and-legal-notices/"
+      },
+      "geprueft": "2026-10-13"
+    },
+    "xentral": {
+      "unternehmen": "Xentral ERP Software GmbH",
+      "ort": "Augsburg",
+      "land": "Deutschland",
+      "quelle": {
+        "titel": "Impressum von Xentral",
+        "url": "https://xentral.com/en/legal/impressum"
+      },
+      "geprueft": "2026-10-13"
+    }
+  }
+}

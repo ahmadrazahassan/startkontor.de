@@ -1,0 +1,2226 @@
+{
+  "_hinweis": "17 zusätzliche Softwareprofile und ausführliche Analysen. Originaldaten bleiben unverändert. Quellen und öffentliche Preisangaben sind vom 14. Oktober 2026; keine erfundenen Nutzerbewertungen.",
+  "stand": "2026-10-14",
+  "anbieter": [
+    {
+      "slug": "easybill",
+      "name": "easybill",
+      "baustein": "finanzen",
+      "stationen": [
+        "gruendung",
+        "erste-umsaetze",
+        "wachstum"
+      ],
+      "partner": null,
+      "logo": "/logos/easybill.svg",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": true,
+      "kurz": "Cloudsoftware für Rechnungen und vorbereitende Buchhaltung mit einer eigenen Anbindung für Shops und Marktplätze.",
+      "fuerWen": [
+        "Selbstständige mit regelmäßigem Rechnungsversand und überschaubarer Kundenverwaltung.",
+        "Onlinehändler, die Bestellungen in Rechnungen und Versandabläufe überführen möchten.",
+        "Teams, die Ausgangsrechnungen an eine bestehende Buchhaltung oder ihre Steuerberatung übergeben."
+      ],
+      "wenigerPassend": [
+        "Unternehmen, die ein vollständiges ERP mit Produktionsplanung und komplexer Lagersteuerung suchen.",
+        "Teams mit vielen Personen, wenn der erforderliche Tarif und zusätzliche Zugänge das Budget übersteigen.",
+        "Gründende, die den kostenlosen Tarif trotz vieler Kundenkontakte dauerhaft nutzen möchten."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Starter: 12 Euro im Monat oder 9 Euro bei jährlicher Abrechnung",
+        "zeilen": [
+          "Free: 0 Euro, mit begrenzten Dokumenten und Kontakten.",
+          "Starter: 12 Euro monatlich; 9 Euro je Monat im Jahrespaket.",
+          "Professional: ab 39 Euro monatlich; ab 25 Euro je Monat im Jahrespaket.",
+          "Premium: ab 45 Euro monatlich; ab 37 Euro je Monat im Jahrespaket.",
+          "Zusatzdokumente, Archivierung, Zahlungen und zusätzliche Mitarbeiter können weitere Kosten verursachen."
+        ],
+        "hinweis": "Reguläre Einstiegspreise laut Preisübersicht. Dokumentenvolumen und Zahlungsturnus beeinflussen den Gesamtpreis; easybill Connect und weitere Leistungen separat prüfen."
+      },
+      "funktionen": [
+        "Angebote, Rechnungen, Lieferscheine und Mahnungen erstellen und versenden.",
+        "E-Rechnungen in XRechnung und ZUGFeRD verarbeiten, abhängig vom gebuchten Umfang.",
+        "Vorbereitende Buchhaltung und Übergabe an DATEV oder Lexware Office.",
+        "Bestellimport und Versandabläufe über easybill Connect mit Shop- und Marktplatzanbindungen.",
+        "Wiederkehrende Dokumente, Projektverwaltung, Zeiterfassung und Programmierschnittstelle nach REST in den dafür vorgesehenen Tarifen."
+      ],
+      "grenzen": [
+        "Free ist auf drei Kontakte und ein begrenztes monatliches Dokumentenkontingent ausgelegt.",
+        "Mehrere Zugänge, Automatisierungen und Projekte sind tarifabhängig.",
+        "Archivierung und Transaktionen können zusätzlich zum Paketpreis berechnet werden.",
+        "Eine Shopanbindung muss mit Ihren Steuersachverhalten, Retouren und Rechnungsabläufen geprüft werden."
+      ],
+      "vertrag": "Es gibt monatliche, vierteljährliche, halbjährliche und jährliche Pakete. Der längere Zahlungsturnus wird im Voraus abgerechnet. Wählen Sie die Laufzeit bewusst und prüfen Sie Kündigung, Archivzugriff und Datenexport in den aktuellen Bedingungen.",
+      "fragen": [
+        "Welche Dokumente zählen bei unserem Bestell- und Belegvolumen ins Kontingent?",
+        "Was kosten Archivierung, zusätzliche Nutzer und Transaktionen in unserem Fall?",
+        "Welche Funktionen deckt easybill Connect für unsere Shops und Retouren ab?",
+        "Wie erfolgt die Übergabe an unsere Steuerberatung und bestehende Buchhaltung?",
+        "Welche Daten und Dokumente können wir nach einer Kündigung exportieren?"
+      ],
+      "einordnung": "easybill ist besonders interessant, wenn Rechnungsstellung und Bestellimport den Engpass bilden. Der günstige Einstieg sagt wenig über die Kosten eines Onlinehandels mit vielen Dokumenten aus. Rechnen Sie Paket, Zusatzvolumen, Archivierung und Anbindungen gemeinsam. Für eine eigenständige Finanzbuchhaltung oder ein vollständiges ERP sollten Sie den benötigten Umfang getrennt prüfen.",
+      "quellen": [
+        {
+          "titel": "Pakete und Preise",
+          "url": "https://www.easybill.de/preise/"
+        },
+        {
+          "titel": "Zahlungsturnus und Paketkosten",
+          "url": "https://support.easybill.de/hc/de/articles/15735726223772-Was-kostet-easybill"
+        },
+        {
+          "titel": "Dokumentarten im Helpcenter",
+          "url": "https://support.easybill.de/hc/de/articles/360019838360-Welche-Dokumente-k%C3%B6nnen-mit-easybill-erstellt-werden"
+        }
+      ],
+      "zielUrl": "https://www.easybill.de/preise/",
+      "url": "/anbieter/easybill"
+    },
+    {
+      "slug": "orgamax-buchhaltung",
+      "name": "orgaMAX Buchhaltung",
+      "baustein": "finanzen",
+      "stationen": [
+        "gruendung",
+        "erste-umsaetze",
+        "wachstum"
+      ],
+      "partner": null,
+      "logo": "/logos/orgamax-buchhaltung.svg",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "Buchhaltungssoftware im Browser für Angebote, Rechnungen, Belege und Auswertungen, mit einer getrennten Produktlinie für ERP.",
+      "fuerWen": [
+        "Kleine Unternehmen, die Rechnungen, Bankvorgänge und Belege an einem Ort bearbeiten möchten.",
+        "Selbstständige mit Bedarf an EÜR, Auswertungen zur Umsatzsteuer und Steuerberaterübergabe.",
+        "Betriebe, die unterschiedliche Dokumentarten und wiederkehrende kaufmännische Abläufe organisieren."
+      ],
+      "wenigerPassend": [
+        "Fertigungsbetriebe, die Materialbedarfsplanung und Produktionssteuerung benötigen.",
+        "Unternehmen, die den Umfang von orgaMAX ERP automatisch im Buchhaltungspaket erwarten.",
+        "Teams, die komplexe Lager- oder Handelsprozesse ohne vorherigen Funktionsabgleich übernehmen möchten."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "S: regulär 25,90 Euro im Monat",
+        "zeilen": [
+          "S: regulär 25,90 Euro im Monat.",
+          "M: regulär 35,90 Euro im Monat.",
+          "L: regulär 55,90 Euro im Monat.",
+          "Die Preisübersicht zeigt zusätzlich zeitlich begrenzte Aktionen bei jährlicher Abrechnung."
+        ],
+        "hinweis": "Reguläre Referenzpreise aus der Herstellerübersicht; Rabattaktionen sind hier nicht als dauerhafte Preise dargestellt. Vertragslaufzeit, Zusatzmodule und Preis nach Ende einer Aktion prüfen."
+      },
+      "funktionen": [
+        "Angebote, Aufträge, Lieferscheine und Rechnungen einschließlich E-Rechnungen.",
+        "Belegerfassung, Bankverknüpfung, offener Zahlungsbestand und Mahnungen.",
+        "Elektronisches Kassenbuch und Auswertungen für EÜR, GuV und Umsatzsteuervoranmeldung.",
+        "DATEV- und Anbindungen an ELSTER sowie Zugang für die Steuerberatung.",
+        "Erweiterte Dokumentarten und Automatisierungen in höheren Paketen; Lagerumfang im dafür vorgesehenen Paket."
+      ],
+      "grenzen": [
+        "orgaMAX Buchhaltung und orgaMAX ERP sind unterschiedliche Produkte.",
+        "Automatisches Mahnwesen und erweiterte Dokumentabläufe sind nicht in jedem Paket enthalten.",
+        "Das Lagerpaket sollte anhand von Varianten, Lagerorten und Ihrem Bestellprozess geprüft werden.",
+        "Aktionspreise können den dauerhaften Aufwand verdecken, wenn nur das erste Vertragsjahr betrachtet wird."
+      ],
+      "vertrag": "Der Hersteller bietet unterschiedliche Abrechnungsmodelle und Aktionen an. Die konkrete Laufzeit, Kündigungsfrist und Bedingungen eines rabattierten Pakets müssen im gewählten Angebot geprüft werden. Ein veröffentlichter Monatspreis allein belegt keine monatliche Kündbarkeit.",
+      "fragen": [
+        "Welches Paket unterstützt unsere Abschlags-, Sammel- und Schlussrechnungen?",
+        "Welche Lagerfunktionen gehören zum Buchhaltungspaket und wann ist ERP erforderlich?",
+        "Was kostet das Paket nach Ablauf des beworbenen Rabatts?",
+        "Wie werden Bankvorgänge, Belege und Übergaben an DATEV im Alltag geprüft?",
+        "Welche Daten lassen sich vollständig exportieren?"
+      ],
+      "einordnung": "orgaMAX Buchhaltung bündelt viele Aufgaben kleiner Betriebe in einer Oberfläche. Der entscheidende Auswahlpunkt ist die Grenze zur separaten Lösung zur Unternehmenssteuerung. Prüfen Sie Ihr Dokument- und Lagerkonzept im konkreten Paket und vergleichen Sie reguläre Folgekosten. Für klassische Rechnungs- und Belegabläufe ist das Programm eine sinnvolle Kandidatin für einen eigenen Praxistest.",
+      "quellen": [
+        {
+          "titel": "Pakete und reguläre Referenzpreise",
+          "url": "https://www.orgamax.de/orgamax-buchhaltung/preise/"
+        },
+        {
+          "titel": "Funktionen der Buchhaltung",
+          "url": "https://www.orgamax.de/orgamax-buchhaltung/funktionen/"
+        },
+        {
+          "titel": "Abgrenzung Buchhaltung und ERP",
+          "url": "https://www.orgamax.de/funktionsuebersicht-windows-und-online-1/"
+        }
+      ],
+      "zielUrl": "https://www.orgamax.de/orgamax-buchhaltung/preise/",
+      "url": "/anbieter/orgamax-buchhaltung"
+    },
+    {
+      "slug": "papierkram",
+      "name": "Papierkram",
+      "baustein": "finanzen",
+      "stationen": [
+        "gruendung",
+        "erste-umsaetze",
+        "erstes-team"
+      ],
+      "partner": null,
+      "logo": "/logos/papierkram.png",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": true,
+      "kurz": "Buchhaltung aus der Cloud mit Kunden- und Projektverwaltung, Zeiterfassung und einer Verbindung zwischen geleisteter Arbeit und Rechnung.",
+      "fuerWen": [
+        "Freiberufler und Dienstleister, die Projekte nach Zeit oder vereinbarten Leistungen abrechnen.",
+        "Gründende und kleine Teams mit Bedarf an Rechnungen, Belegen und Auswertungen zur EÜR.",
+        "Unternehmen, die die Zusammenarbeit mit der Steuerberatung durch strukturierte Datenübergaben vorbereiten möchten."
+      ],
+      "wenigerPassend": [
+        "Unternehmen mit umfangreicher Produktions- oder Mehrlagersteuerung.",
+        "Teams, die eine vollständige Lohnabrechnung als Teil des Programms benötigen.",
+        "Organisationen, die ohne Prüfung des Steuer- und Rechtsformumfangs eine allgemeine Bilanzlösung erwarten."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Free: 0 Euro; S laut Übersicht ab 12,90 Euro im Monat",
+        "zeilen": [
+          "Free: 0 Euro mit eingeschränktem Umfang.",
+          "S: laut Preisübersicht ab 12,90 Euro im Monat.",
+          "M: laut Preisübersicht ab 24,90 Euro im Monat.",
+          "L: laut Preisübersicht ab 49,90 Euro im Monat.",
+          "Zusätzliche Nutzer und Speichergrenzen hängen vom Paket ab."
+        ],
+        "hinweis": "Der Hersteller bietet monatliche und jährliche Abrechnung an. Den ausgewählten Zahlungsmodus sowie Zusatznutzer vor Abschluss prüfen; die Übersicht nennt Nettopreise."
+      },
+      "funktionen": [
+        "Angebote und Rechnungen aus Kunden- und Leistungsdaten erstellen.",
+        "Kunden, Projekte und Arbeitszeiten zusammen verwalten.",
+        "Belege digital erfassen und Zahlungen über Bankanbindungen zuordnen.",
+        "EÜR, Auswertungen zur Umsatzsteuer und weitere Berichte erzeugen.",
+        "Teamzugänge, rollenabhängige Rechte und Datenübergaben je nach Paket."
+      ],
+      "grenzen": [
+        "Die kostenlose Variante deckt nicht denselben Umfang wie die bezahlten Pakete ab.",
+        "Nutzerzahl und Speicherplatz begrenzen einzelne Pakete.",
+        "Steuerfunktionen richten sich vorrangig nach deutschen Anforderungen.",
+        "Ein Rechnungs- und Projektwerkzeug ersetzt keine umfassende Warenwirtschaft oder Lohnsoftware."
+      ],
+      "vertrag": "Papierkram bietet monatliche oder jährliche Vertragslaufzeit und Zahlungsweise an. Laut Preisseite ist die Kündigung bis zum Ende der gewählten Laufzeit möglich. Datenexport und Zugriff auf Unterlagen nach Vertragsende sollten Sie vorab bestätigen lassen.",
+      "fragen": [
+        "Welche Berichte und Übergaben benötigt unsere Steuerberatung und in welchem Paket stehen sie bereit?",
+        "Wie lassen sich Projektzeiten korrigieren und freigegebene Leistungen abrechnen?",
+        "Wie viele Nutzer und wie viel Speicher brauchen wir in einem vollständigen Jahr?",
+        "Welche E-Rechnungs- und Dokumentabläufe funktionieren für unsere Kundschaft?",
+        "Wie vollständig ist der Export von Kunden, Projekten, Belegen und Zeitdaten?"
+      ],
+      "einordnung": "Papierkram ist besonders plausibel für Dienstleister, bei denen Kundenarbeit, Zeitnachweis und Rechnung zusammengehören. Die Projektverbindung kann wichtiger sein als eine besonders lange allgemeine Liste der Buchhaltungsfunktionen. Entscheidend sind das erforderliche Paket, der Umfang der Berichte und eine klare Abstimmung mit der Steuerberatung. Für Lager, Produktion oder Lohn braucht es weitere Lösungen.",
+      "quellen": [
+        {
+          "titel": "Pakete, Laufzeiten und Grenzen",
+          "url": "https://www.papierkram.de/preise/"
+        },
+        {
+          "titel": "Funktionsübersicht",
+          "url": "https://www.papierkram.de/funktionen/"
+        }
+      ],
+      "zielUrl": "https://www.papierkram.de/preise/",
+      "url": "/anbieter/papierkram"
+    },
+    {
+      "slug": "accountable",
+      "name": "Accountable",
+      "baustein": "finanzen",
+      "stationen": [
+        "gruendung",
+        "erste-umsaetze"
+      ],
+      "partner": null,
+      "logo": "/logos/accountable.svg",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "App und Webanwendung für selbstständige Personen, die Rechnungen, Belege, Buchhaltung und deutsche Steuererklärungen organisieren.",
+      "fuerWen": [
+        "Selbstständige und Freiberufler, die ihre laufenden Einnahmen und Ausgaben selbst bearbeiten.",
+        "Gründende mit einer überschaubaren Struktur und dem Wunsch nach mobiler Belegerfassung.",
+        "Einzelpersonen, die Buchhaltung und unterstützte Steuererklärungen in einem Ablauf vorbereiten möchten."
+      ],
+      "wenigerPassend": [
+        "Unternehmen mit komplexen Konzern-, Produktions- oder Lagerprozessen.",
+        "Teams, die eine umfangreiche kaufmännische Mehrbenutzerverwaltung erwarten.",
+        "Betriebe, die ungeprüft davon ausgehen, dass jede Rechtsform und jeder steuerliche Sonderfall abgedeckt ist."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Buchhaltung: 24,90 Euro monatlich oder 19,90 Euro je Monat im Jahrestarif",
+        "zeilen": [
+          "Rechnungen Free: 0 Euro.",
+          "Rechnungen Plus: 12,40 Euro monatlich oder 9,90 Euro je Monat im Jahrestarif.",
+          "Buchhaltung: 24,90 Euro monatlich oder 19,90 Euro je Monat im Jahrestarif.",
+          "Steuern: 37,40 Euro monatlich oder 29,90 Euro je Monat im Jahrestarif.",
+          "Max erweitert die persönliche Betreuung; den gewählten Umfang und die Laufzeit auf der Preisseite prüfen."
+        ],
+        "hinweis": "Reguläre Preise ohne den beworbenen Einführungsrabatt. Support, Steuerumfang und Garantiebedingungen sind tarifabhängig; Zusatzanlagen können separat berechnet werden."
+      },
+      "funktionen": [
+        "Rechnungen einschließlich E-Rechnungen über Smartphone und je nach Tarif Webanwendung.",
+        "Ausgaben erfassen und Einnahmen über Bankverbindungen zuordnen.",
+        "Buchhaltung mit Datenzugang für eine Steuerberatung.",
+        "Vorbereitung und Übermittlung unterstützter deutscher Steuererklärungen im dafür vorgesehenen Tarif.",
+        "Tarifabhängige Unterstützung durch Steuercoaches und zusätzliche persönliche Begleitung."
+      ],
+      "grenzen": [
+        "Der volle Webzugriff ist nicht in allen Einstiegstarifen enthalten.",
+        "Buchhaltungs- und Steuerfunktionen sind nach Tarif getrennt.",
+        "Leistungen des Steuercoachs und Herstellergarantien haben einen definierten Umfang und Bedingungen.",
+        "Die Eignung für Ihre Rechtsform, Nebeneinkünfte und besonderen Steuerfälle muss vor der Nutzung geprüft werden."
+      ],
+      "vertrag": "Accountable zeigt monatliche und jährliche Preise sowie ein Angebot für Max mit eigener Bindung. Prüfen Sie die Vertragsdauer und Kündigung des konkret gewählten Tarifs. Eine jederzeit mögliche Kündigungserklärung ist nicht automatisch gleichbedeutend mit einem jederzeitigen Vertragsende.",
+      "fragen": [
+        "Deckt der Tarif unsere Rechtsform und alle benötigten Steuererklärungen ab?",
+        "Welche Funktionen stehen vollständig im Browser und welche nur in der App bereit?",
+        "Welche Unterlagen kann unsere Steuerberatung übernehmen?",
+        "Was kostet das Angebot nach Ende des Einführungsrabatts?",
+        "Welche Bedingungen und Ausschlüsse gelten für Unterstützung durch einen Coach und Garantien?"
+      ],
+      "einordnung": "Accountable passt vor allem zu einer selbstständigen Person, die ihre Finanzorganisation und unterstützte Steuerprozesse selbst in die Hand nehmen möchte. Der entscheidende Unterschied zwischen den Tarifen ist der Umfang von Buchhaltung, Webzugriff und Steuerleistungen. Prüfen Sie Ihre Fälle mit eigenen Unterlagen. Eine allgemein beworbene Garantie ersetzt diesen Funktionsabgleich nicht.",
+      "quellen": [
+        {
+          "titel": "Reguläre Tarife und Leistungsumfang",
+          "url": "https://www.accountable.de/preise/"
+        },
+        {
+          "titel": "Accountable für den deutschen Markt",
+          "url": "https://www.accountable.de/"
+        },
+        {
+          "titel": "Unterschiede zwischen den Abonnements",
+          "url": "https://www.accountable.de/help-center/ich-bin-mir-nicht-sicher-welches-abo-ich-waehlen-soll-was-sind-die-unterschiede/"
+        }
+      ],
+      "zielUrl": "https://www.accountable.de/preise/",
+      "url": "/anbieter/accountable"
+    },
+    {
+      "slug": "edlohn",
+      "name": "edlohn",
+      "baustein": "lohn",
+      "stationen": [
+        "erstes-team",
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/edlohn.png",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "Lohnabrechnung aus der Cloud von eurodata für professionelle Abrechner und die Zusammenarbeit zwischen Kanzlei und Unternehmen.",
+      "fuerWen": [
+        "Lohnbüros und Steuerkanzleien mit mehreren Mandanten.",
+        "Unternehmen mit eigener fachkundiger Lohnabrechnung und regelmäßigen Sonderfällen.",
+        "Betriebe, die Lohnunterlagen, Mitarbeiterzugriff und die Übergabe von Zeitdaten verbinden möchten."
+      ],
+      "wenigerPassend": [
+        "Gründende ohne Lohnfachwissen, die eine Lohnabrechnung allein durch wenige automatische Angaben erwarten.",
+        "Teams, die ausschließlich Urlaub und Zeit dokumentieren möchten.",
+        "Unternehmen, die ohne Angebotsprüfung einen festen Preis für beliebige Sonderabrechnungen erwarten."
+      ],
+      "preis": {
+        "status": "anfrage",
+        "zeilen": [
+          "Der Hersteller beschreibt ein nutzungsabhängiges Abrechnungsmodell.",
+          "Ein individueller Preis hängt von Abrechnungsumfang, Dienstleistung und ergänzenden Lösungen ab.",
+          "Für dieses Profil liegt kein aktuell verifizierter öffentlicher Eurobetrag vor."
+        ],
+        "hinweis": "Fordern Sie ein Angebot für Ihre Anzahl an Abrechnungen, Sonderfällen, Portalen und die benötigte Betreuung an."
+      },
+      "funktionen": [
+        "Webbasierte Lohn- und Gehaltsabrechnung mit Mandanten- und Rollenverwaltung.",
+        "Elektronische Meldeverfahren und Anbindung an ELStAM.",
+        "Unterstützung für Baulohn und Kurzarbeitergeld laut Produktbeschreibung.",
+        "Digitale Lohnakte und Bereitstellung von Unterlagen im Mitarbeiterportal.",
+        "Verbindungen zu Rechnungswesen, edtime und ergänzenden Mandantenlösungen."
+      ],
+      "grenzen": [
+        "Die Nutzung setzt einen fachlich belastbaren Abrechnungsprozess voraus.",
+        "Zeitwirtschaft und weitere ergänzende Lösungen müssen im Gesamtangebot abgegrenzt werden.",
+        "Ein nutzungsabhängiger Preis braucht ein realistisches Mengengerüst.",
+        "Die Produktbeschreibung richtet sich stark an professionelle Abrechner und Mandantenarbeit."
+      ],
+      "vertrag": "Der öffentliche Produktauftritt beschreibt ein nutzungsabhängiges Modell, aber keinen für alle Fälle belegten Vertragsrahmen. Lassen Sie Abrechnungseinheit, Mindestkosten, Laufzeit, Kündigung, Support und Datenzugriff nach einem Wechsel im Angebot festhalten.",
+      "fragen": [
+        "Wie werden Abrechnungen, Korrekturen und zusätzliche Mandanten berechnet?",
+        "Welche unserer Baulohn- und Sonderfälle sind im Angebot enthalten?",
+        "Welche Portale, Zeitdatenübergaben und Schnittstellen werden separat beauftragt?",
+        "Wie läuft eine Datenübernahme und eine parallele Kontrollabrechnung ab?",
+        "Wer übernimmt Vertretung und Unterstützung bei kritischen Fristen?"
+      ],
+      "einordnung": "edlohn ist eine fundierte Auswahloption für professionelle Lohnprozesse und Zusammenarbeit mit einer Kanzlei. Besonders relevant sind Mandantenfähigkeit, Rollen und Sonderfälle. Für ein erstes kleines Team sollte zunächst geklärt werden, wer fachlich abrechnet. Das Programm ist keine Abkürzung um diese Zuständigkeit, sondern eine mögliche technische Grundlage dafür.",
+      "quellen": [
+        {
+          "titel": "Produkt, Leistungsumfang und Verfügbarkeit",
+          "url": "https://www.eurodata.de/loesungen/steuerberater/lohnabrechnung/"
+        },
+        {
+          "titel": "Produktinformation edlohn",
+          "url": "https://media.eurodata.de/edlohn/dokumente/ed_edlohn.pdf"
+        }
+      ],
+      "zielUrl": "https://www.eurodata.de/loesungen/steuerberater/lohnabrechnung/",
+      "url": "/anbieter/edlohn"
+    },
+    {
+      "slug": "gdi-lohn-gehalt",
+      "name": "GDI Lohn & Gehalt",
+      "baustein": "lohn",
+      "stationen": [
+        "erstes-team",
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/gdi-lohn-gehalt.webp",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "Lohnsoftware für die eigenständige deutsche Entgeltabrechnung mit Meldeverfahren, Auswertungen und Anbindung an Zeitwirtschaft.",
+      "fuerWen": [
+        "Kleine und mittlere Unternehmen mit fachkundiger interner Lohnabrechnung.",
+        "Betriebe, die Abrechnung, Meldungen und Auswertungen selbst organisieren.",
+        "Unternehmen, die eine bestehende GDI- oder andere Zeitwirtschaft anbinden möchten."
+      ],
+      "wenigerPassend": [
+        "Teams ohne klare fachliche Zuständigkeit für Lohn und Meldungen.",
+        "Unternehmen, die eine reine Urlaubsverwaltung suchen.",
+        "Betriebe, die einen Umstieg ohne Prüfung von Altdaten, Lohnarten und Sonderfällen planen."
+      ],
+      "preis": {
+        "status": "anfrage",
+        "zeilen": [
+          "Der Hersteller nennt Mitarbeiterzahl und Anwenderzahl als Kostentreiber.",
+          "Ein individuelles Abonnement und die benötigten Module müssen im Angebot konkretisiert werden.",
+          "Kein aktueller öffentlicher Eurobetrag ist für dieses Profil verifiziert."
+        ],
+        "hinweis": "Angebot einschließlich weiterer Nutzer, Module, Einführung und Betreuung anfordern."
+      },
+      "funktionen": [
+        "Lohn- und Gehaltsabrechnung mit elektronischem Meldewesen über GDI MeldeCenter.",
+        "ELStAM, elektronische Entgeltersatzleistungen und weitere Meldeverfahren.",
+        "Prüf- und Plausibilitätsroutinen sowie nachträgliche Korrekturen.",
+        "Lohnjournal, Buchungsbelege, Zahlungslisten und weitere Auswertungen.",
+        "Mandantenverwaltung, Export für DATEV und Integration von Zeiterfassungssystemen."
+      ],
+      "grenzen": [
+        "Weitere Anwender und besondere Module können eigene Lizenzpositionen bilden.",
+        "Die konkrete technische Betriebsumgebung muss zum Angebot passen.",
+        "Ein breiter Funktionsumfang ersetzt keine fachliche Abrechnungsprüfung.",
+        "Baulohn und andere branchenspezifische Anforderungen müssen im gebuchten Umfang bestätigt werden."
+      ],
+      "vertrag": "Die Produktseite beschreibt ein Abonnement, enthält aber keinen für sämtliche Konfigurationen verifizierten Vertragsrahmen. Prüfen Sie Laufzeit, Leistungen für Aktualisierungen, Zusatzlizenzen, Kündigung und Exportmöglichkeiten im konkreten Angebot.",
+      "fragen": [
+        "Wie wirken sich Mitarbeiterzahl, zusätzliche Anwender und Mandanten auf die Kosten aus?",
+        "Welche Module brauchen wir für unsere tatsächlichen Sonderfälle?",
+        "Welche technische Umgebung und Betreuung sind erforderlich?",
+        "Wie werden Daten aus unserem bisherigen Lohnprogramm übernommen und geprüft?",
+        "Wie exportieren wir vollständige Abrechnungs- und Archivdaten beim Wechsel?"
+      ],
+      "einordnung": "GDI Lohn & Gehalt ist eine Option für Betriebe, die Lohnarbeit fachkundig selbst erledigen möchten. Relevant sind die Verbindung von Meldeverfahren und Auswertungen sowie die vorhandene Zeitwirtschaft. Vor der Auswahl stehen ein konkreter Funktionsabgleich, ein vollständiges Angebot und eine sorgfältige Übernahmeprüfung. Für eine einfache Personalverwaltung wäre der Schwerpunkt zu speziell.",
+      "quellen": [
+        {
+          "titel": "GDI Lohn & Gehalt: Funktionen und Kostenlogik",
+          "url": "https://www.gdi.de/lohnabrechnung/"
+        },
+        {
+          "titel": "Aktuelle Produktinformation",
+          "url": "https://www.gdi.de/wp-content/uploads/2026/06/GDI-Lohn-und-Gehalt_Produktinformation.pdf"
+        }
+      ],
+      "zielUrl": "https://www.gdi.de/lohnabrechnung/",
+      "url": "/anbieter/gdi-lohn-gehalt"
+    },
+    {
+      "slug": "clockodo",
+      "name": "Clockodo",
+      "baustein": "personal",
+      "stationen": [
+        "erste-umsaetze",
+        "erstes-team",
+        "wachstum"
+      ],
+      "partner": null,
+      "logo": "/logos/clockodo.svg",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "Arbeits- und Projektzeiterfassung mit Abwesenheiten, Stundenkonten, Berichten und Übergaben an Rechnungs- oder Lohnprogramme.",
+      "fuerWen": [
+        "Agenturen, Beratungen und andere Dienstleister mit projektbezogener Arbeit.",
+        "Kleine und mittlere Teams, die Arbeitszeiten und Abwesenheiten zusammenführen möchten.",
+        "Unternehmen, die Zeitdaten an bestehende Rechnungs- oder Lohnsoftware übergeben."
+      ],
+      "wenigerPassend": [
+        "Betriebe, die eine vollständige Personalsuite mit Personalentwicklung und Recruiting benötigen.",
+        "Unternehmen, die ohne zusätzliche Prüfung eine vollständige Lohnabrechnung erwarten.",
+        "Teams, die Projektcontrolling benötigen, aber ausschließlich nach dem günstigsten Arbeitszeittarif auswählen."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Basic: 4 Euro je Nutzer und Monat",
+        "zeilen": [
+          "Basic: 4 Euro je Nutzer und Monat.",
+          "Pro: 10 Euro je Nutzer und Monat.",
+          "Pro Plus: 12 Euro je Nutzer und Monat.",
+          "Erweiterungen in Plus und die gewählte Abrechnung im aktuellen Angebot prüfen."
+        ],
+        "hinweis": "Nettopreise laut Hersteller. Arbeitszeiterfassung und Projektfunktionen nach Tarif unterscheiden; die veröffentlichte Testphase beträgt 14 Tage."
+      },
+      "funktionen": [
+        "Arbeitszeiten per Stoppuhr oder manuell in Browser und Apps erfassen.",
+        "Sollzeiten, Stundenkonten und Abwesenheiten verwalten.",
+        "Projektzeiten Kunden und Leistungen zuordnen sowie Budgets und Berichte auswerten.",
+        "Daten an unterstützte Rechnungs- und Lohnprogramme übergeben.",
+        "Rollen, Exporte, API und weitergehende Integrationen nach Tarif."
+      ],
+      "grenzen": [
+        "Projektfunktionen und erweiterte Leistungen sind tarifabhängig.",
+        "Clockodo bereitet Lohn- und Rechnungsdaten vor; der gesamte Folgeschritt kann ein anderes Programm benötigen.",
+        "Die richtige Zuordnung von Arbeitszeit, Projektzeit und abrechenbarer Leistung muss im Unternehmen geregelt werden.",
+        "SSO und weitergehende Serviceleistungen können ein Zusatzpaket erfordern."
+      ],
+      "vertrag": "Der Hersteller nennt eine Kündigung zum Ende des aktuellen Vertragszeitraums. Prüfen Sie den gewählten Abrechnungszeitraum im Angebot. Eine Veröffentlichung als Preis je Monat belegt für sich noch keine monatliche Vertragslaufzeit.",
+      "fragen": [
+        "Reicht Arbeitszeiterfassung oder brauchen wir Projektbudgets und Abrechnung?",
+        "Welche Zeitdaten werden an unser Rechnungs- oder Lohnprogramm übertragen?",
+        "Wie werden Korrekturen, abgeschlossene Zeiträume und Freigaben geregelt?",
+        "Welche Funktionen der Apps stehen ohne Verbindung zur Verfügung?",
+        "Welche Tarifstufe enthält die benötigten Rollen, Integrationen und Serviceleistungen?"
+      ],
+      "einordnung": "Clockodo ist besonders interessant, wenn Arbeitszeit und Projektwirtschaftlichkeit gemeinsam betrachtet werden sollen. Die Tarifwahl muss deshalb beim Bedarf beginnen: allgemeine Arbeitszeit oder abrechenbare Kundenarbeit. Ein eigener Test sollte Korrekturen, Abwesenheiten und die Weiterverarbeitung abdecken. Für eine umfangreiche Personalentwicklung oder eigenständige Lohnabrechnung sind zusätzliche Systeme nötig.",
+      "quellen": [
+        {
+          "titel": "Tarife und Vertragsinformationen",
+          "url": "https://www.clockodo.com/de/preise/"
+        },
+        {
+          "titel": "Funktionsübersicht",
+          "url": "https://www.clockodo.com/de/funktionen/"
+        },
+        {
+          "titel": "Funktionsumfang und Integrationen im Helpcenter",
+          "url": "https://support.clockodo.com/de/help-center/clockodo-funktionen-informationen-und-integrationen"
+        }
+      ],
+      "zielUrl": "https://www.clockodo.com/de/preise/",
+      "url": "/anbieter/clockodo"
+    },
+    {
+      "slug": "hrlab",
+      "name": "HRlab",
+      "baustein": "personal",
+      "stationen": [
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/hrlab.svg",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": true,
+      "kurz": "Modulare HR-Software mit digitaler Personalakte, Prozessen und Zugängen für Mitarbeitende; Zeit, Recruiting und Talentfunktionen sind erweiterbar.",
+      "fuerWen": [
+        "Wachsende Unternehmen mit einer verantwortlichen Personalabteilung.",
+        "Teams ab einem Umfang, bei dem die Mindestlizenzierung wirtschaftlich ist.",
+        "Organisationen, die Stammdaten, Dokumente und Freigaben vereinheitlichen möchten."
+      ],
+      "wenigerPassend": [
+        "Sehr kleine Teams, für die die Mindestlizenzierung von 30 Nutzern unverhältnismäßig ist.",
+        "Unternehmen, die Zeitwirtschaft und Recruiting ungeprüft als Basisumfang erwarten.",
+        "Betriebe, die eine vollständige Entgeltabrechnung statt vorbereitender Übergaben suchen."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Core: 6 Euro je Nutzer und Monat, mindestens 30 Nutzer",
+        "zeilen": [
+          "Core: 6 Euro je Nutzer und Monat.",
+          "Core Premium: 7 Euro je Nutzer und Monat.",
+          "Mindestlizenzierung: 30 Nutzer.",
+          "Zusatzmodule wie Recruitment, Talent Management oder Time & Absence werden gesondert berechnet."
+        ],
+        "hinweis": "Mindestlizenzierung und Zusatzmodule gemeinsam kalkulieren. 30 Lizenzen für Core ergeben rechnerisch mindestens 180 Euro je Monat vor weiteren Leistungen und Umsatzsteuer; ausgewählte Laufzeit bestätigen."
+      },
+      "funktionen": [
+        "Digitale Personalakte, Dokumentenmanagement und Vorlagen.",
+        "Zugänge für Mitarbeitende, Rollen und Prozess- beziehungsweise Aufgabenverwaltung.",
+        "Reporting und Übergaben an DATEV beziehungsweise ADDISON.",
+        "Optionale Module für Zeiterfassung, Abwesenheiten und Recruiting.",
+        "Talent- und weitergehende Funktionen von Premium im jeweils gewählten Umfang."
+      ],
+      "grenzen": [
+        "Die Mindestlizenzierung liegt laut Preisübersicht bei 30 Nutzern.",
+        "Zeiterfassung, Recruiting und Talentmanagement sind ergänzende Module.",
+        "Vorbereitende Lohndaten sind von der vollständigen Lohnabrechnung abzugrenzen.",
+        "Individuelle Einrichtungen und Schulungen müssen im Angebot berücksichtigt werden."
+      ],
+      "vertrag": "Die Preisseite nennt bei monatlicher Zahlung eine Kündigung von Monat zu Monat mit 30 Tagen Frist. Bei jährlicher oder zweijähriger Zahlung gelten längere Laufzeiten und drei Monate Kündigungsfrist. Die gewählte Variante im Vertrag prüfen; die Testphase endet laut Hersteller nach 28 Tagen ohne automatische kostenpflichtige Umstellung.",
+      "fragen": [
+        "Welche Personen zählen als Nutzer und wie wirkt die Mindestlizenzierung?",
+        "Welche unserer Abläufe benötigen Zusatzmodule oder Core Premium?",
+        "Wie gelangen Änderungen aus HRlab in unsere Lohnabrechnung?",
+        "Welche Kosten entstehen für Einrichtung, Schulung und Datenübernahme?",
+        "Welche Rollen, Löschverfahren und Exporte passen zu unserer Personalorganisation?"
+      ],
+      "einordnung": "HRlab ist eher eine Auswahloption für eine wachsende Personalorganisation als für ein sehr kleines erstes Team. Die Mindestlizenzierung ist ein wichtiger wirtschaftlicher Filter. Vergleichen Sie Basis und Zusatzmodule anhand konkreter Abläufe. Für konsistente Stammdaten und Freigaben kann eine zentrale Plattform sinnvoll sein, sofern Verantwortung und Einführung geregelt sind.",
+      "quellen": [
+        {
+          "titel": "Tarife, Mindestlizenzierung und Laufzeiten",
+          "url": "https://www.hrlab.de/preise"
+        },
+        {
+          "titel": "Funktionsumfang und Produktfragen",
+          "url": "https://www.hrlab.de/faq"
+        }
+      ],
+      "zielUrl": "https://www.hrlab.de/preise",
+      "url": "/anbieter/hrlab"
+    },
+    {
+      "slug": "rexx-hr",
+      "name": "Rexx HR",
+      "baustein": "personal",
+      "stationen": [
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/rexx-hr.svg",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "Personalmanagement aus der modularen Rexx Suite mit Organisationsverwaltung, digitalen Akten, Workflows und optionalen Personalmodulen.",
+      "fuerWen": [
+        "Mittelständische Unternehmen mit mehreren Personalprozessen und Organisationseinheiten.",
+        "Personalteams, die Verwaltung, Onboarding und Reporting gemeinsam organisieren.",
+        "Unternehmen, die bei Bedarf Recruiting, Zeitwirtschaft und Talentmanagement ergänzen möchten."
+      ],
+      "wenigerPassend": [
+        "Sehr kleine Teams, die nur einen Urlaubskalender oder einzelne Stammdaten brauchen.",
+        "Unternehmen ohne klare Prozessverantwortung für ein umfangreicheres Personalprojekt.",
+        "Organisationen, die jedes optionale Modul als Teil des Basispakets kalkulieren."
+      ],
+      "preis": {
+        "status": "anfrage",
+        "zeilen": [
+          "Der Hersteller kalkuliert nach Unternehmensgröße, Modulen und Funktionsumfang.",
+          "Für die Einführung können eigene Beratungs- und Schulungsleistungen anfallen.",
+          "Ein individueller Preis wird auf Anfrage erstellt."
+        ],
+        "hinweis": "grundlegendes Personalmanagement, optionale Module, Betriebsmodell und Einführung getrennt im Angebot aufführen lassen."
+      },
+      "funktionen": [
+        "Personalakte, Dokumente und Organisationsmanagement einschließlich Tochtergesellschaften.",
+        "Eigene Zugänge für Mitarbeitende und Führungskräfte sowie flexible Berechtigungen.",
+        "Onboarding, Offboarding, Aufgaben und Erinnerungen.",
+        "Konfigurierbare Felder, Berichte und Exporte.",
+        "Optionale Zeitwirtschaft, Recruiting, Entgeltvorbereitung und Talentmodule innerhalb der Suite."
+      ],
+      "grenzen": [
+        "Eine umfangreiche Suite benötigt klare Daten- und Prozessverantwortung.",
+        "Mehrere fachliche Bereiche sind optional und nicht automatisch im Basispaket enthalten.",
+        "Betriebsmodell und Hostingregion sind im konkreten Vertrag zu bestätigen.",
+        "Einführung, Anpassungen und Schulung bilden einen eigenen Aufwand."
+      ],
+      "vertrag": "Rexx beschreibt eigene Cloudangebote mit Servern in Deutschland und der Schweiz sowie einen möglichen Betrieb beim Kunden. Laufzeit, Kündigung, Betriebsort, Modulumfang und Einführungsleistungen werden im individuellen Angebot festgelegt.",
+      "fragen": [
+        "Welche Prozesse gehören zum Basispaket und welche benötigen Zusatzmodule?",
+        "Welche Hostingregion und welches Betriebsmodell wird konkret vereinbart?",
+        "Wie sind Beratung, Datenübernahme und Schulung bepreist?",
+        "Wie werden Tochtergesellschaften, Rollen und Genehmigungen abgebildet?",
+        "Welche Daten lassen sich bei einem Wechsel vollständig exportieren?"
+      ],
+      "einordnung": "Rexx HR ist eine Option für Unternehmen, die eine umfassendere Personalorganisation aufbauen oder vereinheitlichen möchten. Der modulare Umfang verlangt einen klaren Einstieg und eine geregelte Einführung. Für ein sehr kleines Team kann diese Breite unnötigen Aufwand bedeuten. Maßgeblich ist ein konkretes Angebot für die tatsächlich benötigten Prozesse.",
+      "quellen": [
+        {
+          "titel": "Individuelle Preise und Betriebsmodelle",
+          "url": "https://www.rexx-systems.com/preise/"
+        },
+        {
+          "titel": "Personalmanagement",
+          "url": "https://www.rexx-systems.com/personalmanagement/"
+        },
+        {
+          "titel": "Rexx Suite und ergänzende Bereiche",
+          "url": "https://www.rexx-systems.com/rexx-suite-komplettloesung/"
+        }
+      ],
+      "zielUrl": "https://www.rexx-systems.com/preise/",
+      "url": "/anbieter/rexx-hr"
+    },
+    {
+      "slug": "absence-io",
+      "name": "absence.io",
+      "baustein": "personal",
+      "stationen": [
+        "erstes-team",
+        "wachstum"
+      ],
+      "partner": null,
+      "logo": "/logos/absence-io.png",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": true,
+      "kurz": "Werkzeug zur Personalverwaltung für Abwesenheiten und Urlaub, erweiterbar um Zeiterfassung, Personalakten sowie Spesen und Reisekosten.",
+      "fuerWen": [
+        "Kleine und mittlere Teams, die Urlaub und Abwesenheiten verständlich organisieren möchten.",
+        "Unternehmen, die die Zeiterfassung zusammen mit einer einfachen Personalverwaltung einführen.",
+        "Betriebe, die einen klar bepreisten Umfang mit kurzer vertraglicher Bindung suchen."
+      ],
+      "wenigerPassend": [
+        "Unternehmen mit Bedarf an vollständiger Lohnabrechnung oder einer breiten Suite für Talentmanagement.",
+        "Teams, die jede Funktion im günstigsten Tarif Starter erwarten.",
+        "Organisationen mit komplexer Schicht- und Einsatzplanung ohne vorherigen Ablaufabgleich."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Starter: 2,99 Euro je Nutzer und Monat",
+        "zeilen": [
+          "Starter: 2,99 Euro je Nutzer und Monat.",
+          "Pro: 4,99 Euro je Nutzer und Monat.",
+          "Complete: 7,99 Euro je Nutzer und Monat.",
+          "Jährliche Zahlung wird mit einem gesonderten Rabatt angeboten."
+        ],
+        "hinweis": "Reguläre Nettopreise ohne befristete Rabattaktionen. Pro erweitert den Umfang um Zeit und Personalakten; Complete ergänzt Spesen, Reisekosten und API."
+      },
+      "funktionen": [
+        "Urlaubs- und Abwesenheitsverwaltung mit Genehmigungen und Übersichten.",
+        "Berichte, Downloads und Verbindungen zu bestehenden Werkzeuge am Arbeitsplatz.",
+        "Zeiterfassung und digitale Personalakte im Umfang von Pro.",
+        "Spesen- und Reisekostenbearbeitung im Umfang von Complete.",
+        "Zugang zur API im dafür vorgesehenen Paket."
+      ],
+      "grenzen": [
+        "Arbeitszeit ist gegenüber Starter eine Erweiterung des Tarifs.",
+        "Reisekosten und API gehören nicht automatisch zum Einstieg.",
+        "Eine umfangreiche Personalentwicklung oder Entgeltabrechnung ist nicht der Schwerpunkt.",
+        "Besondere Zeitmodelle und Genehmigungsregeln sollten anhand eigener Fälle geprüft werden."
+      ],
+      "vertrag": "Der deutsche Produktauftritt beschreibt eine monatliche Kündbarkeit und einen Rabatt bei jährlicher Zahlung. Prüfen Sie die konkreten Zahlungs- und Kündigungsbedingungen der gewählten Variante. Die Testphase beträgt laut Preisübersicht 14 Tage ohne erforderliche Zahlungsdaten.",
+      "fragen": [
+        "Welche unserer Urlaubstypen und Genehmigungsregeln können wir abbilden?",
+        "Brauchen wir Starter, Pro oder Complete für unseren vollständigen Ablauf?",
+        "Wie wirken sich Teilzeit, Eintritte und Austritte auf Kontingente aus?",
+        "Wie exportieren wir Zeit- und Personaldaten für die Weiterverarbeitung?",
+        "Welche Kosten und Bedingungen gelten bei jährlicher Zahlung?"
+      ],
+      "einordnung": "absence.io ist eine nachvollziehbare Option für Teams, die zuerst Abwesenheiten und Zeit ordnen möchten. Der klar gestufte Umfang erleichtert einen bedarfsbezogenen Vergleich. Prüfen Sie die eigenen Urlaubs- und Zeitmodelle, bevor Sie einen Tarif wählen. Für umfangreiche Lohn- oder Talentprozesse sollten weitere Lösungen separat bewertet werden.",
+      "quellen": [
+        {
+          "titel": "Produkt und deutscher Markt",
+          "url": "https://www.absence.io/de/"
+        },
+        {
+          "titel": "Reguläre Pakete und Leistungsumfang",
+          "url": "https://www.absence.io/en/packages-pricing/"
+        }
+      ],
+      "zielUrl": "https://www.absence.io/de/",
+      "url": "/anbieter/absence-io"
+    },
+    {
+      "slug": "cobra-crm",
+      "name": "cobra CRM",
+      "baustein": "vertrieb",
+      "stationen": [
+        "erste-umsaetze",
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/cobra-crm.png",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "CRM für Kundenhistorie, Vertriebschancen und Kommunikation mit abgestuften Cloudtarifen und erweiterten Automatisierungen.",
+      "fuerWen": [
+        "Kleine und mittlere Vertriebsteams, die Kundeninformationen und Aufgaben gemeinsam führen.",
+        "Unternehmen, die Kommunikation und Verkaufschancen in einem nachvollziehbaren Prozess verbinden.",
+        "Organisationen, die ein Angebot zur Kundenverwaltung mit deutschem Hosting und Support laut Hersteller prüfen möchten."
+      ],
+      "wenigerPassend": [
+        "Einzelpersonen, die nur eine einfache Kontaktliste benötigen.",
+        "Teams ohne klare Verantwortlichkeit für Stammdaten und Vertriebsprozesse.",
+        "Unternehmen, die fortgeschrittene Anpassungen oder Funktionsumfang der API automatisch im Einstiegstarif erwarten."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Cloud Essential: ab 36 Euro je Nutzer und Monat",
+        "zeilen": [
+          "Cloud Essential: ab 36 Euro je Nutzer und Monat.",
+          "Cloud Grow: ab 54 Euro je Nutzer und Monat.",
+          "Cloud Max: ab 79 Euro je Nutzer und Monat.",
+          "Weitere Produkt- und Betriebsvarianten sowie Einführungsleistungen gesondert prüfen."
+        ],
+        "hinweis": "Veröffentlichte Referenzpreise der Cloudtarife; genaue Laufzeit, Steuerangaben, Nutzerumfang und zusätzliche Leistungen im Angebot bestätigen."
+      },
+      "funktionen": [
+        "Kundenhistorie und gemeinsame Sicht auf Kontakte und Vorgänge.",
+        "Leads, Verkaufschancen und Aufgaben organisieren.",
+        "Kommunikation mit Vorlagen und tarifabhängigen Funktionen der KI.",
+        "Automatisierungen, Zielgruppenmarketing und eigene Strukturen in erweiterten Tarifen.",
+        "Erweiterte Berechtigungen, Integrationen und Funktionsumfang der API abhängig von der Edition."
+      ],
+      "grenzen": [
+        "Die Preisübersicht unterscheidet Cloudtarife und weitere Angebote von cobra.",
+        "Anpassbarkeit und Automatisierungstiefe hängen vom gewählten Umfang ab.",
+        "Datenmigration, Schnittstellen und Einführung brauchen eine eigene Planung.",
+        "Funktionen der KI sind anhand von Datenzugriff, Freigaben und tatsächlichem Anwendungsfall zu prüfen."
+      ],
+      "vertrag": "Der veröffentlichte Preis pro Monat beschreibt die Kosten, nicht abschließend die Vertragsdauer. Lassen Sie Edition, Laufzeit, Kündigung, Datenexport und Betreuung im konkreten Angebot bestätigen. Cloud und andere Produktvarianten dürfen nicht ungeprüft gleichgesetzt werden.",
+      "fragen": [
+        "Welche Edition unterstützt unsere eigenen Felder, Rollen und Vertriebsabläufe?",
+        "Welche Kommunikation und Integrationen sind ohne Zusatzkosten enthalten?",
+        "Wie übernehmen und bereinigen wir bestehende Kontakte und Historien?",
+        "Welche Daten dürfen Funktionen der KI nutzen und wie kontrollieren wir Ergebnisse?",
+        "Wie sind Laufzeit, Export und Unterstützung beim Wechsel geregelt?"
+      ],
+      "einordnung": "cobra CRM ist interessant, wenn ein Team Kundenbeziehungen verbindlicher organisieren und den Umfang später ausbauen möchte. Die neue Cloudstaffel muss anhand der benötigten Strukturen und Automatismen bewertet werden. Ein eigener Test sollte Datenqualität, Kommunikation und Rollen abdecken. Wer nur Kontakte ablegt, benötigt möglicherweise weniger Umfang.",
+      "quellen": [
+        {
+          "titel": "Cloudtarife und Funktionsgrenzen",
+          "url": "https://cobra.de/preise/"
+        },
+        {
+          "titel": "Lösungen zur Kundenverwaltung",
+          "url": "https://cobra.de/loesungen/"
+        },
+        {
+          "titel": "Betreuung und Schulungen",
+          "url": "https://cobra.de/service/support/"
+        }
+      ],
+      "zielUrl": "https://cobra.de/preise/",
+      "url": "/anbieter/cobra-crm"
+    },
+    {
+      "slug": "cas-genesisworld",
+      "name": "CAS genesisWorld",
+      "baustein": "vertrieb",
+      "stationen": [
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/cas-genesisworld.png",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "CRM für den Mittelstand mit zentralen Kundendaten, Workflows, mobilen Zugängen und Verbindungen zwischen mehreren Fachbereichen.",
+      "fuerWen": [
+        "Mittelständische Unternehmen mit längeren Kundenbeziehungen und mehreren beteiligten Abteilungen.",
+        "Teams, die Vertrieb, Service und Projektinformationen zusammenführen möchten.",
+        "Betriebe mit Bedarf an branchenspezifischer Anpassung und geplanten Integrationen."
+      ],
+      "wenigerPassend": [
+        "Kleine Teams, die ausschließlich eine einfache Verkaufspipeline benötigen.",
+        "Unternehmen ohne Ressourcen für Prozessdefinition und Datenpflege.",
+        "Betriebe, die eine gesamte ERP- oder Buchhaltungslösung aus einem Angebot zur Kundenverwaltung erwarten."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Mietangebot für Premium: regulärer Referenzwert 39,90 Euro je Nutzer und Monat",
+        "zeilen": [
+          "Die Herstelleraktion nennt für die Premium Edition einen regulären Referenzwert von 39,90 Euro je Nutzer und Monat.",
+          "Beworbene Aktionswerte sind zeitlich beziehungsweise angebotsabhängig und hier nicht als dauerhafte Preise dargestellt.",
+          "Module, Betriebsmodell, Schnittstellen und Einführungsleistungen müssen im Gesamtangebot bestätigt werden."
+        ],
+        "hinweis": "Der Referenzwert stammt aus einem veröffentlichten Mietangebot und ist kein verbindlicher Preis für jede Konfiguration. Aktuelle Konditionen individuell anfordern."
+      },
+      "funktionen": [
+        "Zentrale Kundendaten und Informationen zu Kontakten und Interaktionen.",
+        "Gemeinsame Prozesse für Vertrieb, Marketing, Service und Projekte.",
+        "Workflows und Anpassungen an Branchen- oder Unternehmensabläufe.",
+        "Mobile Nutzung und Zugänge über SmartDesign; Umfang der Nutzung ohne Internetverbindung laut Produktbeschreibung.",
+        "Schnittstellen und tarif- beziehungsweise versionsabhängige Unterstützung durch KI."
+      ],
+      "grenzen": [
+        "CRM und umfassende Unternehmenssteuerung sind unterschiedliche Aufgaben.",
+        "Branchenspezifische Anpassungen und Schnittstellen brauchen einen konkreten Projektumfang.",
+        "Die Nutzung mehrerer Abteilungen verlangt klare Zugriffs- und Datenregeln.",
+        "Aktions- und Mietangebote dürfen nicht mit einem vollständigen Projektbudget gleichgesetzt werden."
+      ],
+      "vertrag": "CAS veröffentlicht Mietangebote und bietet Beratung zu Konfiguration und Betriebsmodell. Bestätigen Sie Nutzerzahl, Edition, Laufzeit, Kündigung, Betrieb, Partnerleistungen und Export im konkreten Angebot. Ein öffentlicher Referenzpreis ersetzt keine Vertragsprüfung.",
+      "fragen": [
+        "Welche Fachbereiche und Rollen lassen sich in unserer Konfiguration gemeinsam abbilden?",
+        "Welche Module und Schnittstellen benötigen wir wirklich?",
+        "Welcher Offline- und Mobilumfang gilt für unsere Edition?",
+        "Wie werden Einführung, Anpassungen und spätere Updates abgegrenzt?",
+        "Welche vollständigen Daten und Historien erhalten wir beim Wechsel?"
+      ],
+      "einordnung": "CAS genesisWorld passt besonders zur Prüfung längerfristiger Kundenbeziehungen über mehrere Abteilungen hinweg. Die Stärke einer gemeinsamen Datenbasis setzt klare Verantwortung voraus. Rechnen Sie die gesamte Einführung und benötigte Erweiterungen, statt nur einen Mietpreis zu vergleichen. Für eine einfache erste Pipeline kann der Umfang größer sein als nötig.",
+      "quellen": [
+        {
+          "titel": "Veröffentlichtes Mietangebot",
+          "url": "https://www.cas.de/loesungen/crm-xrm/crm-aktion/"
+        },
+        {
+          "titel": "Produkt und Funktionen",
+          "url": "https://www.cas.de/loesungen/crm-xrm/cas-genesisworld/"
+        },
+        {
+          "titel": "Hilfeportal des Herstellers",
+          "url": "https://hilfe.cas.de/"
+        }
+      ],
+      "zielUrl": "https://www.cas.de/loesungen/crm-xrm/cas-genesisworld/",
+      "url": "/anbieter/cas-genesisworld"
+    },
+    {
+      "slug": "salesforce-sales-cloud",
+      "name": "Salesforce Sales Cloud",
+      "baustein": "vertrieb",
+      "stationen": [
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/salesforce-sales-cloud.ico",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "Internationale Plattform zur Kundenverwaltung mit deutschem Angebot für Leads, Kunden, Verkaufschancen, Automatisierungen und erweiterte Vertriebssteuerung.",
+      "fuerWen": [
+        "Wachsende Vertriebsteams mit einem klaren gemeinsamen Daten- und Prozessmodell.",
+        "Unternehmen, die Integrationen und umfangreichere Vertriebssteuerung planen.",
+        "Organisationen mit Budget und Verantwortung für Einführung und laufende Administration."
+      ],
+      "wenigerPassend": [
+        "Teams, die nur eine einfache Kontaktliste ohne Pflegeaufwand suchen.",
+        "Unternehmen, die höhere Editionen und Leistungen der KI im günstigsten Tarif erwarten.",
+        "Betriebe ohne Zuständigkeit für Administration, Datenqualität und Integrationen."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Starter Suite: 25 Euro je Nutzer und Monat",
+        "zeilen": [
+          "Starter Suite: 25 Euro je Nutzer und Monat, monatliche oder jährliche Abrechnung laut Übersicht.",
+          "Pro Suite: 100 Euro je Nutzer und Monat, jährliche Abrechnung.",
+          "Core: 195 Euro je Nutzer und Monat, jährliche Abrechnung.",
+          "Höhere Pakete sowie zusätzliche KI-, Support- und Datenleistungen können das Budget deutlich erweitern."
+        ],
+        "hinweis": "Aktuelle deutsche Preisübersicht vom Prüftag. Suite- und höhere Plattformangebote unterscheiden sich im Umfang; konkrete Edition, Abrechnung, Steuern und zusätzliche Dienste bestätigen."
+      },
+      "funktionen": [
+        "Leads, Accounts, Kontakte und Verkaufschancen verwalten.",
+        "Vertriebsabläufe und Zuweisungen automatisieren.",
+        "Angebots- und Prognosefunktionen in dafür vorgesehenen Editionen.",
+        "Berichte, Anpassungen und Verbindungen zu weiteren Anwendungen nach Umfang.",
+        "Zusätzliche KI-, Daten- und Vertriebsleistungen je nach Paket oder Erweiterung."
+      ],
+      "grenzen": [
+        "Starter Suite und höhere Angebote für den Vertrieb sind nicht funktionsgleich.",
+        "Einführung, Anpassungen und Administration bilden einen eigenen Aufwand.",
+        "Zusatzdienste, Support und verbrauchsabhängige Leistungen der KI können gesondert kosten.",
+        "Integrationen, Datenzugriffe und Exportwege sollten vor dem Plattformausbau geprüft werden."
+      ],
+      "vertrag": "Die deutsche Preisübersicht unterscheidet monatliche oder jährliche Abrechnung für Starter und jährliche Abrechnung für mehrere höhere Angebote. Prüfen Sie den konkreten Vertrag einschließlich Mindestbindung, Nutzeränderungen, Verlängerung und Kündigung. Ein Monatspreis einer jährlich berechneten Edition ist keine monatliche Kündigungszusage.",
+      "fragen": [
+        "Welche Edition deckt unsere benötigten Automatisierungen, Berichte und Schnittstellen ab?",
+        "Wie hoch sind Einrichtung, Administration und laufende Partnerleistungen?",
+        "Welche Funktionen der KI werden nach Verbrauch oder separat berechnet?",
+        "Welche Datenstandorte, Zugriffe und Vertragsunterlagen gelten für unsere Konfiguration?",
+        "Wie vollständig können wir Daten, Aktivitäten und eigene Strukturen exportieren?"
+      ],
+      "einordnung": "Salesforce Sales Cloud ist eine Option für Teams, die eine längerfristige, ausbaufähige Vertriebsplattform suchen. Der günstige Einstieg in die Suite darf dabei nicht mit dem Umfang einer größeren Plattformkonfiguration verwechselt werden. Entscheidend sind Edition, Datenmodell, Verantwortlichkeit und Gesamtkosten. Für eine einfache erste Kontaktorganisation kann eine fokussiertere Lösung wirtschaftlicher sein.",
+      "quellen": [
+        {
+          "titel": "Deutsche Preise und Editionsvergleich",
+          "url": "https://www.salesforce.com/de/sales/pricing/"
+        },
+        {
+          "titel": "Sales Cloud für Deutschland",
+          "url": "https://www.salesforce.com/de/sales/cloud/"
+        },
+        {
+          "titel": "Offizielle Grundlagen zur Sales Cloud",
+          "url": "https://resources.docs.salesforce.com/latest/latest/de-de/sfdc/pdf/sales_core.pdf"
+        }
+      ],
+      "zielUrl": "https://www.salesforce.com/de/sales/pricing/",
+      "url": "/anbieter/salesforce-sales-cloud"
+    },
+    {
+      "slug": "jtl-wawi",
+      "name": "JTL-Wawi",
+      "baustein": "betrieb",
+      "stationen": [
+        "erste-umsaetze",
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/jtl-wawi.svg",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "Warenwirtschaft im Ökosystem von JTL für Artikel, Einkauf, Aufträge und Lager, erweiterbar um Shop, Marktplätze und Logistiklösungen.",
+      "fuerWen": [
+        "Onlinehändler, die Produktdaten, Bestände und Aufträge zentral organisieren möchten.",
+        "Wachsende Handelsbetriebe mit mehreren Vertriebskanälen.",
+        "Unternehmen, die den Funktionsumfang von JTL mit eigenen Lager- und Versandabläufen prüfen können."
+      ],
+      "wenigerPassend": [
+        "Dienstleister, die hauptsächlich eine einfache Rechnungssoftware benötigen.",
+        "Unternehmen, die alle Zusatzprodukte von JTL als Teil eines kostenlosen Einstiegs erwarten.",
+        "Betriebe, die ohne Datenbereinigung oder technische Planung auf eine neue Warenwirtschaft wechseln möchten."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "JTL Start: ab 0 Euro im Monat; erweiterter Umfang tarifabhängig",
+        "zeilen": [
+          "JTL Start: laut aktueller Editionenübersicht ab 0 Euro im Monat.",
+          "JTL Advanced: laut Übersicht ab 119 Euro im Monat.",
+          "JTL Pro: laut Übersicht ab 369 Euro im Monat.",
+          "Lagerverwaltung, Versand, Auftragsvolumen, Hosting und zusätzliche Lösungen müssen im Gesamtumfang geprüft werden."
+        ],
+        "hinweis": "Preise der aktuellen Editionen von JTL im Ökosystem. Shopgrenzen und Leistungen sind nicht automatisch Grenzen oder Inklusivleistungen jedes einzelnen Moduls Wawi; konkrete Konfiguration bestätigen."
+      },
+      "funktionen": [
+        "Artikel-, Kunden- und Auftragsdaten in der Warenwirtschaft führen.",
+        "Einkauf, Bestände und kaufmännische Dokumente verbinden.",
+        "Shop- und Marktplatzprozesse über die vorgesehenen Lösungen von JTL anbinden.",
+        "Workflows und Automatisierungen nach Edition und Konfiguration.",
+        "Lager, Versand, Retouren und Finanzübergaben mit weiteren Teilen des Ökosystems verbinden."
+      ],
+      "grenzen": [
+        "JTL-Wawi und ergänzende Lösungen wie Shop, Lager und Versand sind im Umfang zu unterscheiden.",
+        "Der kostenlose Einstieg beschreibt keine pauschal kostenlose Gesamtlösung.",
+        "Shopartikelgrenzen, Auftragskontingente und Supportstufen sind editionsabhängig.",
+        "Betriebsumgebung, Hosting, Partnerleistungen und Datenübernahme erzeugen eigenen Aufwand."
+      ],
+      "vertrag": "Die neue Editionenübersicht bietet monatliche und jährliche Angebote. Prüfen Sie die Laufzeit der gewählten Variante sowie Zusatzmodule, Kontingente, Support und Abrechnung von Mehrvolumen. Ein kostenloser Einstieg hebt die Bedingungen ergänzender Produkte nicht auf.",
+      "fragen": [
+        "Welche Edition und Zusatzlösungen benötigen wir für unsere tatsächlichen Kanäle?",
+        "Welche Grenzen gelten für Shopartikel, Aufträge und die gewählte Lagerlösung?",
+        "Welche Kosten entstehen für Hosting, Versand und Schnittstellen?",
+        "Wie übernehmen wir Varianten, Bestände und offene Aufträge kontrolliert?",
+        "Wie werden Retouren, Teilversand und Finanzübergaben in unserer Konfiguration bearbeitet?"
+      ],
+      "einordnung": "JTL-Wawi ist eine ernsthafte Option für einen Händler, der Warenwirtschaft und Vertriebskanäle verbinden möchte. Der größte Auswahlfehler wäre, den kostenlosen Einstieg mit den Kosten eines vollständigen Handelsbetriebs gleichzusetzen. Prüfen Sie Edition, Betriebsmodell und ergänzende Lösungen an eigenen Aufträgen. Für einfache Dienstleistungsrechnungen wäre der Schwerpunkt meist zu breit.",
+      "quellen": [
+        {
+          "titel": "Aktuelle Editionen und Preise",
+          "url": "https://www.jtl-software.com/de/preise-und-tarife"
+        },
+        {
+          "titel": "Warenwirtschaft und Produktumfang",
+          "url": "https://www.jtl-software.com/de/warenwirtschaftssystem-software/"
+        },
+        {
+          "titel": "Funktionsübersicht JTL-Wawi",
+          "url": "https://www.jtl-software.de/uploads/2021/12/funktionen-jtl-wawi.pdf"
+        }
+      ],
+      "zielUrl": "https://www.jtl-software.com/de/preise-und-tarife",
+      "url": "/anbieter/jtl-wawi"
+    },
+    {
+      "slug": "plentyone",
+      "name": "PlentyONE",
+      "baustein": "betrieb",
+      "stationen": [
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/plentyone.svg",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "Plattform aus der Cloud für Handel über mehrere Kanäle mit zentralen Produktdaten, Beständen, Aufträgen und automatisierten Handelsabläufen.",
+      "fuerWen": [
+        "Onlinehändler und Marken mit mehreren Shops oder Marktplätzen.",
+        "Unternehmen, die Produkt- und Auftragsdaten gemeinsam organisieren möchten.",
+        "Handelsbetriebe mit Ressourcen für Einführung, Schnittstellen und laufende Prozesspflege."
+      ],
+      "wenigerPassend": [
+        "Kleine Dienstleister ohne Produkt- oder Lagerprozesse.",
+        "Händler, die den Einstiegspreis unabhängig von Umsatz- und Kapazitätsgrenzen kalkulieren.",
+        "Unternehmen ohne klare Zuständigkeit für Produktdaten, Regeln und Anbindungen."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Lite: ab 59 Euro im Monat, abhängig von Plan und GMV",
+        "zeilen": [
+          "Lite: ab 59 Euro im Monat.",
+          "Lite+: ab 99 Euro im Monat.",
+          "Expand: ab 149 Euro im Monat.",
+          "Scale: ab 229 Euro im Monat.",
+          "Startpreise umfassen laut Übersicht einen definierten Umsatzrahmen; Überschreitungen und höhere Kapazitäten verändern die Kosten."
+        ],
+        "hinweis": "Reguläre Nettopreise aus der Herstellerübersicht. GMV wird ohne Versand und Umsatzsteuer, aber vor Abzug von Retouren betrachtet. Produktvarianten, Kanäle, Nutzer und Zusatzleistungen im gewählten Plan prüfen."
+      },
+      "funktionen": [
+        "Zentrale Verwaltung von Produkten, Varianten und kanalspezifischen Daten.",
+        "Bestands- und Auftragsmanagement über mehrere Verkaufswege.",
+        "Anbindung von Marktplätzen, eigenen Shops und externen Systemen.",
+        "Automatisierung wiederkehrender Handelsprozesse und Bestandsabgleich.",
+        "Lager- und Versandprozesse sowie weitere Analysen im gebuchten Umfang."
+      ],
+      "grenzen": [
+        "Pläne begrenzen unter anderem Produktvarianten, Kanäle und weitere Kapazitäten.",
+        "Das Umsatzmodell kann Kosten verändern, auch wenn die Anzahl der Nutzer gleich bleibt.",
+        "Retouren werden für die beschriebene Berechnung des GMV nicht vom Verkaufswert abgezogen.",
+        "Schnittstellen, Erweiterungen und Einführung bilden zusätzliche Auswahl- und Kostenpunkte."
+      ],
+      "vertrag": "Die Preisseite beschreibt plan- und vom GMV abhängige Kosten sowie eine vereinbarte Überschreitungsgebühr. Bestätigen Sie den gebuchten Umsatzrahmen, Zahlungsmodus, Laufzeit, Kündigung und Wechsel zwischen Plänen im konkreten Vertrag.",
+      "fragen": [
+        "Wie berechnet sich unser GMV mit saisonalen Spitzen und Retouren?",
+        "Welche Kapazitäten gelten für Varianten, Shops, Marktplätze und Nutzer?",
+        "Welche Gebühren fallen bei Überschreitung des Umsatzrahmens an?",
+        "Welche unserer bestehenden Systeme können sinnvoll angebunden werden?",
+        "Wie werden Produktdaten, Bestände und Regeln vollständig exportiert?"
+      ],
+      "einordnung": "PlentyONE ist besonders interessant für Händler mit mehreren Verkaufskanälen und wachsender Datenkomplexität. Die zentrale Plattform kann Doppelpflege verringern, benötigt aber klare Regeln für Produktdaten und Bestände. Das Kostenmodell sollte mit realen Umsätzen und Retouren gerechnet werden. Der Einstiegspreis allein ist dafür keine ausreichende Grundlage.",
+      "quellen": [
+        {
+          "titel": "Preispläne, Kapazitäten und GMV",
+          "url": "https://www.plentyone.com/de/preise-und-tarife"
+        },
+        {
+          "titel": "Plattform und Handelsfunktionen",
+          "url": "https://www.plentyone.com/de/"
+        },
+        {
+          "titel": "Offizielles Handbuch zu Artikelpreisen",
+          "url": "https://knowledge.plentyone.com/de-de/manual/main/artikel/preise.html"
+        }
+      ],
+      "zielUrl": "https://www.plentyone.com/de/preise-und-tarife",
+      "url": "/anbieter/plentyone"
+    },
+    {
+      "slug": "haufe-x360",
+      "name": "Haufe X360",
+      "baustein": "betrieb",
+      "stationen": [
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/haufe-x360.svg",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "Modulares ERP aus der Cloud für den Mittelstand mit Finanzwesen, Warenwirtschaft, CRM, Projekten und optionalen branchenspezifischen Bereichen.",
+      "fuerWen": [
+        "Wachsende Unternehmen, die mehrere Betriebsbereiche auf einer gemeinsamen Datenbasis führen möchten.",
+        "Handels-, Dienstleistungs- und Produktionsbetriebe mit klar definierten Anforderungen an das ERP.",
+        "Organisationen mit Projektbudget und verantwortlichen Personen für eine geplante Einführung."
+      ],
+      "wenigerPassend": [
+        "Sehr kleine Firmen, die lediglich einzelne Rechnungen erstellen möchten.",
+        "Teams ohne Ressourcen für Datenübernahme und Prozessabstimmung.",
+        "Unternehmen, die den Mindestbetrag als Preis für sämtliche Nutzer und Module verstehen."
+      ],
+      "preis": {
+        "status": "veroeffentlicht",
+        "anker": "Mindestbuchungsbetrag: 449 Euro im Monat",
+        "zeilen": [
+          "Die monatlichen Lizenzkosten beginnen laut Hersteller beim Mindestbuchungsbetrag von 449 Euro.",
+          "Nutzer benötigen Basislizenzen; zusätzliche Funktionsmodule werden nach tatsächlichem Zugriff kalkuliert.",
+          "Spezialisierte Module und Schnittstellen beeinflussen die laufenden Kosten.",
+          "Implementierung wird zusätzlich nach Projektumfang berechnet."
+        ],
+        "hinweis": "Der Mindestbetrag ist kein Komplettpreis für eine beliebige Konfiguration. Lassen Sie Nutzerrollen, Module, Schnittstellen und Einführung getrennt anbieten."
+      },
+      "funktionen": [
+        "Cloudbasierte, modulare Verbindung zentraler Betriebsprozesse.",
+        "Finanzbuchhaltung, Warenwirtschaft und CRM im gewählten Modulumfang.",
+        "Produktion, Projektcontrolling und weitere spezialisierte Bereiche nach Konfiguration.",
+        "Rollenbezogene Zugänge und individuell konfigurierbare Übersichten.",
+        "Verbindungen zu Drittsystemen über vorgesehene Schnittstellen."
+      ],
+      "grenzen": [
+        "Basislizenz und funktionaler Zugriff sind im Preis zu unterscheiden.",
+        "Implementierung und besondere Anpassungen verursachen zusätzlichen Aufwand.",
+        "Die Eignung hängt stark von den branchenspezifischen Abläufen ab.",
+        "Ein Einführungsprojekt benötigt fachliche Verantwortlichkeit in mehreren Bereichen."
+      ],
+      "vertrag": "Der Hersteller beschreibt ein monatliches Mietmodell mit Betrieb und Updates. Die tatsächliche Vertragslaufzeit und Kündigung sind im Angebot zu prüfen. Module, Nutzerkonfigurationen, Schnittstellen, Service und Einführungsleistungen müssen eindeutig abgegrenzt werden.",
+      "fragen": [
+        "Welche Rollen brauchen welche Module und wie wird dieser Zugriff berechnet?",
+        "Was umfasst der Mindestbuchungsbetrag in unserer konkreten Konfiguration?",
+        "Welche Leistungen und Abnahmen gehören zum Einführungsprojekt?",
+        "Wie werden Bestände, offene Posten und Altdaten übernommen?",
+        "Welche Schnittstellen, Exportmöglichkeiten und laufenden Betreuungsleistungen erhalten wir?"
+      ],
+      "einordnung": "Haufe X360 ist eine Auswahloption, wenn ein Unternehmen mehrere Betriebsbereiche bewusst zusammenführen möchte. Der Mindestpreis dient nur als untere Orientierung. Wichtiger sind ein nachvollziehbares Rollen- und Modulschema sowie ein klar begrenztes Einführungsprojekt. Für einzelne einfache Rechnungsaufgaben wäre ein ERP dieser Breite häufig unverhältnismäßig.",
+      "quellen": [
+        {
+          "titel": "Preis- und Lizenzmodell",
+          "url": "https://www.haufe-x360.de/preise"
+        },
+        {
+          "titel": "ERP aus der Cloud und Einsatzbereiche",
+          "url": "https://www.haufe-x360.de/"
+        },
+        {
+          "titel": "ERP für Handelsabläufe",
+          "url": "https://www.haufe-x360.de/handel"
+        }
+      ],
+      "zielUrl": "https://www.haufe-x360.de/preise",
+      "url": "/anbieter/haufe-x360"
+    },
+    {
+      "slug": "abas-erp",
+      "name": "Abas ERP",
+      "baustein": "betrieb",
+      "stationen": [
+        "wachstum",
+        "ausbau"
+      ],
+      "partner": null,
+      "logo": "/logos/abas-erp.svg",
+      "geprueft": "14. Oktober 2026",
+      "monatlichKuendbar": null,
+      "kurz": "ERP für den fertigenden Mittelstand mit Disposition, Produktion, kaufmännischen Prozessen und integriertem Finanzwesen.",
+      "fuerWen": [
+        "Mittelständische Fertigungsunternehmen mit zusammenhängender Material- und Produktionsplanung.",
+        "Betriebe, die Einkauf, Vertrieb, Fertigung und Finanzwesen verbinden möchten.",
+        "Organisationen mit klaren Prozessverantwortlichen und Ressourcen für ein Einführungsprojekt."
+      ],
+      "wenigerPassend": [
+        "Gründende mit ausschließlich einfachen Rechnungs- oder Kontaktaufgaben.",
+        "Unternehmen ohne hinreichend gepflegte Artikel-, Stücklisten- und Prozessdaten.",
+        "Betriebe, die einen Wechsel des ERP ohne Projektorganisation und Fachabnahmen durchführen möchten."
+      ],
+      "preis": {
+        "status": "anfrage",
+        "zeilen": [
+          "Ein individueller Projektpreis muss mit dem Hersteller beziehungsweise zuständigen Partner kalkuliert werden.",
+          "Betriebsmodell, Nutzer, Einführungsumfang, Anpassungen und Integrationen sind gemeinsam zu berücksichtigen.",
+          "Für dieses Profil liegt kein aktuell verifizierter öffentlicher Eurobetrag vor."
+        ],
+        "hinweis": "Ein schriftliches Angebot für Einführung, laufenden Betrieb und spätere Änderungen anfordern. Keine allgemeinen Preisbeispiele für ERP als konkreten Preis für Abas übernehmen."
+      },
+      "funktionen": [
+        "Materialbedarfs- und Terminplanung über mehrere Unternehmensbereiche.",
+        "Planung und Steuerung von Fertigungsabläufen.",
+        "Verbindung von Einkauf, Verkauf, Lager und Service.",
+        "Finanzbuchhaltung, Kostenrechnung, Controlling und Kalkulation.",
+        "Anpassungen mit vorgesehenen Werkzeugen sowie Erweiterungen und Schnittstellen im gewählten Umfang."
+      ],
+      "grenzen": [
+        "Die Eignung muss anhand des tatsächlichen Fertigungsverfahrens geprüft werden.",
+        "Stammdaten, Stücklisten und Rückmeldungen benötigen klare Verantwortung.",
+        "Einführung und Anpassungen sind ein eigenständiges Projekt.",
+        "Ergänzende Lösungen, Schnittstellen und Betriebsmodell müssen im Angebot bestätigt werden."
+      ],
+      "vertrag": "Für Abas ERP ist ein konkreter Vertrag mit dem gewählten Betriebs- und Projektmodell erforderlich. Klären Sie Lizenzen, Wartung oder Betrieb, Updates, Einführung, Anpassungen, Laufzeit und Export. Aus einer allgemeinen Produktbeschreibung lässt sich keine einheitliche Kündbarkeit ableiten.",
+      "fragen": [
+        "Wie werden unsere Stücklisten, Varianten und Fertigungsverfahren abgebildet?",
+        "Wie erkennt und behandelt die Planung Material- oder Kapazitätsengpässe?",
+        "Welche Daten und Rückmeldungen benötigen wir für belastbare Kalkulationen?",
+        "Welche Schnittstellen und Anpassungen gehören zum Angebot und bleiben updatefähig?",
+        "Wie werden Einführung, Abnahme, Betreuung und vollständiger Datenexport geregelt?"
+      ],
+      "einordnung": "Abas ERP ist besonders für fertigende Unternehmen eine ernsthafte Kandidatin. Die Auswahl muss an Materialplanung, Produktionsabläufen und belastbaren kaufmännischen Übergaben erfolgen. Ein eigener Prozessnachweis und ein vollständiges Projektangebot sind wichtiger als eine allgemeine Funktionsliste eines ERP. Für ein junges Unternehmen ohne entsprechende Komplexität kann der Umfang zu groß sein.",
+      "quellen": [
+        {
+          "titel": "Produkt und Funktionsbereiche",
+          "url": "https://abas-erp.com/de/de/produkt"
+        },
+        {
+          "titel": "Fertigung und Produktionsplanung",
+          "url": "https://abas-erp.com/de/faq/abas-erp-funktionen-fertigung-produktion"
+        },
+        {
+          "titel": "Ergänzende Anwendungen und Integrationen",
+          "url": "https://abas-erp.com/de/faq/produktportfolio-abas"
+        }
+      ],
+      "zielUrl": "https://abas-erp.com/de/",
+      "url": "/anbieter/abas-erp"
+    }
+  ],
+  "reviews": {
+    "easybill": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.easybill.de/preise/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Arbeitsablauf und praktische Stärke",
+          "absaetze": [
+            "Die redaktionelle Stärke von easybill liegt in einem klar abgegrenzten Vorgang: Aus einem Auftrag wird ein korrekt zugeordneter Beleg, aus einem Beleg eine nachvollziehbare Zahlung und anschließend eine Übergabe an die Buchhaltung. Das ist vor allem dann hilfreich, wenn dieselben Kundendaten und Positionen heute mehrfach erfasst werden. Eine größere Zahl an Funktionen ist dafür weniger entscheidend als ein verlässlicher Ablauf ohne doppelte Dateneingabe.",
+            "Bei einem Onlinehändler würden wir zuerst einen normalen Auftrag, eine Teilretoure und eine nachträgliche Änderung durchspielen. Prüfen Sie dabei, ob Rechnungsnummern, Gutschriften und Zahlungszuordnung zusammenpassen. Ein reibungsloser Standardimport allein ist noch keine ausreichende Entscheidungsgrundlage. Die Ausnahmefälle bestimmen, wie viel manuelle Arbeit nach der Einführung tatsächlich übrig bleibt."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Tarifwahl und Gesamtkosten",
+          "absaetze": [
+            "Der kostenlose Einstieg eignet sich zur Orientierung, setzt aber bei der Zahl der Kontakte eine enge Grenze. Für eine tragfähige Tarifentscheidung sollten Sie einen durchschnittlichen Monat und einen saisonalen Spitzenmonat gegenüberstellen. Zählen Sie dabei sämtliche relevanten Dokumente, statt nur die Anzahl der Verkäufe zu betrachten. Der günstigste Grundpreis kann bei einem anderen Volumen ungünstiger sein als das nächsthöhere Paket.",
+            "Unser Rat: Lassen Sie sich die Kalkulation mit Archivierung, zusätzlichen Zugängen und Transaktionen schriftlich aufschlüsseln. Prüfen Sie anschließend, ob ein Jahrespaket auch bei einem veränderten Geschäftsmodell noch sinnvoll wäre. Der Preisvorteil längerer Vorauszahlung ist nur dann ein Vorteil, wenn das Programm und der benötigte Funktionsumfang bereits ausreichend erprobt sind."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Einführung und Zusammenarbeit",
+          "absaetze": [
+            "Beginnen Sie mit einem einzigen vollständigen Rechnungsablauf und beziehen Sie die Steuerberatung ein, bevor Sie große Datenmengen übernehmen. Legen Sie fest, welches System Kundenstammdaten führt und wo Belege nachbearbeitet werden. Diese Zuständigkeit verhindert widersprüchliche Datenstände zwischen Rechnungsprogramm, Shop und Buchhaltung. Bei einem späteren Ausbau sollten dieselben Regeln auch für automatisch importierte Vorgänge gelten.",
+            "Eine gute Testphase endet mit einem erfolgreichen Export und einer Prüfung durch die Person, die die Unterlagen weiterverarbeitet. Dokumentieren Sie dabei, wie Stornos, fehlende Zahlungsangaben und abweichende Rechnungsadressen behandelt werden. So können Sie den Nutzen der Automatisierung anhand Ihrer eigenen Fälle beurteilen und müssen sich nicht auf allgemeine Werbeaussagen verlassen."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Wann wir easybill in die engere Auswahl nehmen würden",
+          "absaetze": [
+            "Wir würden easybill in die engere Auswahl nehmen, wenn wiederkehrende Rechnungsarbeit oder die Verbindung zum Onlinehandel spürbar Zeit bindet. Entscheidend ist, ob die benötigten Automatismen zum eigenen Prozess passen und wirtschaftlich bleiben. Ein kleiner Dienstleister kann andere Prioritäten haben als ein Händler mit mehreren Verkaufskanälen. Beide sollten zunächst den gleichen Grundsatz beachten: erst den eigenen Ablauf prüfen, anschließend den Tarif wählen.",
+            "Weniger überzeugend wäre die Wahl allein wegen eines niedrigen Einstiegspreises. Wenn Sie Produktion, komplexe Lagerbewegungen oder die gesamte kaufmännische Steuerung zusammenführen möchten, ist der Bedarf breiter. Dann sollte die Entscheidung von den erforderlichen Prozessen ausgehen und nicht von einer möglichst langen Liste an Rechnungsfunktionen."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "orgamax-buchhaltung": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.orgamax.de/orgamax-buchhaltung/preise/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Ein gemeinsamer Ablauf für Rechnungen und Belege",
+          "absaetze": [
+            "orgaMAX Buchhaltung ist redaktionell vor allem als Werkzeug für den laufenden kaufmännischen Alltag einzuordnen. Die relevante Frage lautet, ob eine Rechnung, der dazugehörige Zahlungseingang und die spätere Auswertung ohne unnötige Zwischenschritte zusammengeführt werden können. Ein einzelnes Unternehmen braucht dafür nicht zwangsläufig ein großes Einführungsprojekt, wohl aber ein eindeutiges Verfahren für Belegprüfung, Korrekturen und Abstimmung mit der Steuerberatung.",
+            "Für die Vorführung würden wir einen echten Monatsablauf vorbereiten: Angebot, Auftrag, Rechnung, eingehender Beleg und Zahlung. Lassen Sie außerdem eine nicht automatisch erkannte Buchung bearbeiten. Daran sehen Sie besser als an einer vorgefertigten Präsentation, ob die Zuständigkeiten im Team und die spätere Weiterverarbeitung zusammenpassen."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Die Produktgrenze zum ERP ist entscheidend",
+          "absaetze": [
+            "Der ähnliche Markenname kann bei der Auswahl Erwartungen erzeugen, die zum falschen Produkt gehören. Deshalb sollte Ihr Pflichtenheft ausdrücklich zwischen Buchhaltung und umfassender Betriebssteuerung unterscheiden. Wenn Variantenartikel, mehrere Lagerorte, Einkauf oder Fertigung zentral werden, reicht der Hinweis auf ein Lagerpaket als Entscheidungsgrundlage nicht aus. Schreiben Sie die einzelnen Anforderungen auf und lassen Sie jede im gebuchten Produkt demonstrieren.",
+            "Eine nützliche Entscheidungsmethode ist die Arbeit mit konkreten Ausschlusskriterien. Wenn beispielsweise ein unverzichtbarer Lagerablauf nur durch ein anderes Produkt abgedeckt wird, sollte dieser Punkt vor der Vertragswahl geklärt sein. So vermeiden Sie, zunächst ein scheinbar passendes Buchhaltungspaket einzuführen und kurz danach einen größeren Systemwechsel vorbereiten zu müssen."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Kosten und Einrichtungsaufwand abwägen",
+          "absaetze": [
+            "Die regulären Paketpreise sind für den Vergleich hilfreicher als eine kurzfristige Rabattüberschrift. Stellen Sie ein Budget für das erste und das zweite Jahr auf und beziehen Sie die tatsächlich benötigten Zusatzleistungen ein. Ein Angebot ist erst dann vergleichbar, wenn Laufzeit, Nutzerumfang und benötigte Dokumentabläufe feststehen. Andernfalls kann eine günstige Monatsangabe verschiedene Leistungsumfänge verdecken.",
+            "Wir würden die Einführung schrittweise durchführen und zunächst einen abgeschlossenen Zeitraum mit der bisherigen Ablage vergleichen. Wichtig sind nachvollziehbare Kontenzuordnung, Vollständigkeit der Belege und ein brauchbarer Export. Planen Sie Zeit für Stammdatenbereinigung und Rückfragen ein. Diese Arbeiten bestimmen den praktischen Start mindestens so stark wie die Zahl der verfügbaren Funktionen."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Redaktionelles Urteil",
+          "absaetze": [
+            "Für einen kleinen Betrieb mit wiederkehrenden Rechnungs- und Belegaufgaben ist orgaMAX Buchhaltung eine ernsthafte Option. Der Nutzen entsteht, wenn mehrere bislang getrennte Arbeitsschritte zu einem verlässlichen Ablauf werden. Das setzt voraus, dass die gewählte Paketstufe die benötigten Dokumentarten abdeckt und die Steuerberatung die erzeugten Unterlagen sinnvoll übernehmen kann.",
+            "Wir würden das Programm weniger stark gewichten, wenn das Unternehmen schon heute ein durchgängiges ERP benötigt. In diesem Fall muss die Auswahl an den gesamten Betriebsabläufen ausgerichtet werden. Die Buchhaltung sollte dann als Teil dieses größeren Bedarfs betrachtet werden, statt die Entscheidung allein an einem einzelnen Rechnungs- oder Belegwerkzeug festzumachen."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "papierkram": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.papierkram.de/funktionen/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Projektarbeit als Ausgangspunkt",
+          "absaetze": [
+            "Papierkram ist dann besonders interessant, wenn die Rechnung erst am Ende eines längeren Arbeitsablaufs entsteht. Bei einer Beratung oder kleinen Agentur beginnt dieser Ablauf häufig mit einem Kundenprojekt, führt über geleistete Zeit und endet mit einem nachvollziehbaren Rechnungsdokument. Die Verbindung dieser Schritte kann Doppelarbeit verringern. Wir würden den Nutzen deshalb an einem vollständigen Projekt bewerten und nicht nur am Erstellen einer einzelnen Musterrechnung.",
+            "Ein sinnvoller Testfall enthält sowohl vereinbarte Leistungen als auch zusätzliche, nach Aufwand erbrachte Arbeit. Prüfen Sie, wie Änderungen nachvollziehbar werden und wer Zeiten vor der Abrechnung kontrolliert. Entscheidend ist, dass Ihre eigene Kalkulationslogik im System verständlich bleibt. Ein Werkzeug hilft wenig, wenn Mitarbeitende aus Unsicherheit weiterhin parallele Tabellen führen."
+          ],
+          "quellen": [
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Welcher Tarif ist wirtschaftlich sinnvoll?",
+          "absaetze": [
+            "Der kostenlose Tarif ist eine Möglichkeit, das Grundprinzip kennenzulernen. Für eine dauerhafte Nutzung sollte die Entscheidung aber an den benötigten Funktionen und Kapazitäten hängen. Ein kleines Team hat andere Anforderungen an Rechte, Speicher und zusätzliche Zugänge als eine einzelne Person. Vergleichen Sie deshalb die Kosten bei der tatsächlichen Teamgröße und nicht nur den günstigsten Einstieg.",
+            "Bei monatlicher und jährlicher Abrechnung sollten Sie Flexibilität und Preis zusammen betrachten. Solange Ihre Abläufe noch nicht feststehen, kann eine kurze Bindung wertvoller sein als ein rechnerischer Rabatt. Erst nach einer repräsentativen Testphase lässt sich sinnvoll beurteilen, ob ein längerer Zeitraum zu Ihrem Unternehmen passt. Behalten Sie dabei auch den Export bei einem späteren Wechsel im Blick."
+          ],
+          "quellen": [
+            0
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Buchhaltung und Zusammenarbeit im Alltag",
+          "absaetze": [
+            "Vor der Einführung sollte die Steuerberatung die für sie erforderlichen Daten und Formate benennen. Legen Sie danach fest, wer Belege vollständig erfasst, wer fehlende Unterlagen nachfordert und wann ein Zeitraum abgeschlossen wird. Diese Regeln sind bei einer kleinen Firma oft wichtiger als weitere Automatisierungen. Sie sorgen dafür, dass Berichte auf einer verlässlichen Datenbasis entstehen.",
+            "Wir würden zunächst einen begrenzten Zeitraum übernehmen und die Ergebnisse mit dem bisherigen Verfahren abgleichen. Prüfen Sie offene Rechnungen, unvollständige Belege und nachträgliche Änderungen. Auch ein gemeinsamer Zugriff benötigt klare Zuständigkeiten. Die bloße Möglichkeit, mehrere Personen anzumelden, sagt noch nichts darüber aus, ob Ihr Freigabe- und Kontrollprozess passend eingerichtet ist."
+          ],
+          "quellen": [
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Für wen wir Papierkram priorisieren würden",
+          "absaetze": [
+            "Unsere Einschätzung fällt besonders für kleine Dienstleistungsunternehmen positiv aus, wenn ein nachvollziehbarer Weg von Projektarbeit zur Rechnung gesucht wird. Der entscheidende Mehrwert wäre eine konsistente Verbindung von Kunden, Leistungen und Nachweisen. Das sollte sich im eigenen Arbeitsalltag zeigen und nicht nur in einer Herstellerpräsentation.",
+            "Für einen Betrieb, dessen Kernprobleme in Einkauf, Lagerbewegungen oder Produktion liegen, würden wir zuerst eine andere Kategorie prüfen. Papierkram kann daneben eine Aufgabe übernehmen, doch es sollte nicht zum Ersatz für fehlende Betriebssteuerung erklärt werden. Ebenso sollten Sie Steuerumfang und Rechtsformbezug individuell abklären, bevor Sie das Programm als zentrale Finanzlösung festlegen."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "accountable": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.accountable.de/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Eine persönliche Finanzorganisation",
+          "absaetze": [
+            "Accountable setzt an einem anderen Bedarf an als eine umfangreiche Unternehmensverwaltung: Eine selbstständige Person möchte Belege, Rechnungen und Steuerunterlagen möglichst konsequent selbst organisieren. Das ist ein sinnvoller Ansatz, wenn die eigene Struktur überschaubar bleibt und die angebotenen Verfahren zu den tatsächlichen Fällen passen. Unser wichtigster Auswahlpunkt wäre deshalb der konkrete Steuer- und Rechtsformumfang, nicht die Zahl allgemeiner Komfortfunktionen.",
+            "Für eine eigene Prüfung würden wir verschiedene Belege und einen typischen Zahlungsvorgang vorbereiten. Kontrollieren Sie, wie Sie eine fehlerhafte Erkennung korrigieren und wie offene Fragen kenntlich bleiben. Ein guter Ablauf erleichtert die Erfassung, zwingt Sie aber nicht dazu, ungeklärte Sachverhalte ungeprüft zu übernehmen. Genau diese Kontrolle sollte in der Testphase sichtbar werden."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Tarife sauber auseinanderhalten",
+          "absaetze": [
+            "Rechnungsfunktionen, laufende Buchhaltung und die Vorbereitung von Steuererklärungen gehören nicht automatisch zum selben Leistungsumfang. Vergleichen Sie die Pakete anhand einer eigenen Liste der wirklich benötigten Tätigkeiten. Wer lediglich Rechnungen schreibt, bewertet andere Funktionen als jemand, der zusätzlich Einnahmen, Ausgaben und Erklärungen bearbeitet. Auch der Unterschied zwischen App und Browser kann für die tägliche Arbeit relevant sein.",
+            "Einführungsrabatte sollten bei der Auswahl getrennt von den dauerhaften Kosten betrachtet werden. Rechnen Sie mit dem regulären Preis und prüfen Sie die Vertragsdauer des gewählten Pakets. Wenn Unterstützung durch einen Coach oder Garantieversprechen für Ihre Entscheidung ausschlaggebend sind, lesen Sie den konkreten Umfang und die Ausschlüsse. Die allgemeine Überschrift ist dafür keine ausreichende Grundlage."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Zusammenarbeit und Qualitätskontrolle",
+          "absaetze": [
+            "Wenn Sie mit einer Steuerberatung arbeiten, sollte deren Arbeitsweise früh in die Entscheidung einfließen. Klären Sie, ob ein direkter Zugriff oder eine regelmäßige Datenübergabe sinnvoller ist und wer Korrekturen verantwortet. Eine gemeinsame Datenbasis funktioniert nur dann gut, wenn Zuständigkeiten feststehen. Andernfalls können parallel bearbeitete Unterlagen zu unnötigen Rückfragen führen.",
+            "Bei der Selbstorganisation würden wir eine feste monatliche Prüfung vorsehen: Sind alle Einnahmen zugeordnet, fehlen Belege und sind unklare Vorgänge offen markiert? Diese Routine ist wichtiger als eine möglichst schnelle automatische Erfassung. Die Software kann die Vorbereitung unterstützen; Ihre eigenen Unterlagen müssen trotzdem vollständig und verständlich bleiben."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Unser Urteil für die engere Auswahl",
+          "absaetze": [
+            "Accountable würden wir vor allem für Einzelpersonen priorisieren, die einen durchgehenden, mobilen Ablauf für ihre Finanzunterlagen suchen. Das Programm kann dann ein guter Kandidat sein, wenn es die benötigten Fälle nachvollziehbar abdeckt und der gewählte Tarif ausreichend Unterstützung bietet. Prüfen Sie dies anhand eigener Vorgänge und beziehen Sie bei Bedarf eine fachkundige Person ein.",
+            "Bei einer wachsenden Organisation mit mehreren kaufmännischen Rollen würden wir die Anforderungen neu bewerten. Der Bedarf kann sich von einer persönlichen Finanzorganisation zu einer umfangreicheren Unternehmenssteuerung verschieben. Entscheidend ist dann, ob das bisherige Werkzeug weiterhin zum Unternehmen passt oder nur aus Gewohnheit als zentrale Lösung fortgeführt wird."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "edlohn": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Laut Hersteller ausschließlich in Deutschland erhältlich.",
+        "quelle": "https://www.eurodata.de/loesungen/steuerberater/lohnabrechnung/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Professionelle Abrechnung als Ausgangspunkt",
+          "absaetze": [
+            "edlohn ist redaktionell als System für organisierte Lohnarbeit einzuordnen. Die zentrale Stärke wäre nicht, beliebige Fälle ohne Fachwissen abzurechnen, sondern mehrere Beteiligte auf einer nachvollziehbaren Datenbasis zusammenzubringen. Das ist für eine Kanzlei mit Mandanten ebenso relevant wie für ein Unternehmen mit eigenem Abrechner. Die Verantwortlichkeit für Prüfung und Freigabe bleibt dabei ein wichtiger Bestandteil des Prozesses.",
+            "Vor der Auswahl würden wir den gesamten Monatsablauf aufzeichnen: Wer liefert Änderungen, wer prüft sie und wann erfolgt die Freigabe? Legen Sie auch fest, wie Rückmeldungen aus Meldeverfahren bearbeitet werden. Erst anhand dieses Ablaufs lässt sich bewerten, ob die angebotenen Rollen und Übergaben tatsächlich zu Ihrem Unternehmen passen."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Sonderfälle und Zusammenarbeit prüfen",
+          "absaetze": [
+            "Ein Lohnsystem sollte mit den Fällen ausgewählt werden, die im Betrieb wirklich vorkommen. Dazu gehören neben normalen Abrechnungen auch Korrekturen, Ein- und Austritte oder branchenspezifische Besonderheiten. Die Herstellerbeschreibung nennt einen breiten Umfang; für Ihre Entscheidung ist aber der Nachweis an den eigenen Fällen wichtiger als eine allgemeine Funktionsübersicht.",
+            "Bei ausgelagerter oder gemeinsam bearbeiteter Abrechnung würden wir besonders auf die Übergabe zwischen Unternehmen und Dienstleister achten. Prüfen Sie, wie fehlende Informationen sichtbar werden und wer eine Änderung endgültig bestätigt. Ein sinnvoller Test endet mit vollständigen, nachvollziehbaren Unterlagen für die Beteiligten und nicht schon mit dem erfolgreichen Anlegen eines Mitarbeiters."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Kostenmodell und Einführungsrisiko",
+          "absaetze": [
+            "Bei einer nutzungsabhängigen Abrechnung muss das Angebot auf einem belastbaren Mengengerüst beruhen. Lassen Sie regelmäßige Abrechnungen, mögliche Korrekturen und ergänzende Dienste getrennt aufführen. Ein niedriger Preis pro Vorgang ist allein wenig aussagekräftig, wenn wichtige Leistungen zusätzlich berechnet werden. Auch die fachliche Betreuung sollte im Vergleich ausdrücklich berücksichtigt werden.",
+            "Für den Umstieg empfehlen wir eine kontrollierte Parallelprüfung eines geeigneten Abrechnungszeitraums. Die Datenübernahme sollte mit Stammdaten, bisherigen Werten und wiederkehrenden Fällen geplant werden. Benennen Sie vorab Verantwortliche und einen Rückfallplan. So lässt sich die Entscheidung auf einen nachvollziehbaren Übergang stützen, statt auf einen möglichst schnellen technischen Start."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Für wen sich die engere Prüfung lohnt",
+          "absaetze": [
+            "Wir würden edlohn für Lohnbüros, Kanzleien und Unternehmen mit einem fachkundigen Abrechner priorisieren. Die Verbindung von Mandantenarbeit, Unterlagen und ergänzenden Lösungen kann dort einen relevanten organisatorischen Nutzen haben. Voraussetzung ist ein klares Angebot, das den benötigten Umfang abgrenzt und eine geregelte Zusammenarbeit ermöglicht.",
+            "Für eine junge Firma mit dem ersten Beschäftigten beginnt die Entscheidung dagegen bei der Zuständigkeit: selbst fachkundig abrechnen oder einen Dienstleister beauftragen. Aus dieser Entscheidung ergeben sich die Anforderungen an ein System. Die Einführung einer professionellen Abrechnungssoftware sollte deshalb nicht mit der Einrichtung einer einfachen Personalakte verwechselt werden."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "gdi-lohn-gehalt": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.gdi.de/wp-content/uploads/2026/06/GDI-Lohn-und-Gehalt_Produktinformation.pdf"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Eigenständige Lohnarbeit mit klaren Zuständigkeiten",
+          "absaetze": [
+            "GDI Lohn & Gehalt adressiert die laufende Abrechnung in Unternehmen, die diese Aufgabe selbst verantworten möchten. Für die Auswahl wäre entscheidend, ob der eigene Abrechner die erforderlichen Tätigkeiten in einem nachvollziehbaren Monatsprozess erledigen kann. Dazu gehören nicht nur normale Abrechnungen, sondern ebenso Rückmeldungen, Korrekturen und die Übergabe an das Rechnungswesen.",
+            "Wir würden eine Vorführung anhand mehrerer eigener Fälle vorbereiten. Lassen Sie beispielsweise eine Änderung der Arbeitszeit, eine nachträgliche Korrektur und einen Mitarbeiterwechsel bearbeiten. So erkennen Sie, welche Arbeitsschritte automatisiert werden und an welchen Stellen weiterhin eine fachliche Entscheidung erforderlich ist. Die verständliche Behandlung solcher Fälle ist wichtiger als eine besonders schnelle Standardabrechnung."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Verbindungen zur Zeitwirtschaft",
+          "absaetze": [
+            "Die Anbindung an ein vorhandenes Zeitsystem kann Doppelarbeit verringern, wenn Lohnarten, Fehlzeiten und Freigaben sauber zugeordnet werden. Entscheidend ist dabei nicht die bloße Existenz einer Schnittstelle, sondern die Bedeutung der übertragenen Daten. Ein Zeitwert muss im Abrechnungsprozess richtig interpretiert werden können. Legen Sie deshalb die Zuordnung gemeinsam mit den fachlich Verantwortlichen fest.",
+            "Prüfen Sie auch, wie nachträgliche Änderungen zwischen den Systemen behandelt werden. Ein bereits übertragener Zeitraum kann eine andere Kontrolle benötigen als ein noch offener Monat. Für die Einführung würden wir diese Abläufe schriftlich festhalten und anhand eines Testexports nachvollziehen. Damit wird die Verbindung zu einem geregelten Verfahren statt zu einer zusätzlichen Fehlerquelle."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Angebot und Umstieg planen",
+          "absaetze": [
+            "Das Kostenangebot sollte Mitarbeiter, Anwender, Module und Betreuung getrennt benennen. Gerade bei einem Lohnsystem kann eine kleine Lizenzposition eine unverzichtbare fachliche Funktion betreffen. Lassen Sie deshalb die benötigten Sonderfälle im Angebot bestätigen und vergleichen Sie den vollständigen Jahresaufwand. Eine nicht verifizierte öffentliche Preisangabe lässt sich durch ein belastbares, nachvollziehbares Angebot ersetzen.",
+            "Der Wechsel sollte nicht als bloßer Datenimport geplant werden. Vereinbaren Sie, wer übernommene Stammdaten und Werte kontrolliert und wie Abweichungen aufgelöst werden. Ein geeigneter Parallelvergleich schafft eine deutlich bessere Entscheidungsgrundlage. Ebenso wichtig ist die spätere Möglichkeit, Unterlagen vollständig bereitzustellen und bei einem erneuten Wechsel sinnvoll weiterzugeben."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Redaktionelle Einschätzung",
+          "absaetze": [
+            "Wir würden GDI Lohn & Gehalt vor allem dann näher prüfen, wenn eine fachkundige Abrechnung im Unternehmen vorhanden ist und das Werkzeug zu dessen Verfahren passen soll. Eine bereits genutzte Zeitwirtschaft oder weitere kaufmännische Software kann für den Funktionsabgleich relevant sein. Sie sollte aber nicht der einzige Grund für die Entscheidung werden.",
+            "Für ein kleines Team ohne eigenen Abrechner würden wir zunächst das Dienstleistungsmodell klären. Die technische Möglichkeit, selbst abzurechnen, sagt nichts darüber aus, ob dies organisatorisch die beste Lösung ist. Erst wenn Zuständigkeit, Betreuung und Monatsprozess feststehen, lässt sich das Programm sinnvoll mit anderen Abrechnungsoptionen vergleichen."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "clockodo": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.clockodo.com/de/funktionen/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Arbeitszeit und Kundenleistung unterscheiden",
+          "absaetze": [
+            "Clockodo verbindet zwei Aufgaben, die in einem Dienstleistungsunternehmen leicht vermischt werden: Die Dokumentation der Arbeitszeit und die Bewertung von Kundenprojekten. Für eine gute Einführung sollten diese Zwecke klar getrennt bleiben. Eine vollständig dokumentierte Arbeitszeit ist nicht automatisch vollständig abrechenbar. Ebenso kann ein Projektzeitnachweis andere Angaben brauchen als die allgemeine Arbeitszeitverwaltung.",
+            "Wir würden deshalb vorab wenige verständliche Kategorien und klare Zuständigkeiten festlegen. Lassen Sie mehrere Mitarbeitende einen typischen Arbeitstag erfassen und die Ergebnisse anschließend gemeinsam auswerten. So wird sichtbar, ob die Struktur verständlich ist oder zusätzliche Rückfragen erzeugt. Ein möglichst feines Raster ist nicht unbedingt besser als eine einfachere Struktur, die konsequent gepflegt wird."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Den richtigen Tarif für den Zweck wählen",
+          "absaetze": [
+            "Der Preis von Basic ist ein sinnvoller Einstiegspunkt für einen Kostenvergleich, sollte aber nicht unabhängig vom gewünschten Projektumfang betrachtet werden. Wenn Sie Budgets, Stundensätze und Kundenleistungen steuern möchten, benötigen Sie einen anderen Funktionsabgleich als für reine Arbeitszeit. Rechnen Sie den gewählten Tarif für alle tatsächlich benötigten Personen und eventuell erforderliche Erweiterungen durch.",
+            "Für ein kleines Team würden wir zunächst eine überschaubare Pilotgruppe nutzen und danach beurteilen, ob der zusätzliche Auswertungsnutzen den Aufwand rechtfertigt. Wichtig ist die Frage, welche Entscheidung aus einem Bericht folgt. Eine interessante Statistik allein verbessert noch keinen Ablauf. Der Nutzen sollte sich in klareren Projektentscheidungen oder einer nachvollziehbaren Abrechnung zeigen."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Korrekturen und Weiterverarbeitung",
+          "absaetze": [
+            "Ein guter Zeiterfassungsprozess braucht ein Verfahren für vergessene Einträge, Abwesenheiten und Änderungen abgeschlossener Zeiträume. Diese Fälle sollten in der Testphase bewusst vorkommen. Legen Sie fest, wer Zeiten prüft und wann sie weiterverarbeitet werden. Das erleichtert sowohl den Monatsabschluss als auch die Zusammenarbeit mit einer externen Lohnabrechnung oder dem Rechnungswesen.",
+            "Bei einer Schnittstelle würden wir eine kontrollierte Übergabe eigener Daten prüfen. Entscheidend ist, ob Projekte, Leistungen und Zeitarten richtig ankommen und eine erneute Übertragung keine unklaren Doppelungen erzeugt. Bewerten Sie außerdem den Export unabhängig von der Schnittstelle. Ein verständlicher Datenbestand hilft auch dann, wenn Sie später die nachgelagerte Software wechseln."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Unser Urteil für Dienstleister und Teams",
+          "absaetze": [
+            "Wir würden Clockodo für Dienstleister priorisieren, die aus Arbeitszeit nachvollziehbare Projektinformationen gewinnen möchten. Die fokussierte Aufgabe kann ein Vorteil gegenüber einer umfangreichen Suite sein, wenn andere kaufmännische Systeme bereits vorhanden sind. Voraussetzung ist, dass die Datenstruktur einfach bleibt und das Team sie im Alltag tatsächlich nutzt.",
+            "Wenn dagegen Personalakten, Recruiting und Entwicklungsgespräche die entscheidenden Aufgaben sind, sollte die Auswahl in einer breiteren Personalkategorie erfolgen. Clockodo kann dort eine Ergänzung sein, ist aber nicht automatisch die zentrale Personalsoftware. Der passende Einsatz ergibt sich aus einem klaren Bedarf und einer geprüften Verbindung zu den übrigen Arbeitsabläufen."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "hrlab": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.hrlab.de/faq"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Eine zentrale Personalorganisation",
+          "absaetze": [
+            "HRlab ist redaktionell vor allem dann interessant, wenn Personalinformationen und Freigaben über mehrere Stellen verteilt sind. Eine gemeinsame Plattform kann dabei helfen, einen verbindlichen Datenbestand aufzubauen. Der Nutzen entsteht aber erst, wenn feststeht, wer welche Angaben pflegt und wer eine Änderung bestätigt. Diese organisatorischen Regeln sollten vor der Systemeinrichtung formuliert werden.",
+            "Für die Vorführung würden wir einen Eintritt, einen Wechsel von Stammdaten und einen Austritt vorbereiten. Dabei sollte jede beteiligte Rolle ihre tatsächliche Aufgabe übernehmen. So erkennen Sie, ob ein Prozess verständlich bleibt und ob Informationen an der richtigen Stelle ankommen. Eine große Zahl möglicher Einstellungen ist nur hilfreich, wenn daraus eine klare Arbeitsweise entsteht."
+          ],
+          "quellen": [
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Mindestlizenzierung als wirtschaftlicher Filter",
+          "absaetze": [
+            "Die Mindestlizenzierung von 30 Personen ist bei der Auswahl eines kleinen Teams ein wesentlicher Punkt. Rechnen Sie deshalb mit dem tatsächlich zu beauftragenden Umfang und nicht ausschließlich mit dem Preis pro Person. Ebenso sollten benötigte Zusatzmodule von Anfang an im Vergleich enthalten sein. Andernfalls stehen ein günstiger Basispreis und ein deutlich umfangreicherer tatsächlicher Bedarf nebeneinander.",
+            "Für ein wachsendes Unternehmen würden wir zwei Szenarien kalkulieren: den aktuellen Personalbestand und eine realistische nächste Entwicklungsstufe. So wird sichtbar, ob die Plattform wirtschaftlich zum Unternehmen passt. Eine umfangreichere Suite kann sinnvoll sein, wenn dadurch mehrere gepflegte Einzellösungen ersetzt werden; dieser Effekt sollte jedoch konkret nachvollziehbar sein."
+          ],
+          "quellen": [
+            0
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Einführung, Rechte und Lohnübergabe",
+          "absaetze": [
+            "Personalsoftware enthält Informationen mit unterschiedlichen Verantwortlichkeiten. Definieren Sie deshalb zunächst Rollen, Freigaben und die Grenzen des Mitarbeiterzugriffs. Im Test sollten Sie nachvollziehen, wie eine Änderung dokumentiert und an die zuständige Stelle übergeben wird. Eine gut geregelte Datenpflege durch Mitarbeitende kann Arbeit vereinfachen, erfordert aber eine verständliche Kontrolle der eingegebenen Daten.",
+            "Bei der Verbindung zur Entgeltabrechnung zählt die fachliche Zuordnung der Daten. Lassen Sie die benötigten Felder und Übergabezeitpunkte mit Ihrem Abrechner abstimmen. Wir würden einen begrenzten Zeitraum parallel prüfen und Abweichungen dokumentieren. Das ist eine bessere Grundlage für die Einführung als die Annahme, eine vorhandene Schnittstelle löse sämtliche Übergabeprobleme automatisch."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Redaktionelles Urteil",
+          "absaetze": [
+            "Wir würden HRlab für Unternehmen mit einer wachsenden, dauerhaft organisierten Personalverwaltung in die engere Auswahl nehmen. Der modulare Aufbau kann dabei helfen, den Ausbau entlang des tatsächlichen Bedarfs zu planen. Voraussetzung ist eine passende Mindestlizenzierung und eine Einführung, die Verantwortlichkeiten ebenso sorgfältig behandelt wie die technischen Einstellungen.",
+            "Für eine kleine Firma mit wenigen Beschäftigten würden wir zunächst prüfen, ob ein einfacherer Umfang ausreicht. Eine zentrale Personalplattform lohnt sich nicht allein durch die Zahl möglicher Funktionen. Entscheidend ist, ob sie wiederkehrende Aufgaben tatsächlich ordnet und dem Team eine nachvollziehbare gemeinsame Arbeitsweise ermöglicht."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "rexx-hr": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.rexx-systems.com/preise/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Breite Personalprozesse sinnvoll bündeln",
+          "absaetze": [
+            "Rexx HR ist für die redaktionelle Auswahl vor allem eine Plattformfrage: Soll die Personalorganisation mehrere Prozesse auf einer gemeinsamen Grundlage führen? Das kann für einen mittelständischen Betrieb mit unterschiedlichen Rollen und Einheiten sinnvoll sein. Eine umfangreiche Suite sollte allerdings nicht mit dem Ziel eingeführt werden, möglichst viele verfügbare Funktionen sofort zu nutzen.",
+            "Wir würden zunächst wenige verbindliche Kernprozesse auswählen und deren Zuständigkeiten dokumentieren. Ein Eintritt, eine organisatorische Änderung und ein Austritt eignen sich für eine erste Prüfung. Lassen Sie dabei die tatsächlich beteiligten Personen mitarbeiten. So wird sichtbar, ob die konfigurierten Abläufe verständlich sind oder ob zusätzliche Abstimmung außerhalb des Systems notwendig bleibt."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Modulauswahl und Kostenvergleich",
+          "absaetze": [
+            "Bei einem individuell kalkulierten Angebot müssen Basis und zusätzliche Bereiche klar auseinandergehalten werden. Schreiben Sie Ihre Anforderungen pro Prozess auf und lassen Sie den benötigten Umfang zuordnen. Das verhindert, dass im Preisvergleich unterschiedliche Konfigurationen nebeneinanderstehen. Auch Beratungsstunden, Schulung und spätere Anpassungen sollten in einer gemeinsamen Kalkulation erscheinen.",
+            "Für die Entscheidung würden wir einen gestuften Ausbau prüfen. Eine erste Phase kann die zentralen Stammdaten und Freigaben ordnen; weitere Aufgaben folgen erst nach einer belastbaren Nutzung. So erhalten Sie eine nachvollziehbare Grundlage für den Ausbau, statt schon vor der Einführung sämtliche optionalen Bereiche zu beauftragen."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Betriebsmodell und Datenverantwortung",
+          "absaetze": [
+            "Die Wahl zwischen einem angebotenen Cloudbetrieb und dem Betrieb beim Kunden verändert die organisatorischen Anforderungen. Klären Sie, wer Updates, Zugriffe und technische Betreuung verantwortet. Ebenso sollte der konkret vereinbarte Standort der Datenverarbeitung feststehen. Allgemeine Aussagen über verfügbare Regionen ersetzen keine eindeutige Festlegung im Vertrag.",
+            "Für die Datenübernahme würden wir zuerst einen bereinigten, klar verantworteten Personalbestand vorbereiten. Unterschiedliche Bezeichnungen, doppelte Datensätze und uneinheitliche Organisationsstrukturen sollten nicht ungeprüft übernommen werden. Die Softwareeinführung ist eine Gelegenheit, diese Grundlagen zu ordnen. Sie sollte aber nicht dazu führen, dass bestehende Unklarheiten lediglich in ein neues System übertragen werden."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Wann wir Rexx HR priorisieren würden",
+          "absaetze": [
+            "Wir würden Rexx HR näher prüfen, wenn eine Personalabteilung eine längerfristige gemeinsame Plattform benötigt und genügend Verantwortung für die Einführung vorhanden ist. Der mögliche Ausbau innerhalb einer Suite kann dann ein relevanter Vorteil sein. Er sollte mit einem verbindlichen Stufenplan und einer vollständigen Kostenübersicht verbunden werden.",
+            "Für ein kleines erstes Team mit wenigen wiederkehrenden Aufgaben würden wir zunächst einen schmaleren Bedarf formulieren. Eine große Suite ist nicht automatisch die professionellere Lösung. Professionell ist die Entscheidung dann, wenn Funktionsumfang, Einführung und laufende Betreuung zur Größe und Arbeitsweise des Unternehmens passen."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "absence-io": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.absence.io/de/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Ein konkreter Einstieg in die Personalorganisation",
+          "absaetze": [
+            "absence.io würden wir zunächst an einer klaren Aufgabe messen: Abwesenheiten sollen verlässlich sichtbar sein und mit verständlichen Genehmigungen bearbeitet werden. Das ist für ein kleines Team häufig sinnvoller als sofort eine umfangreiche Personalplattform einzuführen. Der praktische Nutzen hängt davon ab, ob die Regeln im Unternehmen eindeutig sind und Mitarbeitende sie nachvollziehen können.",
+            "Für eine Vorführung würden wir normale Urlaubsanträge, kurzfristige Abwesenheiten und eine Teilzeitkonstellation vorbereiten. Prüfen Sie dabei, wer eine Entscheidung trifft und wie der aktuelle Stand erkennbar wird. Eine gute Übersicht hilft nur, wenn sie den verbindlichen Zustand zeigt und keine parallelen Abstimmungen über private Kalender erforderlich bleiben."
+          ],
+          "quellen": [
+            0
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Die Paketgrenzen passen zum schrittweisen Ausbau",
+          "absaetze": [
+            "Die Staffelung in Starter, Pro und Complete erleichtert grundsätzlich eine bedarfsbezogene Entscheidung. Entscheidend ist jedoch, welche Aufgaben Sie gemeinsam lösen möchten. Wer neben Urlaub auch Arbeitszeit, Akten oder Reisekosten benötigt, sollte diese Tätigkeiten von Anfang an im Vergleich aufführen. Andernfalls ist der günstigste Einstiegspreis nicht der Preis des erforderlichen Gesamtumfangs.",
+            "Wir würden den gewählten Tarif für die tatsächliche Personenzahl kalkulieren und eine realistische Wachstumsannahme ergänzen. Prüfen Sie außerdem die Bedingungen der jährlichen Zahlung, bevor Sie den Rabatt einrechnen. Eine überschaubare Testphase ist hilfreich, um die eigene Bedienung und die Verständlichkeit der Abläufe zu beurteilen, ohne sich nur auf eine Funktionsliste zu verlassen."
+          ],
+          "quellen": [
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Zeitdaten und Folgeprozesse",
+          "absaetze": [
+            "Wenn Arbeitszeiten mit erfasst werden, müssen die Regeln für Korrekturen, Freigabe und Weitergabe feststehen. Eine Urlaubsübersicht und eine Abrechnungsvorbereitung verfolgen unterschiedliche Zwecke. Deshalb sollte Ihr Prozess bestimmen, welche Daten zum Monatsende verbindlich sind und wer sie kontrolliert. Diese Entscheidung kann nicht allein durch die Wahl eines Tarifs ersetzt werden.",
+            "Wir würden den Export mit einer kleinen Menge eigener Daten prüfen und die Person einbeziehen, die diese Daten später benötigt. Achten Sie auf verständliche Bezeichnungen und nachvollziehbare Kontingente. Ebenso sollten Mitarbeitende wissen, wie sie fehlerhafte Einträge korrigieren lassen. Ein einfacher, konsequent genutzter Ablauf ist meist wertvoller als eine zusätzliche Funktion ohne klare Zuständigkeit."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Redaktionelles Urteil",
+          "absaetze": [
+            "absence.io würden wir für kleine und mittlere Teams mit einem klaren Bedarf an Urlaub, Abwesenheiten und gegebenenfalls Zeit in die engere Auswahl nehmen. Das Werkzeug sollte dabei als fokussierte Lösung geprüft werden. Der Nutzen liegt in einer verständlichen gemeinsamen Organisation und nicht darin, jede denkbare Personalaufgabe abzudecken.",
+            "Bei einem Bedarf an umfassender Personalentwicklung, Recruiting oder eigenständiger Entgeltabrechnung würden wir den Umfang größer definieren. absence.io kann Teil eines solchen Aufbaus sein, muss aber nicht dessen zentrales System werden. Entscheidend bleibt, ob die gewählten Aufgaben vollständig und verlässlich in Ihrer eigenen Arbeitsweise unterstützt werden."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "cobra-crm": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://cobra.de/preise/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Kundenbeziehungen als gemeinsamer Arbeitsprozess",
+          "absaetze": [
+            "cobra CRM würden wir an der Qualität eines gemeinsamen Vertriebsablaufs messen. Ein Kontakt ist nur dann hilfreich, wenn das Team die bisherige Kommunikation, den nächsten Schritt und die Verantwortung nachvollziehen kann. Die Auswahl sollte deshalb mit wenigen konkreten Vorgängen beginnen und nicht mit dem Wunsch, möglichst viele Felder in einer Kundendatenbank anzulegen.",
+            "Für eine Vorführung eignen sich eine neue Anfrage, eine laufende Verkaufschance und eine Übergabe an eine andere Person. Lassen Sie die Beteiligten jeweils mit ihrer vorgesehenen Rolle arbeiten. So erkennen Sie, ob die Kundenhistorie verständlich bleibt und ob Aufgaben tatsächlich an der richtigen Stelle sichtbar werden. Das ist aussagekräftiger als eine allgemeine Demonstration vieler möglicher Ansichten."
+          ],
+          "quellen": [
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Cloudtarife nach Prozessbedarf vergleichen",
+          "absaetze": [
+            "Die Staffelung in Essential, Grow und Max macht den Funktionsabgleich zu einem wichtigen Teil der Entscheidung. Ein Team mit einfachen Verkaufschancen benötigt einen anderen Umfang als ein Unternehmen mit eigenen Objekten, komplexeren Rechten und Automatisierungen. Rechnen Sie deshalb mit der erforderlichen Edition und den tatsächlich beteiligten Personen. Der günstigste Tarif ist nicht automatisch das günstigste passende Angebot.",
+            "Wir würden zusätzlich die einmaligen Arbeiten für Datenübernahme, Einrichtung und Schulung aufführen. Diese Kosten sollten neben der laufenden Lizenz stehen. Ein Projekt zur Kundenverwaltung kann technisch klein beginnen, benötigt aber dennoch einen klaren Verantwortlichen. Ohne diese Zuständigkeit werden Automatisierungen und zusätzliche Strukturen leicht zu einem Ersatz für noch ungeklärte Abläufe."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Datenqualität und KI bewusst prüfen",
+          "absaetze": [
+            "Bei der Migration sollten Kontakte, Unternehmen und Historien zuerst bereinigt werden. Legen Sie fest, welche Informationen künftig verbindlich im CRM gepflegt werden und welche weiterhin in anderen Systemen entstehen. Eine Schnittstelle hilft nur dann, wenn Datenhoheit und Bedeutung der übertragenen Felder klar sind. Prüfen Sie den Austausch deshalb mit eigenen Beispielen.",
+            "Bei Unterstützung durch KI würden wir einen eng abgegrenzten Anwendungsfall wählen und die Ergebnisse kontrollieren. Wichtig ist, welche Daten verwendet werden, wer einen Vorschlag freigibt und wie ein fehlerhaftes Ergebnis korrigiert wird. Der Nutzen sollte im konkreten Arbeitsablauf sichtbar sein. Eine allgemeine Beschreibung der KI reicht nicht aus, um die Eignung für Kundenkommunikation oder Entscheidungen zu beurteilen."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Redaktionelles Urteil",
+          "absaetze": [
+            "Für ein Team, das Kundeninformationen und Vertriebsarbeit verbindlich zusammenführen möchte, ist cobra CRM eine ernsthafte Kandidatin. Wir würden den Schwerpunkt auf die passende Edition, klare Datenverantwortung und einen begrenzten ersten Einführungsumfang legen. Die beworbenen deutschen Betriebs- und Supportmerkmale können im Vertragsabgleich relevant sein, ersetzen aber keine eigene Prüfung des benötigten Angebots.",
+            "Weniger passend ist ein umfangreicher Aufbau der Kundenverwaltung, wenn lediglich eine Kontaktliste gesucht wird oder der Vertrieb noch keinen verständlichen gemeinsamen Prozess besitzt. In diesem Fall sollte zunächst der Bedarf geordnet werden. Ein professioneller Einsatz entsteht durch eine nachvollziehbare Arbeitsweise und passende Unterstützung, nicht allein durch den Kauf einer leistungsfähigen Plattform."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    "cas-genesisworld": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.cas.de/loesungen/crm-xrm/cas-genesisworld/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Ein CRM über den Vertrieb hinaus",
+          "absaetze": [
+            "CAS genesisWorld ist redaktionell besonders für eine Kundenbeziehung interessant, an der mehrere Fachbereiche mitarbeiten. Der praktische Auswahlpunkt ist dann nicht nur die nächste Verkaufschance, sondern der Zusammenhang zwischen Kontakt, bisheriger Zusammenarbeit und offenen Aufgaben. Eine gemeinsame Datenbasis kann hilfreich sein, wenn sie für die jeweiligen Rollen verständlich und verlässlich bleibt.",
+            "Wir würden eine Kundenübergabe zwischen Vertrieb und Service oder Projektverantwortlichen vorbereiten. Lassen Sie prüfen, welche Informationen mitgegeben werden und welche Zugriffe erforderlich sind. So zeigt sich, ob ein gemeinsamer Vorgang Arbeit erleichtert oder lediglich zusätzliche Pflege erzeugt. Ein konsistenter Prozess ist wichtiger als eine besonders große Zahl möglicher Ansichten."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Anpassung mit einem klaren Rahmen",
+          "absaetze": [
+            "Eine anpassbare Plattform sollte mit einem nachvollziehbaren Kernprozess eingeführt werden. Definieren Sie zuerst verbindliche Stammdaten, Zuständigkeiten und wenige typische Abläufe. Besondere Anforderungen können anschließend ergänzt werden. Ohne diesen Rahmen besteht die Gefahr, bereits zu Beginn viele individuelle Strukturen aufzubauen, deren Pflege und spätere Weiterentwicklung unklar bleiben.",
+            "Für eine Vorführung würden wir auch Änderungen an vorhandenen Daten und einen Zugriff von unterwegs prüfen. Der passende Mobil- oder Umfang der Nutzung ohne Internetverbindung hängt vom eigenen Arbeitsalltag ab. Lassen Sie genau die gewählte Edition demonstrieren und dokumentieren Sie Einschränkungen. Aussagen über die gesamte Produktfamilie sind dafür weniger hilfreich als ein konkreter Nachweis Ihrer Konfiguration."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Mietpreis und Projektbudget unterscheiden",
+          "absaetze": [
+            "Das veröffentlichte Mietangebot ist ein Orientierungspunkt, aber noch kein Gesamtbudget. In einen belastbaren Vergleich gehören Edition, beteiligte Personen, Erweiterungen, Integrationen und Einführungsleistungen. Trennen Sie dabei befristete Konditionen von regulären Kosten. Ein scheinbar günstiger Nutzerpreis kann ein anderes Angebot beschreiben als den für Ihr Unternehmen erforderlichen Umfang.",
+            "Wir würden eine erste Projektphase mit klaren Abnahmekriterien vereinbaren. Beispielsweise sollten Kundendaten übernommen, ein gemeinsamer Vorgang bearbeitet und ein vollständiger Export geprüft werden. Solche Kriterien helfen, den Einführungsaufwand zu beurteilen. Sie geben auch eine bessere Grundlage für spätere Erweiterungen als ein offenes Projekt ohne überprüfbaren Zwischenstand."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Wann sich die engere Auswahl lohnt",
+          "absaetze": [
+            "CAS genesisWorld würden wir priorisieren, wenn ein mittelständischer Betrieb Kundeninformationen über den Vertrieb hinaus gemeinsam nutzen möchte. Voraussetzung ist ein geregelter Umgang mit Daten, ein klarer Projektumfang und eine verantwortliche Stelle für die Einführung. Dann kann die anpassbare Plattform einen relevanten organisatorischen Nutzen bieten.",
+            "Für eine junge Firma mit einer einzigen überschaubaren Verkaufspipeline würden wir dagegen zuerst einen schmaleren Bedarf prüfen. Eine umfangreichere Lösung zur Kundenverwaltung wird nicht durch ihre Breite automatisch passend. Die Entscheidung sollte davon abhängen, welche gemeinsamen Arbeitsabläufe heute gebraucht werden und welche Erweiterungen später realistisch folgen."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "salesforce-sales-cloud": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.salesforce.com/de/sales/cloud/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Eine Plattformentscheidung mit langfristigen Folgen",
+          "absaetze": [
+            "Salesforce Sales Cloud würden wir als längerfristige Plattformentscheidung betrachten. Der Nutzen kann entstehen, wenn ein Team einheitliche Kundendaten, nachvollziehbare Verkaufschancen und verbindliche Übergaben benötigt. Gleichzeitig wächst mit dem Funktionsumfang die Bedeutung von Datenmodell und Administration. Ein CRM sollte deshalb nicht allein nach einer Liste vorhandener Möglichkeiten ausgewählt werden.",
+            "Vor der Vorführung würden wir einen typischen Vertriebsprozess mit wenigen klaren Phasen formulieren. Legen Sie fest, welche Informationen tatsächlich für den nächsten Schritt benötigt werden. Prüfen Sie anschließend die Übernahme einer Anfrage, die Zusammenarbeit mehrerer Personen und eine geänderte Verkaufschance. Diese Fälle zeigen, ob die Plattform Ihre Arbeitsweise unterstützt oder zusätzliche Pflege erzeugt."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Editionen und Zusatzleistungen realistisch kalkulieren",
+          "absaetze": [
+            "Der veröffentlichte Preis von Starter bietet einen Orientierungspunkt, beschreibt aber nicht den gesamten möglichen Plattformumfang. Wenn weitergehende Automatisierungen, Anpassungen oder Analysen benötigt werden, muss die erforderliche Edition geprüft werden. Rechnen Sie mit dieser Konfiguration und nicht mit einem Einstiegspreis, der entscheidende Anforderungen offen lässt. Der Unterschied zwischen monatlicher und jährlicher Abrechnung gehört ebenfalls in den Vergleich.",
+            "Wir würden zusätzlich ein Budget für Einführung und laufende Betreuung vorsehen. Klären Sie, wer Änderungen an Feldern, Regeln und Integrationen verantwortet. Bei KI- und zusätzlichen Datenleistungen sollten Kosten und Leistungsgrenzen gesondert feststehen. Ein vollständiger Kostenvergleich umfasst die erwartete Nutzung und eine realistische nächste Wachstumsstufe des Vertriebsteams."
+          ],
+          "quellen": [
+            0
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Datenmodell, Übergaben und Abnahme",
+          "absaetze": [
+            "Die Einführung sollte mit einem bereinigten Datenbestand beginnen. Unternehmen, Kontakte und Verkaufschancen benötigen klare Regeln, damit Informationen nicht mehrfach oder unterschiedlich gepflegt werden. Bei einer Integration sollte feststehen, welches System eine Angabe führt und wie Änderungen abgeglichen werden. Diese Verantwortung wird mit zunehmender Zahl angebundener Anwendungen wichtiger.",
+            "Für die Abnahme würden wir einen vollständigen Vorgang und einen Datenexport verlangen. Dazu gehören nicht nur Stammdaten, sondern die für den Betrieb relevante Historie und angepasste Strukturen. Prüfen Sie außerdem den Umgang mit fehlerhaften oder doppelten Daten. Ein erfolgreicher Import allein reicht nicht aus, um die Qualität einer langfristigen Plattformentscheidung zu beurteilen."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Unser Urteil für wachsende Vertriebsteams",
+          "absaetze": [
+            "Salesforce Sales Cloud würden wir in die engere Auswahl nehmen, wenn ein Unternehmen eine ausbaufähige Vertriebsplattform benötigt und die notwendige Verantwortung für Einführung und Pflege vorhanden ist. Der mögliche Ausbau sollte dabei an konkrete Ziele gebunden sein. Eine passende Edition und verständliche Abläufe sind wichtiger als der sofortige Einsatz sämtlicher Plattformfunktionen.",
+            "Für ein sehr kleines Team ohne Administrationskapazität würden wir zunächst einen einfacheren Bedarf prüfen. Ein leistungsfähiges System ist nicht automatisch die wirtschaftlichste Lösung. Entscheidend ist, ob die zusätzlichen Möglichkeiten einen nachvollziehbaren Nutzen bringen und der laufende Aufwand zur Arbeitsweise des Unternehmens passt."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "jtl-wawi": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.jtl-software.com/de/warenwirtschaftssystem-software/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Handelsabläufe als Entscheidungsgrundlage",
+          "absaetze": [
+            "JTL-Wawi würden wir an einem vollständigen Handelsvorgang messen: Ein Artikel wird gepflegt, ein Auftrag übernommen, Bestand zugeordnet und die Lieferung vorbereitet. Der praktische Nutzen entsteht, wenn diese Schritte verlässlich zusammenarbeiten. Für die Auswahl ist deshalb ein eigener Ablaufplan hilfreicher als die Frage, wie viele zusätzliche Produkte das Ökosystem insgesamt anbietet.",
+            "Bereiten Sie für eine Vorführung neben einem Standardauftrag auch eine Teilmenge, eine Retoure und eine Änderung des Bestands vor. Lassen Sie die später beteiligten Personen ihren jeweiligen Schritt ausführen. So wird sichtbar, wo Informationen fehlen oder manuelle Arbeit bleibt. Eine erfolgreiche Shopanbindung allein beantwortet diese Fragen noch nicht."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Kosten des gesamten Ökosystems",
+          "absaetze": [
+            "Der Einstieg ohne Grundgebühr ist ein Orientierungspunkt, aber kein fertiges Betriebsbudget. Eine vollständige Kalkulation umfasst die gewählte Edition und tatsächlich benötigte Zusatzleistungen. Achten Sie darauf, welche Grenze zu welchem Produkt gehört. Eine Artikelgrenze im Basisshop ist beispielsweise eine andere Frage als der benötigte Umfang einer Warenwirtschaft oder eines Lagers.",
+            "Wir würden für das aktuelle Geschäft und einen saisonalen Spitzenmonat kalkulieren. Auftragsvolumen, Supportbedarf, technische Betreuung und zusätzliche Anbindungen sollten jeweils nachvollziehbar aufgeführt sein. Vergleichen Sie erst danach die Zahlungsvarianten. Ein längerer Vertrag ist nur dann sinnvoll, wenn die eigene Konfiguration bereits ausreichend geprüft wurde und die erwarteten Kosten verständlich sind."
+          ],
+          "quellen": [
+            0
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Migration und Betrieb sorgfältig vorbereiten",
+          "absaetze": [
+            "Eine Warenwirtschaft übernimmt den Zustand Ihres Betriebs. Deshalb sollten Artikelnummern, Varianten, Lagerorte und offene Vorgänge vor einem Umstieg bereinigt werden. Legen Sie fest, welches System Produktdaten und Bestände künftig führt. Bei mehreren Kanälen ist diese Verantwortung entscheidend, damit Änderungen nicht widersprüchlich verteilt werden.",
+            "Für den Start würden wir einen begrenzten Pilotumfang mit klaren Abnahmekriterien vereinbaren. Prüfen Sie Wareneingang, Auftrag, Versand und Rücknahme zusammenhängend. Auch die Weitergabe an die Finanzbearbeitung gehört in diesen Ablauf. Dokumentieren Sie, wer bei Störungen reagieren kann und welche Schritte vorübergehend manuell fortgeführt werden. Das macht den Betrieb belastbarer als ein möglichst schneller unkontrollierter Wechsel."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Unser Urteil für Händler",
+          "absaetze": [
+            "JTL-Wawi würden wir für Händler priorisieren, die Bestände und Aufträge über mehrere Verkaufswege hinweg organisieren möchten. Der mögliche Ausbau im Ökosystem ist interessant, sollte jedoch entlang eines klaren Bedarfs erfolgen. Eine passende Edition, geregelte Datenhoheit und ein geprüfter Ablauf sind dafür wichtiger als die Nutzung möglichst vieler Zusatzprodukte.",
+            "Für einen Dienstleister ohne Warenbestand würden wir zunächst eine fokussiertere Kategorie prüfen. Ein umfangreiches Handelswerkzeug muss nicht die passende Lösung für Angebote und einzelne Rechnungen sein. Die professionelle Entscheidung besteht darin, den notwendigen Betriebsablauf sauber abzudecken und sowohl Einführungsaufwand als auch laufende Kosten realistisch zu beurteilen."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "plentyone": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.plentyone.com/de/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Ein gemeinsamer Datenbestand für mehrere Kanäle",
+          "absaetze": [
+            "PlentyONE würden wir vor allem an der Qualität des Zusammenspiels zwischen Produktdaten, Beständen und Aufträgen messen. Bei mehreren Verkaufskanälen kann ein gemeinsamer Datenbestand ein relevanter Vorteil sein. Dieser Nutzen setzt jedoch voraus, dass klar ist, wo eine Angabe gepflegt wird und wie sie in den einzelnen Kanälen erscheint.",
+            "Für eine Vorführung würden wir einen Artikel mit Varianten und unterschiedlichen Kanalvorgaben vorbereiten. Lassen Sie anschließend eine Bestandsänderung und einen Auftrag verfolgen. So wird sichtbar, welche Informationen automatisch weitergegeben werden und wo besondere Regeln nötig sind. Die Zahl möglicher Anbindungen ist weniger wichtig als die Qualität der tatsächlich benötigten Verbindungen."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "GMV und Kapazitäten im Budget berücksichtigen",
+          "absaetze": [
+            "Die Preispläne verbinden Funktionsumfang und Kapazitäten mit einem Umsatzrahmen. Deshalb sollten Sie den Vergleich mit Ihren tatsächlichen Handelszahlen durchführen. Berücksichtigen Sie nicht nur einen durchschnittlichen Monat, sondern auch einen saisonalen Höhepunkt. Gerade bei vielen Rücksendungen ist wichtig, wie der Hersteller den für die Abrechnung relevanten Verkaufswert definiert.",
+            "Wir würden eine nachvollziehbare Beispielrechnung für den eigenen Umsatz, die Zahl der Varianten und die benötigten Kanäle anfordern. Dabei sollten mögliche Überschreitungsgebühren gesondert sichtbar sein. So lässt sich beurteilen, ob ein höherer gebuchter Rahmen wirtschaftlicher ist als regelmäßige Zusatzkosten. Ein niedriger Startpreis ohne diese Prüfung beschreibt den späteren Aufwand nur unvollständig."
+          ],
+          "quellen": [
+            0
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Automatisierung braucht verlässliche Regeln",
+          "absaetze": [
+            "Handelsautomatisierungen sollten zunächst wenige, gut verstandene Vorgänge unterstützen. Legen Sie fest, welche Bedingung einen Schritt auslöst und wer eine Ausnahme bearbeitet. Ein fehlerhafter Auftrag darf nicht nur schneller weiterverarbeitet werden. Die Testphase sollte deshalb auch fehlende Daten, Retouren und Veränderungen nach Auftragseingang enthalten.",
+            "Für die Einführung würden wir Produktdaten und offene Vorgänge schrittweise übernehmen. Kontrollieren Sie die Ergebnisse je Kanal und dokumentieren Sie Abweichungen. Eine verantwortliche Person sollte Regeln und Anbindungen dauerhaft pflegen können. Der laufende Betrieb einer zentralen Handelsplattform ist eine organisatorische Aufgabe und nicht mit einem einmaligen technischen Import abgeschlossen."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Redaktionelles Urteil für Handel über mehrere Kanäle",
+          "absaetze": [
+            "Wir würden PlentyONE für Händler und Marken näher prüfen, wenn mehrere Kanäle zu wiederholter Datenpflege und unübersichtlichen Abläufen führen. Eine zentrale Plattform kann dort einen plausiblen Nutzen haben. Voraussetzung ist, dass Produktdaten, Bestandsverantwortung und Ausnahmen sauber organisiert werden und das Kostenmodell auch bei Wachstum nachvollziehbar bleibt.",
+            "Für einen sehr kleinen Betrieb mit einem einfachen Verkaufskanal kann der Einführungsumfang größer sein als nötig. Dann sollte zunächst ein schmalerer Bedarf geprüft werden. Die passende Lösung richtet sich nach der tatsächlichen Komplexität des Handelsgeschäfts und nicht allein nach dem Wunsch, bereits heute möglichst viele zukünftige Kanäle anbinden zu können."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "haufe-x360": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://www.haufe-x360.de/"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Auswahl eines ERP beginnt bei gemeinsamen Prozessen",
+          "absaetze": [
+            "Haufe X360 würden wir als Entscheidung für eine gemeinsame Betriebsplattform betrachten. Ein sinnvoller Bedarf entsteht beispielsweise dann, wenn Informationen zwischen Auftrag, Einkauf, Lager und Finanzbearbeitung mehrfach übernommen werden. Die Auswahl eines ERP sollte deshalb mit einem zusammenhängenden Ablauf beginnen und nicht mit der isolierten Betrachtung einzelner Module.",
+            "Für die Vorführung würden wir einen repräsentativen Vorgang von der Erfassung bis zur Auswertung vorbereiten. Jede Fachabteilung sollte dabei ihre tatsächliche Aufgabe bearbeiten. So erkennen Sie, ob Zuständigkeiten und Datenübergaben zusammenpassen. Eine schöne zentrale Übersicht ist nur dann nützlich, wenn die zugrunde liegenden Vorgänge verlässlich gepflegt werden."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Rollenbezogene Lizenzierung verständlich kalkulieren",
+          "absaetze": [
+            "Der Mindestbuchungsbetrag ist ein Orientierungspunkt, aber kein Gesamtpreis für alle möglichen Anforderungen. Bei der beschriebenen Lizenzlogik kommt es darauf an, welche Personen Zugang zu welchen Funktionen benötigen. Ein sauberer Kostenvergleich beginnt deshalb mit einer Rollenmatrix. Diese sollte Nutzer, Module und notwendige Schnittstellen nachvollziehbar zusammenführen.",
+            "Wir würden außerdem einen realistischen Ausbau des Unternehmens kalkulieren. Fragen Sie, wie sich zusätzliche Rollen oder Funktionen auf das laufende Budget auswirken. Die Einführung gehört als eigene Position daneben. So vermeiden Sie, eine größere Entscheidung für ein ERP auf einen Betrag zu stützen, der nur die untere Grenze einer individuellen Konfiguration beschreibt."
+          ],
+          "quellen": [
+            0
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Einführungsprojekt mit überprüfbaren Ergebnissen",
+          "absaetze": [
+            "Ein Einführungsprojekt braucht fachliche Verantwortliche und einen klaren ersten Umfang. Legen Sie fest, welche Prozesse zum Start verbindlich funktionieren müssen und welche später folgen. Datenqualität, Bestandsabgleich und offene Vorgänge sollten dabei ausdrücklich berücksichtigt werden. Eine technische Einrichtung allein ist noch keine erfolgreiche Übernahme des Betriebs.",
+            "Für die Abnahme würden wir vollständige Testabläufe und belastbare Auswertungen vereinbaren. Dazu gehören Fehlerfälle, nachträgliche Änderungen und ein Export. Dokumentieren Sie außerdem, wer im laufenden Betrieb Einstellungen verändern darf und wie solche Änderungen geprüft werden. Diese Regeln sind für eine wachsende Plattform mindestens so wichtig wie die erste Systemkonfiguration."
+          ],
+          "quellen": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Unser Urteil für wachsende Unternehmen",
+          "absaetze": [
+            "Wir würden Haufe X360 näher prüfen, wenn mehrere kaufmännische und betriebliche Bereiche bewusst integriert werden sollen und ein tragfähiges Projektbudget vorhanden ist. Die modulare Struktur kann dabei helfen, den Umfang auf die tatsächlichen Rollen auszurichten. Sie muss jedoch in einem vollständigen Angebot und einem überprüfbaren Einführungsplan sichtbar werden.",
+            "Für einen kleinen Betrieb mit wenigen einfachen Rechnungsaufgaben würden wir zuerst eine schmalere Lösung betrachten. Ein ERP entfaltet seinen Nutzen durch das Zusammenführen relevanter Prozesse. Wenn diese Komplexität noch nicht vorhanden ist, kann die zusätzliche Einführung mehr Aufwand verursachen, als sie im täglichen Betrieb einspart."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "abas-erp": {
+      "methodik": "Quellenbasierte redaktionelle Analyse. Herstellerangaben wurden am 14. Oktober 2026 recherchiert; Eignung und Empfehlungen sind unsere Einordnung. Es handelt sich um keinen eigenen Praxistest.",
+      "deutschland": {
+        "text": "Für den deutschen Markt angeboten; deutsche Produktinformationen sind beim Hersteller verfügbar.",
+        "quelle": "https://abas-erp.com/de/de/produkt"
+      },
+      "abschnitte": [
+        {
+          "id": "abschnitt-1",
+          "titel": "Fertigungsprozesse stehen im Mittelpunkt",
+          "absaetze": [
+            "Abas ERP würden wir zuerst mit dem tatsächlichen Produktionsablauf des Unternehmens prüfen. Entscheidend ist, wie Materialbedarf, Termine und Rückmeldungen zusammenwirken. Eine integrierte Plattform kann hier einen erheblichen organisatorischen Nutzen haben, wenn die zugrunde liegenden Daten verlässlich sind. Ohne gepflegte Artikel, Stücklisten und Verantwortlichkeiten wird auch eine umfangreiche Planung unübersichtlich.",
+            "Für eine Vorführung würden wir einen repräsentativen Auftrag mit einer bewussten Änderung vorbereiten. Beispielsweise kann ein Material fehlen oder ein Arbeitsschritt später abgeschlossen werden. Lassen Sie nachvollziehen, welche Folgen dadurch in den beteiligten Bereichen entstehen. Diese Zusammenhänge sind für die Auswahl aussagekräftiger als eine isolierte Demonstration einzelner Masken."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "abschnitt-2",
+          "titel": "Durchgängige Daten statt einzelner Funktionen",
+          "absaetze": [
+            "Bei einem ERP für die Fertigung muss der gesamte Vorgang von der Anfrage bis zur kaufmännischen Auswertung verständlich bleiben. Legen Sie deshalb fest, welche Daten an welcher Stelle entstehen und wer sie freigibt. Eine breite Funktionsliste beantwortet diese Frage nicht. Wichtig ist, ob Ihr Betrieb Informationen ohne widersprüchliche Zwischenstände weiterverarbeiten kann.",
+            "Wir würden auch die Anforderungen an bestehende Systeme sammeln. Prüfen Sie, welche Angaben tatsächlich ausgetauscht werden müssen und welche Schnittstelle dafür vorgesehen ist. Eine Anbindung sollte anhand eigener Daten vorgeführt werden. Ebenso wichtig ist der vollständige Export der relevanten Betriebsdaten, damit die langfristige Entscheidung nicht ausschließlich vom täglichen Zugriff auf die Plattform abhängt."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-3",
+          "titel": "Projektumfang und Kosten belastbar vereinbaren",
+          "absaetze": [
+            "Ohne einen verifizierten öffentlichen Betrag sollte die wirtschaftliche Entscheidung auf einem konkreten Angebot beruhen. Dieses muss Einführung, laufenden Betrieb, benötigte Anpassungen und Integrationen nachvollziehbar abgrenzen. Allgemeine Kostenbeispiele für ERP sind dafür kein Ersatz. Rechnen Sie außerdem mit interner Arbeitszeit der beteiligten Fachbereiche, nicht nur mit externen Projektleistungen.",
+            "Für die Umsetzung würden wir eine erste verbindliche Phase mit überprüfbaren Ergebnissen festlegen. Dazu gehören bereinigte Daten, vollständige Testaufträge und fachliche Abnahmen. Auch spätere Anpassungen brauchen ein Verfahren, das Auswirkungen auf andere Bereiche berücksichtigt. Ein klares Änderungs- und Betreuungskonzept hilft dabei, den Umfang nach dem Start kontrolliert weiterzuentwickeln."
+          ],
+          "quellen": [
+            0,
+            2
+          ]
+        },
+        {
+          "id": "abschnitt-4",
+          "titel": "Redaktionelles Urteil für den Mittelstand",
+          "absaetze": [
+            "Wir würden Abas ERP für mittelständische Fertigungsunternehmen priorisieren, wenn Materialplanung, Produktion und kaufmännische Steuerung gemeinsam verbessert werden sollen. Die Entscheidung sollte mit einem konkreten Prozessnachweis, einer sauberen Datenbasis und einem realistischen Projektbudget verbunden werden. Dann lässt sich beurteilen, ob der integrierte Ansatz zum Betrieb passt.",
+            "Für ein sehr junges Unternehmen ohne entsprechende Fertigungs- und Steuerungskomplexität würden wir zunächst einen kleineren Bedarf prüfen. Ein umfangreiches ERP ist nicht allein durch seine Möglichkeiten die passende Wahl. Sein Nutzen entsteht dort, wo relevante Betriebsprozesse zusammengeführt werden und genügend Verantwortung für Einführung und laufende Pflege vorhanden ist."
+          ],
+          "quellen": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  "verknuepfungen": {
+    "erste-rechnung": [
+      "easybill",
+      "orgamax-buchhaltung",
+      "papierkram",
+      "accountable"
+    ],
+    "e-rechnung-fahrplan": [
+      "easybill",
+      "orgamax-buchhaltung",
+      "papierkram"
+    ],
+    "erster-mitarbeiter-lohn": [
+      "edlohn",
+      "gdi-lohn-gehalt"
+    ],
+    "arbeitszeit-erfassen": [
+      "clockodo",
+      "absence-io"
+    ],
+    "personaldaten-fuehren": [
+      "hrlab",
+      "rexx-hr",
+      "absence-io"
+    ],
+    "crm-ohne-overhead": [
+      "cobra-crm",
+      "cas-genesisworld",
+      "salesforce-sales-cloud"
+    ],
+    "warenwirtschaft-und-erp": [
+      "jtl-wawi",
+      "plentyone",
+      "haufe-x360",
+      "abas-erp"
+    ]
+  }
+}

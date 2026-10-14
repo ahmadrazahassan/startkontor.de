@@ -1,0 +1,46 @@
+{
+  "name": "startkontor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Startkontor: redaktionelle Website für Geschäftssoftware junger B2B Unternehmen",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "suchindex": "node scripts/build-search-index.mjs",
+    "predev": "node scripts/build-search-index.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/build-search-index.mjs",
+    "build": "next build",
+    "build:prod": "node scripts/launch-gate.mjs --strict && npm run build && node scripts/launch-gate.mjs --html",
+    "gate": "node scripts/launch-gate.mjs",
+    "shot": "node scripts/shot.mjs",
+    "start": "next start",
+    "test": "node --test lib/*.test.ts",
+    "check:text": "node scripts/check-text.mjs",
+    "check:routen": "node scripts/check-routen.mjs",
+    "check:e2e": "node scripts/check-e2e.mjs",
+    "check": "npm run test && npm run check:text && npm run check:routen"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "playwright": "1.64.0",
+    "typescript": "5.9.3"
+  },
+  "browserslist": [
+    "chrome >= 111",
+    "edge >= 111",
+    "safari >= 16.4",
+    "ios_saf >= 16.4",
+    "firefox >= 121"
+  ]
+}

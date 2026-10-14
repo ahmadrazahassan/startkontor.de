@@ -1,0 +1,124 @@
+@layer print {
+  @media print {
+    @page {
+      margin: 20mm;
+    }
+
+    html,
+    body {
+      background: #ffffff !important;
+      color: #000000 !important;
+      font-size: 11pt;
+    }
+
+    .kopf,
+    .streifen,
+    .fuss,
+    .suchdialog,
+    .menue_dialog,
+    .mobilleiste,
+    .springlink,
+    .brotkrumen,
+    .entwurf_banner,
+    .werbebanner,
+    .nur_bildschirm,
+    button:not(.druck_sichtbar),
+    .newsletterblock,
+    nav[aria-label="Brotkrumen"] {
+      display: none !important;
+    }
+
+    main,
+    .band,
+    .band_weiss,
+    .band_nebel,
+    .band_nacht,
+    .band_primaer {
+      background: #ffffff !important;
+      color: #000000 !important;
+      padding-block: 0 !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #000000 !important;
+      break-after: avoid;
+    }
+
+    a {
+      color: #000000 !important;
+      text-decoration: none;
+    }
+
+    /* Adressen interner Links nur für Checkliste und Planer sichtbar machen */
+    .druckbereich a[href^="/"]::after {
+      content: " (" attr(href) ")";
+      font-size: 0.85em;
+      color: #333333;
+    }
+
+    .druckbereich a.ohne_druckadresse::after {
+      content: none;
+    }
+
+    .nur_druck {
+      display: block !important;
+    }
+
+    .akte,
+    .checkliste__gruppe,
+    .planer__eintrag,
+    tr,
+    figure,
+    blockquote {
+      break-inside: avoid;
+    }
+
+    .akte {
+      border: 1px solid #000000 !important;
+      border-top-width: 3px !important;
+    }
+
+    .checkliste__fortschritt {
+      display: none !important;
+    }
+
+    .checkliste .haken {
+      display: flex;
+      gap: 8px;
+    }
+
+    .checkliste .haken__eingabe {
+      position: static;
+      opacity: 1;
+      appearance: auto;
+      flex: none;
+      width: 16px;
+      height: 16px;
+      margin: 5px 0 0;
+    }
+
+    .checkliste .haken__box {
+      display: none;
+    }
+
+    .checkliste__hinweis {
+      margin-inline-start: 24px;
+    }
+
+    .planer__eintrag {
+      border: 1px solid #000000;
+      background: #ffffff;
+    }
+
+    [data-ziffer]::before {
+      color: #666666;
+    }
+  }
+
+  .nur_druck {
+    display: none;
+  }
+}

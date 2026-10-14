@@ -1,0 +1,71 @@
+@layer components {
+  .fuss {
+    margin-top: auto;
+    padding-top: clamp(56px, 6.5vw, 96px);
+    background: var(--night);
+    color: var(--mist);
+    font-family: var(--font-ui);
+  }
+  .fuss :focus-visible { outline: 2px solid var(--sky); outline-offset: 5px; border-radius: 3px; }
+  .fuss a { color: #e9f3f8; text-decoration: none; }
+  .fuss a:hover { color: var(--white); text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+  .fuss__oben { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 3fr); gap: 80px; padding-bottom: 72px; }
+  .fuss .logo, .fuss .logo:hover { color: var(--white); text-decoration: none; padding-block: 0; }
+  .fuss .logo__wortmarke { font-size: 2rem; font-weight: 600; letter-spacing: -.04em; }
+  .fuss .logo__zeichen { width: 38px; height: 38px; }
+  .fuss__beschreibung { max-width: 32ch; margin-top: 24px; color: #b5c8da; font-size: .9375rem; line-height: 1.75; }
+  .fuss .fuss__cta { display: inline-flex; align-items: center; gap: 12px; margin-top: 28px; min-height: 44px; padding: 11px 16px; border: 1px solid #64839e; border-radius: 6px; font-size: .875rem; font-weight: 500; }
+  .fuss .fuss__cta:hover { background: #ffffff0a; text-decoration: none; border-color: var(--sky); }
+  .fuss__spalten { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; align-items: start; }
+  .fuss__titel { margin-bottom: 24px; font-size: .6875rem; font-weight: 500; letter-spacing: .11em; line-height: 1.4; text-transform: uppercase; color: #a9bfd2; }
+  .fuss__spalte li + li { margin-top: 8px; }
+  .fuss__spalte li a { display: inline-block; padding-block: 5px; font-size: .875rem; line-height: 1.55; min-height: 30px; }
+  .fuss__spalte_haupt li + li { margin-top: 4px; }
+  .fuss__spalte_haupt li a { font-size: 1.5rem; font-weight: 400; letter-spacing: -.025em; line-height: 1.5; padding-block: 3px; }
+  .fuss__brief { margin-top: 32px; }
+  .fuss__briefTitel { color: var(--white); font-size: .9375rem; font-weight: 500; margin-bottom: 8px; }
+  .fuss__brief p:not(.fuss__briefTitel) { color: #b5c8da; font-size: .8125rem; line-height: 1.7; }
+  .fuss .fuss__brieflink { display: inline-flex; gap: 10px; align-items: center; min-height: 40px; margin-top: 12px; font-size: .8125rem; text-decoration: underline; text-underline-offset: 5px; }
+  .fuss__abschluss { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-block: 38px; border-top: 1px dashed #ffffff35; }
+  .fuss__claim { color: var(--white); max-width: 27ch; font-size: 1.5rem; font-weight: 400; letter-spacing: -.025em; line-height: 1.4; }
+  .fuss__haltung { text-align: right; display: flex; flex-direction: column; gap: 12px; }
+  .fuss__haltung p { font-size: .875rem; color: #b5c8da; line-height: 1.5; }
+  .fuss__haltung a { display: inline-flex; align-items: center; gap: 10px; font-size: .8125rem; min-height: 32px; }
+  .fuss__unten { padding-bottom: 24px; }
+  .fuss__werbehinweis { max-width: 104ch; padding-top: 20px; border-top: 1px solid #ffffff20; font-size: .6875rem; line-height: 1.7; color: #a9bfd2; }
+  .fuss__untenInnen { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 32px; padding-top: 16px; font-size: .6875rem; color: #a9bfd2; }
+  .fuss__untenInnen p { max-width: none; }
+  .fuss__recht { display: flex; gap: 24px; flex-wrap: wrap; margin: 0; padding: 0; }
+  .fuss__recht a { display: inline-block; padding-block: 8px; min-height: 32px; font-size: .75rem; }
+  @media (max-width: 1199px) {
+    .fuss__oben { gap: 48px; grid-template-columns: minmax(0, 1fr) minmax(0, 2.8fr); }
+    .fuss__spalten { gap: 28px; }
+    .fuss .logo__wortmarke { font-size: 1.75rem; }
+  }
+  @media (max-width: 899px) {
+    .fuss__oben { grid-template-columns: minmax(0, 1fr); gap: 44px; padding-bottom: 48px; }
+    .fuss__beschreibung { max-width: 52ch; }
+    .fuss__spalten { gap: 32px; }
+    .fuss__claim { font-size: 1.375rem; }
+  }
+  @media (max-width: 599px) {
+    .fuss { padding-top: 48px; }
+    .fuss__spalten { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; }
+    .fuss__titel { margin-bottom: 18px; font-size: .625rem; }
+    .fuss__spalte_haupt li a { font-size: 1.25rem; }
+    .fuss__spalte li a { min-height: 40px; }
+    .fuss__spalte_kontakt { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
+    .fuss__spalte_kontakt .fuss__titel { grid-column: 1 / -1; }
+    .fuss__spalte_kontakt .fuss__brief { margin-top: 4px; }
+    .fuss__spalte_kontakt li + li { margin-top: 3px; }
+    .fuss__brief p:not(.fuss__briefTitel) { font-size: .75rem; }
+    .fuss .fuss__brieflink { font-size: .75rem; gap: 6px; }
+    .fuss__abschluss { flex-direction: column; gap: 24px; padding-block: 32px; }
+    .fuss__haltung { text-align: left; }
+    .fuss__haltung p br { display: none; }
+    .fuss__haltung p { display: none; }
+    .fuss__untenInnen { align-items: flex-start; flex-direction: column; gap: 8px; }
+    .fuss__unten { padding-bottom: 96px; }
+    .fuss__werbehinweis { font-size: .6875rem; }
+  }
+}

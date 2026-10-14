@@ -1,0 +1,74 @@
+{
+  "erste-rechnung": {
+    "datei": "/bilder/artikel/erste-rechnung.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Eine Unternehmerin prüft ihre erste Rechnung mit einer Checkliste."
+  },
+  "e-rechnung-fahrplan": {
+    "datei": "/bilder/artikel/e-rechnung-fahrplan.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Eine Fachperson plant den digitalen Rechnungsablauf anhand von drei Meilensteinen."
+  },
+  "belege-aufbewahren": {
+    "datei": "/bilder/artikel/belege-aufbewahren.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Eine Buchhalterin ordnet Belege und archiviert sie in einem geschützten digitalen Speicher."
+  },
+  "kleinunternehmer-oder-regelbesteuerung": {
+    "datei": "/bilder/artikel/kleinunternehmer-oder-regelbesteuerung.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Ein Gründer vergleicht zwei steuerliche Wege anhand von Rechnungen und einer Kostenübersicht."
+  },
+  "erster-mitarbeiter-lohn": {
+    "datei": "/bilder/artikel/erster-mitarbeiter-lohn.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Ein neues Team organisiert die erste Gehaltsabrechnung und die monatlichen Termine."
+  },
+  "arbeitszeit-erfassen": {
+    "datei": "/bilder/artikel/arbeitszeit-erfassen.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Zwei Kolleginnen organisieren Arbeitszeiten und Pausen mit einer digitalen Übersicht."
+  },
+  "personaldaten-fuehren": {
+    "datei": "/bilder/artikel/personaldaten-fuehren.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Eine Personalverantwortliche verwaltet digitale Mitarbeiterakten mit geregelten Zugriffsrechten."
+  },
+  "vertraege-lesen": {
+    "datei": "/bilder/artikel/vertraege-lesen.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Zwei Fachpersonen prüfen einen Softwarevertrag und die Bedingungen für einen späteren Wechsel."
+  },
+  "crm-ohne-overhead": {
+    "datei": "/bilder/artikel/crm-ohne-overhead.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Ein Vertriebsteam organisiert Kundenkontakte in einer übersichtlichen CRM-Pipeline."
+  },
+  "warenwirtschaft-und-erp": {
+    "datei": "/bilder/artikel/warenwirtschaft-und-erp.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Zwei Beschäftigte koordinieren Aufträge, Lager und Versand mit einer zentralen Software."
+  },
+  "gesamtkosten-rechnen": {
+    "datei": "/bilder/artikel/gesamtkosten-rechnen.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Eine Unternehmerin berechnet Softwarekosten und das Budget für ein ganzes Jahr."
+  },
+  "anbietergespraech-vorbereiten": {
+    "datei": "/bilder/artikel/anbietergespraech-vorbereiten.png",
+    "breite": 1672,
+    "hoehe": 941,
+    "alt": "Zwei Fachpersonen besprechen eine Software anhand einer vorbereiteten Fragenliste."
+  }
+}

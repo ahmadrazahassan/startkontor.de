@@ -1,0 +1,125 @@
+{
+  "_hinweis": "Quelle jedes Logos eintragen: Adresse der Herstellerseite oder Pressebereich und Abrufdatum. Logos unverändert und nur zur Identifikation des Herstellers verwenden.",
+  "logos": {
+    "fastbill": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "lexware-office": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "sevdesk": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "sage-active": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "billomat": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "datev-lohn-und-gehalt": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "agenda-personalwesen": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "personio": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "factorial": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "kenjo": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "hr-works": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "hibob-bob": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "pipedrive": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "hubspot-sales-hub": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "centralstationcrm": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "zoho-crm": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "superoffice-crm": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "weclapp": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "xentral": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "odoo": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "microsoft-dynamics-365-business-central": {
+      "quelle": "",
+      "abgerufen": ""
+    },
+    "lexware-office-lohn-gehalt": {
+      "quelle": "Gleiches Herstellerlogo wie lexware-office (Marke Lexware), unverändert kopiert. Quelle des Basislogos dort eintragen.",
+      "abgerufen": ""
+    },
+    "personio-payroll": {
+      "quelle": "Gleiches Herstellerlogo wie personio (Marke Personio), unverändert kopiert. Quelle des Basislogos dort eintragen.",
+      "abgerufen": ""
+    },
+    "sage-hr-payroll": {
+      "quelle": "Gleiches Herstellerlogo wie sage-active (Marke Sage), unverändert kopiert. Quelle des Basislogos dort eintragen.",
+      "abgerufen": ""
+    },
+    "sage-payroll": {
+      "quelle": "Gleiches Herstellerlogo wie sage-active (Marke Sage), unverändert kopiert. Quelle des Basislogos dort eintragen.",
+      "abgerufen": ""
+    },
+    "sage-hr": {
+      "quelle": "Gleiches Herstellerlogo wie sage-active (Marke Sage), unverändert kopiert. Quelle des Basislogos dort eintragen.",
+      "abgerufen": ""
+    },
+    "sage-sales-management": {
+      "quelle": "Gleiches Herstellerlogo wie sage-active (Marke Sage), unverändert kopiert. Quelle des Basislogos dort eintragen.",
+      "abgerufen": ""
+    },
+    "sage-100": {
+      "quelle": "Gleiches Herstellerlogo wie sage-active (Marke Sage), unverändert kopiert. Quelle des Basislogos dort eintragen.",
+      "abgerufen": ""
+    },
+    "sage-50-handwerk": {
+      "quelle": "Gleiches Herstellerlogo wie sage-active (Marke Sage), unverändert kopiert. Quelle des Basislogos dort eintragen.",
+      "abgerufen": ""
+    },
+    "sage-intacct": {
+      "quelle": "Gleiches Herstellerlogo wie sage-active (Marke Sage), unverändert kopiert. Quelle des Basislogos dort eintragen.",
+      "abgerufen": ""
+    }
+  }
+}

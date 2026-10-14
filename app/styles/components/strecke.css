@@ -1,0 +1,236 @@
+@layer components {
+  /* Strecke: Linie mit quadratischen Haltepunkten */
+  .strecke {
+    --k: 44px;
+    --linie: 3px;
+    --luecke: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+
+  .strecke_kompakt {
+    --k: 32px;
+    --linie: 2px;
+    --luecke: 12px;
+  }
+
+  .strecke_menue {
+    --k: 16px;
+    --linie: 2px;
+    --luecke: 16px;
+  }
+
+  .strecke__halt {
+    position: relative;
+    padding-top: calc(var(--k) + var(--luecke));
+    padding-right: var(--a-4);
+    min-width: 0;
+  }
+
+  /* Verbindungsstück vom Knoten bis zum nächsten Halt */
+  .strecke__halt::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--k) / 2 - var(--linie) / 2);
+    left: var(--k);
+    right: 0;
+    height: var(--linie);
+    background: var(--sky);
+    transform-origin: left center;
+  }
+
+  .strecke__halt:last-child::before {
+    display: none;
+  }
+
+  .strecke__halt[data-zustand="aktuell"]::before,
+  .strecke__halt[data-zustand="kommend"]::before {
+    background: var(--line);
+  }
+
+  .strecke__knoten {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: var(--k);
+    height: var(--k);
+    border: 2px solid var(--sky);
+    border-radius: var(--r-2);
+    background: var(--sky);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: calc(var(--k) * 0.46);
+    line-height: 1;
+    transition:
+      background-color var(--t-farbe),
+      border-color var(--t-farbe),
+      color var(--t-farbe);
+  }
+
+  .strecke_menue .strecke__knoten {
+    border-width: 0;
+  }
+
+  .strecke__halt[data-zustand="aktuell"] .strecke__knoten {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+  }
+
+  .strecke__halt[data-zustand="kommend"] .strecke__knoten {
+    background: var(--base);
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .strecke__halt[data-zustand="neutral"] .strecke__knoten,
+  .strecke__halt[data-zustand="passiert"] .strecke__knoten {
+    background: var(--sky);
+    border-color: var(--sky);
+    color: var(--ink);
+  }
+
+  .strecke__halt:has(.strecke__link:hover) .strecke__knoten {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+  }
+
+  .strecke__inhalt {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  a.strecke__inhalt:hover {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .strecke__titel {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    color: inherit;
+  }
+
+  .strecke_menue .strecke__titel {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 1.0625rem;
+  }
+
+  .strecke__link:hover .strecke__titel {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  .strecke__text {
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  .strecke__ziffer {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--sky);
+    letter-spacing: -0.02em;
+  }
+
+  .strecke_menue .strecke__halt:has(.strecke__link:hover) .strecke__ziffer {
+    color: var(--primary);
+  }
+
+  /* Vertikal unterhalb von 768 Pixel */
+  @media (max-width: 767px) {
+    .strecke_mobilvertikal {
+      grid-auto-flow: row;
+      grid-auto-columns: auto;
+    }
+
+    .strecke_mobilvertikal .strecke__halt {
+      padding-top: 0;
+      padding-right: 0;
+      padding-left: calc(var(--k) + var(--a-4));
+      padding-bottom: var(--a-6);
+      min-height: var(--k);
+    }
+
+    .strecke_mobilvertikal .strecke__halt:last-child {
+      padding-bottom: 0;
+    }
+
+    .strecke_mobilvertikal .strecke__halt::before {
+      top: var(--k);
+      bottom: 0;
+      left: calc(var(--k) / 2 - var(--linie) / 2);
+      right: auto;
+      width: var(--linie);
+      height: auto;
+      transform-origin: center top;
+    }
+
+    .strecke_mobilvertikal .strecke__inhalt {
+      padding-top: calc(var(--k) / 2 - 0.7em);
+    }
+  }
+
+  /* Einmaliges Zeichnen der Linie, nur wenn Skripte laufen und Bewegung erlaubt ist */
+  @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+    .strecke_huelle:not(.strecke_sichtbar) .strecke_animiert .strecke__halt::before {
+      transform: scaleX(0);
+    }
+
+    .strecke_huelle.strecke_sichtbar .strecke_animiert .strecke__halt::before {
+      animation: strecke_zeichnen 120ms linear both;
+      animation-delay: calc(var(--i) * 120ms);
+    }
+
+    @media (max-width: 767px) {
+      .strecke_huelle:not(.strecke_sichtbar) .strecke_animiert.strecke_mobilvertikal .strecke__halt::before {
+        transform: scaleY(0);
+      }
+
+      .strecke_huelle.strecke_sichtbar .strecke_animiert.strecke_mobilvertikal .strecke__halt::before {
+        animation-name: strecke_zeichnen_senkrecht;
+      }
+    }
+  }
+
+  @keyframes strecke_zeichnen {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes strecke_zeichnen_senkrecht {
+    from {
+      transform: scaleY(0);
+    }
+
+    to {
+      transform: scaleY(1);
+    }
+  }
+}

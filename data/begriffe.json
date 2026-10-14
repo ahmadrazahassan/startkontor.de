@@ -1,0 +1,220 @@
+{
+  "_hinweis": "Deutsche Begriffe und redaktionelle Texte für das Softwareportal. Die Originaldaten bleiben unverändert; alt wird beim Build gegen die Originaldatei geprüft.",
+  "aenderungen": [
+    {
+      "pfad": "navigation.kopfzeile[2].label",
+      "alt": "Anbieter",
+      "neu": "Software"
+    },
+    {
+      "pfad": "navigation.kopfzeile[2].beschreibung",
+      "alt": "Anbieterakten",
+      "neu": "Softwareprofile"
+    },
+    {
+      "pfad": "navigation.mobil.reihenfolge[2]",
+      "alt": "Anbieter",
+      "neu": "Software"
+    },
+    {
+      "pfad": "navigation.brotkrumen.muster[2]",
+      "alt": "Anbieter > Anbieterakte",
+      "neu": "Software > Softwareprofil"
+    },
+    {
+      "pfad": "ui.knoepfe.zurAnbieterakte",
+      "alt": "Zur Anbieterakte",
+      "neu": "Zum Softwareprofil"
+    },
+    {
+      "pfad": "ui.knoepfe.alleAnbieter",
+      "alt": "Alle Anbieter",
+      "neu": "Alle Softwareprofile"
+    },
+    {
+      "pfad": "ui.labels.anbieter",
+      "alt": "Anbieter",
+      "neu": "Software"
+    },
+    {
+      "pfad": "ui.suche.platzhalter",
+      "alt": "Anbieter",
+      "neu": "Software"
+    },
+    {
+      "pfad": "ui.suche.gruppen[0]",
+      "alt": "Anbieter",
+      "neu": "Softwareprofile"
+    },
+    {
+      "pfad": "ui.anbieterFilter.trefferEinzahl",
+      "alt": "Anbieter",
+      "neu": "Programm"
+    },
+    {
+      "pfad": "ui.anbieterFilter.trefferMehrzahl",
+      "alt": "Anbieter",
+      "neu": "Programme"
+    },
+    {
+      "pfad": "ui.abschnitte.station.anbieter",
+      "alt": "Anbieterakten",
+      "neu": "Softwareprofile"
+    },
+    {
+      "pfad": "ui.abschnitte.baustein.anbieter",
+      "alt": "Anbieterakten",
+      "neu": "Software in dieser Kategorie"
+    },
+    {
+      "pfad": "ui.abschnitte.leitfaden.verwandtAnbieter",
+      "alt": "Anbieterakten",
+      "neu": "Softwareprofile"
+    },
+    {
+      "pfad": "marke.begriffe.anbieterakte",
+      "alt": "Anbieterakte: die Faktenseite zu einem Programm mit Preisangaben, Grenzen, Fragen und Quellen.",
+      "neu": "Softwareprofil: die Faktenseite zu einem Programm mit Preisangaben, Grenzen, Fragen, Quellen und der Einschätzung der Redaktion."
+    },
+    {
+      "pfad": "marke.metaStandardBeschreibung",
+      "alt": "Anbieterakten",
+      "neu": "Software"
+    },
+    {
+      "pfad": "partner.anbieter[5].werbemittel.einsatz[0].seite",
+      "alt": "Anbieterakte",
+      "neu": "Softwareprofil"
+    },
+    {
+      "pfad": "partner.anbieter[5].werbemittel.einsatz[1].seite",
+      "alt": "Anbieterakte",
+      "neu": "Softwareprofil"
+    },
+    {
+      "pfad": "partner.anbieter[5].werbemittel.einsatz[2].seite",
+      "alt": "Anbieterakte",
+      "neu": "Softwareprofil"
+    },
+    {
+      "pfad": "seiten.start.seo.beschreibung",
+      "alt": "Anbieterakten",
+      "neu": "Software"
+    },
+    {
+      "pfad": "seiten.start.hero.fakten[2].label",
+      "alt": "Anbieterakten",
+      "neu": "Softwareprofile"
+    },
+    {
+      "pfad": "seiten.anbieter.seo.titel",
+      "alt": "Anbieterakten: dreißig Programme mit Fakten und Quellen",
+      "neu": "Software vergleichen: Programme, Preise und Funktionen"
+    },
+    {
+      "pfad": "seiten.anbieter.seo.beschreibung",
+      "alt": "Anbieterakten",
+      "neu": "Software"
+    },
+    {
+      "pfad": "seiten.anbieter.eyebrow",
+      "alt": "Anbieter",
+      "neu": "Softwareverzeichnis"
+    },
+    {
+      "pfad": "seiten.anbieter.h1",
+      "alt": "Dreißig Anbieterakten mit Fakten, Grenzen und Quellen.",
+      "neu": "Software finden und vergleichen"
+    },
+    {
+      "pfad": "seiten.anbieter.einleitung[0]",
+      "alt": "Eine Anbieterakte fasst",
+      "neu": "Ein Softwareprofil fasst"
+    },
+    {
+      "pfad": "seiten.anbieter.einleitung[1]",
+      "alt": "Die Akten sind",
+      "neu": "Die Softwareprofile sind"
+    },
+    {
+      "pfad": "seiten.suche.seo.beschreibung",
+      "alt": "Anbieterakten",
+      "neu": "Software"
+    },
+    {
+      "pfad": "leitfaeden[7].bloecke[2].text",
+      "alt": "Die Anbieterakten nennen",
+      "neu": "Die Softwareprofile nennen"
+    },
+    {
+      "pfad": "faq[2].antwort",
+      "alt": "Jede Anbieterakte nennt",
+      "neu": "Jedes Softwareprofil nennt"
+    },
+    {
+      "pfad": "faq[18].antwort",
+      "alt": "auf jeder Anbieterakte",
+      "neu": "in jedem Softwareprofil"
+    },
+    {
+      "pfad": "navigation.kopfzeile[1].label",
+      "alt": "Bausteine",
+      "neu": "Kategorien"
+    },
+    {
+      "pfad": "navigation.mobil.reihenfolge[1]",
+      "alt": "Bausteine",
+      "neu": "Kategorien"
+    },
+    {
+      "pfad": "navigation.fusszeile.spalten[1].titel",
+      "alt": "Bausteine",
+      "neu": "Kategorien"
+    },
+    {
+      "pfad": "ui.labels.baustein",
+      "alt": "Baustein",
+      "neu": "Kategorie"
+    },
+    {
+      "pfad": "ui.anbieterFilter.baustein",
+      "alt": "Baustein",
+      "neu": "Kategorie"
+    },
+    {
+      "pfad": "navigation.kopfzeileAktion.label",
+      "alt": "Bausteinplaner",
+      "neu": "Auswahlhilfe"
+    },
+    {
+      "pfad": "ui.anbieterFilter.hinweis",
+      "alt": "Die Liste ist alphabetisch sortiert. Es gibt bewusst keine Rangfolge und keine Gegenüberstellung.",
+      "neu": "Alphabetisch sortiert. Die Reihenfolge enthält keine Wertung."
+    },
+    {
+      "pfad": "seiten.bausteine.eyebrow",
+      "alt": "Bausteine",
+      "neu": "Kategorien"
+    },
+    {
+      "pfad": "seiten.bausteine.h1",
+      "alt": "Fünf Softwarebereiche, die ein Unternehmen nacheinander abdeckt.",
+      "neu": "Software nach Kategorie"
+    },
+    {
+      "pfad": "seiten.bausteine.einleitung[0]",
+      "alt": "Ein Baustein ist ein Aufgabengebiet, kein Produkt. Finanzen und Rechnungen, Lohn und Gehalt, Personal und Zeit, Vertrieb und Kunden, Betrieb und Waren: Für jeden dieser Bereiche gibt es Programme, die sich in Umfang, Preislogik und Vertragsbedingungen stark unterscheiden.",
+      "neu": "Wählen Sie einen Bereich und finden Sie Programme für Ihren Arbeitsalltag. Vergleichen Sie Funktionen, Preise und die Einschätzung der Redaktion."
+    },
+    {
+      "pfad": "seiten.bausteine.einleitung[1]",
+      "alt": "Deshalb beginnt jede Bausteinseite mit den Kriterien, die über Eignung entscheiden, und mit der Frage, die Sie jedem Anbieter stellen sollten. Erst danach folgen die Anbieterakten, alphabetisch und ohne Wertung.",
+      "neu": "Dazu finden Sie Auswahlkriterien, Preislogik und Ratgeber."
+    },
+    {
+      "pfad": "seiten.bausteine.seo.titel",
+      "alt": "Bausteine: fünf Softwarebereiche mit Kriterien",
+      "neu": "Software nach Kategorie: Programme und Auswahlhilfen"
+    }
+  ]
+}

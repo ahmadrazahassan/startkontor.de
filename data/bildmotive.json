@@ -1,0 +1,154 @@
+{
+  "softwareauswahl": {
+    "datei": "/bilder/illustrationen/softwareauswahl.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Fotocollage mit zwei Berufstätigen am Laptop und Karten zu Funktionen, Kosten und Eignung.",
+    "transparent": true,
+    "art": "Fotocollage"
+  },
+  "buero-team": {
+    "datei": "/bilder/illustrationen/buero-team.png",
+    "breite": 1536,
+    "hoehe": 1024,
+    "alt": "Vier fiktive Berufstätige besprechen gemeinsam eine Softwareauswahl in einem hellen Büro.",
+    "transparent": false,
+    "art": "Foto"
+  },
+  "beratung": {
+    "datei": "/bilder/illustrationen/beratung.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Porträt einer fiktiven Fachperson in einem geometrischen Rahmen aus Blau und Hellblau.",
+    "transparent": true,
+    "art": "Fotocollage"
+  },
+  "softwarevergleich": {
+    "datei": "/bilder/illustrationen/softwarevergleich.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Zwei illustrierte Personen vergleichen Programme anhand von Funktionen, Kosten und Eignung.",
+    "transparent": true,
+    "art": "Illustration"
+  },
+  "quellenpruefung": {
+    "datei": "/bilder/illustrationen/quellenpruefung.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Illustration einer Redaktion, die Herstellerangaben, Quellen und Grenzen einer Software einordnet.",
+    "transparent": true,
+    "art": "Illustration"
+  },
+  "software-planung": {
+    "datei": "/bilder/illustrationen/software-planung.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Ein illustriertes Büroteam plant seine Softwareauswahl anhand von Bedarf, Budget und Team.",
+    "transparent": true,
+    "art": "Illustration"
+  },
+  "finanzen": {
+    "datei": "/bilder/illustrationen/finanzen.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Eine illustrierte Unternehmerin ordnet Rechnungen und Belege neben einem Laptop.",
+    "transparent": true,
+    "art": "Illustration"
+  },
+  "lohn": {
+    "datei": "/bilder/illustrationen/lohn.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Eine illustrierte Fachperson organisiert Gehaltsabrechnungen und monatliche Fristen.",
+    "transparent": true,
+    "art": "Illustration"
+  },
+  "personal": {
+    "datei": "/bilder/illustrationen/personal.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Zwei illustrierte Kolleginnen planen Arbeitszeiten und Urlaub am Bildschirm.",
+    "transparent": true,
+    "art": "Illustration"
+  },
+  "vertrieb": {
+    "datei": "/bilder/illustrationen/vertrieb.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Ein illustriertes Vertriebsteam ordnet Kundenkontakte und Angebote in einem CRM.",
+    "transparent": true,
+    "art": "Illustration"
+  },
+  "betrieb": {
+    "datei": "/bilder/illustrationen/betrieb.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Zwei illustrierte Beschäftigte koordinieren Warenbestand und Aufträge mit einer Software.",
+    "transparent": true,
+    "art": "Illustration"
+  },
+  "gruendung": {
+    "datei": "/bilder/illustrationen/gruendung.png",
+    "breite": 1536,
+    "hoehe": 1024,
+    "alt": "Zwei fiktive Gründende planen ihr Unternehmen mit Laptop und Notizen in einem hellen Büro.",
+    "transparent": false,
+    "art": "Foto"
+  },
+  "erste-umsaetze": {
+    "datei": "/bilder/illustrationen/erste-umsaetze.png",
+    "breite": 1536,
+    "hoehe": 1024,
+    "alt": "Eine fiktive Unternehmerin prüft Belege und Rechnungen an ihrem Laptop.",
+    "transparent": false,
+    "art": "Foto"
+  },
+  "erstes-team": {
+    "datei": "/bilder/illustrationen/erstes-team.png",
+    "breite": 1536,
+    "hoehe": 1024,
+    "alt": "Drei fiktive Beschäftigte richten gemeinsam den Arbeitsplatz einer neuen Kollegin ein.",
+    "transparent": false,
+    "art": "Foto"
+  },
+  "wachstum": {
+    "datei": "/bilder/illustrationen/wachstum.png",
+    "breite": 1536,
+    "hoehe": 1024,
+    "alt": "Ein fiktives Team mit sechs Personen bespricht Arbeitsabläufe vor einer Planungstafel.",
+    "transparent": false,
+    "art": "Foto"
+  },
+  "ausbau": {
+    "datei": "/bilder/illustrationen/ausbau.png",
+    "breite": 1536,
+    "hoehe": 1024,
+    "alt": "Fiktive Beschäftigte stimmen Warenwirtschaft und Versand in einem Büro neben einem Lager ab.",
+    "transparent": false,
+    "art": "Foto"
+  },
+  "vertragscheck": {
+    "datei": "/bilder/illustrationen/vertragscheck.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Zwei illustrierte Personen prüfen einen Softwarevertrag anhand einer Checkliste.",
+    "transparent": true,
+    "art": "Illustration"
+  },
+  "anbieterprofil": {
+    "datei": "/bilder/illustrationen/anbieterprofil.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Eine illustrierte Person stellt Funktionen und Quellen eines Softwareangebots zusammen.",
+    "transparent": true,
+    "art": "Illustration"
+  },
+  "monatsbrief": {
+    "datei": "/bilder/illustrationen/monatsbrief.png",
+    "breite": 1254,
+    "hoehe": 1254,
+    "alt": "Eine illustrierte Person liest einen Monatsbrief über Software, Preise und Fristen.",
+    "transparent": true,
+    "art": "Illustration"
+  }
+}

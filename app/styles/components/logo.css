@@ -1,0 +1,32 @@
+@layer components {
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .logo:hover {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .logo__zeichen {
+    flex: none;
+  }
+
+  .logo__wortmarke {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: -0.012em;
+  }
+
+  .logo_hell,
+  .logo_hell:hover {
+    color: var(--white);
+  }
+}

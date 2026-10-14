@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bildgalerie für Startkontor</title>
+<meta name="description" content="Sechs abgestimmte Bildmotive für Startkontor: Büroalltag, Softwareauswahl und redaktionelle Einordnung.">
+<style>
+@font-face{font-family:DM Sans;src:url('/fonts/dmsans/dm-sans-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:DM Sans;src:url('/fonts/dmsans/dm-sans-latin-800-normal.woff2') format('woff2');font-weight:800;font-display:swap}
+:root{color-scheme:light;--blau:#095fbb;--hell:#e9f3f8;--himmel:#7aacdc;--text:#0f2438;--linie:#c9d9e5;--bildflaeche:#fff}
+*{box-sizing:border-box}body{margin:0;background:#f7fafc;color:var(--text);font-family:"DM Sans",system-ui,sans-serif;font-weight:500;line-height:1.5}body[data-flaeche="hell"]{--bildflaeche:#e9f3f8}body[data-flaeche="dunkel"]{--bildflaeche:#0f2438}
+a{color:var(--blau);text-underline-offset:3px}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid var(--blau);outline-offset:4px}.huelle{max-width:1280px;margin:auto;padding-inline:clamp(20px,4vw,48px)}header{background:white;border-bottom:1px solid var(--linie)}.kopf{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}.marke{font-size:22px;font-weight:800;color:var(--text);text-decoration:none;display:flex;gap:12px;align-items:center}.marke i{width:30px;height:30px;background:var(--blau);border-radius:8px;display:inline-block;position:relative}.marke i:after{content:"";position:absolute;width:6px;height:6px;top:12px;left:5px;background:white;box-shadow:7px 0 white,14px 0 white}.kopf small{font-size:13px;color:#425468}.einleitung{padding-block:46px 28px}.augenbraue{color:var(--blau);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;margin:0 0 8px}h1{font-size:clamp(30px,4vw,44px);line-height:1.13;letter-spacing:-.03em;font-weight:800;margin:0 0 16px}.intro{max-width:720px;margin:0;color:#425468;font-size:16px}.werkzeuge{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;padding-block:4px 24px}.flaechen{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.flaechen>span{font-size:13px;margin-right:6px}.flaechen button{font:inherit;font-size:13px;color:var(--text);background:white;border:1px solid var(--linie);border-radius:99px;padding:8px 12px;display:flex;align-items:center;gap:7px;cursor:pointer}.flaechen button[aria-pressed="true"]{border-color:var(--blau);box-shadow:0 0 0 1px var(--blau)}.flaechen i{width:14px;height:14px;border-radius:50%;border:1px solid #b3c3cf;background:var(--ton)}.paket{display:inline-flex;text-decoration:none;background:var(--blau);color:white;border-radius:99px;padding:10px 18px;font-size:13px;font-weight:800}.raster{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding-bottom:34px}.karte{overflow:hidden;border:1px solid var(--linie);border-radius:16px;background:white;margin:0;min-width:0}.bildflaeche{aspect-ratio:1.12;display:flex;align-items:center;justify-content:center;background:var(--bildflaeche);padding:14px;transition:background-color .18s ease}.bildflaeche img{display:block;max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain}.karteninhalt{padding:18px;border-top:1px solid var(--linie)}.bildart{margin:0 0 4px;color:#425468;font-size:11px;letter-spacing:.07em;text-transform:uppercase}h2{font-size:20px;line-height:1.25;margin:0 0 7px;font-weight:800}.beschreibung{margin:0 0 16px;color:#425468;font-size:13px;min-height:40px}.links{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px}.links a{font-weight:800}footer{border-top:1px solid var(--linie);padding-block:24px 34px;color:#425468;font-size:12px}footer p{margin:0 0 10px}.farben{display:flex;flex-wrap:wrap;gap:12px}.farben span{display:flex;align-items:center;gap:6px}.farben i{width:11px;height:11px;border-radius:3px;background:var(--ton)}@media(max-width:900px){.raster{grid-template-columns:repeat(2,minmax(0,1fr))}.kopf small{display:none}}@media(max-width:550px){.raster{grid-template-columns:1fr}.einleitung{padding-top:30px}.werkzeuge{align-items:flex-start}.beschreibung{min-height:0}.bildflaeche{aspect-ratio:1.05}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body data-flaeche="weiss">
+<header><div class="huelle kopf"><a class="marke" href="/"><i aria-hidden="true"></i>Startkontor</a><small>Bildserie · 13. Oktober 2026</small></div></header>
+<main class="huelle">
+<section class="einleitung" aria-labelledby="galerie-titel">
+<p class="augenbraue">Bildgalerie</p>
+<h1 id="galerie-titel">Bilder für die passende Software.</h1>
+<p class="intro">Sechs Motive für Büroalltag, Softwareauswahl und redaktionelle Einordnung. Abgestimmt auf die Farben von Startkontor, mit deutschen Beschriftungen.</p>
+</section>
+<div class="werkzeuge">
+<div class="flaechen" role="group" aria-label="Hintergrund der Bildvorschau">
+<span>Hintergrund:</span>
+<button type="button" data-ton="weiss" aria-pressed="true"><i style="--ton:#ffffff" aria-hidden="true"></i>Weiß</button>
+<button type="button" data-ton="hell" aria-pressed="false"><i style="--ton:#e9f3f8" aria-hidden="true"></i>Hellblau</button>
+<button type="button" data-ton="dunkel" aria-pressed="false"><i style="--ton:#0f2438" aria-hidden="true"></i>Marineblau</button>
+</div>
+<a class="paket" href="startkontor-bildpaket.zip" download>Alle Bilder herunterladen ↓</a>
+</div>
+<div class="raster">
+<figure class="karte">
+<div class="bildflaeche"><img src="softwareauswahl.png" alt="Fotocollage mit zwei Berufstätigen am Laptop und Karten zu Funktionen, Kosten und Eignung." width="1254" height="1254"  decoding="async"></div>
+<figcaption class="karteninhalt"><p class="bildart">Fotocollage · transparent</p><h2>Softwareauswahl</h2><p class="beschreibung">Fotocollage für die Suche nach einer passenden Software.</p><div class="links"><a href="softwareauswahl.png" download>PNG herunterladen ↓</a><a href="softwareauswahl.png" target="_blank" rel="noopener" aria-label="Softwareauswahl groß ansehen">Groß ansehen ↗</a></div></figcaption>
+</figure>
+<figure class="karte">
+<div class="bildflaeche"><img src="buero-team.png" alt="Vier fiktive Berufstätige besprechen gemeinsam eine Softwareauswahl in einem hellen Büro." width="1536" height="1024"  decoding="async"></div>
+<figcaption class="karteninhalt"><p class="bildart">Bürofoto</p><h2>Büroteam</h2><p class="beschreibung">Eine gemeinsame Entscheidung im Büroalltag.</p><div class="links"><a href="buero-team.png" download>PNG herunterladen ↓</a><a href="buero-team.png" target="_blank" rel="noopener" aria-label="Büroteam groß ansehen">Groß ansehen ↗</a></div></figcaption>
+</figure>
+<figure class="karte">
+<div class="bildflaeche"><img src="beratung.png" alt="Porträt einer fiktiven Fachperson in einem geometrischen Rahmen aus Blau und Hellblau." width="1254" height="1254"  decoding="async"></div>
+<figcaption class="karteninhalt"><p class="bildart">Fotocollage · transparent</p><h2>Beratung</h2><p class="beschreibung">Ein freundliches Porträt für Beratung und Orientierung.</p><div class="links"><a href="beratung.png" download>PNG herunterladen ↓</a><a href="beratung.png" target="_blank" rel="noopener" aria-label="Beratung groß ansehen">Groß ansehen ↗</a></div></figcaption>
+</figure>
+<figure class="karte">
+<div class="bildflaeche"><img src="softwarevergleich.png" alt="Zwei illustrierte Personen vergleichen Programme anhand von Funktionen, Kosten und Eignung." width="1254" height="1254" loading="lazy" decoding="async"></div>
+<figcaption class="karteninhalt"><p class="bildart">Illustration · transparent</p><h2>Softwarevergleich</h2><p class="beschreibung">Funktionen, Kosten und Eignung übersichtlich gegenüberstellen.</p><div class="links"><a href="softwarevergleich.png" download>PNG herunterladen ↓</a><a href="softwarevergleich.png" target="_blank" rel="noopener" aria-label="Softwarevergleich groß ansehen">Groß ansehen ↗</a></div></figcaption>
+</figure>
+<figure class="karte">
+<div class="bildflaeche"><img src="quellenpruefung.png" alt="Illustration einer Redaktion, die Herstellerangaben, Quellen und Grenzen einer Software einordnet." width="1254" height="1254" loading="lazy" decoding="async"></div>
+<figcaption class="karteninhalt"><p class="bildart">Illustration · transparent</p><h2>Quellenprüfung</h2><p class="beschreibung">Herstellerangaben und redaktionelle Einordnung verständlich zeigen.</p><div class="links"><a href="quellenpruefung.png" download>PNG herunterladen ↓</a><a href="quellenpruefung.png" target="_blank" rel="noopener" aria-label="Quellenprüfung groß ansehen">Groß ansehen ↗</a></div></figcaption>
+</figure>
+<figure class="karte">
+<div class="bildflaeche"><img src="software-planung.png" alt="Ein illustriertes Büroteam plant seine Softwareauswahl anhand von Bedarf, Budget und Team." width="1254" height="1254" loading="lazy" decoding="async"></div>
+<figcaption class="karteninhalt"><p class="bildart">Illustration · transparent</p><h2>Softwareplanung</h2><p class="beschreibung">Vom Bedarf zur Auswahl – gemeinsam mit dem Team.</p><div class="links"><a href="software-planung.png" download>PNG herunterladen ↓</a><a href="software-planung.png" target="_blank" rel="noopener" aria-label="Softwareplanung groß ansehen">Groß ansehen ↗</a></div></figcaption>
+</figure>
+</div>
+</main>
+<footer><div class="huelle">
+<p>Mit Imagegen erstellt. Alle dargestellten Personen sind fiktiv. Fünf Motive haben einen transparenten Hintergrund.</p>
+<p>Bildsprache nach Analyse der <a href="https://technologycounter.com/" target="_blank" rel="noopener">TechnologyCounter-Homepage</a> und der vorhandenen Startkontor-Website.</p>
+<div class="farben"><span><i style="--ton:#095fbb" aria-hidden="true"></i>Blau #095FBB</span><span><i style="--ton:#e9f3f8" aria-hidden="true"></i>Hellblau #E9F3F8</span><span><i style="--ton:#7aacdc" aria-hidden="true"></i>Himmelblau #7AACDC</span><span><i style="--ton:#0f2438" aria-hidden="true"></i>Marineblau #0F2438</span></div>
+<p style="margin-top:14px"><a href="bilder.json">Bilddaten und Alternativtexte</a> · <a href="bildkonzept.md">Bildkonzept</a> · <a href="generierung.json">Originalprompts</a></p>
+</div></footer>
+<script>
+document.querySelectorAll('[data-ton]').forEach(function(knopf){knopf.addEventListener('click',function(){document.body.dataset.flaeche=knopf.dataset.ton;document.querySelectorAll('[data-ton]').forEach(function(anderer){anderer.setAttribute('aria-pressed',String(anderer===knopf))})})});
+</script>
+</body>
+</html>

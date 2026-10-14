@@ -1,0 +1,795 @@
+@layer pages {
+  .abschnittstitel {
+    margin-bottom: var(--a-6);
+  }
+
+  .prinzipien_drei {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    .prinzipien_drei {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .prinzipien_drei .prinzipien__punkt {
+      padding-inline: var(--a-5);
+      border-bottom: 0;
+      border-inline-start: 1px solid var(--sky);
+    }
+
+    .prinzipien_drei .prinzipien__punkt:first-child {
+      padding-inline-start: 0;
+      border-inline-start: 0;
+    }
+  }
+
+  /* Hervorgehobene Aussage (Hinweisblock auf Fahrplan und Bausteine) */
+  .aussage {
+    max-width: none;
+    padding: clamp(20px, 3vw, 36px) clamp(20px, 3vw, 40px);
+    background: var(--mist);
+    border-inline-start: 6px solid var(--primary);
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    line-height: 1.4;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+
+  /* Liegende Akten (Fahrplan, Bausteine) */
+  .akten_breit_liste {
+    display: grid;
+    gap: var(--spalten-abstand);
+  }
+
+  .akte_breit .akte__bild {
+    border-bottom: 1px solid var(--line);
+  }
+
+  @media (min-width: 768px) {
+    .akte_breit {
+      display: grid;
+      grid-template-columns: minmax(260px, 40%) minmax(0, 1fr);
+    }
+
+    .akte_breit .akte__bild {
+      border-bottom: 0;
+      border-inline-end: 1px solid var(--line);
+    }
+
+    .akte_breit .akte__koerper {
+      justify-content: center;
+      padding: clamp(24px, 3vw, 48px);
+    }
+
+    .akte_breit .akte__titel {
+      font-size: clamp(1.75rem, 1.3rem + 1.2vw, 2.5rem);
+    }
+
+    .akte_breit .akte__text {
+      font-size: var(--fs-body);
+      max-width: 58ch;
+    }
+  }
+
+  .akte_breit .akte__kennung {
+    font-size: clamp(3rem, 2rem + 3vw, 5rem);
+  }
+
+  .akte__untertitel {
+    font-family: var(--font-ui);
+    color: var(--ink);
+  }
+
+  .akte__meta {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: var(--fs-label);
+    color: var(--ink-soft);
+  }
+
+  .akte[data-ton="warn"] {
+    border-top: 1px solid var(--line);
+    border-inline-start: 6px solid var(--warn);
+  }
+
+  .akte[data-ton="warn"]:hover {
+    border-top-color: var(--line);
+  }
+
+  .abschlussband {
+    display: grid;
+    gap: var(--a-6);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .abschlussband {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+  }
+
+  .abschlussband .lead {
+    color: var(--mist);
+    margin-top: var(--a-3);
+  }
+
+  /* Fahrplantafel */
+  .tafel__tabelle {
+    width: 100%;
+    min-width: 720px;
+    table-layout: fixed;
+  }
+
+  .tafel__tabelle th,
+  .tafel__tabelle td {
+    padding: 0;
+    vertical-align: middle;
+  }
+
+  .tafel__tabelle thead th {
+    padding: var(--a-3) var(--a-3);
+    background: var(--base);
+    font-family: var(--font-ui);
+  }
+
+  .tafel__tabelle thead th:first-child {
+    width: 190px;
+  }
+
+  .tafel__stationlink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    color: var(--ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .tafel__stationlink:hover {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .tafel__stationsnummer {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--r-2);
+    background: var(--sky);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.875rem;
+  }
+
+  .tafel__baustein {
+    padding: var(--a-3) var(--a-4) !important;
+    font-weight: 700;
+  }
+
+  .tafel__baustein a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .tafel__baustein a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .tafel__zelle {
+    border-inline-start: 1px solid var(--line);
+  }
+
+  .tafel__knopf {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+    min-height: 64px;
+    padding: var(--a-2) var(--a-3);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: var(--fs-label);
+    line-height: 1.2;
+    text-align: start;
+    text-decoration: none;
+    transition: background-color var(--t-farbe);
+  }
+
+  .tafel__knopf:hover {
+    background: var(--mist);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .tafel__zelle[data-aktiv="ja"] {
+    background: var(--mist);
+    box-shadow: inset 0 -4px 0 var(--primary);
+  }
+
+  .tafel__zelle[data-status="jetzt"] .tafel__glyph,
+  .tafel__zelle[data-status="alsNaechstes"] .tafel__glyph {
+    color: var(--primary);
+  }
+
+  .tafel__zelle[data-status="spaeter"] .tafel__glyph {
+    color: var(--primary);
+  }
+
+  .tafel__zelle[data-status="nichtNoetig"] .tafel__glyph {
+    color: var(--ink-soft);
+  }
+
+  .tafel__zelle[data-status="nichtNoetig"] .tafel__label {
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+
+  .tafel__glyph {
+    flex: none;
+  }
+
+  @media (max-width: 1100px) {
+    .tafel__label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+
+    .tafel__knopf {
+      justify-content: center;
+    }
+  }
+
+  .tafel__legende {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--a-2) var(--a-4);
+    margin: var(--a-4) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tafel__hinweis {
+    margin-top: var(--a-4);
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+    max-width: 78ch;
+  }
+
+  .tafel__detail {
+    margin-top: var(--a-5);
+    padding: var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-inline-start: 6px solid var(--primary);
+    border-radius: var(--r-2);
+  }
+
+  .tafel__detailkopf {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-3);
+    margin-bottom: var(--a-3);
+  }
+
+  .tafel__detailtitel {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--a-3);
+    max-width: none;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.375rem;
+  }
+
+  .tafel__trenner {
+    width: 8px;
+    height: 8px;
+    background: var(--sky);
+  }
+
+  .tafel__grund {
+    max-width: 66ch;
+  }
+
+  .tafel__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-3) var(--a-5);
+    margin-top: var(--a-4);
+    max-width: none;
+  }
+
+  /* Stationskopf (auch für Bausteine) */
+  .stationskopf {
+    display: grid;
+    gap: var(--a-6) var(--a-8);
+    align-items: center;
+    padding-bottom: var(--a-7);
+  }
+
+  @media (min-width: 1024px) {
+    .stationskopf {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    }
+  }
+
+  .stationskopf__text > * + * {
+    margin-top: var(--a-4);
+  }
+
+  .stationskopf__ziffer {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(5rem, 3rem + 8vw, 9rem);
+    line-height: 0.8;
+    letter-spacing: -0.04em;
+    color: var(--sky);
+    user-select: none;
+    margin-bottom: var(--a-3);
+  }
+
+  @media (min-width: 900px) {
+    .stationskopf h1 {
+      max-width: 16ch;
+    }
+  }
+
+  .stationskopf__bild {
+    padding-right: 16px;
+    padding-bottom: 16px;
+  }
+
+  .stationsstrecke {
+    padding-bottom: var(--a-6);
+  }
+
+  .stationstext {
+    padding-bottom: var(--a-6);
+  }
+
+  .stationstext > * + * {
+    margin-top: var(--a-4);
+  }
+
+  .stationstext p {
+    max-width: 66ch;
+  }
+
+  .stationsteaser {
+    margin-top: var(--a-5);
+    color: var(--ink-soft);
+    max-width: 62ch;
+  }
+
+  /* Aufgaben der Station */
+  .prioritaeten {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid var(--ink);
+  }
+
+  .prioritaet {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: var(--a-4);
+    padding: var(--a-5) 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .prioritaet__nummer {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--r-2);
+    background: var(--primary);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+  }
+
+  .prioritaet__inhalt > * + * {
+    margin-top: var(--a-3);
+  }
+
+  .prioritaet__titel {
+    font-size: 1.375rem;
+    line-height: 1.25;
+  }
+
+  .prioritaet__baustein {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-2) var(--a-3);
+    max-width: none;
+  }
+
+  .prioritaet__label,
+  .kriterium__label,
+  .preismuster__label {
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .bausteinmarke {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 4px 12px;
+    border: 2px solid var(--primary);
+    border-radius: var(--r-2);
+    background: var(--white);
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    text-decoration: none;
+  }
+
+  .bausteinmarke:hover {
+    background: var(--mist);
+    text-decoration: none;
+  }
+
+  /* Bausteinstatus der Station */
+  .bausteinstatus {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid var(--ink);
+  }
+
+  .bausteinstatus__zeile {
+    display: grid;
+    gap: var(--a-2) var(--a-5);
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--a-4) 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  @media (min-width: 768px) {
+    .bausteinstatus__zeile {
+      grid-template-columns: 170px minmax(0, 3fr) minmax(0, 5fr);
+      align-items: baseline;
+    }
+  }
+
+  .bausteinstatus__name {
+    font-family: var(--font-ui);
+    font-size: 1.1875rem;
+  }
+
+  .bausteinstatus__name a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .bausteinstatus__name a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .bausteinstatus__grund {
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+    max-width: none;
+  }
+
+  .statuslegende {
+    display: grid;
+    gap: var(--a-3) var(--a-5);
+    margin-top: var(--a-5);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .statuslegende li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+  }
+
+  /* Fragen */
+  .fragenliste {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid var(--ink);
+  }
+
+  .fragenliste li {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: var(--a-4);
+    padding: var(--a-4) 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 1.125rem;
+    line-height: 1.55;
+  }
+
+  .fragenliste__nummer {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.375rem;
+    color: var(--sky);
+  }
+
+  /* Fristen kompakt */
+  .fristkompakt_liste {
+    display: grid;
+    gap: var(--spalten-abstand);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  }
+
+  .fristkompakt {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--a-2);
+    padding: var(--a-4) var(--a-4) var(--a-4) var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-inline-start: 4px solid var(--primary);
+    border-radius: var(--r-2);
+  }
+
+  .fristkompakt[data-frist="gilt"] {
+    border-inline-start-color: var(--ok);
+  }
+
+  .fristkompakt[data-frist="entwurf"] {
+    border-inline-start-color: var(--warn);
+  }
+
+  .fristkompakt[data-frist="wiederkehrend"] {
+    border-inline-start-color: var(--field);
+  }
+
+  .fristkompakt__kopf {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--a-2);
+  }
+
+  .fristkompakt__datum {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: var(--fs-label);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .fristkompakt__titel {
+    font-family: var(--font-ui);
+    font-size: 1.125rem;
+    line-height: 1.3;
+  }
+
+  .fristkompakt__titel a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .fristkompakt__titel a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  .fristkompakt__titel a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .fristkompakt__text {
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+    max-width: none;
+  }
+
+  .alphabetisch_hinweis {
+    margin-bottom: var(--a-3);
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    max-width: none;
+  }
+
+  /* Stationswechsel */
+  .stationsnavigation__raster {
+    display: grid;
+    gap: var(--a-4);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    .stationsnavigation__raster {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .stationswechsel {
+    container-type: inline-size;
+    display: flex;
+    align-items: center;
+    gap: var(--a-4);
+    min-height: 88px;
+    padding: var(--a-4) var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    box-shadow: inset 0 6px 0 var(--sky);
+    border-radius: var(--r-2);
+    color: var(--ink);
+    text-decoration: none;
+    transition: box-shadow var(--t-farbe);
+  }
+
+  .stationswechsel:hover {
+    box-shadow: inset 0 6px 0 var(--primary);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .stationswechsel_weiter {
+    justify-content: space-between;
+    text-align: end;
+  }
+
+  .stationswechsel__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .stationswechsel__label {
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  .stationswechsel__name {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(0.875rem, 4.4cqi, 1.5rem);
+    line-height: 1.2;
+    min-width: 0;
+  }
+
+  /* Baustein: Kriterien */
+  .kriterien {
+    margin: 0;
+    border-top: 2px solid var(--ink);
+  }
+
+  .kriterium {
+    display: grid;
+    gap: var(--a-3) var(--a-5);
+    padding: var(--a-5) 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  @media (min-width: 1024px) {
+    .kriterium {
+      grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    }
+
+    .kriterium__titel {
+      grid-row: span 2;
+    }
+  }
+
+  .kriterium__titel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--a-2);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.375rem;
+    line-height: 1.25;
+  }
+
+  .kriterium__nummer {
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--sky);
+  }
+
+  .kriterium__warum,
+  .kriterium__frage {
+    margin: 0;
+    max-width: 66ch;
+  }
+
+  .kriterium__label {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .kriterium__frage {
+    padding: var(--a-3) var(--a-4);
+    background: var(--mist);
+    border-inline-start: 4px solid var(--primary);
+  }
+
+  .stationsmarken_zeile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-3) var(--a-6);
+    margin-top: var(--a-4);
+  }
+
+  .stationsliste {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--a-2) var(--a-5);
+    margin: 0;
+    padding: 0;
+  }
+
+  .preismuster {
+    margin-top: var(--a-5);
+  }
+
+  .preismuster__beispiel {
+    font-size: var(--fs-small);
+    max-width: none;
+  }
+
+  .preismuster__vorsicht {
+    padding: var(--a-3);
+    background: var(--warn-fill);
+    border-inline-start: 4px solid var(--warn);
+    font-size: var(--fs-small);
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: none;
+  }
+
+  .preismuster__vorsichtLabel {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--warn);
+  }
+}

@@ -1,0 +1,110 @@
+@layer components {
+  .bild {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--verhaeltnis, 3 / 2);
+    background: var(--mist);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Versatzblock: 16 Pixel Sky hinter dem Bild, quadratisch und ohne Rundung */
+  .bild_versatz {
+    overflow: visible;
+    background: transparent;
+  }
+
+  .bild_versatz::before {
+    content: "";
+    position: absolute;
+    inset: 16px -16px -16px 16px;
+    z-index: -1;
+    background: var(--sky);
+  }
+
+  @media (max-width: 767px) {
+    .bild_versatz::before {
+      inset: 12px -8px -12px 8px;
+    }
+  }
+
+  .bild__bild {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bild_versatz .bild__bild {
+    background: var(--mist);
+  }
+
+  /* Gestalteter Platzhalter: Nebelfläche, Strecke in der Mitte, große Ziffer */
+  .bild__platzhalter {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: var(--mist);
+  }
+
+  .bild_versatz .bild__platzhalter {
+    border: 1px solid var(--line);
+  }
+
+  .bild__ziffer {
+    position: absolute;
+    inset-inline-start: 6%;
+    inset-block-end: 2%;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(5rem, 30cqi, 14rem);
+    line-height: 0.82;
+    color: var(--primary);
+    opacity: 0.14;
+    letter-spacing: -0.04em;
+    user-select: none;
+  }
+
+  .bild {
+    container-type: inline-size;
+  }
+
+  .bild__strecke {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 74%;
+    margin-block-start: -4%;
+  }
+
+  .bild__strecke::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: calc(50% - 1.5px);
+    height: 3px;
+    background: var(--sky);
+  }
+
+  .bild__halt {
+    position: relative;
+    width: clamp(14px, 4.4cqi, 28px);
+    aspect-ratio: 1;
+    border: 3px solid var(--sky);
+    border-radius: var(--r-2);
+    background: var(--mist);
+  }
+
+  .bild__halt[data-zustand="passiert"] {
+    background: var(--sky);
+  }
+
+  .bild__halt[data-zustand="aktuell"] {
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .bild__halt[data-zustand="kommend"] {
+    border-color: var(--sky);
+  }
+}

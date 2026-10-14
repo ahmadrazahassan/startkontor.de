@@ -1,0 +1,149 @@
+@layer pages {
+  .kopf__innen { gap: 36px; }
+  .hauptnav__liste { gap: 12px; }
+  .hauptnav__knopf, .hauptnav__link { gap: 7px; font-weight: 500; }
+  .kopf__aktionen { gap: 22px; }
+  .kopf__hersteller { color: var(--ink-soft); font-size: .875rem; font-weight: 500; text-decoration: none; white-space: nowrap; }
+  .kopf__hersteller:hover { color: var(--primary); }
+  .hauptnav__panel { box-shadow: 0 18px 30px #0a25400d; }
+  .hauptnav__panelinnen { padding-block: 28px 32px; }
+  .hauptnav__sektion { font-size: 1.25rem; }
+  .hauptnav__eintraege { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px 24px; }
+  .hauptnav__eintraege[data-anzahl="5"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hauptnav__eintraege[data-anzahl="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .hauptnav__eintrag { padding: 14px; border: 0; border-radius: 8px; box-shadow: none; }
+  .hauptnav__eintrag:hover { box-shadow: none; }
+  .hauptnav__eintragTitel { font-size: .9375rem; font-weight: 600; }
+  .hauptnav__eintragText { font-size: .8125rem; line-height: 1.55; }
+  .menue_dialog { background: var(--white); }
+  .menue_dialog__label { font-size: 1.375rem; font-weight: 600; }
+  .menue_dialog__nummer { display: none; }
+  .menue_dialog__stationen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; padding-left: 0; margin-bottom: 12px; }
+  .menue_dialog__station { min-height: 40px; font-size: .875rem; }
+  .portalhero__aktionen { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 18px; margin-top: 22px; color: var(--ink-soft); }
+  .portalhero__aktionen .textlink { font-size: .875rem; }
+  .softwarekarte__aktionen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: 100%; }
+  .softwarekarte__hersteller { display: flex; flex-direction: column; align-items: center; gap: 3px; min-width: 0; }
+  .softwarekarte__website { width: 100%; min-height: 38px; padding-inline: 10px; font-size: .8125rem; gap: 8px; }
+  .softwarekarte__werbung { font-size: .6875rem; color: var(--ink-soft); }
+  .softwarekarte__profil, .softwarekarte:is(:hover, :focus-within) .softwarekarte__profil { width: 100%; padding-inline: 10px; background: var(--white); color: var(--primary); border: 1px solid #c7d9ea; box-shadow: none; font-size: .8125rem; }
+  .softwarekarte_liste .softwarekarte__aktionen { width: auto; grid-template-columns: auto auto auto; }
+  .softwarekarte_liste .softwarekarte__website, .softwarekarte_liste .softwarekarte__profil { padding-inline: 18px; }
+  .kategorienprogramme .softwarekarte__aktionen { width: auto; min-width: 236px; }
+  .kategorienprogramme .softwarekarte__profil, .kategorienprogramme .softwarekarte:is(:hover, :focus-within) .softwarekarte__profil { min-height: 38px; padding-inline: 8px; font-size: .8125rem; border: 1px solid #c7d9ea; background: var(--white); }
+  .aufgabenbereich { padding-block: 48px; border-block: 1px solid #edf1f5; }
+  .aufgabenkarten { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+  .aufgabenkarte { display: flex; flex-direction: column; gap: 12px; padding: 20px 16px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); text-decoration: none; transition: border-color .18s, background .18s; }
+  .aufgabenkarte:hover { border-color: #b8cde0; background: #f8fbfe; text-decoration: none; color: var(--ink); }
+  .aufgabenkarte > svg { color: var(--primary); fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .aufgabenkarte h3 { font-size: 1rem; font-weight: 600; }
+  .aufgabenkarte p { font-size: .875rem; line-height: 1.6; color: var(--ink-soft); }
+  .aufgabenkarte .textlink { font-size: .8125rem; margin-top: auto; }
+  .artikelkarten { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .artikelkarten_start { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .artikelkarten_zwei { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .artikelkarte { min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--white); transition: border-color .18s, box-shadow .18s; }
+  .artikelkarte:hover { border-color: #b8cde0; box-shadow: 0 6px 20px #0a25400a; }
+  .artikelbild { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--mist); }
+  .artikelkarte__bildlink { display: block; }
+  .artikelkarte__inhalt { display: flex; flex-direction: column; gap: 12px; padding: 22px; flex: 1; }
+  .artikelkarte__meta { display: flex; flex-wrap: wrap; gap: 7px; font-size: .75rem; color: var(--ink-soft); }
+  .artikelkarte h2, .artikelkarte h3, .artikelkarte h4 { font-size: 1.125rem; line-height: 1.45; font-weight: 600; }
+  .artikelkarte h2 a, .artikelkarte h3 a, .artikelkarte h4 a { color: var(--ink); text-decoration: none; }
+  .artikelkarte h2 a:hover, .artikelkarte h3 a:hover, .artikelkarte h4 a:hover { color: var(--primary); }
+  .artikelkarte__text { font-size: .875rem; line-height: 1.6; color: var(--ink-soft); }
+  .artikelkarte__fuss { margin-top: auto; padding-top: 10px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+  .artikelkarte__fuss > span { font-size: .6875rem; color: var(--ink-soft); }
+  .artikelkarte__fuss .textlink { font-size: .8125rem; }
+  .artikelkopf_bebildert { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: center; gap: 48px; }
+  .artikelkopf_bebildert h1 { font-size: clamp(1.75rem, 1.2rem + 1.4vw, 2.5rem); max-width: none; line-height: 1.2; }
+  .artikelkopf__text { min-width: 0; }
+  .artikelkopf__text > * + * { margin-top: 18px; }
+  .artikelkopf__bild { border-radius: 12px; }
+  .artikelkopf_bebildert .artikelmeta { gap: 12px 20px; font-size: .75rem; }
+  .artikelkopf_bebildert .artikelmeta__label { font-size: .6875rem; letter-spacing: 0; text-transform: none; }
+  .artikelsoftwarehilfe { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; padding: 20px 0; border-top: 1px solid var(--line); font-size: .8125rem; }
+  .artikelsoftwarehilfe p { font-weight: 600; color: var(--ink); }
+  .artikelsoftwarehilfe .textlink { font-size: .8125rem; flex-wrap: wrap; }
+  .artikelsoftware { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+  .artikelsoftware .portalabschnittkopf h2 { font-size: 1.5rem; }
+  .artikelsoftware__karten { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .artikelweiter { margin-top: 56px; }
+  .artikelweiter > h2 { margin-bottom: 24px; font-size: 1.5rem; }
+  .entscheidung { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 36px 40px; border: 1px solid #c7d9ea; border-radius: 12px; background: #f4f8fc; margin-top: 40px; }
+  .entscheidung h2 { font-size: 1.625rem; margin: 8px 0 12px; }
+  .entscheidung p:not(.eyebrow) { font-size: .9375rem; line-height: 1.6; max-width: 60ch; color: var(--ink-soft); }
+  .entscheidung__aktionen { display: flex; flex-direction: column; flex: none; gap: 12px; }
+  .entscheidung__aktionen .knopf { font-size: .875rem; min-height: 44px; }
+  .startfaq { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 80px; }
+  .startfaq__kopf { display: flex; align-items: flex-start; flex-direction: column; gap: 16px; }
+  .startfaq__kopf h2 { font-size: 2rem; }
+  .startfaq__kopf p:not(.eyebrow) { color: var(--ink-soft); font-size: 1rem; }
+  .startfaq__kopf .textlink { margin-top: 12px; }
+  .startfaq .akkordeon { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: var(--white); box-shadow: none; }
+  .startfaq .akkordeon__kopf { padding: 22px 0; }
+  .startfaq .akkordeon__frage { font-size: 1rem; font-weight: 600; }
+  .startfaq .akkordeon__inhalt { padding: 0 0 24px; font-size: .9375rem; }
+  .startfaq .akkordeon__inhalt .textlink { margin-top: 16px; }
+  @media (max-width: 1199px) {
+    .kopf__innen { gap: 24px; }
+    .kopf__aktionen { gap: 16px; }
+    .hauptnav__liste { gap: 4px; }
+    .kopf__hersteller { display: none; }
+    .aufgabenkarten { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .artikelkopf_bebildert { gap: 32px; }
+  }
+  @media (max-width: 899px) {
+    .artikelkarten, .artikelkarten_start { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .artikelkopf_bebildert { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    .artikelkopf__bild { max-width: 640px; }
+    .startfaq { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    .entscheidung { align-items: flex-start; flex-direction: column; padding: 28px; }
+    .entscheidung__aktionen { flex-direction: row; flex-wrap: wrap; }
+  }
+  @media (max-width: 599px) {
+    .menue_dialog__stationen { grid-template-columns: minmax(0, 1fr); }
+    .aufgabenkarten { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+    .aufgabenkarte { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 8px 16px; padding: 20px; }
+    .aufgabenkarte > svg { grid-row: 1 / 3; }
+    .aufgabenkarte p, .aufgabenkarte .textlink { grid-column: 2; }
+    .artikelkarten, .artikelkarten_start, .artikelkarten_zwei, .artikelsoftware__karten { grid-template-columns: minmax(0, 1fr); }
+    .artikelkarte__inhalt { padding: 20px; }
+    .softwarekarte_liste .softwarekarte__aktionen { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .softwarekarte_liste .softwarekarte__preislink { grid-column: 1 / -1; }
+    .softwarekarte_liste .softwarekarte__website, .softwarekarte_liste .softwarekarte__profil { padding-inline: 8px; }
+    .kategorienprogramme .softwarekarte__aktionen { width: 100%; min-width: 0; }
+    .entscheidung { padding: 24px; }
+    .entscheidung h2 { font-size: 1.375rem; }
+    .entscheidung__aktionen { width: 100%; flex-direction: column; }
+    .entscheidung__aktionen .knopf { width: 100%; }
+    .startfaq__kopf h2 { font-size: 1.625rem; }
+  }
+}
+
+@layer pages {
+.logo__zeichen { width:36px; height:36px; }
+.logo_hell .logo__form_haupt { fill:#fff; }
+.deutschland { display:inline-flex; align-items:center; gap:10px; font-size:.8125rem; font-weight:500; line-height:1.5; }
+.deutschland img { display:block; width:25px; height:15px; flex:none; object-fit:contain; background:transparent; border-radius:0; }
+.portalhero__marke .deutschland { color:var(--ink-soft); letter-spacing:0; font-size:.875rem; }
+.fuss__land { margin-top:22px; color:#b5c8da; font-size:.75rem; }
+.softwarekarte__initial { background:transparent; }
+.softwareanalyse { display:grid; gap:30px; max-width:72ch; }
+.softwareanalyse h3 { font-size:1.25rem; line-height:1.4; margin-bottom:16px; }
+.softwareanalyse p { font-size:1rem; line-height:1.8; }
+.softwareanalyse p + p { margin-top:14px; }
+.softwareanalyse .softwareanalyse__quellen { font-size:.75rem; line-height:1.6; color:var(--ink-soft); margin-top:18px; }
+.softwareanalyse__quellen a { color:var(--ink-soft); }
+.softwareanalyse__markt { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-bottom:28px; padding:14px 0; border-block:1px solid var(--line); font-size:.8125rem; color:var(--ink-soft); }
+.softwareanalyse__markt > svg { color:var(--primary); }
+.softwareanalyse__markt a { display:inline-flex; align-items:center; gap:6px; margin-left:auto; font-size:.75rem; }
+@media(max-width:599px){.softwareanalyse__markt a{margin-left:28px}.softwareanalyse h3{font-size:1.125rem}}
+}
+
+@layer pages {
+  @media (max-width: 359px) {
+    .mobilleiste { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+    .mobilleiste .knopf { padding-inline: 12px; gap: 8px; font-size: .875rem; }
+  }
+}

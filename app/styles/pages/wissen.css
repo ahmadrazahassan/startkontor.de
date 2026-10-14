@@ -1,0 +1,809 @@
+@layer pages {
+  .register_gross .register__titel {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  }
+
+  .register_gross .register__zeile {
+    padding-block: var(--a-6);
+  }
+
+  .register_gross .register__nummer {
+    font-size: 2rem;
+  }
+
+  .register_gross .register__text {
+    font-size: var(--fs-body);
+    max-width: 60ch;
+  }
+
+  /* Leitfäden nach Baustein */
+  .leitfadengruppen {
+    display: grid;
+    gap: var(--a-8);
+    padding-bottom: var(--a-8);
+  }
+
+  .leitfadengruppe__titel {
+    display: flex;
+    align-items: baseline;
+    gap: var(--a-4);
+    margin-bottom: var(--a-4);
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  }
+
+  .leitfadengruppe__nr {
+    font-size: 1.125em;
+    color: var(--sky);
+  }
+
+  .leitfadengruppe .register__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  @media (min-width: 768px) {
+    .leitfadengruppe .register__meta {
+      align-items: flex-end;
+    }
+  }
+
+  /* Artikel */
+  @media (min-width: 900px) {
+    .artikelkopf h1 {
+      max-width: 24ch;
+    }
+  }
+
+  .artikelmeta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-3) var(--a-6);
+    margin-top: var(--a-5);
+    padding-top: var(--a-4);
+    border-top: 1px solid var(--line);
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+  }
+
+  .artikelmeta__label {
+    margin-inline-end: 4px;
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .artikelraster {
+    padding-bottom: var(--a-8);
+  }
+
+  .artikel {
+    min-width: 0;
+    max-width: 960px;
+  }
+
+  .verzeichnisrail__titel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+    padding: 0 var(--a-4);
+    border: 2px solid var(--field);
+    border-radius: var(--r-4);
+    background: var(--white);
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    list-style: none;
+  }
+
+  .verzeichnisrail__titel::-webkit-details-marker {
+    display: none;
+  }
+
+  .verzeichnisrail__titel::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translate(-2px, -2px);
+    transition: transform var(--t-panel);
+  }
+
+  .verzeichnisrail__details[open] > .verzeichnisrail__titel::after {
+    transform: rotate(-135deg) translate(-2px, -2px);
+  }
+
+  @media (min-width: 1024px) {
+    .verzeichnisrail__titel {
+      min-height: 0;
+      padding: 0 0 var(--a-3);
+      border: 0;
+      border-bottom: 2px solid var(--ink);
+      border-radius: 0;
+      background: transparent;
+      font-size: var(--fs-label);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .verzeichnisrail__titel::after {
+      display: none;
+    }
+  }
+
+  .verzeichnisrail__liste {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .verzeichnisrail__liste a {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: var(--a-2);
+    padding: 10px 0 10px var(--a-2);
+    border-inline-start: 3px solid transparent;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .verzeichnisrail__liste a:hover {
+    color: var(--primary);
+  }
+
+  .verzeichnisrail__liste a[aria-current="location"] {
+    border-inline-start-color: var(--primary);
+    font-weight: 700;
+    background: var(--white);
+  }
+
+  .verzeichnisrail__nr {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: var(--fs-label);
+    color: var(--sky);
+    padding-top: 2px;
+  }
+
+  @media (max-width: 1023px) {
+    .verzeichnisrail__liste {
+      margin-top: var(--a-2);
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 0 var(--a-3);
+    }
+  }
+
+  .kernaussagen {
+    margin-bottom: var(--a-7);
+    padding: var(--a-5) var(--a-5) var(--a-5);
+    background: var(--mist);
+    box-shadow: inset 0 6px 0 var(--primary);
+    border-radius: var(--r-2);
+  }
+
+  .kernaussagen__titel {
+    margin-bottom: var(--a-4);
+    font-size: 1.5rem;
+  }
+
+  .kernaussagen__liste {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .kernaussagen__liste li {
+    position: relative;
+    padding: 10px 0 10px var(--a-6);
+    box-shadow: inset 0 1px 0 var(--sky);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    max-width: 68ch;
+  }
+
+  .kernaussagen__liste li::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 2px;
+    top: 1.15em;
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+  }
+
+  .artikel__body {
+    font-size: var(--fs-body);
+    line-height: 1.7;
+  }
+
+  .artikel__body > p,
+  .artikel__body > ul,
+  .artikel__body > ol {
+    max-width: var(--lesebreite);
+    margin-bottom: 1.25em;
+  }
+
+  .artikel__h2 {
+    display: flex;
+    align-items: baseline;
+    gap: var(--a-4);
+    margin-top: var(--a-8);
+    margin-bottom: var(--a-4);
+    padding-top: var(--a-5);
+    border-top: 1px solid var(--line);
+    font-size: clamp(1.625rem, 1.25rem + 1.2vw, 2.25rem);
+    max-width: 24em;
+  }
+
+  .artikel__h2:first-child {
+    margin-top: 0;
+  }
+
+  .artikel__nr {
+    flex: none;
+    min-width: 2ch;
+    color: var(--sky);
+    font-size: 1.1em;
+  }
+
+  .nummeriert {
+    counter-reset: nr;
+  }
+
+  .artikel__body ol.nummeriert > li {
+    position: relative;
+    padding-inline-start: 2.6em;
+    counter-increment: nr;
+  }
+
+  .artikel__body ol.nummeriert > li::before {
+    content: counter(nr);
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0.05em;
+    display: grid;
+    place-items: center;
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: var(--r-2);
+    background: var(--primary);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9em;
+    line-height: 1;
+  }
+
+  .randnotiz,
+  .achtung,
+  .merksatz {
+    clear: both;
+    max-width: var(--lesebreite);
+    margin: var(--a-6) 0;
+    padding: var(--a-4) var(--a-5);
+  }
+
+  .randnotiz {
+    background: var(--mist);
+    border-inline-start: 4px solid var(--primary);
+    font-size: var(--fs-small);
+    line-height: 1.6;
+  }
+
+  .randnotiz__label,
+  .achtung__label,
+  .merksatz__label {
+    margin-bottom: 4px;
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  .randnotiz__titel,
+  .achtung__titel {
+    margin-bottom: 4px;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 1.0625rem;
+  }
+
+  .randnotiz p,
+  .achtung p {
+    max-width: none;
+  }
+
+  .achtung {
+    background: var(--warn-fill);
+    border-inline-start: 4px solid var(--warn);
+    font-size: var(--fs-small);
+    line-height: 1.6;
+  }
+
+  .achtung__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--warn);
+  }
+
+  .merksatz {
+    margin-inline: 0;
+    padding: var(--a-2) 0 var(--a-2) var(--a-5);
+    border-inline-start: 4px solid var(--sky);
+    background: transparent;
+  }
+
+  .merksatz__label {
+    color: var(--ink-soft);
+  }
+
+  .merksatz__text {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 1.3;
+    max-width: none;
+  }
+
+  /* Marginalien: Hinweise rücken auf breiten Bildschirmen in den rechten Rand */
+  @media (min-width: 1360px) {
+    .artikel {
+      max-width: none;
+    }
+
+    .artikel__body {
+      max-width: calc(68ch + 320px);
+    }
+
+    .artikel__body .randnotiz {
+      float: right;
+      clear: right;
+      width: 280px;
+      margin: 0.3em 0 var(--a-4) var(--a-5);
+      margin-inline-end: calc(-1 * (280px + var(--a-5)) + (100% - 68ch));
+    }
+  }
+
+  .artikel__checkliste {
+    margin: var(--a-7) 0;
+    padding: var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    box-shadow: inset 0 6px 0 var(--sky);
+    border-radius: var(--r-2);
+    max-width: none;
+  }
+
+  .artikelfuss {
+    margin-top: var(--a-8);
+    display: grid;
+    gap: var(--a-7);
+  }
+
+  .rechtshinweis {
+    max-width: var(--lesebreite);
+    padding: var(--a-4) var(--a-5);
+    border: 1px solid var(--field);
+    border-radius: var(--r-2);
+    background: var(--white);
+    font-size: var(--fs-small);
+  }
+
+  .artikelfuss__titel {
+    margin-bottom: var(--a-4);
+    font-size: 1.5rem;
+  }
+
+  /* Checkliste */
+  .checkliste {
+    max-width: 860px;
+  }
+
+  .checkliste__kopf {
+    display: grid;
+    gap: var(--a-4);
+    margin-bottom: var(--a-5);
+  }
+
+  .checkliste__titel {
+    font-size: 1.5rem;
+  }
+
+  .checkliste__zaehler {
+    margin-bottom: var(--a-2);
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    max-width: none;
+  }
+
+  .checkliste__zaehler strong {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+
+  .segmentbalken {
+    display: flex;
+    gap: 2px;
+    height: 10px;
+  }
+
+  .segmentbalken__teil {
+    flex: 1;
+    min-width: 2px;
+    background: var(--white);
+    border: 1px solid var(--field);
+  }
+
+  .segmentbalken__teil[data-voll="ja"] {
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .checkliste__gruppe {
+    margin-bottom: var(--a-6);
+  }
+
+  .checkliste__gruppentitel {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--a-2);
+    padding-bottom: var(--a-2);
+    border-bottom: 2px solid var(--ink);
+    font-size: 1.25rem;
+  }
+
+  .checkliste__gruppe legend {
+    width: 100%;
+  }
+
+  .checkliste__punkt {
+    padding: var(--a-3) 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .checkliste__text {
+    font-size: var(--fs-body);
+    line-height: 1.55;
+  }
+
+  .checkliste__hinweis {
+    margin: 4px 0 0 calc(28px + var(--a-3));
+    font-size: var(--fs-small);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 64ch;
+  }
+
+  .checkliste__aktionen {
+    display: grid;
+    gap: var(--a-3);
+    margin-top: var(--a-6);
+    padding-top: var(--a-5);
+    border-top: 1px solid var(--line);
+  }
+
+  .checkliste__speicher {
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+    max-width: 66ch;
+  }
+
+  .checkliste__druckkopf {
+    margin-bottom: var(--a-5);
+  }
+
+  .checklistenseite {
+    display: grid;
+    gap: var(--a-7) var(--a-8);
+    padding-bottom: var(--a-8);
+  }
+
+  @media (min-width: 1024px) {
+    .checklistenseite {
+      grid-template-columns: minmax(0, 1fr) 280px;
+      align-items: start;
+    }
+  }
+
+  .checklistenseite__rand {
+    position: sticky;
+    top: calc(var(--kopf-hoehe) + 24px);
+  }
+
+  .seitenkopf__stationen {
+    margin-top: var(--a-4);
+  }
+
+  /* Fristenseite */
+  .legende__titel {
+    margin-bottom: var(--a-4);
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .fristlegende {
+    display: grid;
+    gap: var(--a-4) var(--a-6);
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+
+  .fristlegende li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+  }
+
+  .filterleiste_klein {
+    margin-bottom: var(--a-6);
+  }
+
+  .filterleiste__zeile_drei {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    .filterleiste__zeile_drei {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .fristgruppe {
+    margin-bottom: var(--a-7);
+  }
+
+  .fristgruppe__titel {
+    margin-bottom: var(--a-5);
+    font-size: 2.25rem;
+    color: var(--ink);
+  }
+
+  .fristenstrecke {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 44px;
+    list-style: none;
+    display: grid;
+    gap: var(--a-5);
+  }
+
+  .fristenstrecke::before {
+    content: "";
+    position: absolute;
+    inset-block: 14px;
+    inset-inline-start: 11px;
+    width: 3px;
+    background: var(--sky);
+  }
+
+  .fristenstrecke_wiederkehrend::before {
+    background: transparent;
+    border-inline-start: 3px dashed var(--field);
+    width: 0;
+  }
+
+  .fristeintrag {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--a-2);
+    padding: var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-inline-start: 4px solid var(--primary);
+    border-radius: var(--r-2);
+    max-width: 880px;
+  }
+
+  .fristeintrag[data-frist="gilt"] {
+    border-inline-start-color: var(--ok);
+  }
+
+  .fristeintrag[data-frist="entwurf"] {
+    border-inline-start-color: var(--warn);
+  }
+
+  .fristeintrag[data-frist="wiederkehrend"] {
+    border-inline-start-color: var(--field);
+  }
+
+  .fristeintrag__knoten {
+    position: absolute;
+    inset-inline-start: -44px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    border: 3px solid var(--sky);
+    border-radius: var(--r-2);
+    background: var(--primary);
+  }
+
+  .fristeintrag[data-frist="gilt"] .fristeintrag__knoten {
+    background: var(--ok);
+  }
+
+  .fristeintrag[data-frist="entwurf"] .fristeintrag__knoten {
+    background: var(--warn);
+  }
+
+  .fristeintrag[data-frist="wiederkehrend"] .fristeintrag__knoten {
+    background: var(--base);
+    border-color: var(--field);
+  }
+
+  .fristeintrag__kopf {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-2) var(--a-4);
+  }
+
+  .fristeintrag__datum {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: var(--fs-label);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    max-width: none;
+  }
+
+  .fristeintrag__art {
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    color: var(--ink-soft);
+  }
+
+  .fristeintrag__titel {
+    font-family: var(--font-ui);
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .fristeintrag__text {
+    max-width: 68ch;
+  }
+
+  .fristeintrag__quelle {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    max-width: none;
+  }
+
+  .fristeintrag__stand {
+    font-size: var(--fs-label);
+    color: var(--ink-soft);
+  }
+
+  .fristeintrag__fuss {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-3) var(--a-5);
+    padding-top: var(--a-3);
+    border-top: 1px solid var(--line);
+  }
+
+  .fristeintrag__leitfaden {
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 700;
+  }
+
+  .fristenregister__leer {
+    padding: var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+  }
+
+  .aussage_klein {
+    margin-top: var(--a-7);
+    font-size: 1.125rem;
+    font-family: var(--font-body);
+    font-weight: 400;
+  }
+
+  /* Glossar */
+  .glossarliste {
+    min-width: 0;
+  }
+
+  .glossargruppe {
+    display: grid;
+    gap: var(--a-3) var(--a-6);
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: var(--a-5);
+    scroll-margin-top: calc(var(--kopf-hoehe) + 16px);
+  }
+
+  @media (min-width: 768px) {
+    .glossargruppe {
+      grid-template-columns: 80px minmax(0, 1fr);
+    }
+  }
+
+  .glossargruppe__zeichen {
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--sky);
+  }
+
+  .glossarregister {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: var(--a-6);
+  }
+
+  @media (min-width: 1100px) {
+    .glossarregister {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .glossarregister__zeile {
+    position: relative;
+    padding: var(--a-4) var(--a-3);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .glossarregister__zeile:hover {
+    background: var(--white);
+  }
+
+  .glossarseite {
+    display: grid;
+    gap: var(--a-7);
+    padding-bottom: var(--a-8);
+  }
+
+  .glossarseite .fliesstext p {
+    font-size: 1.1875rem;
+    max-width: 62ch;
+  }
+
+  .glossarseite__titel {
+    margin-bottom: var(--a-4);
+    font-size: 1.5rem;
+  }
+
+  .glossarseite__siehe {
+    padding: var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    box-shadow: inset 0 6px 0 var(--sky);
+    border-radius: var(--r-2);
+  }
+
+  .glossarnavigation {
+    margin-top: var(--a-4);
+  }
+}

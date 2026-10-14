@@ -1,0 +1,110 @@
+@layer components {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  .akkordeon-liste {
+    border-top: 2px solid var(--ink);
+  }
+
+  .akkordeon {
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: calc(var(--kopf-hoehe) + 16px);
+  }
+
+  .akkordeon__kopf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--a-5);
+    min-height: 64px;
+    padding: var(--a-4) 0;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .akkordeon__kopf::-webkit-details-marker {
+    display: none;
+  }
+
+  .akkordeon__kopf::marker {
+    content: "";
+  }
+
+  .akkordeon__frage {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 1.1875rem;
+    line-height: 1.35;
+    letter-spacing: 0;
+    text-wrap: pretty;
+  }
+
+  .akkordeon__kopf:hover .akkordeon__frage {
+    color: var(--primary);
+  }
+
+  .akkordeon__zeichen {
+    position: relative;
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--primary);
+    border-radius: var(--r-2);
+    background: var(--white);
+    color: var(--primary);
+    transition:
+      background-color var(--t-farbe),
+      color var(--t-farbe);
+  }
+
+  .akkordeon__zeichen .icon {
+    grid-area: 1 / 1;
+  }
+
+  .akkordeon__minus {
+    display: none;
+  }
+
+  .akkordeon[open] .akkordeon__plus {
+    display: none;
+  }
+
+  .akkordeon[open] .akkordeon__minus {
+    display: block;
+  }
+
+  .akkordeon[open] .akkordeon__zeichen {
+    background: var(--primary);
+    color: var(--white);
+  }
+
+  .akkordeon__inhalt {
+    padding: 0 0 var(--a-5);
+    max-width: var(--lesebreite);
+  }
+
+  .akkordeon__inhalt > p + p {
+    margin-top: var(--a-3);
+  }
+
+  .akkordeon__inhalt .akkordeon__mehr {
+    margin-top: var(--a-3);
+  }
+
+  @supports selector(::details-content) {
+    .akkordeon::details-content {
+      block-size: 0;
+      overflow: clip;
+      transition:
+        block-size var(--t-panel),
+        content-visibility var(--t-panel) allow-discrete;
+    }
+
+    .akkordeon[open]::details-content {
+      block-size: auto;
+    }
+  }
+}

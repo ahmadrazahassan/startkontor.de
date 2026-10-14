@@ -1,0 +1,289 @@
+@layer components {
+  .icon {
+    flex: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Knöpfe: Pillenform. Primäre Knöpfe sind glänzend (Glasverlauf, Lichtkante, Glow, Glanzlauf). */
+  .knopf {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 28px;
+    border: 2px solid transparent;
+    border-radius: var(--r-pille);
+    font-family: var(--font-ui);
+    font-size: var(--fs-button);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background-color var(--t-farbe),
+      border-color var(--t-farbe),
+      color var(--t-farbe),
+      box-shadow 220ms ease-out,
+      transform 160ms ease-out,
+      filter 160ms ease-out;
+  }
+
+  .knopf:hover {
+    text-decoration: none;
+  }
+
+  .knopf__text {
+    padding-block: 4px;
+  }
+
+  .knopf_breit {
+    display: flex;
+    width: 100%;
+  }
+
+  /*
+   * Glänzender Primärknopf. Alle Farben laufen über Variablen, damit dunkle Flächen nur diese Werte tauschen.
+   * Der Text liegt immer über den Glanzflächen (z-index 1). Die Verlaufsfarben sind so gewählt, dass weißer Text
+   * auch am hellsten Rand mindestens 4,5 zu 1 erreicht.
+   */
+  .knopf_primaer,
+  .softwarekarte:is(:hover, :focus-within) .softwarekarte__cta {
+    --k-oben: #1a6fcb;
+    --k-mitte: #095fbb;
+    --k-unten: #064a96;
+    --k-rand: #053f80;
+    --k-text: var(--white);
+    --k-textschatten: 0 1px 0 rgba(4, 30, 66, 0.4);
+    --k-kante: rgba(255, 255, 255, 0.42);
+    --k-tiefe: rgba(4, 30, 66, 0.26);
+    --k-glanz: rgba(255, 255, 255, 0.16);
+    --k-glow: rgba(9, 95, 187, 0.5);
+    --k-schein: rgba(255, 255, 255, 0.62);
+
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background-color: var(--k-mitte);
+    background-image: linear-gradient(180deg, var(--k-oben) 0%, var(--k-mitte) 55%, var(--k-unten) 100%);
+    border-color: var(--k-rand);
+    color: var(--k-text);
+    text-shadow: var(--k-textschatten);
+    box-shadow:
+      inset 0 1px 0 var(--k-kante),
+      inset 0 -2px 0 var(--k-tiefe),
+      0 1px 2px rgba(7, 46, 99, 0.28),
+      0 10px 20px -8px var(--k-glow);
+  }
+
+  /* Obere Glasfläche */
+  .knopf_primaer::before,
+  .softwarekarte:is(:hover, :focus-within) .softwarekarte__cta::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 52% 0;
+    z-index: -1;
+    background: linear-gradient(180deg, var(--k-glanz) 0%, rgba(255, 255, 255, 0.03) 100%);
+    pointer-events: none;
+  }
+
+  /* Glanzlauf: ein schräges Lichtband wandert beim Überfahren und bei Tastaturfokus einmal über den Knopf */
+  .knopf_primaer::after,
+  .softwarekarte:is(:hover, :focus-within) .softwarekarte__cta::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    bottom: -30%;
+    left: -55%;
+    width: 34%;
+    z-index: -1;
+    background: linear-gradient(100deg, transparent 0%, var(--k-schein) 50%, transparent 100%);
+    transform: skewX(-22deg) translateX(0);
+    transition: transform 720ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    pointer-events: none;
+  }
+
+  .knopf_primaer:hover::after,
+  .knopf_primaer:focus-visible::after,
+  .softwarekarte:is(:hover, :focus-within) .softwarekarte__cta::after {
+    transform: skewX(-22deg) translateX(520%);
+  }
+
+  .knopf_primaer:hover {
+    color: var(--k-text);
+    filter: brightness(1.07) saturate(1.06);
+    transform: translateY(-1px);
+    box-shadow:
+      inset 0 1px 0 var(--k-kante),
+      inset 0 -2px 0 var(--k-tiefe),
+      0 2px 4px rgba(7, 46, 99, 0.3),
+      0 16px 28px -10px var(--k-glow);
+  }
+
+  .knopf_primaer:active {
+    color: var(--k-text);
+    filter: brightness(0.96);
+    transform: translateY(1px);
+    box-shadow:
+      inset 0 2px 5px rgba(4, 30, 66, 0.4),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.16),
+      0 1px 1px rgba(7, 46, 99, 0.25);
+  }
+
+  /* Der Inhalt liegt über den Glanzflächen */
+  .knopf_primaer > *,
+  .softwarekarte:is(:hover, :focus-within) .softwarekarte__cta > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Sekundärknopf: weiße Fläche mit feinem Glanz */
+  .knopf_sekundaer {
+    background-color: var(--white);
+    background-image: linear-gradient(180deg, #ffffff 0%, #eef5fb 100%);
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 1px 2px rgba(7, 46, 99, 0.1);
+  }
+
+  .knopf_sekundaer:hover {
+    background-image: linear-gradient(180deg, #f4f9fd 0%, #dbeaf6 100%);
+    color: var(--primary);
+    transform: translateY(-1px);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      0 8px 16px -8px rgba(9, 95, 187, 0.45);
+  }
+
+  .knopf_sekundaer:active {
+    background-image: linear-gradient(180deg, var(--secondary-active) 0%, #c9def0 100%);
+    color: var(--primary-active);
+    transform: translateY(1px);
+    box-shadow: inset 0 2px 4px rgba(9, 95, 187, 0.25);
+  }
+
+  .knopf_tertiaer {
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  .knopf_tertiaer:hover {
+    background: none;
+    color: var(--primary-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 3.5px;
+  }
+
+  .knopf_klein {
+    min-height: 40px;
+    padding: 0 16px;
+  }
+
+  .knopf:disabled,
+  .knopf[aria-disabled="true"] {
+    background: var(--disabled-fill);
+    background-image: none;
+    border-color: var(--disabled-fill);
+    color: var(--disabled-text);
+    box-shadow: none;
+    text-shadow: none;
+    filter: none;
+    transform: none;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .knopf:disabled::before,
+  .knopf:disabled::after,
+  .knopf[aria-disabled="true"]::before,
+  .knopf[aria-disabled="true"]::after {
+    display: none;
+  }
+
+  /* Auf dunklen Flächen wird der Primärknopf weiß und glänzend, nur die Variablen wechseln */
+  .band_nacht .knopf_primaer,
+  .band_primaer .knopf_primaer,
+  .fuss .knopf_primaer {
+    --k-oben: #ffffff;
+    --k-mitte: #f1f7fc;
+    --k-unten: #d6e6f3;
+    --k-rand: #ffffff;
+    --k-text: var(--night);
+    --k-textschatten: none;
+    --k-kante: rgba(255, 255, 255, 1);
+    --k-tiefe: rgba(9, 95, 187, 0.18);
+    --k-glanz: rgba(255, 255, 255, 0.7);
+    --k-glow: rgba(122, 172, 220, 0.6);
+    --k-schein: rgba(9, 95, 187, 0.28);
+  }
+
+  .band_nacht .knopf_sekundaer,
+  .fuss .knopf_sekundaer {
+    background: rgba(255, 255, 255, 0.06);
+    background-image: none;
+    border-color: var(--white);
+    color: var(--white);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .band_nacht .knopf_sekundaer:hover,
+  .fuss .knopf_sekundaer:hover {
+    background: rgba(255, 255, 255, 0.14);
+    background-image: none;
+    color: var(--white);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      0 8px 18px -8px rgba(122, 172, 220, 0.6);
+  }
+
+  .band_nacht .knopf_tertiaer,
+  .band_primaer .knopf_tertiaer {
+    color: var(--white);
+  }
+
+  .knopf_icon {
+    width: 48px;
+    min-height: 48px;
+    padding: 0;
+    border-radius: var(--r-pille);
+  }
+
+  .knopf_gruppe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--a-3) var(--a-4);
+    align-items: center;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .knopf,
+    .knopf_primaer::after,
+    .softwarekarte .softwarekarte__cta::after {
+      transition: none;
+    }
+
+    .knopf_primaer:hover,
+    .knopf_primaer:active,
+    .knopf_sekundaer:hover,
+    .knopf_sekundaer:active {
+      transform: none;
+    }
+
+    .knopf_primaer:hover::after,
+    .knopf_primaer:focus-visible::after,
+    .softwarekarte:is(:hover, :focus-within) .softwarekarte__cta::after {
+      transform: skewX(-22deg) translateX(0);
+    }
+  }
+}

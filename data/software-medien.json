@@ -1,0 +1,1127 @@
+{
+  "profile": {
+    "billomat": {
+      "bilder": [
+        {
+          "src": "/bilder/software/billomat-02.png",
+          "breite": 1920,
+          "hoehe": 1252,
+          "titel": "Finanzübersicht",
+          "alt": "Finanzübersicht: Originalansicht von Billomat.",
+          "quelle": "https://www.billomat.com/onboarding/dashboard/",
+          "original": "https://www.billomat.com/wp-content/uploads/2022/10/Billomat_Software-1-1.png"
+        },
+        {
+          "src": "/bilder/software/billomat-01.png",
+          "breite": 848,
+          "hoehe": 385,
+          "titel": "Anpassbares Dashboard",
+          "alt": "Anpassbares Dashboard: Originalansicht von Billomat.",
+          "quelle": "https://www.billomat.com/onboarding/dashboard/",
+          "original": "https://www.billomat.com/wp-content/uploads/2023/02/Dashboard-individuell-einrichten.png"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Billomat: Rechnungen erstellen",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/oiWUPaSvhWA?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=oiWUPaSvhWA",
+        "quelle": "https://support.aifinyo.de/hc/de/articles/22628948820124-Allgemeines-zu-den-Dokumenten",
+        "sprache": "Deutsch"
+      }
+    },
+    "fastbill": {
+      "bilder": [
+        {
+          "src": "/bilder/software/fastbill-01.png",
+          "breite": 2880,
+          "hoehe": 1556,
+          "titel": "Banking und Zahlungsabgleich",
+          "alt": "Banking und Zahlungsabgleich: Originalansicht von FastBill.",
+          "quelle": "https://www.fastbill.com/funktionen",
+          "original": "https://www.fastbill.com/sites/default/files/2024-07/Bildschirmfoto%202024-07-29%20um%2014.54.24.png"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "FastBill: Buchhaltung im Überblick",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/2QLZODHpR88?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=2QLZODHpR88",
+        "quelle": "https://www.fastbill.com/funktionen",
+        "sprache": "Deutsch"
+      }
+    },
+    "lexware-office": {
+      "bilder": [
+        {
+          "src": "/bilder/software/lexware-office-01.svg",
+          "breite": 1173,
+          "hoehe": 691,
+          "titel": "Finanzübersicht",
+          "alt": "Finanzübersicht: Originalansicht von Lexware Office.",
+          "quelle": "https://www.lexware.de/buchhaltungssoftware/",
+          "original": "https://www.lexware.de/fileadmin/lexware-office/dashboard.svg"
+        },
+        {
+          "src": "/bilder/software/lexware-office-02.svg",
+          "breite": 920,
+          "hoehe": 690,
+          "titel": "Einnahmenüberschussrechnung",
+          "alt": "Einnahmenüberschussrechnung: Originalansicht von Lexware Office.",
+          "quelle": "https://www.lexware.de/buchhaltungssoftware/",
+          "original": "https://www.lexware.de/fileadmin/lexware-office/einnahmenueberschussrechnung-920x690.svg"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Lexware Office: Automatische Onlinebuchhaltung",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/mNP94c9iGxA?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=mNP94c9iGxA",
+        "quelle": "https://www.lexware.de/buchhaltungssoftware/",
+        "sprache": "Deutsch"
+      }
+    },
+    "lexware-office-lohn-gehalt": {
+      "bilder": [
+        {
+          "src": "/bilder/software/lexware-office-lohn-gehalt-02.svg",
+          "breite": 1198,
+          "hoehe": 986,
+          "titel": "Übermittlung einer Arbeitsbescheinigung",
+          "alt": "Übermittlung einer Arbeitsbescheinigung: Originalansicht von Lexware Office Lohn & Gehalt.",
+          "quelle": "https://www.lexware.de/lohnprogramm-lohnsoftware/",
+          "original": "https://www.lexware.de/fileadmin/lexware-office/arbeitsbescheinigung.svg"
+        },
+        {
+          "src": "/bilder/software/lexware-office-lohn-gehalt-01.svg",
+          "breite": 780,
+          "hoehe": 780,
+          "titel": "Abgeschlossene Lohnabrechnung",
+          "alt": "Abgeschlossene Lohnabrechnung: Originalansicht von Lexware Office Lohn & Gehalt.",
+          "quelle": "https://www.lexware.de/lohnprogramm-lohnsoftware/",
+          "original": "https://www.lexware.de/fileadmin/lexware-office/funktionen/lohnabrechnungabgeschlossen_780x780.svg"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Lexware Office Lohn & Gehalt: Produkttour",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/ldXr0w3Arrg?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=ldXr0w3Arrg",
+        "quelle": "https://www.lexware.de/lohnprogramm-lohnsoftware/",
+        "sprache": "Deutsch"
+      }
+    },
+    "sevdesk": {
+      "bilder": [
+        {
+          "src": "/bilder/software/sevdesk-original.png",
+          "breite": 4584,
+          "hoehe": 3336,
+          "titel": "Dashboard und FinanzÃ¼bersicht",
+          "alt": "Originalansicht von sevdesk mit FinanzÃ¼bersicht, Kennzahlen und Auswertungen.",
+          "quelle": "https://sevdesk.de/dashboard/",
+          "original": "https://cdn.prod.website-files.com/65c9eb8b18a74904c71e4d8e/67b5ec9825079b2a2e72b8ad_sevdesk-dashboard-desktop%403x.png"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "sevdesk: Buchhaltungssoftware in einer Minute",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/6Z1VD7ODSco?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=6Z1VD7ODSco",
+        "quelle": "https://sevdesk.de/buchhaltungssoftware-freiberufler/",
+        "sprache": "Deutsch"
+      }
+    },
+    "factorial": {
+      "bilder": [
+        {
+          "src": "/bilder/software/factorial-01.webp",
+          "breite": 1450,
+          "hoehe": 920,
+          "titel": "Personalverwaltung",
+          "alt": "Personalverwaltung: Originalansicht von Factorial.",
+          "quelle": "https://factorialhr.de/preise",
+          "original": "https://www.datocms-assets.com/58969/1715260556-core-pricing-page-de.webp"
+        },
+        {
+          "src": "/bilder/software/factorial-02.webp",
+          "breite": 1450,
+          "hoehe": 920,
+          "titel": "Arbeitszeiterfassung",
+          "alt": "Arbeitszeiterfassung: Originalansicht von Factorial.",
+          "quelle": "https://factorialhr.de/preise",
+          "original": "https://www.datocms-assets.com/58969/1715257882-time-tracking-pricing-page-de.webp"
+        }
+      ]
+    },
+    "hr-works": {
+      "bilder": [
+        {
+          "src": "/bilder/software/hr-works-01.png",
+          "breite": 2048,
+          "hoehe": 1244,
+          "titel": "Dashboard zur Zeiterfassung",
+          "alt": "Dashboard zur Zeiterfassung: Originalansicht von HR WORKS.",
+          "quelle": "https://www.hrworks.de/produkt/personalverwaltung-software/",
+          "original": "https://www.hrworks.de/wp-content/uploads/Dashboard_Zeiterfassung-e1693835435869.png"
+        }
+      ]
+    },
+    "kenjo": {
+      "bilder": [
+        {
+          "src": "/bilder/software/kenjo-01.jpg",
+          "breite": 2000,
+          "hoehe": 1998,
+          "titel": "Schichtplanung",
+          "alt": "Schichtplanung: Originalansicht von Kenjo.",
+          "quelle": "https://www.kenjo.io/de",
+          "original": "https://images.prismic.io/kenjo-company-website/aS8LlHNYClf9ntXR_DE_Shiftplan.png?auto=format%2Ccompress&rect=0%2C0%2C2000%2C1998&w=3840&fit=max"
+        },
+        {
+          "src": "/bilder/software/kenjo-02.png",
+          "breite": 1000,
+          "hoehe": 1000,
+          "titel": "Anwesenheitsübersicht",
+          "alt": "Anwesenheitsübersicht: Originalansicht von Kenjo.",
+          "quelle": "https://www.kenjo.io/de",
+          "original": "https://images.prismic.io/kenjo-company-website/aBJDMfIqRLdaBwmn_DE_Whoscheckedin.png?auto=format%2Ccompress&fit=max&w=2048"
+        }
+      ]
+    },
+    "centralstationcrm": {
+      "bilder": [
+        {
+          "src": "/bilder/software/centralstationcrm-01.png",
+          "breite": 2000,
+          "hoehe": 1400,
+          "titel": "Kontaktansicht",
+          "alt": "Kontaktansicht: Originalansicht von CentralStationCRM.",
+          "quelle": "https://centralstationcrm.de/",
+          "original": "https://s3.42he.com/cscrm-marketing-page-production/Central_Station_CRM_Person_Details_2833134bb9.png"
+        }
+      ],
+      "video": {
+        "typ": "vimeo",
+        "titel": "CentralStationCRM im Überblick",
+        "anbieter": "Vimeo",
+        "einbettung": "https://player.vimeo.com/video/943680237?dnt=1",
+        "extern": "https://www.youtube.com/watch?v=943680237",
+        "quelle": "https://centralstationcrm.de/",
+        "sprache": "Deutsch"
+      }
+    },
+    "hubspot-sales-hub": {
+      "bilder": [
+        {
+          "src": "/bilder/software/hubspot-sales-hub-01.jpg",
+          "breite": 3200,
+          "hoehe": 1800,
+          "titel": "Arbeitsbereich für den Vertrieb",
+          "alt": "Arbeitsbereich für den Vertrieb: Originalansicht von HubSpot Sales Hub.",
+          "quelle": "https://www.hubspot.de/products/sales",
+          "original": "https://www.hubspot.de/hs-fs/hubfs/WBZ%202025%20Rebrand/Product%20UIs/2025-%20Sales%20Hub/DE/Sales%20Hub%20-%20Prospecting%20Workspace_de.webp?width=5760&height=3240&name=Sales%20Hub%20-%20Prospecting%20Workspace_de.webp"
+        },
+        {
+          "src": "/bilder/software/hubspot-sales-hub-02.png",
+          "breite": 1400,
+          "hoehe": 1050,
+          "titel": "Bewertung von Verkaufschancen",
+          "alt": "Bewertung von Verkaufschancen: Originalansicht von HubSpot Sales Hub.",
+          "quelle": "https://www.hubspot.de/products/sales",
+          "original": "https://www.hubspot.de/hs-fs/hubfs/WBZ%202025%20Rebrand/Product%20UIs/2025-%20Sales%20Hub/DE/Sales%20Hub%20-%20Deal%20Scores_de.webp?width=1701&height=1275&name=Sales%20Hub%20-%20Deal%20Scores_de.webp"
+        }
+      ],
+      "video": {
+        "typ": "datei",
+        "titel": "HubSpot Sales Hub: Der Vertriebsarbeitsplatz",
+        "anbieter": "HubSpot Sales Hub",
+        "einbettung": "https://stream.mux.com/qEYQqxwUi401NH3aDronr02e5lmZnJx0073jKvKm69sctM/capped-1080p.mp4",
+        "extern": "https://stream.mux.com/qEYQqxwUi401NH3aDronr02e5lmZnJx0073jKvKm69sctM/capped-1080p.mp4",
+        "quelle": "https://www.hubspot.de/spotlight/spring2025",
+        "sprache": "Deutsch"
+      }
+    },
+    "pipedrive": {
+      "bilder": [
+        {
+          "src": "/bilder/software/pipedrive-02.png",
+          "breite": 2880,
+          "hoehe": 2400,
+          "titel": "Vertriebspipeline",
+          "alt": "Vertriebspipeline: Originalansicht von Pipedrive.",
+          "quelle": "https://www.pipedrive.com/de",
+          "original": "https://www-cms.pipedriveassets.com/brand-half-page-illustrations/Localized-half-page-illustrations/Pipedrive-homepage-hero-25_DE.png",
+          "hinweis": "Originalbeispiel des Herstellers mit englischer Benutzeroberfläche. Darstellung und Funktionsumfang können je nach Version, Sprache und Tarif abweichen."
+        },
+        {
+          "src": "/bilder/software/pipedrive-01.svg",
+          "breite": 720,
+          "hoehe": 450,
+          "titel": "Kontakte und Aktivitäten",
+          "alt": "Kontakte und Aktivitäten: Originalansicht von Pipedrive.",
+          "quelle": "https://www.pipedrive.com/de",
+          "original": "https://www-cms.pipedriveassets.com/brand-half-page-illustrations/LOCALIZED-HP-ILLUSTRATIONS/Contacts-450-DE.svg",
+          "hinweis": "Originalbeispiel des Herstellers mit englischer Benutzeroberfläche. Darstellung und Funktionsumfang können je nach Version, Sprache und Tarif abweichen."
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Pipedrive: Kurze Produktdemo",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/iHZq78MUWms?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=iHZq78MUWms",
+        "quelle": "https://www.pipedrive.com/de/blog/was-ist-crm",
+        "sprache": "Englisch"
+      }
+    },
+    "superoffice-crm": {
+      "bilder": [
+        {
+          "src": "/bilder/software/superoffice-crm-01.png",
+          "breite": 1550,
+          "hoehe": 946,
+          "titel": "Übersicht des CRM",
+          "alt": "Übersicht des CRM: Originalansicht von SuperOffice CRM.",
+          "quelle": "https://www.superoffice.de/preise/",
+          "original": "https://www.superoffice.de/globalassets/home-com-website/pricing/feature_crm-suite-dashboard.png?v=49aeff",
+          "hinweis": "Originalbeispiel des Herstellers mit englischer Benutzeroberfläche. Darstellung und Funktionsumfang können je nach Version, Sprache und Tarif abweichen."
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "SuperOffice CRM: Vom Lead zum Verkaufsabschluss",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/snG3qShZxIU?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=snG3qShZxIU",
+        "quelle": "https://community.superoffice.com/en/learning/videos/",
+        "sprache": "Deutsch"
+      }
+    },
+    "zoho-crm": {
+      "bilder": [
+        {
+          "src": "/bilder/software/zoho-crm-01.svg",
+          "breite": 1502,
+          "hoehe": 643,
+          "titel": "Anpassbare Kundenansicht",
+          "alt": "Anpassbare Kundenansicht: Originalansicht von Zoho CRM.",
+          "quelle": "https://www.zoho.com/de/crm/",
+          "original": "https://www.zohowebstatic.com/sites/zweb/images/crm/canvas-screen-crm-home.svg",
+          "hinweis": "Originalbeispiel des Herstellers mit englischer Benutzeroberfläche. Darstellung und Funktionsumfang können je nach Version, Sprache und Tarif abweichen."
+        }
+      ],
+      "video": {
+        "typ": "datei",
+        "titel": "Zoho CRM: Kommunikation über mehrere Kanäle in der Oberfläche",
+        "anbieter": "Zoho CRM",
+        "einbettung": "https://www.zohowebstatic.com/sites/zweb/images/crm/home-pg-omnichannel-video-zcrm-1.mp4",
+        "extern": "https://www.zohowebstatic.com/sites/zweb/images/crm/home-pg-omnichannel-video-zcrm-1.mp4",
+        "quelle": "https://www.zoho.com/de/crm/",
+        "sprache": "Oberfläche auf Englisch",
+        "hinweis": "Kurzer offizieller Clip der Oberfläche aus demselben Herstellerauftritt; kein vollständiger Überblick."
+      }
+    },
+    "microsoft-dynamics-365-business-central": {
+      "bilder": [
+        {
+          "src": "/bilder/software/microsoft-dynamics-365-business-central-01.jpg",
+          "breite": 2000,
+          "hoehe": 1125,
+          "titel": "Dashboard mit Verkaufskennzahlen",
+          "alt": "Dashboard mit Verkaufskennzahlen: Originalansicht von Microsoft Dynamics 365 Business Central.",
+          "quelle": "https://www.microsoft.com/de-de/dynamics-365/products/business-central",
+          "original": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/106513-Accordion-2-1?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1125&qlt=100&fit=constrain",
+          "hinweis": "Originalbeispiel des Herstellers mit englischer Benutzeroberfläche. Darstellung und Funktionsumfang können je nach Version, Sprache und Tarif abweichen."
+        }
+      ]
+    },
+    "weclapp": {
+      "bilder": [
+        {
+          "src": "/bilder/software/weclapp-01.png",
+          "breite": 809,
+          "hoehe": 619,
+          "titel": "Dashboard der Warenwirtschaft",
+          "alt": "Dashboard der Warenwirtschaft: Originalansicht von weclapp.",
+          "quelle": "https://www.weclapp.com/de/",
+          "original": "https://www.weclapp.com/de/wp-content/uploads/sites/4/2026/08/dashboard-weclapp-erp-homepage.png"
+        }
+      ],
+      "video": {
+        "typ": "datei",
+        "titel": "weclapp: Produktvorstellung",
+        "anbieter": "weclapp",
+        "einbettung": "https://www.weclapp.com/remote-image/de-new/videos/Weclapp_Brandmovie_Final_DE_4k_compressed.mp4",
+        "extern": "https://www.weclapp.com/remote-image/de-new/videos/Weclapp_Brandmovie_Final_DE_4k_compressed.mp4",
+        "quelle": "https://www.weclapp.com/de/",
+        "sprache": "Deutsch"
+      }
+    },
+    "xentral": {
+      "bilder": [
+        {
+          "src": "/bilder/software/xentral-original.png",
+          "breite": 2386,
+          "hoehe": 1104,
+          "titel": "Kennzahlen und GesamtÃ¼berblick",
+          "alt": "Originale Xentral OberflÃ¤che mit Kennzahlen zu GeschÃ¤ft, Vertrieb und Lager.",
+          "quelle": "https://help.xentral.com/hc/de/articles/9822447988636-Gesamt%C3%BCberblick-Kennzahlen-KPIs-und-Performance-deines-Unternehmens-verstehen",
+          "original": "https://help.xentral.com/hc/article_attachments/25698405183004"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Xentral: Livevorführung der KI Agenten",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/tszfAxlAWSU?rel=0&playsinline=1&hl=de&start=1021",
+        "extern": "https://www.youtube.com/watch?v=tszfAxlAWSU&t=1021s",
+        "quelle": "https://www.youtube.com/watch?v=tszfAxlAWSU",
+        "sprache": "Deutsch",
+        "hinweis": "Offizielle Webinaraufzeichnung. Das Video beginnt bei der Produktdemo ab Minute 17:01."
+      }
+    },
+    "papierkram": {
+      "bilder": [
+        {
+          "src": "/bilder/software/papierkram-02.png",
+          "breite": 1350,
+          "hoehe": 837,
+          "titel": "Papierkram am Desktop",
+          "alt": "Papierkram am Desktop: Originalansicht von Papierkram.",
+          "quelle": "https://www.papierkram.de/funktionen/",
+          "original": "https://www.papierkram.de/media/elm_screen-notebook.png"
+        },
+        {
+          "src": "/bilder/software/papierkram-01.png",
+          "breite": 2030,
+          "hoehe": 1215,
+          "titel": "Dokumentgestaltung",
+          "alt": "Dokumentgestaltung: Originalansicht von Papierkram.",
+          "quelle": "https://www.papierkram.de/funktionen/",
+          "original": "https://www.papierkram.de/assets/img/elm__feature--editor-templates.png"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Papierkram: Buchhaltung im Arbeitsalltag",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/W7I7RTB15VY?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=W7I7RTB15VY",
+        "quelle": "https://www.papierkram.de/funktionen/",
+        "sprache": "Deutsch",
+        "hinweis": "Herstellervideo mit einer Kundin über digitale Buchhaltung für Selbstständige."
+      }
+    },
+    "accountable": {
+      "bilder": [
+        {
+          "src": "/bilder/software/accountable-01.webp",
+          "breite": 1568,
+          "hoehe": 1498,
+          "titel": "Rechnungen und Einnahmen",
+          "alt": "Rechnungen und Einnahmen: Originalansicht von Accountable.",
+          "quelle": "https://www.accountable.de/",
+          "original": "https://www.accountable.de/wp-content/themes/accountable/assets/rebranding-images/features/de/features_revenues.webp"
+        }
+      ]
+    },
+    "gdi-lohn-gehalt": {
+      "bilder": [
+        {
+          "src": "/bilder/software/gdi-lohn-gehalt-02.webp",
+          "breite": 1650,
+          "hoehe": 1110,
+          "titel": "Lohnabrechnung",
+          "alt": "Lohnabrechnung: Originalansicht von GDI Lohn & Gehalt.",
+          "quelle": "https://www.gdi.de/lohnabrechnung/",
+          "original": "https://www.gdi.de/wp-content/uploads/2026/06/Gehalt-Lohn_Abrechnung.webp"
+        },
+        {
+          "src": "/bilder/software/gdi-lohn-gehalt-01.webp",
+          "breite": 1650,
+          "hoehe": 1110,
+          "titel": "Meldewesen",
+          "alt": "Meldewesen: Originalansicht von GDI Lohn & Gehalt.",
+          "quelle": "https://www.gdi.de/lohnabrechnung/",
+          "original": "https://www.gdi.de/wp-content/uploads/2026/06/Lohn-Gehalt_Meldewesen.webp"
+        }
+      ]
+    },
+    "clockodo": {
+      "bilder": [
+        {
+          "src": "/bilder/software/clockodo-01.svg",
+          "breite": 576,
+          "hoehe": 736,
+          "titel": "Zeiterfassung mit der Stoppuhr",
+          "alt": "Zeiterfassung mit der Stoppuhr: Originalansicht von Clockodo.",
+          "quelle": "https://www.clockodo.com/de/funktionen/",
+          "original": "https://www.clockodo.com/fileadmin/features/mockup-stoppuhr-mit-vorteilen.svg"
+        },
+        {
+          "src": "/bilder/software/clockodo-02.png",
+          "breite": 600,
+          "hoehe": 490,
+          "titel": "Export zur Lohnbuchhaltung",
+          "alt": "Export zur Lohnbuchhaltung: Originalansicht von Clockodo.",
+          "quelle": "https://www.clockodo.com/de/funktionen/",
+          "original": "https://www.clockodo.com/fileadmin/_processed_/c/e/csm_Exporte_fuer_die_Lohnbuchhaltung_be9b862a50.png"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Clockodo: Kunden und Projektzeiten erfassen",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/R-AqsA565Gg?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=R-AqsA565Gg",
+        "quelle": "https://www.clockodo.com/de/blog/neue-stoppuhr/",
+        "sprache": "Deutsch"
+      }
+    },
+    "hrlab": {
+      "bilder": [
+        {
+          "src": "/bilder/software/hrlab-01.png",
+          "breite": 2560,
+          "hoehe": 1440,
+          "titel": "Personalübersicht",
+          "alt": "Personalübersicht: Originalansicht von HRlab.",
+          "quelle": "https://www.hrlab.de/",
+          "original": "https://www.hrlab.de/_next/static/media/hrlab-dashboard-screen-de.1wgtnk6tvxwl2.png"
+        },
+        {
+          "src": "/bilder/software/hrlab-02.png",
+          "breite": 2560,
+          "hoehe": 1440,
+          "titel": "Digitale Personalakte",
+          "alt": "Digitale Personalakte: Originalansicht von HRlab.",
+          "quelle": "https://www.hrlab.de/",
+          "original": "https://www.hrlab.de/_next/static/media/hrlab-digitale-personnel-file-de.3x53yrm6409xm.png"
+        }
+      ]
+    },
+    "rexx-hr": {
+      "bilder": [
+        {
+          "src": "/bilder/software/rexx-hr-original.webp",
+          "breite": 1920,
+          "hoehe": 1080,
+          "titel": "Digitale Personalakte",
+          "alt": "Originalabbildung der digitalen Personalakte in rexx HR.",
+          "quelle": "https://www.rexx-systems.com/module-funktionen/",
+          "original": "https://cdn.rexx-systems.com/wp-content/uploads/2026/03/rexx-systems-digitale-personalakte.webp"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "rexx HR: Personalmanagement mit der rexx Suite",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/PgQlV-i4_QQ?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=PgQlV-i4_QQ",
+        "quelle": "https://www.rexx-systems.com/personalmanagement/",
+        "sprache": "Deutsch"
+      }
+    },
+    "absence-io": {
+      "bilder": [
+        {
+          "src": "/bilder/software/absence-io-02.svg",
+          "breite": 1025,
+          "hoehe": 576,
+          "titel": "Abwesenheiten und Arbeitszeiten",
+          "alt": "Abwesenheiten und Arbeitszeiten: Originalansicht von absence.io.",
+          "quelle": "https://www.absence.io/de/",
+          "original": "https://www.absence.io/wp-content/uploads/2026/04/Abwesenheiten-Zeiterfassung-Desktop-Mobile-App-absence-DE.svg"
+        },
+        {
+          "src": "/bilder/software/absence-io-01.svg",
+          "breite": 1025,
+          "hoehe": 576,
+          "titel": "Digitale Personalakte",
+          "alt": "Digitale Personalakte: Originalansicht von absence.io.",
+          "quelle": "https://www.absence.io/de/",
+          "original": "https://www.absence.io/wp-content/uploads/2026/04/Personalfragebogen-an-Desktop-ausfuellen-und-Sammlung-aller-Frageboegen.svg"
+        }
+      ]
+    },
+    "cobra-crm": {
+      "bilder": [
+        {
+          "src": "/bilder/software/cobra-crm-02.png",
+          "breite": 1929,
+          "hoehe": 1106,
+          "titel": "Cockpit der Kundenverwaltung",
+          "alt": "Cockpit der Kundenverwaltung: Originalansicht von cobra CRM.",
+          "quelle": "https://cobra.de/",
+          "original": "https://cobra.de/wp-content/uploads/2025/10/cobra_Grafik_Header_Cockpit-6.png"
+        },
+        {
+          "src": "/bilder/software/cobra-crm-01.png",
+          "breite": 2003,
+          "hoehe": 1347,
+          "titel": "Auswertung und Kennzahlen",
+          "alt": "Auswertung und Kennzahlen: Originalansicht von cobra CRM.",
+          "quelle": "https://cobra.de/",
+          "original": "https://cobra.de/wp-content/uploads/2025/10/cobra_Grafik_Uebersicht_Business_intelligence.png"
+        }
+      ]
+    },
+    "salesforce-sales-cloud": {
+      "bilder": [
+        {
+          "src": "/bilder/software/salesforce-sales-cloud-original1.jpg",
+          "breite": 1388,
+          "hoehe": 846,
+          "titel": "Vertriebsprognosen und Verkaufschancen",
+          "alt": "Originale Salesforce Sales Cloud Ansicht zur Vertriebsprognose mit Kennzahlen und Verkaufschancen in englischer OberflÃ¤che.",
+          "quelle": "https://trailhead.salesforce.com/content/learn/modules/sales-forecasting/view-and-set-sales-forecasts",
+          "original": "https://res.cloudinary.com/hy4kyit2a/f_auto/fl_lossy/q_70/learn/modules/sales-forecasting/view-and-set-sales-forecasts/images/4b51036286517117bc1ae30ee529f23d_kix.zrjo9rudw2w.png",
+          "hinweis": "Originalbeispiel aus dem offiziellen Salesforce Lernmodul. Die gezeigte OberflÃ¤che ist englisch; Funktionen hÃ¤ngen von Lizenz und Konfiguration ab."
+        },
+        {
+          "src": "/bilder/software/salesforce-sales-cloud-original2.png",
+          "breite": 907,
+          "hoehe": 238,
+          "titel": "Zielerreichung in der Vertriebsprognose",
+          "alt": "Originale Salesforce Sales Cloud Ansicht zur Vertriebsprognose mit Kennzahlen und Verkaufschancen in englischer OberflÃ¤che.",
+          "quelle": "https://trailhead.salesforce.com/content/learn/modules/sales-forecasting/view-and-set-sales-forecasts",
+          "original": "https://res.cloudinary.com/hy4kyit2a/f_auto/fl_lossy/q_70/learn/modules/sales-forecasting/view-and-set-sales-forecasts/images/40c48222943b06d89e85b8379c246cbe_kix.ghcw3fba1yae.png",
+          "hinweis": "Originalbeispiel aus dem offiziellen Salesforce Lernmodul. Die gezeigte OberflÃ¤che ist englisch; Funktionen hÃ¤ngen von Lizenz und Konfiguration ab."
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Salesforce Sales Cloud: Vertriebsprognosen im Überblick",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/Rbe8KLQNkF8?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=Rbe8KLQNkF8",
+        "quelle": "https://trailhead.salesforce.com/de/content/learn/trails/agentforce-sales-drive-pipeline-efficiency-with-analytics-and-ai",
+        "sprache": "Englisch"
+      }
+    },
+    "jtl-wawi": {
+      "bilder": [
+        {
+          "src": "/bilder/software/jtl-wawi-original.png",
+          "breite": 1871,
+          "hoehe": 1242,
+          "titel": "Dashboard der Warenwirtschaft",
+          "alt": "Originales Dashboard von JTL-Wawi mit Lagerkennzahlen und Verkaufsstatistiken.",
+          "quelle": "https://guide.jtl-software.com/jtl-wawi/dashboard/einfuehrung-fuer-das-dashboard/",
+          "original": "https://guide.jtl-software.com/uploads/Dashboard-jtl-wawi-version1-5.png",
+          "hinweis": "Herstellerbeispiel aus der Anleitung zu JTL-Wawi Version 1.5. Die aktuelle OberflÃ¤che kann abweichen."
+        }
+      ]
+    },
+    "haufe-x360": {
+      "bilder": [
+        {
+          "src": "/bilder/software/haufe-x360-02.png",
+          "breite": 800,
+          "hoehe": 380,
+          "titel": "Projektcontrolling",
+          "alt": "Projektcontrolling: Originalansicht von Haufe X360.",
+          "quelle": "https://www.haufe-x360.de/",
+          "original": "https://www.haufe-x360.de/fileadmin/_processed_/e/4/csm_Projektcontrolling-Controlling_1_a74394eb35.png"
+        },
+        {
+          "src": "/bilder/software/haufe-x360-01.jpg",
+          "breite": 800,
+          "hoehe": 398,
+          "titel": "Qualitätsmanagement",
+          "alt": "Qualitätsmanagement: Originalansicht von Haufe X360.",
+          "quelle": "https://www.haufe-x360.de/",
+          "original": "https://www.haufe-x360.de/fileadmin/_processed_/0/c/csm_QMS-Dashboard_Pr%C3%BCfauftr%C3%A4ge_f0a4314f05.jpg"
+        }
+      ]
+    },
+    "abas-erp": {
+      "bilder": [
+        {
+          "src": "/bilder/software/abas-erp-01.webp",
+          "breite": 620,
+          "hoehe": 413,
+          "titel": "Fertigungsübersicht",
+          "alt": "Fertigungsübersicht: Originalansicht von Abas ERP.",
+          "quelle": "https://abas-erp.com/de/",
+          "original": "https://cms.forterro.com/sites/default/files/styles/image_w_620_scale/public/2024-07/abas-erp-dashboard-fertigungsuebersicht.png.webp"
+        }
+      ]
+    },
+    "sage-active": {
+      "bilder": [
+        {
+          "src": "/bilder/software/sage-active-01.png",
+          "breite": 1080,
+          "hoehe": 1920,
+          "titel": "Mobile Kennzahlen und Kundenübersicht",
+          "alt": "Offizielle Sage Active App-Abbildung mit deutscher Kunden- und Kennzahlenübersicht.",
+          "quelle": "https://play.google.com/store/apps/details?id=com.sage.sageactive&hl=de&gl=DE",
+          "original": "https://play-lh.googleusercontent.com/CGu8e2a6L7J66Wyx8O3Se4gc8ELPwbywRD86leJOMynA36pILv5ccP11BsZSxzYhvWBFVO0lKFa57faa7s5SBg=s0",
+          "hinweis": "Originalabbildung der mobilen App des Herstellers. Die Desktopansicht kann abweichen."
+        },
+        {
+          "src": "/bilder/software/sage-active-02.png",
+          "breite": 1080,
+          "hoehe": 1920,
+          "titel": "Das Dashboard in der Sage Active App",
+          "alt": "Offizielle Sage Active App-Abbildung des Dashboards mit deutschen Beschriftungen.",
+          "quelle": "https://play.google.com/store/apps/details?id=com.sage.sageactive&hl=de&gl=DE",
+          "original": "https://play-lh.googleusercontent.com/oogY5sksIIIi2jvtGxsJc82PaPfHYnbopIEjOZCHOtEcbvEL3a9HSti6gLloklwYbKJSHOl4McRZZVWPr6pGxg=s0",
+          "hinweis": "Originalabbildung der mobilen App des Herstellers. Die Desktopansicht kann abweichen."
+        }
+      ]
+    },
+    "sage-hr-payroll": {
+      "bilder": [
+        {
+          "src": "/bilder/software/sage-hr-payroll-01.png",
+          "breite": 1900,
+          "hoehe": 1006,
+          "titel": "Abrechnung und Lohnjournal",
+          "alt": "Deutsche Sage Payroll-Oberfläche innerhalb von Sage HR & Payroll mit Abrechnungsabschluss, Arbeitgeberkosten und Lohnjournal.",
+          "quelle": "https://portal.sage.de/iframe-produktwebseiten/sage-hr-and-payroll",
+          "original": "https://portal.sage.de/uploads/82519619-064c-4af8-92bd-85d61d83b2f5/Abrechnung_HR&P.png",
+          "hinweis": "Lohnabrechnung in der Cloud in Sage HR & Payroll: Herstellerbeispiel mit Demodaten."
+        },
+        {
+          "src": "/bilder/software/sage-hr-payroll-02.png",
+          "breite": 1598,
+          "hoehe": 834,
+          "titel": "Organigramm und Mitarbeiterstruktur",
+          "alt": "Deutsche Sage HR & Payroll-Oberfläche mit Mitarbeiterkarten und Organigramm.",
+          "quelle": "https://portal.sage.de/iframe-produktwebseiten/sage-hr-and-payroll",
+          "original": "https://portal.sage.de/uploads/a422f029-3b52-4a46-8b20-a91ab3742a15/Organigramm_HR&P.png"
+        }
+      ]
+    },
+    "sage-payroll": {
+      "bilder": [
+        {
+          "src": "/bilder/software/sage-payroll-01.png",
+          "breite": 1900,
+          "hoehe": 1006,
+          "titel": "Lohnabrechnung in der Cloud: Abrechnungsübersicht",
+          "alt": "Deutsche Sage Payroll-Abrechnungsoberfläche mit Arbeitgeberkosten und Lohnjournal; Herstellerbeispiel aus der Produktvorstellung von Sage HR & Payroll.",
+          "quelle": "https://portal.sage.de/iframe-produktwebseiten/sage-hr-and-payroll",
+          "original": "https://portal.sage.de/uploads/82519619-064c-4af8-92bd-85d61d83b2f5/Abrechnung_HR&P.png",
+          "hinweis": "Sage Payroll: Herstellerbeispiel der Lohnabrechnung in der Cloud, veröffentlicht im Paket Sage HR & Payroll."
+        }
+      ]
+    },
+    "sage-hr": {
+      "bilder": [
+        {
+          "src": "/bilder/software/sage-hr-01.png",
+          "breite": 1598,
+          "hoehe": 834,
+          "titel": "Organigramm und Mitarbeiterstruktur",
+          "alt": "Originale deutsche Sage HR-Oberfläche mit Organigramm, Mitarbeiterkarten und Personalmodulen; Herstellerbeispiel der HR-Komponente im Paket Sage HR & Payroll.",
+          "quelle": "https://portal.sage.de/iframe-produktwebseiten/sage-hr-and-payroll",
+          "original": "https://portal.sage.de/uploads/a422f029-3b52-4a46-8b20-a91ab3742a15/Organigramm_HR&P.png",
+          "hinweis": "Sage HR: Herstellerbeispiel des Organigramms, veröffentlicht als Personalkomponente von Sage HR & Payroll."
+        },
+        {
+          "src": "/bilder/software/sage-hr-02.png",
+          "breite": 1080,
+          "hoehe": 2160,
+          "titel": "Mobile Mitarbeiterübersicht (englisch)",
+          "alt": "Offizielle Sage HR App-Abbildung mit Schichten und Aufgaben; die gezeigte Oberfläche ist englisch.",
+          "quelle": "https://play.google.com/store/apps/details?id=com.sage.hr&hl=de&gl=DE",
+          "original": "https://play-lh.googleusercontent.com/_kTl_nh1xDbX6Z7Ok2YTTBLNiBh3fhaOOesNkD1ODV9ryV1IyzhgC3XbcvZ-LJj-NhcInyMaq7n7ib6yBYngXw=s0",
+          "hinweis": "Originalabbildung der mobilen App des Herstellers. Die Desktopansicht kann abweichen."
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Sage HR: Das Basismodul im Überblick (englisch)",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/GxiUBOvm-p8?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=GxiUBOvm-p8",
+        "quelle": "https://support.sage.hr/de/articles/10383329-das-sage-hr-basis-modul",
+        "sprache": "Englisch"
+      }
+    },
+    "sage-sales-management": {
+      "bilder": [
+        {
+          "src": "/bilder/software/sage-sales-management-01.png",
+          "breite": 1080,
+          "hoehe": 1920,
+          "titel": "Vertriebsaktivitäten unterwegs (englisch)",
+          "alt": "Offizielle Sage Sales Management App-Abbildung mit Dashboard, Kundenbesuch und Aktivitäten; englische Oberfläche.",
+          "quelle": "https://play.google.com/store/apps/details?id=com.tritiumsoftware.forcemanager&hl=de&gl=DE",
+          "original": "https://play-lh.googleusercontent.com/YP-s35rDW2g8jAUhabRKPYDjVJ9wJMn3zO45tkAcT--8aIMQkNb_wRBjyjeKMVHcI5rnMl27N_C8E4nKsth81Q=s0",
+          "hinweis": "Originalabbildung der mobilen App des Herstellers. Die Desktopansicht kann abweichen."
+        },
+        {
+          "src": "/bilder/software/sage-sales-management-02.png",
+          "breite": 1080,
+          "hoehe": 1920,
+          "titel": "Mobile Verkaufschancen (englisch)",
+          "alt": "Offizielle Sage Sales Management App-Abbildung des mobilen Vertriebs; englische Oberfläche.",
+          "quelle": "https://play.google.com/store/apps/details?id=com.tritiumsoftware.forcemanager&hl=de&gl=DE",
+          "original": "https://play-lh.googleusercontent.com/-CCRDMyMXtLQFEvpvNp7UZxHS_Evej4jUh9dTwpPjjIe2w4Z-HUP5YY1pMfyWetBEXiDPa27YiMRegYf06McMg=s0",
+          "hinweis": "Originalabbildung der mobilen App des Herstellers. Die Desktopansicht kann abweichen."
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Effizienter arbeiten im Außendienst mit Sage Sales Management",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/2mMCmaLY4Hc?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=2mMCmaLY4Hc",
+        "quelle": "https://www.sage.com/de-de/produkte/sage-sales-management/",
+        "sprache": "Deutsch"
+      }
+    },
+    "sage-100": {
+      "bilder": [
+        {
+          "src": "/bilder/software/sage-100-01.png",
+          "breite": 520,
+          "hoehe": 680,
+          "titel": "Warenwirtschaft und Regiezentrum",
+          "alt": "Deutsche Sage 100 Smart Edition mit Kundenliste, Stammdaten und Suchfunktion im Regiezentrum.",
+          "quelle": "https://portal.sage.de/uploads/efeee0bf-a7d0-4976-8e35-e7e8d099f26f/Sage_100_Smart_Edition_.pdf",
+          "original": "https://portal.sage.de/uploads/efeee0bf-a7d0-4976-8e35-e7e8d099f26f/Sage_100_Smart_Edition_.pdf",
+          "hinweis": "Sage 100 Smart Edition: Herstellerbeispiel aus der Dokumentation vom August 2024."
+        },
+        {
+          "src": "/bilder/software/sage-100-02.png",
+          "breite": 520,
+          "hoehe": 479,
+          "titel": "Adressen und Wiedervorlagen",
+          "alt": "Deutsche Sage 100 Smart Edition mit Adressverwaltung, Favoriten und Wiedervorlagen.",
+          "quelle": "https://portal.sage.de/uploads/efeee0bf-a7d0-4976-8e35-e7e8d099f26f/Sage_100_Smart_Edition_.pdf",
+          "original": "https://portal.sage.de/uploads/efeee0bf-a7d0-4976-8e35-e7e8d099f26f/Sage_100_Smart_Edition_.pdf",
+          "hinweis": "Sage 100 Smart Edition: Herstellerbeispiel aus der Dokumentation vom August 2024."
+        }
+      ]
+    },
+    "sage-intacct": {
+      "bilder": [
+        {
+          "src": "/bilder/software/sage-intacct-01.png",
+          "breite": 772,
+          "hoehe": 315,
+          "titel": "Finanzdashboard (englisch)",
+          "alt": "Originales Sage Intacct CFO-Dashboard aus der Herstellerhilfe mit Finanzkennzahlen, Diagrammen und Einkaufsfreigaben; englische Oberfläche.",
+          "quelle": "https://www-p03.intacct.com/ia/docs/en_US/help_action/Reporting/Dashboards/dashboard-basics.htm",
+          "original": "https://www-p03.intacct.com/ia/docs/en_US/help_action/Resources/Images/Dashboards/UI-example-cfo.png",
+          "hinweis": "Herstellerbeispiel eines Finanzdashboards; die gezeigte Oberfläche ist englisch."
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Sage Intacct: Die wichtigsten Fragen schnell und einfach beantwortet",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/rU_y8X97gn8?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=rU_y8X97gn8",
+        "quelle": "https://www.sage.com/de-de/sage-business-cloud/intacct/",
+        "sprache": "Deutsch"
+      }
+    },
+    "agenda-personalwesen": {
+      "bilder": [
+        {
+          "src": "/bilder/software/agenda-personalwesen-01.png",
+          "breite": 1454,
+          "hoehe": 866,
+          "titel": "Mitarbeiterprofil im Agenda Personalportal",
+          "alt": "Agenda Personal-Portal mit Kontaktinformationen und Mitarbeiterprofil.",
+          "quelle": "https://www.agenda-software.de/unternehmen/software/personal-portal.php",
+          "original": "https://www.agenda-software.de/software2020-wAssets/img/Produktabbildungen/weblication/wThumbnails/pep-mitarbeiter-detail-pc-c4aed01b-503811ba@1454w.png"
+        },
+        {
+          "src": "/bilder/software/agenda-personalwesen-02.png",
+          "breite": 1454,
+          "hoehe": 866,
+          "titel": "Mitarbeiterübersicht im Personalportal",
+          "alt": "Listenansicht der Mitarbeitenden im Agenda Personal-Portal.",
+          "quelle": "https://www.agenda-software.de/unternehmen/software/personal-portal.php",
+          "original": "https://www.agenda-software.de/software2020-wAssets/img/Produktabbildungen/weblication/wThumbnails/listenansicht-mitarbeiter-personal-portal-cb6e31b1-503811ba@1454w.png"
+        }
+      ],
+      "video": {
+        "typ": "vimeo",
+        "titel": "Tariflohn leicht gemacht",
+        "anbieter": "Vimeo",
+        "einbettung": "https://player.vimeo.com/video/606280766?h=b4f382fe7c&dnt=1",
+        "extern": "https://vimeo.com/606280766/b4f382fe7c",
+        "quelle": "https://www.agenda-software.de/unternehmen/news/beitrag/lohnabrechnung-tarifunterstuetzung.php",
+        "sprache": "Deutsch",
+        "hinweis": "Herstellerclip zur optionalen Agenda Tarifunterstützung; Veröffentlichung 2021."
+      }
+    },
+    "personio-payroll": {
+      "bilder": [
+        {
+          "src": "/bilder/software/personio-payroll-01.jpg",
+          "breite": 1040,
+          "hoehe": 854,
+          "titel": "Freigegebene Lohnabrechnung",
+          "alt": "Personio Payroll zeigt eine freigegebene Lohnabrechnung mit automatisch versandten Steuer- und Sozialversicherungsinformationen.",
+          "quelle": "https://www.personio.de/funktionen/personio-payroll/",
+          "original": "https://images.ctfassets.net/p03bi75xct27/10FURg0ZQsCC4ENdMaGbQR/93f8865e1f95a7358abeab6f2c2f7ad7/payroll-de-1",
+          "hinweis": "Herstellerabbildung eines Ausschnitts der Oberfläche."
+        },
+        {
+          "src": "/bilder/software/personio-payroll-02.png",
+          "breite": 2080,
+          "hoehe": 1560,
+          "titel": "Lohnabrechnung prüfen und freigeben",
+          "alt": "Personio Payroll zeigt den Status des Abrechnungszeitraums, die Bruttogehaltsumme und den Button zur Freigabe.",
+          "quelle": "https://www.personio.de/funktionen/personio-payroll/",
+          "original": "https://images.ctfassets.net/p03bi75xct27/4zCISVabSYqLD5jWNOoN1O/8767759ace87a2aa6ae7633cc36a6408/Payroll_Automation.png",
+          "hinweis": "Herstellerabbildung eines Ausschnitts der Oberfläche."
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "HR Hour : Payroll Edition",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/sWFs7ONJnhk?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=sWFs7ONJnhk",
+        "quelle": "https://community.personio.de/product-spotlight-209/recap-hr-hour-payroll-edition-aufzeichnung-fragen-9625",
+        "sprache": "Deutsch",
+        "hinweis": "Offizielles Webinar von PersonioDACH mit Vorführungen zur Lohnabrechnung zu betrieblicher Altersvorsorge, Krankheit und Firmenwagen. Herstelleraufzeichnung von 2024; keine Aussage über den heutigen Tarifumfang."
+      }
+    },
+    "personio": {
+      "bilder": [
+        {
+          "src": "/bilder/software/personio-01.webp",
+          "breite": 1792,
+          "hoehe": 1096,
+          "titel": "Mitarbeiterprofil und Organisationsstruktur",
+          "alt": "Personio zeigt ein Mitarbeiterprofil mit Abteilung, Führungskräften und Organisationsstruktur in deutscher Oberfläche.",
+          "quelle": "https://www.personio.de/",
+          "original": "https://images.ctfassets.net/p03bi75xct27/4uFKv8FE3isGb8ecHNrHvd/8aec1b86bde879b703359ff5125fa78a/Product__1_.webp"
+        }
+      ]
+    },
+    "edlohn": {
+      "bilder": [
+        {
+          "src": "/bilder/software/edlohn-01.png",
+          "breite": 1920,
+          "hoehe": 1080,
+          "titel": "Mitarbeiterübersicht in edlohn",
+          "alt": "Originalbild aus dem edlohn-Herstellervideo mit Mitarbeiterliste, Kontaktdaten und anpassbaren Spalten.",
+          "quelle": "https://www.edlohn.de/home/",
+          "original": "https://media.eurodata.de/edlohn/videos/edlohn_stellt_sich_vor.mp4",
+          "hinweis": "Unverändertes Standbild bei 00:30 aus dem offiziellen Herstellervideo edlohn stellt sich vor. Die Vorführung zeigt den Demozeitraum Januar 2022; die aktuelle Oberfläche kann abweichen."
+        },
+        {
+          "src": "/bilder/software/edlohn-02.png",
+          "breite": 1920,
+          "hoehe": 1080,
+          "titel": "Mandantenverwaltung in edlohn",
+          "alt": "Originalbild aus dem edlohn-Herstellervideo mit dem Dialog zum Öffnen eines Mandanten.",
+          "quelle": "https://www.edlohn.de/home/",
+          "original": "https://media.eurodata.de/edlohn/videos/edlohn_stellt_sich_vor.mp4",
+          "hinweis": "Unverändertes Standbild bei 02:20 aus dem offiziellen Herstellervideo edlohn stellt sich vor. Ältere Herstellervorführung; die aktuelle Oberfläche kann abweichen."
+        }
+      ],
+      "video": {
+        "typ": "datei",
+        "titel": "edlohn stellt sich vor",
+        "anbieter": "edlohn",
+        "einbettung": "https://media.eurodata.de/edlohn/videos/edlohn_stellt_sich_vor.mp4",
+        "extern": "https://media.eurodata.de/edlohn/videos/edlohn_stellt_sich_vor.mp4",
+        "quelle": "https://www.edlohn.de/home/",
+        "sprache": "Deutsch",
+        "hinweis": "Öffentliche Originaldatei des Herstellers, direkt auf der edlohn Website eingebunden. Ältere Vorführung mit Demozeiträumen um 2022. Kein eigener Praxistest."
+      }
+    },
+    "hibob-bob": {
+      "bilder": [
+        {
+          "src": "/bilder/software/hibob-bob-01.png",
+          "breite": 1900,
+          "hoehe": 958,
+          "titel": "Bob: Vielfalt im Team",
+          "alt": "Bob-Dashboard mit Auswertungen zu Vielfalt und Mitarbeiterstruktur",
+          "quelle": "https://www.hibob.com/blog/hr-dashboard-examples/",
+          "original": "https://new.hibob.com/app/uploads/2025/02/dei-Dashboard-1900x958-1.png",
+          "hinweis": "Originalbeispiel des Herstellers mit englischer Benutzeroberfläche. Darstellung und Funktionsumfang können je nach Version, Sprache und Tarif abweichen."
+        },
+        {
+          "src": "/bilder/software/hibob-bob-02.png",
+          "breite": 1900,
+          "hoehe": 1908,
+          "titel": "Bob: Personalkennzahlen",
+          "alt": "Bob HR-Dashboard mit Kennzahlen zu Personalbestand, Fluktuation und Vielfalt",
+          "quelle": "https://www.hibob.com/blog/hr-dashboard-examples/",
+          "original": "https://new.hibob.com/app/uploads/2025/02/HR-executive-Dashboard-1900x1908-1.png",
+          "hinweis": "Originalbeispiel des Herstellers mit englischer Benutzeroberfläche. Darstellung und Funktionsumfang können je nach Version, Sprache und Tarif abweichen."
+        }
+      ],
+      "video": {
+        "typ": "vimeo",
+        "titel": "Bob: Produktdemo der Personalplattform",
+        "anbieter": "Vimeo",
+        "einbettung": "https://player.vimeo.com/video/953190937?dnt=1",
+        "extern": "https://vimeo.com/953190937",
+        "quelle": "https://www.hibob.com/de/platform/core/",
+        "sprache": "Deutsch"
+      }
+    },
+    "odoo": {
+      "bilder": [
+        {
+          "src": "/bilder/software/odoo-01.webp",
+          "breite": 1046,
+          "hoehe": 654,
+          "titel": "Odoo CRM: Vertriebspipeline",
+          "alt": "Odoo-CRM-Oberfläche mit Verkaufschancen in einer Pipeline",
+          "quelle": "https://www.odoo.com/de_DE/app/crm",
+          "original": "https://odoocdn.com/openerp_website/static/src/img/apps/crm/hero_image.webp",
+          "hinweis": "Originalbeispiel des Herstellers mit englischer Benutzeroberfläche. Darstellung und Funktionsumfang können je nach Version, Sprache und Tarif abweichen."
+        },
+        {
+          "src": "/bilder/software/odoo-02.webp",
+          "breite": 1046,
+          "hoehe": 521,
+          "titel": "Odoo CRM: Kommunikation",
+          "alt": "Kommunikationsansicht in Odoo CRM",
+          "quelle": "https://www.odoo.com/de_DE/app/crm",
+          "original": "https://odoocdn.com/openerp_website/static/src/img/apps/crm/effortless_communication.webp",
+          "hinweis": "Originalbeispiel des Herstellers mit englischer Benutzeroberfläche. Darstellung und Funktionsumfang können je nach Version, Sprache und Tarif abweichen."
+        }
+      ],
+      "video": {
+        "typ": "datei",
+        "titel": "Odoo CRM in Aktion",
+        "anbieter": "Odoo",
+        "einbettung": "https://download.odoocdn.com/videos/odoo_com/video_CRM.mp4",
+        "extern": "https://download.odoocdn.com/videos/odoo_com/video_CRM.mp4",
+        "quelle": "https://www.odoo.com/de_DE/app/crm",
+        "sprache": "Oberfläche auf Englisch"
+      }
+    },
+    "cas-genesisworld": {
+      "bilder": [
+        {
+          "src": "/bilder/software/cas-genesisworld-01.webp",
+          "breite": 1328,
+          "hoehe": 1245,
+          "titel": "CAS genesisWorld: Helle Oberfläche",
+          "alt": "CAS-genesisWorld-Oberfläche im hellen Darstellungsmodus",
+          "quelle": "https://www.cas.de/loesungen/crm-xrm/cas-genesisworld/versionshighlights/",
+          "original": "https://www.cas-software.com/storage/thumbs/1328x/6elazhthycokn.webp"
+        },
+        {
+          "src": "/bilder/software/cas-genesisworld-02.webp",
+          "breite": 1328,
+          "hoehe": 1245,
+          "titel": "CAS genesisWorld: Dunkle Oberfläche",
+          "alt": "CAS-genesisWorld-Oberfläche im dunklen Darstellungsmodus",
+          "quelle": "https://www.cas.de/loesungen/crm-xrm/cas-genesisworld/versionshighlights/",
+          "original": "https://www.cas-software.com/storage/thumbs/1328x/m57dxibdqw2ow.webp"
+        }
+      ],
+      "video": {
+        "typ": "datei",
+        "titel": "CAS genesisWorld: Produktvorstellung",
+        "anbieter": "CAS genesisWorld",
+        "einbettung": "https://cas.s3-cdn.welocal.cloud/media/56653/videos/56653.mp4",
+        "extern": "https://cas.s3-cdn.welocal.cloud/media/56653/videos/56653.mp4",
+        "quelle": "https://www.cas.de/loesungen/crm-xrm/cas-genesisworld/",
+        "sprache": "Deutsch"
+      }
+    },
+    "plentyone": {
+      "bilder": [
+        {
+          "src": "/bilder/software/plentyone-01.png",
+          "breite": 1200,
+          "hoehe": 675,
+          "titel": "PlentyONE: Auftragsübersicht",
+          "alt": "PlentyONE-Oberfläche zur Übersicht und Bearbeitung von Aufträgen",
+          "quelle": "https://www.plentyone.com/de/",
+          "original": "https://139696427.fs1.hubspotusercontent-eu1.net/hub/139696427/hubfs/Marketing/Graphics/Capabilities/Order%20Management%20-%20Processing/Capabilities_OrderManagement-Processing_FeaturesInAction_OrderUI_Overview.png?width=1200&length=1200&name=Capabilities_OrderManagement-Processing_FeaturesInAction_OrderUI_Overview.png"
+        },
+        {
+          "src": "/bilder/software/plentyone-02.png",
+          "breite": 1200,
+          "hoehe": 675,
+          "titel": "PlentyONE: Flow Studio",
+          "alt": "PlentyONE Flow Studio für die Automatisierung von Prozessen",
+          "quelle": "https://www.plentyone.com/de/",
+          "original": "https://139696427.fs1.hubspotusercontent-eu1.net/hub/139696427/hubfs/Marketing/Graphics/Capabilities/Process%20Automation/Capabilities_ProcessAutomation_FeaturesInAction_FlowStudio-1.png?width=1200&length=1200&name=Capabilities_ProcessAutomation_FeaturesInAction_FlowStudio-1.png"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "PlentyONE: Artikeldaten mit Formeln für Marktplätze aufbereiten",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/TyO2iI3yato?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=TyO2iI3yato",
+        "quelle": "https://knowledge.plentyone.com/de-de/manual/main/daten/funktionen.html",
+        "sprache": "Englisch"
+      }
+    },
+    "orgamax-buchhaltung": {
+      "bilder": [
+        {
+          "src": "/bilder/software/orgamax-buchhaltung-01.png",
+          "breite": 1192,
+          "hoehe": 722,
+          "titel": "orgaMAX Buchhaltung: Dashboard",
+          "alt": "Dashboard der Cloud-Anwendung orgaMAX Buchhaltung mit Kennzahlen und Aufgaben",
+          "quelle": "https://info.orgamax.de/faq-orgamax-buchhaltung/was-zeigt-mir-das-dashboard-in-orgamax",
+          "original": "https://info.orgamax.de/hubfs/Support/Knowledgebase/orgaMAX%20Buchhaltung/2026%20OMBU%20Das%20Dashboard/Dashboard%20nutzen%20-%20%C3%9Cbersicht.png"
+        },
+        {
+          "src": "/bilder/software/orgamax-buchhaltung-02.png",
+          "breite": 4100,
+          "hoehe": 2483,
+          "titel": "orgaMAX Buchhaltung: Aufgaben",
+          "alt": "Aufgabenübersicht im Dashboard von orgaMAX Buchhaltung",
+          "quelle": "https://info.orgamax.de/faq-orgamax-buchhaltung/was-zeigt-mir-das-dashboard-in-orgamax",
+          "original": "https://info.orgamax.de/hubfs/Support/Knowledgebase/orgaMAX%20Buchhaltung/2026%20OMBU%20Das%20Dashboard/Dashboard%20nutzen%20-%20Aufgaben.png"
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "Angebote erstellen mit orgaMAX Buchhaltung",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/QT0z9s7yGQs?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=QT0z9s7yGQs",
+        "quelle": "https://www.orgamax.de/orgamax-buchhaltung/funktionen/",
+        "sprache": "Deutsch"
+      }
+    },
+    "easybill": {
+      "bilder": [
+        {
+          "src": "/bilder/software/easybill-01.png",
+          "breite": 1999,
+          "hoehe": 818,
+          "titel": "eBay mit easybill Connect verbinden",
+          "alt": "Originalansicht der eBay Schnittstelle in easybill Connect mit Navigation und Verbindungseinstellungen.",
+          "quelle": "https://support.easybill.de/hc/de/articles/115001069229-eBay-mit-easybill-verkn%C3%BCpfen",
+          "original": "https://support.easybill.de/hc/article_attachments/30353839514524",
+          "hinweis": "Herstellerbeispiel der eBay Anbindung in easybill Connect. Die roten Markierungen stammen aus der offiziellen Anleitung."
+        }
+      ],
+      "video": {
+        "typ": "youtube",
+        "titel": "easybill: eBay Rechnungen automatisieren",
+        "anbieter": "YouTube",
+        "einbettung": "https://www.youtube-nocookie.com/embed/e5XNRHpid1Q?rel=0&playsinline=1&hl=de",
+        "extern": "https://www.youtube.com/watch?v=e5XNRHpid1Q",
+        "quelle": "https://support.easybill.de/hc/de/articles/115001069229-eBay-mit-easybill-verkn%C3%BCpfen",
+        "sprache": "Deutsch"
+      }
+    }
+  }
+}

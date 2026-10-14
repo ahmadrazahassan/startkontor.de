@@ -1,0 +1,121 @@
+@layer components {
+  /* Tabellen: Scrollcontainer mit sichtbaren Rändern und fester erster Spalte */
+  .tabelle {
+    position: relative;
+    margin-block: var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-2);
+  }
+
+  .tabelle__huelle {
+    position: relative;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+
+  .tabelle__huelle:focus-visible {
+    outline-offset: -2px;
+  }
+
+  .tabelle::before,
+  .tabelle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 24px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--t-farbe);
+  }
+
+  .tabelle::before {
+    inset-inline-start: 0;
+    background: linear-gradient(to right, rgba(15, 36, 56, 0.16), rgba(15, 36, 56, 0));
+  }
+
+  .tabelle::after {
+    inset-inline-end: 0;
+    background: linear-gradient(to left, rgba(15, 36, 56, 0.16), rgba(15, 36, 56, 0));
+  }
+
+  .tabelle[data-links="ja"]::before,
+  .tabelle[data-rechts="ja"]::after {
+    opacity: 1;
+  }
+
+  .tabelle table {
+    width: 100%;
+    min-width: 560px;
+  }
+
+  .tabelle caption {
+    padding: var(--a-3) var(--a-4);
+    text-align: start;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    background: var(--mist);
+    border-bottom: 1px solid var(--line);
+    caption-side: top;
+  }
+
+  .tabelle th,
+  .tabelle td {
+    padding: 12px var(--a-4);
+    text-align: start;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+    background: var(--white);
+  }
+
+  .tabelle thead th {
+    font-weight: 700;
+    background: var(--base);
+    border-bottom: 2px solid var(--ink);
+    white-space: nowrap;
+  }
+
+  .tabelle tbody th {
+    font-weight: 700;
+  }
+
+  .tabelle tbody tr:last-child th,
+  .tabelle tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .tabelle th:first-child {
+    position: sticky;
+    inset-inline-start: 0;
+    z-index: 2;
+    border-inline-end: 1px solid var(--line);
+  }
+
+  .tabelle tbody tr:hover td,
+  .tabelle tbody tr:hover th {
+    background: var(--mist);
+  }
+
+  .tabelle__fussnote {
+    margin-top: calc(-1 * var(--a-3));
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: var(--lesebreite);
+  }
+
+  @media (max-width: 767px) {
+    .tabelle th,
+    .tabelle td {
+      padding: 10px var(--a-3);
+    }
+
+    .tabelle th:first-child {
+      min-width: 132px;
+    }
+  }
+}

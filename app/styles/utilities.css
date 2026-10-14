@@ -1,0 +1,55 @@
+@layer utilities {
+  .visuell_versteckt {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  .nur_breit {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .nur_breit {
+      display: revert;
+    }
+
+    .nur_schmal {
+      display: none !important;
+    }
+  }
+
+  .ohne_umbruch {
+    white-space: nowrap;
+  }
+
+  .tabellenzahl {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sprung_ziel {
+    scroll-margin-top: calc(var(--kopf-hoehe) + 16px);
+  }
+}
+
+@layer utilities {
+  /*
+   * Dekorative Ziffern (Sky, groß) stehen nicht als Text im HTML, sondern als generierter Inhalt.
+   * Sie sind reine Gestaltung, werden nicht vorgelesen und nicht als Text auf Kontrast geprüft.
+   */
+  [data-ziffer]::before {
+    content: attr(data-ziffer);
+  }
+
+  @supports (content: "a" / "") {
+    [data-ziffer]::before {
+      content: attr(data-ziffer) / "";
+    }
+  }
+}

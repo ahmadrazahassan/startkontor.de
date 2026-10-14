@@ -1,0 +1,221 @@
+{
+  "_hinweis": "Texte der Startseite im Stil eines Softwareportals. Die Originaldatei startkontor-daten.json bleibt unverändert. Zahlen in geschweiften Klammern ({anzahl}, {n}) setzt der Code aus den Daten ein. Hier steht kein erfundener Wert: keine Sterne, keine Nutzerzahlen, keine Zitate.",
+  "hero": {
+    "eyebrow": "Software finden. Klar entscheiden.",
+    "h1": "Die richtige Software für Ihr Unternehmen.",
+    "text": "Vergleichen Sie {anzahl} Programme für Finanzen, Personal, Vertrieb und Betrieb. Mit Preisen, Funktionen und einer klaren Einschätzung.",
+    "suchePlatzhalter": "Software oder Kategorie suchen",
+    "sucheLabel": "Software suchen",
+    "sucheKnopf": "Suchen",
+    "haeufig": "Beliebte Themen",
+    "suchbegriffe": [
+      "Rechnungen",
+      "Lohn",
+      "Zeiterfassung",
+      "CRM",
+      "ERP",
+      "E-Rechnung"
+    ],
+    "alleReviews": "Alle Softwareprofile ansehen",
+    "zusicherungen": [
+      "Nachvollziehbare Quellen",
+      "Preise und Grenzen im Blick",
+      "Redaktionell eingeordnet"
+    ]
+  },
+  "kategorien": {
+    "eyebrow": "Kategorien",
+    "titel": "Software nach Kategorie",
+    "text": "Vom ersten Auftrag bis zum wachsenden Team: Finden Sie Programme für Ihren Arbeitsalltag.",
+    "reviews": "Programme",
+    "review": "Programm",
+    "alle": "Alle Programme",
+    "alleKategorie": "Alle {n} Programme ansehen",
+    "kriterien": "Auswahlhilfe zur Kategorie"
+  },
+  "zuletzt": {
+    "reviewLesen": "Profil ansehen",
+    "geprueftAm": "Geprüft am"
+  },
+  "aufbau": {
+    "eyebrow": "Eine fundierte Entscheidung",
+    "titel": "Verstehen, was zu Ihnen passt.",
+    "text": "Gute Software passt zu Ihren Abläufen, Ihrem Budget und Ihrem Team. Unsere Profile zeigen, worauf es vor der Entscheidung ankommt.",
+    "beispiel": "Beispiel",
+    "punkte": [
+      {
+        "titel": "Herstellerangabe",
+        "text": "Preise, Funktionen und Vertragsdetails stammen von der Herstellerseite und tragen Quelle und Prüfdatum."
+      },
+      {
+        "titel": "Unsere Einschätzung",
+        "text": "Die Redaktion ordnet öffentliche Quellen ein. Das ist kein eigener Test und steht deshalb deutlich getrennt."
+      },
+      {
+        "titel": "Grenzen und Ausschlüsse",
+        "text": "Was ein Tarif nicht enthält und wo ein Programm an Grenzen stößt, steht im Softwareprofil und nicht im Kleingedruckten."
+      },
+      {
+        "titel": "Fragen für Ihren Termin",
+        "text": "Zu jedem Programm gibt es Fragen, die Sie dem Anbieter stellen sollten, bevor Sie unterschreiben."
+      }
+    ]
+  },
+  "verzeichnis": {
+    "eyebrow": "Verzeichnis",
+    "titel": "Alle Programme von A bis Z",
+    "text": "Nach Kategorie, alphabetisch und ohne Rangfolge. Jeder Eintrag führt zum vollständigen Softwareprofil.",
+    "alle": "Alle Softwareprofile ansehen"
+  },
+  "anbieter": {
+    "eyebrow": "Für Hersteller",
+    "titel": "Ihr Programm fehlt noch?",
+    "text": "Schlagen Sie Ihre Software für unser Verzeichnis vor. Die Redaktion prüft jede Aufnahme nach festen, transparenten Kriterien.",
+    "kriterien": "Kriterien lesen",
+    "schreiben": "Redaktion schreiben"
+  },
+  "review": {
+    "label": "Softwareprofil",
+    "fazit": "Fazit der Redaktion",
+    "weitere": "Weitere Programme in dieser Kategorie",
+    "weitereText": "Alphabetisch sortiert, ohne Wertung.",
+    "bewertung": "Redaktionelle Bewertung",
+    "von": "von 5",
+    "kriterien": "Bewertung nach Kriterien",
+    "inhalt": "In diesem Softwareprofil",
+    "methodik": "Wie die Redaktion bewertet",
+    "stand": "Bewertung vom",
+    "sprung": "Springen zu",
+    "tabs": {
+      "ueberblick": "Überblick",
+      "funktionen": "Funktionen",
+      "preise": "Preise",
+      "eignung": "Eignung",
+      "grenzen": "Grenzen",
+      "vertrag": "Vertrag",
+      "daten": "Daten",
+      "hersteller": "Hersteller",
+      "fragen": "Fragen",
+      "bewertung": "Bewertung",
+      "alternativen": "Alternativen",
+      "faq": "FAQ",
+      "quellen": "Quellen"
+    },
+    "kopf": {
+      "herstellerseite": "Zur Herstellerseite",
+      "fragenSpringen": "Fragen für den Termin",
+      "faktenPruefen": "Fakten beim Hersteller prüfen",
+      "preis": "Preis laut Hersteller",
+      "kuendbar": "Monatlich kündbar",
+      "kategorie": "Kategorie",
+      "geprueft": "Zuletzt geprüft"
+    },
+    "ueberblickTitel": "Was ist {name}?",
+    "funktionenTitel": "Funktionen von {name}",
+    "funktionenText": "Funktionen laut Hersteller. Der Umfang kann je nach Tarif abweichen.",
+    "preiseTitel": "Preise von {name}",
+    "preiseText": "Preisangaben laut Hersteller. Prüfen Sie aktuelle Tarife und Bedingungen vor dem Kauf.",
+    "eignungTitel": "Für wen ist {name} geeignet?",
+    "geeignet": "Gut geeignet für",
+    "wenigerGeeignet": "Weniger geeignet für",
+    "grenzenTitel": "Grenzen und Ausschlüsse von {name}",
+    "grenzenText": "Was ein Tarif nicht enthält und wo das Programm an Grenzen stößt.",
+    "vertragTitel": "Vertrag und Laufzeit",
+    "datenTitel": "{name} auf einen Blick",
+    "datenText": "Die wichtigsten Angaben zum Programm und zum Vertrag.",
+    "daten": {
+      "kategorie": "Kategorie",
+      "phasen": "Passt zu",
+      "preisangabe": "Preisangabe",
+      "einstieg": "Preis laut Hersteller",
+      "kuendbar": "Monatlich kündbar",
+      "vertrag": "Vertrag und Laufzeit",
+      "funktionen": "Belegte Funktionen",
+      "grenzen": "Bekannte Grenzen",
+      "quellen": "Quellen",
+      "geprueft": "Zuletzt geprüft",
+      "unternehmen": "Unternehmen",
+      "standort": "Standort",
+      "website": "Herstellerseite",
+      "ja": "Ja, laut Hersteller",
+      "nein": "Nein, laut Hersteller",
+      "offen": "Keine geprüfte Angabe"
+    },
+    "herstellerTitel": "Über den Hersteller",
+    "herstellerText": "Das Unternehmen hinter {name}, laut Impressum oder Herstellerseite.",
+    "herstellerQuelle": "Quelle",
+    "herstellerLeer": "Zum Unternehmen hinter {name} liegt noch keine geprüfte Angabe vor. Firma und Sitz stehen im Impressum der Herstellerseite.",
+    "claim": {
+      "titel": "Sind Sie der Hersteller?",
+      "text": "Fehlt etwas, ist etwas veraltet oder falsch? Schreiben Sie uns mit einer Quelle. Wir prüfen die Angabe und ändern sie, wenn sie belegt ist. Inhalt und Einschätzung bleiben unabhängig.",
+      "cta": "Korrektur vorschlagen"
+    },
+    "fragenTitel": "Fragen für Ihren Termin mit {name}",
+    "fragenText": "Stellen Sie diese Fragen, bevor Sie unterschreiben. Die Antworten sollten Sie schriftlich bekommen.",
+    "bewertungTitel": "Bewertung von {name}",
+    "bewertungLeerTitel": "Noch keine redaktionelle Bewertung",
+    "bewertungLeerText": "Die Redaktion vergibt Bewertungen erst, wenn Kriterien und Verfahren veröffentlicht sind. Bis dahin finden Sie die Einschätzung im Fazit. Hinweise und Erfahrungen nehmen wir gern entgegen.",
+    "bewertungLeerCta": "Hinweis senden",
+    "bewertungLeerCta2": "So arbeitet die Redaktion",
+    "alternativenTitel": "Alternativen zu {name}",
+    "alternativenText": "Weitere Programme aus der Kategorie {kategorie}. Alphabetisch sortiert, ohne Wertung.",
+    "alternativenAlle": "Alle Softwareprofile ansehen",
+    "faqTitel": "Häufige Fragen zu {name}",
+    "faq": {
+      "kosten": "Was kostet {name}?",
+      "kostenStand": "Stand der Preisangabe: {datum}.",
+      "eignung": "Für wen ist {name} geeignet?",
+      "wenigerEignung": "Für wen ist {name} weniger geeignet?",
+      "grenzen": "Welche Grenzen hat {name}?",
+      "funktionen": "Welche Funktionen bietet {name}?",
+      "kuendigung": "Ist {name} monatlich kündbar?",
+      "kuendigungOffen": "Dazu liegt keine geprüfte Herstellerangabe vor. Fragen Sie nach Laufzeit, Kündigungsfrist und Datenexport.",
+      "test": "Ist das Softwareprofil ein Test von {name}?",
+      "testNein": "Nein.",
+      "testQuellen": "Grundlage sind die verlinkten Quellen, geprüft am {datum}.",
+      "alternativen": "Welche Alternativen zu {name} gibt es?",
+      "alternativenAntwort": "In der Kategorie {kategorie} stehen {liste} im Softwareprofil. Die Liste ist alphabetisch und keine Rangfolge."
+    },
+    "weiterTitel": "Weiterlesen",
+    "mobilCta": "Zur Herstellerseite"
+  },
+  "logoleiste": {
+    "titel": "Diese Programme finden Sie bei Startkontor",
+    "slugs": [
+      "lexware-office",
+      "sevdesk",
+      "personio",
+      "pipedrive",
+      "zoho-crm",
+      "weclapp"
+    ]
+  },
+  "pfade": {
+    "eyebrow": "Erste Schritte",
+    "titel": "Ihr nächster Schritt zur passenden Software",
+    "text": "Entdecken, einordnen und die Entscheidung vorbereiten.",
+    "karten": [
+      {
+        "icon": "search",
+        "titel": "Programme entdecken",
+        "text": "Funktionen, Preise und Grenzen übersichtlich vergleichen.",
+        "cta": "Software ansehen",
+        "href": "/anbieter"
+      },
+      {
+        "icon": "cycle",
+        "titel": "Bedarf bestimmen",
+        "text": "Der Bausteinplaner nennt in vier Angaben, welche Software jetzt dran ist und welche warten kann.",
+        "cta": "Bausteinplaner starten",
+        "href": "/planer"
+      },
+      {
+        "icon": "check",
+        "titel": "Entscheidung vorbereiten",
+        "text": "Checklisten und Leitfäden für die Vertragsprüfung und das Gespräch mit dem Anbieter.",
+        "cta": "Checklisten öffnen",
+        "href": "/wissen/checklisten"
+      }
+    ]
+  }
+}

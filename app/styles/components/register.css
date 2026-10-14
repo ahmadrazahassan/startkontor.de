@@ -1,0 +1,189 @@
+@layer components {
+  /* Register: linierte Zeilen statt Karten */
+  .register {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid var(--ink);
+  }
+
+  .register__zeile {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) 20px;
+    grid-template-areas:
+      "nr haupt pfeil"
+      ". meta .";
+    gap: var(--a-2) var(--a-4);
+    align-items: baseline;
+    padding: var(--a-4) var(--a-3);
+    border-bottom: 1px solid var(--line);
+    transition: background-color var(--t-farbe);
+  }
+
+  .register__zeile:hover {
+    background: var(--white);
+  }
+
+  .register__nummer {
+    grid-area: nr;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: var(--sky);
+    user-select: none;
+  }
+
+  .register__haupt {
+    grid-area: haupt;
+    min-width: 0;
+  }
+
+  .register__titel {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .register__link {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .register__link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  .register__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  .register__link:focus-visible {
+    outline: none;
+  }
+
+  .register__zeile:has(.register__link:focus-visible) {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
+  }
+
+  .register__text {
+    margin-top: 4px;
+    font-size: var(--fs-small);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 66ch;
+  }
+
+  .register__meta {
+    grid-area: meta;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-2) var(--a-3);
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    color: var(--ink-soft);
+  }
+
+  .register__pfeil {
+    grid-area: pfeil;
+    align-self: center;
+    color: var(--primary);
+    transition: transform var(--t-farbe);
+  }
+
+  .register__zeile:hover .register__pfeil {
+    transform: translateX(3px);
+  }
+
+  @media (min-width: 768px) {
+    .register__zeile {
+      grid-template-columns: 56px minmax(0, 1fr) minmax(140px, auto) 24px;
+      grid-template-areas: "nr haupt meta pfeil";
+      gap: var(--a-5);
+      padding-block: var(--a-5);
+    }
+
+    .register__meta {
+      justify-content: flex-end;
+      text-align: end;
+    }
+  }
+
+  .register_kompakt .register__zeile {
+    padding-block: var(--a-3);
+  }
+
+  .register_kompakt .register__titel {
+    font-size: 1.0625rem;
+  }
+
+  .register_kompakt .register__nummer {
+    font-size: 1.125rem;
+  }
+
+  /* Buchstabenregister: Zwischenüberschrift je Anfangsbuchstabe */
+  .buchstabe {
+    display: grid;
+    gap: var(--a-3) var(--a-5);
+    grid-template-columns: 56px minmax(0, 1fr);
+    padding-block: var(--a-5) 0;
+    scroll-margin-top: calc(var(--kopf-hoehe) + 16px);
+  }
+
+  .buchstabe__zeichen {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--sky);
+  }
+
+  .buchstabenleiste {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .buchstabenleiste a {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--line);
+    border-radius: var(--r-2);
+    background: var(--white);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .buchstabenleiste a:hover {
+    border-color: var(--primary);
+    background: var(--mist);
+    color: var(--primary);
+  }
+
+  @media (min-width: 1024px) {
+    .buchstabenleiste_rail {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: 44px;
+      max-height: calc(100vh - var(--kopf-hoehe) - 48px);
+      overflow-y: auto;
+    }
+  }
+}

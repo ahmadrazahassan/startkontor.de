@@ -1,0 +1,36 @@
+{
+  "stand": "2026-10-14",
+  "freigabebasis": "Der Betreiber hat die Zulassung für diese drei Partnerprogramme bestätigt und die zu verwendenden Links bereitgestellt.",
+  "partner": [
+    {
+      "schluessel": "pipedrive",
+      "name": "Pipedrive",
+      "produkte": [
+        "pipedrive"
+      ],
+      "netzwerk": "direkt",
+      "aktiv": true,
+      "zielLink": "https://www.pipedrive.com/en/programlp?utm_campaign=flatfee&utm_medium=Affiliate&utm_source=startkontor.de&pscd=aff.trypipedrive.com&ps_partner_key=cm9iZXJ0YnJhbmRs&sid1=EN-CTA&ps_xid=wI3FOTPEzjD6lT&gsxid=wI3FOTPEzjD6lT&gspk=cm9iZXJ0YnJhbmRs"
+    },
+    {
+      "schluessel": "weclapp",
+      "name": "weclapp",
+      "produkte": [
+        "weclapp"
+      ],
+      "netzwerk": "direkt",
+      "aktiv": true,
+      "zielLink": "https://www.weclapp.com/?utm_medium=company_profile&utm_source=startkontor.de&utm_campaign=domain_click"
+    },
+    {
+      "schluessel": "odoo",
+      "name": "Odoo",
+      "produkte": [
+        "odoo"
+      ],
+      "netzwerk": "direkt",
+      "aktiv": true,
+      "zielLink": "https://www.odoo.com/r/trustpilot?utm_medium=company_profile&utm_source=startkontor.de&utm_campaign=domain_click"
+    }
+  ]
+}

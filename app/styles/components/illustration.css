@@ -1,0 +1,59 @@
+@layer components {
+  .illustration { position: relative; margin: 0; min-width: 0; width: 100%; }
+  .illustration__bild { display: block; width: 100%; height: auto; object-fit: contain; }
+  .illustration_foto .illustration__bild { border-radius: var(--r-4); }
+  .illustration__hinweis { margin-top: 8px; color: var(--ink-soft); font: 400 0.75rem var(--font-ui); text-align: center; }
+  .bild_illustration, .bild_illustration.bild_versatz .bild__bild { background: transparent; }
+  .bild_illustration .bild__bild { object-fit: contain; padding: 10px; }
+  .bild_illustration.bild_versatz::before { display: none; }
+}
+
+@layer pages {
+  .portalhero__raster { position: relative; display: grid; align-items: center; gap: 24px 40px; grid-template-columns: minmax(0, 1fr); padding-block: 52px 36px; }
+  .portalhero__raster .portalhero__innen { padding: 0; align-items: flex-start; text-align: left; min-width: 0; gap: 20px; }
+  .portalhero__raster .portalhero__h1 { max-width: 19ch; font-size: clamp(2.2rem, 1.2rem + 3.1vw, 3.8rem); }
+  .portalhero__raster .portalhero__text { margin-inline: 0; font-size: 1.125rem; max-width: 50ch; }
+  .portalhero__raster .zusicherungen { justify-content: flex-start; gap: 10px 20px; }
+  .portalhero__raster .zusicherungen__punkt { font-size: 0.8125rem; }
+  .portalhero__bild { max-width: 480px; justify-self: center; }
+  .portalhero .heroformen { opacity: 0.12; }
+  .pfadkarte__bild { height: 190px; margin-bottom: 12px; }
+  .pfadkarte__bild .illustration__bild { height: 100%; }
+  .kategorienintro { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; gap: 28px; margin-bottom: 40px; }
+  .kategorienintro .startkopf { margin-bottom: 0; }
+  .kategorienintro__bild { max-width: 400px; justify-self: center; }
+  .kategoriekopf { display: grid; align-items: center; grid-template-columns: 130px minmax(0, 1fr); gap: 24px; }
+  .kategoriekopf__bild { width: 130px; }
+  .kategoriekopf__links { grid-column: 1 / -1; }
+  .aufbau__vorschau { display: grid; gap: 28px; padding: 0; }
+  .aufbau__vorschau::before { display: none; }
+  .aufbau__bild { max-width: 330px; justify-self: center; }
+  .planerteaser__medien { display: grid; justify-items: center; gap: 36px; min-width: 0; }
+  .planerteaser__bild { max-width: 350px; }
+  .planerteaser__strecke { width: 100%; }
+  .hersteller__bild { max-width: 470px; justify-self: center; }
+  .briefband__bild { max-width: 290px; margin-top: 28px; }
+  .seitenkopf__raster { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px 56px; align-items: center; }
+  .seitenkopf__rechts { width: min(100%, 340px); justify-self: center; }
+  .seitenkopf__rechts .illustration__bild { max-height: 340px; }
+  @media (min-width: 768px) {
+    .kategorienintro, .seitenkopf__raster { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); }
+  }
+  @media (min-width: 1024px) {
+    .portalhero__raster { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); padding-block: 64px 48px; }
+    .kategoriekopf { grid-template-columns: 150px minmax(0, 1fr) auto; }
+    .kategoriekopf__bild { width: 150px; }
+    .kategoriekopf__links { grid-column: auto; }
+  }
+  @media (max-width: 767px) {
+    .portalhero__bild { max-width: 340px; }
+    .portalhero__raster .portalhero__marke { font-size: 0.6875rem; letter-spacing: 0.02em; }
+    .portalhero__raster .herosuche__haeufig { justify-content: flex-start; }
+    .pfadkarte__bild { height: 180px; }
+    .seitenkopf__rechts { max-width: 260px; }
+  }
+  @media print {
+    .portalhero__bild, .pfadkarte__bild, .kategoriekopf__bild, .seitenkopf__rechts { display: none; }
+  }
+}
+

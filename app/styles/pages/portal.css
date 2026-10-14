@@ -1,0 +1,384 @@
+@layer pages {
+  /* Ruhige Oberfläche für Suche, Verzeichnis und Softwareprofile. */
+  html, body, main { background: var(--white); }
+  body { line-height: 1.6; }
+  h1, h2, h3 { font-weight: 700; }
+  .eyebrow { letter-spacing: .045em; font-weight: 600; }
+  .lead, .seitenkopf__lead { font-size: 1.0625rem; color: var(--ink-soft); }
+  .seitenkopf { padding-block: 32px 24px; }
+  .seitenkopf h1 { font-size: min(clamp(1.875rem, 1.4rem + 1.6vw, 2.625rem), calc((100vw - 2 * var(--rand)) / (var(--wl, 1) * .64))); line-height: 1.18; }
+  .seitenkopf__rechts { max-width: 240px; }
+  .brotkrumen { font-size: .8125rem; background: #f7f9fc; border-bottom: 1px solid #edf1f5; }
+  .knopf { border-radius: 7px; min-height: 44px; padding-inline: 22px; border-width: 1px; font-weight: 600; }
+  .knopf_primaer, .softwarekarte:is(:hover, :focus-within) .softwarekarte__cta {
+    background: var(--primary); border-color: var(--primary); color: var(--white);
+    box-shadow: none; text-shadow: none; filter: none; transform: none;
+  }
+  .knopf_primaer::before, .knopf_primaer::after,
+  .softwarekarte:is(:hover, :focus-within) .softwarekarte__cta::before,
+  .softwarekarte:is(:hover, :focus-within) .softwarekarte__cta::after { display: none; }
+  .knopf_primaer:hover { background: var(--primary-hover); border-color: var(--primary-hover); box-shadow: none; filter: none; transform: none; }
+  .knopf_sekundaer { background: var(--white); border-color: #b8cde0; color: var(--primary); box-shadow: none; }
+  .knopf_sekundaer:hover { background: var(--mist); box-shadow: none; }
+  .knopf_klein { min-height: 40px; padding-inline: 18px; }
+  .chip { font-size: .75rem; border-radius: 5px; font-weight: 500; }
+  .kopf { border-color: #edf1f5; box-shadow: 0 2px 12px #0a254005; }
+  .kopf__innen { gap: 32px; }
+  .kopf__haupt { gap: 20px; }
+  .hauptnav__liste { gap: 6px; }
+  .hauptnav__knopf, .hauptnav__link { font-size: .9375rem; font-weight: 500; padding-inline: 10px; }
+  .kopf__aktionen .sucheknopf { border: 0; padding-inline: 4px; }
+  .kopf__aktionen .sucheknopf__kuerzel { display: none; }
+  .textlink { display: inline-flex; align-items: center; gap: 8px; font-size: .9375rem; font-weight: 600; text-decoration: none; }
+  .textlink:hover { text-decoration: underline; }
+
+  /* Zentrierte Suche mit Büromotiven an den Seiten. */
+  .portalhero { overflow: visible; background: var(--white); border: 0; }
+  .portalhero__buehne { position: relative; isolation: isolate; overflow-x: clip; min-height: 440px; background: linear-gradient(180deg, #f0f6fc 0%, #fff 100%); }
+  .portalhero__buehne::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(45deg, transparent 62%, #e8f1fa88 62%, #e8f1fa88 78%, transparent 78%); }
+  .portalhero__zentrum { position: relative; z-index: 2; }
+  .portalhero__masken { position: absolute; width: 0; height: 0; }
+  .portalhero__innen { max-width: 690px; margin-inline: auto; padding-block: 52px 42px; gap: 20px; }
+  .portalhero__marke { padding: 0; box-shadow: none; background: transparent; font-size: .8125rem; letter-spacing: .05em; font-weight: 600; }
+  .portalhero__punkt { width: 6px; height: 6px; }
+  .portalhero__h1 { max-width: 640px; font-size: clamp(2.125rem, 1.45rem + 2.9vw, 3.25rem); line-height: 1.13; letter-spacing: -.035em; }
+  .portalhero__text { max-width: 590px; font-size: 1.0625rem; line-height: 1.65; color: var(--ink-soft); }
+  .portalhero .herosuche { margin-top: 6px; max-width: 640px; }
+  .herosuche__feld { min-height: 60px; border: 1px solid #a9c1d9; border-radius: 8px; padding: 0 0 0 18px; gap: 12px; box-shadow: 0 6px 24px #0a254009; }
+  .herosuche__eingabe { font-size: 1rem; }
+  .herosuche__knopf { min-height: 60px; border-radius: 0 7px 7px 0; padding-inline: 28px; }
+  .herosuche__haeufig { margin-top: 14px; gap: 6px 15px; }
+  .herosuche__haeufigLabel { text-transform: none; letter-spacing: 0; font-weight: 400; }
+  .herosuche__chip { min-height: 30px; padding: 0; border: 0; background: transparent; border-radius: 0; font-weight: 500; font-size: .8125rem; text-decoration: underline; text-underline-offset: 3px; }
+  .herosuche__chip:hover { background: transparent; color: var(--primary); }
+  .herosuche__liste { inset-inline: 0; }
+  .portalhero__portraet { position: absolute; width: 230px; height: 230px; overflow: hidden; border-radius: 38px; transform: rotate(-45deg); z-index: 0; }
+  .portalhero__portraet .illustration { height: 100%; }
+  .portalhero__portraet .illustration__bild { height: 100%; object-fit: cover; border-radius: 0; transform: rotate(45deg) scale(1.45); }
+  .portalhero__portraet_links { width: 326px; height: 326px; left: max(-23px, calc((100vw - 1440px) / 2 - 23px)); top: 69px; transform: none; border-radius: 0; clip-path: url(#hero-buero-rahmen); }
+  .portalhero__portraet_links .illustration__bild { transform: none; object-position: 53% 48%; }
+  .portalhero__portraet_rechts { width: 200px; height: 200px; right: max(24px, calc((100vw - 1440px) / 2 + 24px)); top: 148px; }
+  .portalhero__portraet_rechts .illustration__bild { object-position: center 35%; }
+  .logoleiste { padding-block: 20px 28px; border: 0; background: var(--white); gap: 20px; }
+  .logoleiste__titel { text-transform: none; font-size: .875rem; font-weight: 500; letter-spacing: 0; color: var(--ink-soft); }
+  .logoleiste__liste { width: min(100%, 1040px); justify-content: space-between; gap: 24px; }
+  .logoleiste__link { gap: 10px; text-decoration: none; }
+  .logoleiste__name { font-size: 1.125rem; font-weight: 600; color: var(--ink); }
+  .logoleiste__link img { height: 32px; max-width: 150px; filter: none; opacity: .85; }
+  .entdecken { padding-top: 32px; }
+  .portalabschnittkopf { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 28px; }
+  .portalabschnittkopf p { margin-top: 10px; font-size: .9375rem; color: var(--ink-soft); }
+  .portalzusagen { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px 40px; margin-top: 32px; font-size: .875rem; color: var(--ink-soft); }
+  .portalzusagen li { display: flex; align-items: center; gap: 8px; }
+  .portalzusagen .icon { color: var(--primary); }
+  .startkopf { margin-bottom: 32px; }
+  .startkopf .lead { max-width: 66ch; }
+  .pfade { gap: 24px; }
+  .pfadkarte { padding: 24px; border: 1px solid var(--line); box-shadow: none; border-radius: 12px; gap: 14px; }
+  .pfadkarte:hover { transform: none; box-shadow: 0 8px 24px #0a254008; }
+  .pfadkarte__bild { height: 140px; margin-bottom: 0; }
+  .pfadkarte__titel { font-size: 1.25rem; }
+  .pfadkarte__text { font-size: .9375rem; }
+  /* Kategorien: offene Icon-Navigation und Karten mit vollständigen Beschreibungen. */
+  .kategorienbereich { padding-block: 56px 64px; scroll-margin-top: 16px; }
+  .band:has(+ .kategorienbereich) { padding-bottom: 24px; }
+  .kategorienintro { display: block; margin-bottom: 28px; }
+  .kategorienintro .startkopf { max-width: 760px; }
+  .kategorietabs { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .kategorietabs__liste { position: static; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0; padding: 0; gap: 12px; overflow: visible; border-bottom: 1px solid var(--line); }
+  .kategoriekachel { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: auto; min-width: 0; min-height: 120px; padding: 16px 12px 22px; gap: 12px; border: 0; border-radius: 0; background: transparent; box-shadow: none; text-align: center; }
+  .kategoriekachel::after { content: ""; position: absolute; bottom: -1px; left: 50%; width: 48px; height: 3px; transform: translateX(-50%); background: transparent; border-radius: 2px; }
+  .kategoriekachel:hover { background: transparent; border: 0; color: var(--primary); }
+  .kategoriekachel__icon, .pfadkarte__icon, .leerkarte__icon { display: inline-grid; place-items: center; width: 36px; height: 36px; padding: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; color: var(--primary); }
+  .kategoriekachel__icon .icon { stroke-linecap: round; stroke-linejoin: round; }
+  .kategoriekachel__text { flex-direction: column; align-items: center; gap: 4px; min-width: 0; }
+  .kategoriekachel__name { font-size: 1rem; font-weight: 600; white-space: normal; }
+  .kategoriekachel__anzahl { font-size: .8125rem; font-weight: 400; white-space: normal; }
+  .kategoriekachel[aria-selected="true"] { background: transparent; color: var(--primary); box-shadow: none; border: 0; }
+  .kategoriekachel[aria-selected="true"]::after { background: var(--primary); }
+  .kategoriekachel[aria-selected="true"] .kategoriekachel__name { color: var(--primary); }
+  .kategoriekachel[aria-selected="true"] .kategoriekachel__anzahl { color: var(--ink-soft); }
+  .kategoriekachel[aria-selected="true"] .kategoriekachel__icon { background: transparent; color: var(--primary); }
+  .kategoriekopf { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 40px; align-items: start; margin-bottom: 24px; }
+  .kategoriekopf__text { max-width: 720px; }
+  .kategoriekopf__titel { font-size: 1.375rem; }
+  .kategoriekopf__text p { margin-top: 8px; font-size: .9375rem; line-height: 1.65; max-width: 66ch; }
+  .kategoriekopf__links { grid-column: auto; align-items: flex-end; gap: 10px; padding-top: 4px; }
+  .kategoriekopf__alle { font-size: .875rem; min-height: 32px; }
+  .kategoriekopf__kriterien { font-size: .8125rem; font-weight: 400; }
+  .kategorietabs .kategorienprogramme { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .kategorienprogramme .softwarekarte { display: grid; grid-template-columns: 64px minmax(0, 1fr); align-content: start; padding: 24px; gap: 12px 20px; border-color: var(--line); box-shadow: none; }
+  .kategorienprogramme .softwarekarte:hover { border-color: #b8cde0; box-shadow: none; }
+  .kategorienprogramme .softwarekarte__oben { display: contents; }
+  .kategorienprogramme .softwarekarte__logo { grid-column: 1; grid-row: 1 / span 2; align-self: start; width: 64px; height: 64px; border: 0; background: transparent; }
+  .kategorienprogramme .softwarekarte__kopf { grid-column: 2; align-self: center; min-height: 28px; }
+  .kategorienprogramme .softwarekarte__kategorie { display: none; }
+  .kategorienprogramme .softwarekarte__name { font-size: 1.125rem; }
+  .kategorienprogramme .softwarekarte__kurz { grid-column: 2; display: block; flex: none; overflow: visible; -webkit-line-clamp: unset; max-width: none; font-size: .9375rem; line-height: 1.6; }
+  .kategorienprogramme .softwarekarte__fakten { grid-column: 2; }
+  .kategorienprogramme .softwarekarte__fuss { grid-column: 1 / -1; margin: 6px 0 0; padding: 14px 0 0; background: transparent; border-top: 1px solid #edf1f5; border-radius: 0; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; }
+  .kategorienprogramme .softwarekarte__datum { font-size: .75rem; }
+  .kategorienprogramme .softwarekarte__aktionen { justify-content: flex-end; }
+  .kategorienprogramme .softwarekarte__cta,
+  .kategorienprogramme .softwarekarte:is(:hover, :focus-within) .softwarekarte__cta { width: auto; min-height: 36px; padding: 0; border: 0; background: transparent; color: var(--primary); box-shadow: none; font-size: .875rem; }
+  .kategorienprogramme .softwarekarte__cta:hover { text-decoration: underline; }
+  .aufbau__bild { max-width: 500px; }
+  .aufbau__vorschau { gap: 24px; }
+  .aufbau__punkte { gap: 20px; }
+  .aufbau__nr { width: 28px; height: 28px; font-size: .875rem; background: var(--mist); color: var(--primary); }
+  .aufbau__titel { font-size: 1rem; }
+  .aufbau__punkt p { font-size: .9375rem; }
+  .planerteaser__bild { max-width: 260px; }
+  .planerteaser__text .lead { color: var(--ink-soft); }
+  .hersteller__bild { max-width: 340px; }
+
+  /* Kompakte Produktkacheln und horizontale Listeneinträge. */
+  .kartenraster { gap: 20px; }
+  .softwarekarte { padding: 22px; gap: 14px; border: 1px solid var(--line); box-shadow: 0 3px 12px #0a254005; border-radius: 12px; }
+  .softwarekarte:hover, .softwarekarte:focus-within { transform: none; box-shadow: 0 6px 20px #0a25400b; }
+  .softwarekarte__oben { display: flex; align-items: center; gap: 16px; }
+  .softwarekarte__kopf { display: flex; flex-direction: column; gap: 5px; }
+  .softwarekarte__name { font-size: 1.125rem; line-height: 1.3; }
+  .softwarekarte__link::after { display: none; }
+  .softwarekarte__link:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+  .softwarekarte__kategorie { font-size: .75rem; font-weight: 400; margin: 0; }
+  .softwarekarte__logo { flex: none; width: 64px; height: 64px; margin: 0; }
+  .softwarekarte__logo img { max-width: 100%; width: auto; height: auto; max-height: 48px; object-fit: contain; }
+  .softwarekarte__initial { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 10px; background: var(--mist); color: var(--primary); font-size: 1.5rem; font-weight: 700; }
+  .softwarekarte__kurz { font-size: .9375rem; line-height: 1.6; -webkit-line-clamp: 3; }
+  .softwarekarte__fakten { margin: 0; gap: 6px; }
+  .softwarekarte__fakt { font-size: .75rem; font-weight: 500; padding: 4px 8px; border-radius: 4px; background: #f2f6fa; }
+  .softwarekarte__fakt_ok { color: var(--ok); background: #edf7f0; }
+  .softwarekarte__fuss { margin: 4px -22px -22px; padding: 16px 22px; background: #f8fafc; border-top: 1px solid #edf1f5; border-radius: 0 0 12px 12px; gap: 10px; }
+  .softwarekarte__datum { font-size: .6875rem; }
+  .softwarekarte__aktionen { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .softwarekarte__cta { width: 100%; pointer-events: auto; min-height: 38px; font-size: .8125rem; }
+  .softwarekarte__preislink { font-size: .875rem; font-weight: 500; }
+  .softwareliste { display: grid; gap: 20px; }
+  .softwarekarte_liste { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 12px 24px; padding: 24px; }
+  .softwarekarte_liste .softwarekarte__oben { display: contents; }
+  .softwarekarte_liste .softwarekarte__logo { grid-column: 1; grid-row: 1 / span 3; align-self: start; width: 100px; height: 100px; padding: 12px; border: 1px solid #edf1f5; border-radius: 10px; }
+  .softwarekarte_liste .softwarekarte__logo img { max-height: 68px; }
+  .softwarekarte_liste .softwarekarte__kopf, .softwarekarte_liste .softwarekarte__kurz, .softwarekarte_liste .softwarekarte__fakten { grid-column: 2; }
+  .softwarekarte_liste .softwarekarte__name { font-size: 1.375rem; }
+  .softwarekarte_liste .softwarekarte__kurz { display: block; overflow: visible; }
+  .softwarekarte_liste .softwarekarte__fuss { grid-column: 1 / -1; margin: 6px -24px -24px; padding: 16px 24px; flex-direction: row; justify-content: space-between; align-items: center; }
+  .softwarekarte_liste .softwarekarte__cta { width: auto; }
+
+  /* Verzeichnis: Ergebnisse links, echte Datenfilter rechts. */
+  .softwareportal-kopf .seitenkopf { padding-block: 32px 16px; }
+  .softwareportal-kopf + .band_eng { padding-top: 24px; }
+  .verzeichnis { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 32px; align-items: start; }
+  .verzeichnis__rand { grid-column: 2; grid-row: 1; display: grid; gap: 24px; }
+  .verzeichnis__filterknopf { display: none; }
+  .verzeichnis__resultate { grid-column: 1; grid-row: 1; min-width: 0; }
+  .verzeichnis__kopf { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 24px; min-height: 50px; }
+  .filterhinweis { font-size: .8125rem; letter-spacing: 0; text-transform: none; font-weight: 400; margin: 6px 0 0; }
+  .filterleiste__treffer { font-size: 1.1875rem; font-weight: 700; }
+  .verzeichnis__sortierung { display: grid; gap: 4px; font-size: .75rem; color: var(--ink-soft); }
+  .verzeichnis__sortierung select { font: 400 .875rem var(--font-ui); color: var(--ink); background: var(--white); border: 1px solid #c1cdd8; border-radius: 6px; padding: 8px 12px; }
+  .filterleiste { display: grid; gap: 22px; padding: 22px; margin: 0; background: var(--white); border: 1px solid var(--line); border-radius: 10px; }
+  .filterleiste__titel { font-size: 1.125rem; }
+  .filterleiste_laden { min-height: 540px; align-content: start; }
+  .filterleiste__zeile { display: block; }
+  .filterleiste .segmente__reihe { display: grid; gap: 4px; }
+  .filterleiste .feld__label { font-size: .8125rem; margin-bottom: 8px; font-weight: 600; }
+  .filterleiste .segment { display: block; }
+  .filterleiste .segment__text { display: flex; align-items: center; min-height: 38px; padding: 7px 10px; border: 0; border-radius: 5px; font-size: .875rem; font-weight: 400; }
+  .filterleiste .segment__eingabe:checked + .segment__text { background: var(--mist); color: var(--primary); box-shadow: none; font-weight: 600; }
+  .filterleiste__fuss { display: grid; gap: 16px; padding: 0; border: 0; }
+  .filterleiste .haken__text { font-size: .8125rem; }
+  .verzeichnis__leer { padding: 32px; border: 1px solid var(--line); border-radius: 12px; background: #f8fafc; }
+  .verzeichnis__leer h2 { font-size: 1.25rem; }
+  .auswahlhilfekarte { display: grid; gap: 16px; padding: 24px; background: #f1f7fd; border: 1px solid #e0edf9; border-radius: 12px; }
+  .auswahlhilfekarte .illustration { width: 160px; justify-self: center; }
+  .auswahlhilfekarte h3 { font-size: 1.25rem; line-height: 1.4; }
+  .auswahlhilfekarte p { font-size: .875rem; color: var(--ink-soft); }
+  .auswahlhilfekarte .knopf { font-size: .8125rem; padding-inline: 12px; }
+
+  /* Softwareprofile: kompakter Kopf, horizontale Navigation, ruhige Abschnitte. */
+  .produktkopf { background: var(--white); padding-block: 28px 32px; border: 0; }
+  .produktkopf__innen { grid-template-columns: 128px minmax(0, 1fr) 260px; gap: 28px; align-items: center; }
+  .produktkopf__logo { box-shadow: none; border-color: var(--line); border-radius: 10px; }
+  .produktkopf__h1 { font-size: clamp(1.75rem, 1.25rem + 1.5vw, 2.25rem); line-height: 1.2; letter-spacing: -.025em; }
+  .produktkopf__text .eyebrow { font-size: .75rem; letter-spacing: 0; text-transform: none; }
+  .produktkopf__text > * + * { margin-top: 10px; }
+  .produktkopf__aktionen { grid-column: auto; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 20px; }
+  .produktkopf__aktionen .knopf { min-height: 42px; font-size: .875rem; padding-inline: 18px; }
+  .produktkopf__zusammenfassung { text-align: right; display: grid; justify-items: end; gap: 6px; }
+  .produktkopf__preislabel { font-size: .75rem; color: var(--ink-soft); }
+  .produktkopf__preis { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+  .produktkopf__datum { font-size: .75rem; }
+  .produktnav { background: #f6f9fc; box-shadow: none; border-top: 1px solid #edf1f5; }
+  .produktnav__liste { gap: 12px; }
+  .produktnav__link { min-height: 50px; padding-inline: 14px; font-size: .875rem; font-weight: 500; }
+  .produktraster { grid-template-columns: minmax(0, 1fr) 300px; gap: 36px; padding-top: 32px; }
+  .produkthaupt { gap: 32px; }
+  .produktblock { padding: 0 0 32px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; box-shadow: none; }
+  .produktblock__kopf { margin-bottom: 20px; }
+  .produktblock__kopf h2 { font-size: 1.625rem; line-height: 1.25; }
+  .produktblock__text { font-size: .9375rem; }
+  .produktblock__lead { font-size: 1rem; line-height: 1.7; max-width: none; }
+  .faktenkacheln { gap: 16px; margin-bottom: 24px; }
+  .faktenkachel { background: transparent; padding: 0 0 0 12px; border-left: 2px solid #dce8f4; border-radius: 0; }
+  .faktenkachel dt { font-size: .75rem; font-weight: 400; text-transform: none; letter-spacing: 0; }
+  .faktenkachel dd { font-size: .875rem; font-weight: 500; }
+  .einschaetzung { padding: 20px; border-radius: 8px; background: #f1f7fd; border: 0; }
+  .einschaetzung__abzeichen { font-size: .8125rem; font-weight: 600; color: var(--primary); letter-spacing: 0; background: transparent; padding: 0; text-transform: none; }
+  .einschaetzung__text { font-size: .9375rem; }
+  .einschaetzung__hinweis { font-size: .75rem; }
+  #funktionen.produktblock { border: 1px solid var(--line); border-radius: 12px; padding: 26px; box-shadow: 0 5px 20px #0a254005; }
+  .funktionsliste { gap: 20px 28px; }
+  .funktionsliste__punkt { padding: 0; background: transparent; font-size: .9375rem; gap: 10px; }
+  .funktionsliste__punkt .icon { color: var(--primary); }
+  .herkunft { font-size: .75rem; }
+  .preisbanner { padding: 20px; background: #f1f7fd; color: var(--ink); border-radius: 8px; }
+  .preisbanner__label { color: var(--ink-soft); text-transform: none; letter-spacing: 0; font-weight: 400; }
+  .preisbanner__wert strong { color: var(--primary); }
+  .produktrand { display: grid; gap: 24px; position: sticky; top: calc(var(--kopf-hoehe) + 74px); }
+  .produktrand__karte { box-shadow: none; border-radius: 10px; }
+  .produktrand__label { font-weight: 500; letter-spacing: 0; text-transform: none; }
+  .produktrand__preis { font-size: 1.125rem; font-weight: 600; }
+
+  /* Kategorien stellen zunächst Programme vor, danach die Auswahlkriterien. */
+  .kategoriekopfseite { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 48px; align-items: center; }
+  .kategoriekopfseite .stationskopf__text { padding: 0; }
+  .kategoriekopfseite .stationskopf__bild { width: 220px; }
+  .kategoriekopfseite .bild { border: 0; background: transparent; box-shadow: none; }
+  .kategorienav { background: #f6f9fc; border-block: 1px solid var(--line); }
+  .kategorienav .huelle { display: flex; gap: 32px; }
+  .kategorienav a { display: flex; min-height: 52px; align-items: center; font-size: .9375rem; font-weight: 500; text-decoration: none; }
+  .kategorienav a:first-child { border-bottom: 3px solid var(--primary); }
+  .softwarekategorie { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 36px; padding-block: 32px 64px; scroll-margin-top: 24px; }
+  .softwarekategorie .portalabschnittkopf h2 { font-size: 1.25rem; }
+  .softwarekategorie__rand { display: grid; gap: 24px; align-content: start; }
+  .kategorielinks { padding: 24px; border: 1px solid var(--line); border-radius: 10px; }
+  .kategorielinks h3 { font-size: 1.125rem; margin-bottom: 16px; }
+  .kategorielinks a { display: block; padding-block: 9px; font-size: .9375rem; border-bottom: 1px solid #edf1f5; text-decoration: none; }
+  .kategorieuebersicht { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding-bottom: 48px; }
+  .kategorieuebersicht__karte { display: flex; flex-direction: column; gap: 18px; border: 1px solid var(--line); border-radius: 12px; padding: 28px; }
+  .kategorieuebersicht__kopf { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 4px; }
+  .kategorieuebersicht__icon { color: var(--primary); background: transparent; stroke-linecap: round; stroke-linejoin: round; }
+  .kategorieuebersicht__karte h2 { font-size: 1.375rem; }
+  .kategorieuebersicht__karte h2 a { color: var(--ink); text-decoration: none; }
+  .kategorieuebersicht__karte p { font-size: .9375rem; }
+  .kategorieuebersicht__karte .textlink { margin-top: auto; padding-top: 8px; }
+  .kategorieuebersicht__anzahl { color: var(--ink-soft); font-size: .8125rem !important; }
+
+  @media (max-width: 1279px) {
+    .portalhero__portraet { width: 170px; height: 170px; top: 160px; }
+    .portalhero__portraet_links { width: 240px; height: 240px; top: 125px; left: -27px; }
+    .portalhero__portraet_rechts { right: 8px; }
+    .kopf__innen { gap: 20px; }
+    .kopf__haupt { gap: 12px; }
+    .hauptnav__knopf, .hauptnav__link { padding-inline: 6px; }
+  }
+  @media (max-width: 1099px) {
+    .portalhero__portraet { display: none; }
+    .produktraster { grid-template-columns: minmax(0, 1fr); }
+    .produktrand { display: none; }
+    .produktkopf__innen { grid-template-columns: 112px minmax(0, 1fr) 200px; gap: 24px; }
+    .kategorietabs__liste { gap: 8px; }
+  }
+  @media (min-width: 1100px) {
+    .entdecken__karten { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  }
+  @media (min-width: 640px) and (max-width: 1099px) {
+    .entdecken__karten { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 899px) {
+    .verzeichnis, .softwarekategorie { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+    .verzeichnis__rand, .verzeichnis__resultate { grid-column: 1; grid-row: auto; }
+    .verzeichnis__filterknopf { display: inline-flex; justify-self: start; }
+    .verzeichnis[data-filteroffen="nein"] .verzeichnis__rand { display: none; }
+    .verzeichnis__rand .auswahlhilfekarte { display: none; }
+    .filterleiste { gap: 16px; padding: 20px; }
+    .filterleiste_laden { min-height: 320px; }
+    .filterleiste .segmente__reihe { display: flex; flex-wrap: wrap; gap: 6px; }
+    .filterleiste .segment__text { border: 1px solid var(--line); min-height: 36px; }
+    .filterleiste__fuss { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; }
+    .softwarekategorie__rand { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .kategorieuebersicht { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .kategoriekopf { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    .kategoriekopf__links { grid-column: 1 / -1; }
+    .kategoriekopf__links { align-items: flex-start; padding-top: 0; }
+  }
+  @media (max-width: 639px) {
+    .seitenkopf h1 { font-size: min(1.875rem, calc((100vw - 2 * var(--rand)) / (var(--wl, 1) * .64))); }
+    .portalhero__innen { padding-block: 36px 30px; gap: 18px; }
+    .portalhero__buehne { min-height: 0; }
+    .portalhero__h1 { font-size: clamp(2rem, 7.8vw, 2.75rem); max-width: 16ch; }
+    .portalhero__text { font-size: 1rem; }
+    .portalhero__marke { font-size: .75rem; }
+    .herosuche__feld { padding-left: 12px; min-height: 56px; }
+    .herosuche__eingabe { font-size: .875rem; }
+    .herosuche__knopf { min-height: 56px; padding-inline: 18px; }
+    .herosuche__haeufigLabel { width: 100%; }
+    .logoleiste { padding-block: 22px; gap: 16px; }
+    .logoleiste__liste { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 12px; }
+    .logoleiste__link img { max-width: 92px; max-height: 26px; height: auto; }
+    .logoleiste__link { flex-direction: column; gap: 8px; }
+    .logoleiste__name { font-size: .75rem; text-align: center; }
+    .portalabschnittkopf { align-items: flex-start; flex-direction: column; gap: 14px; }
+    .portalzusagen { justify-content: flex-start; gap: 10px; }
+    .kartenraster { grid-template-columns: minmax(0, 1fr); }
+    .softwarekarte__oben { gap: 20px; }
+    .softwarekarte__logo { width: 72px; }
+    .softwarekarte__kurz { -webkit-line-clamp: 4; }
+    .softwarekarte_liste { grid-template-columns: 64px minmax(0, 1fr); gap: 12px 16px; padding: 20px; }
+    .softwarekarte_liste .softwarekarte__logo { width: 64px; height: 64px; padding: 6px; grid-row: 1; }
+    .softwarekarte_liste .softwarekarte__kurz, .softwarekarte_liste .softwarekarte__fakten { grid-column: 1 / -1; }
+    .softwarekarte_liste .softwarekarte__name { font-size: 1.1875rem; }
+    .softwarekarte_liste .softwarekarte__fuss { margin: 4px -20px -20px; padding: 16px 20px; flex-direction: column; align-items: stretch; }
+    .softwarekarte_liste .softwarekarte__aktionen { gap: 12px; }
+    .softwarekarte_liste .softwarekarte__cta { flex: 1; }
+    .verzeichnis__kopf { align-items: flex-start; }
+    .verzeichnis__sortierung select { max-width: 155px; }
+    .filterleiste__treffer { font-size: 1rem; }
+    .filterleiste { padding: 18px; }
+    .produktkopf__innen { grid-template-columns: 72px minmax(0, 1fr); gap: 16px; }
+    .produktkopf__h1 { font-size: 1.75rem; overflow-wrap: anywhere; }
+    .produktkopf__logo { align-self: start; }
+    .produktkopf__aktionen { margin-top: 16px; }
+    .produktkopf__aktionen .knopf { min-height: 40px; padding-inline: 12px; font-size: .8125rem; }
+    .produktkopf__zusammenfassung { grid-column: 1 / -1; text-align: left; justify-items: start; padding-top: 16px; border-top: 1px solid var(--line); }
+    .produktnav__link { padding-inline: 10px; }
+    .produktraster { padding-top: 28px; }
+    .produktblock__kopf h2 { font-size: 1.375rem; }
+    #funktionen.produktblock { padding: 20px; }
+    .funktionsliste { grid-template-columns: minmax(0, 1fr); }
+    .faktenkacheln { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .kategoriekopfseite { grid-template-columns: minmax(0, 1fr); }
+    .kategoriekopfseite .stationskopf__bild { display: none; }
+    .kategorienav .huelle { gap: 20px; }
+    .kategorienav a { font-size: .8125rem; }
+    .softwarekategorie__rand, .kategorieuebersicht { grid-template-columns: minmax(0, 1fr); }
+    .kategorieuebersicht__karte { padding: 24px; }
+    .kategorienbereich { padding-block: 40px 48px; }
+    .kategorienintro { margin-bottom: 20px; }
+    .kategorietabs { gap: 24px; }
+    .kategorietabs__liste { gap: 0; }
+    .kategoriekachel { min-height: 110px; padding: 12px 0 18px; gap: 10px; }
+    .kategoriekachel__icon { width: 30px; height: 30px; }
+    .kategoriekachel__icon .icon { width: 28px; height: 28px; }
+    .kategoriekachel__name { font-size: .8125rem; }
+    .kategoriekachel__anzahl { display: flex; flex-direction: column; align-items: center; gap: 0; font-size: .6875rem; line-height: 1.4; }
+    .kategoriekachel__wert { font-size: .75rem; }
+    .kategoriekachel__einheit { font-size: .625rem; }
+    .kategoriekopf__titel { font-size: 1.25rem; }
+    .kategoriekopf__text p { font-size: .875rem; }
+    .kategorietabs .kategorienprogramme { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    .kategorienprogramme .softwarekarte { grid-template-columns: 52px minmax(0, 1fr); padding: 20px; gap: 12px 16px; }
+    .kategorienprogramme .softwarekarte__logo { grid-row: 1; width: 52px; height: 52px; }
+    .kategorienprogramme .softwarekarte__kurz, .kategorienprogramme .softwarekarte__fakten { grid-column: 1 / -1; }
+    .kategorienprogramme .softwarekarte__datum { font-size: .6875rem; }
+    .kategorienprogramme .softwarekarte__aktionen { margin-left: auto; }
+    .kategorienprogramme .softwarekarte__cta { min-height: 40px; font-size: .8125rem; }
+    .pfadkarte__bild { height: 160px; }
+  }
+  @media print {
+    .portalhero__portraet, .verzeichnis__rand, .softwarekategorie__rand { display: none; }
+    .verzeichnis, .softwarekategorie, .produktraster { display: block; }
+    .produktnav { position: static; }
+  }
+}

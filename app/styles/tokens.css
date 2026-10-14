@@ -1,0 +1,97 @@
+@layer tokens {
+  :root {
+    color-scheme: light;
+
+    /* Farben, vom Auftraggeber vorgegeben */
+    --primary: #095fbb;
+    --mist: #e9f3f8;
+    --sky: #7aacdc;
+    --base: #f1f1f1;
+
+    /* Abgeleitete Neutrale und Zustände (Kontrast geprüft) */
+    --white: #ffffff;
+    --ink: #0f2438;
+    --ink-soft: #425468;
+    --primary-hover: #074f9c;
+    --primary-active: #063f7d;
+    --primary-deep: #063f7d;
+    --night: #0a2540;
+    --line: #e0e7ee;
+    --field: #5f7b93;
+    --ok: #1b6a42;
+    --ok-fill: #d7ebdf;
+    --warn: #8a5a00;
+    --warn-fill: #f6e7c1;
+    --error: #a61b1b;
+    --error-fill: #f4d9d9;
+    --secondary-active: #d6e8f2;
+    --disabled-fill: #e3e8ec;
+    --disabled-text: #6b7a89;
+
+    /* DM Sans für Überschriften, Fließtext und Oberfläche, lokal gehostet. */
+    --font-display: var(--ff-dmsans), var(--ff-dmsans-ext), system-ui, sans-serif;
+    --font-body: var(--font-display);
+    --font-ui: var(--font-display);
+
+    /* Schriftgrößen */
+    --fs-display: clamp(2.5rem, 1.4rem + 4vw, 4.75rem);
+    --fs-h1: clamp(2.125rem, 1.4rem + 2.6vw, 3.5rem);
+    --fs-h2: clamp(1.625rem, 1.25rem + 1vw, 2.125rem);
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.0625rem;
+    --fs-lead: 1.25rem;
+    --fs-body: 1rem;
+    --fs-small: 0.9375rem;
+    --fs-label: 0.8125rem;
+    --fs-button: 0.9375rem;
+    --fs-ziffer: clamp(3rem, 2rem + 4vw, 6rem);
+
+    /* Abstände, 8 Pixel Basis */
+    --a-1: 4px;
+    --a-2: 8px;
+    --a-3: 12px;
+    --a-4: 16px;
+    --a-5: 24px;
+    --a-6: 32px;
+    --a-7: 48px;
+    --a-8: 64px;
+    --a-9: 96px;
+    --a-10: 128px;
+    --abschnitt: clamp(48px, 6vw, 80px);
+
+    /* Raster */
+    --max: 1240px;
+    --rand: clamp(16px, 4vw, 40px);
+    --spalten-abstand: 24px;
+    --kopf-streifen: 36px;
+    --kopf-leiste: 72px;
+    --kopf-hoehe: var(--kopf-leiste);
+    --lesebreite: 68ch;
+
+    /* Ecken: weich. 8 Pixel für Chips und Kleinteile, 14 Pixel für Karten und Felder, Pillen für Knöpfe und Suche */
+    --r-0: 0;
+    --r-2: 8px;
+    --r-4: 12px;
+    --r-pille: 999px;
+
+    --schatten-linie: 0 1px 0 rgba(10, 37, 64, 0.08);
+    --schatten-karte: 0 1px 2px rgba(10, 37, 64, 0.06), 0 10px 28px -16px rgba(10, 37, 64, 0.22);
+    --schatten-hoch: 0 2px 4px rgba(10, 37, 64, 0.08), 0 22px 44px -18px rgba(10, 37, 64, 0.32);
+
+    /* Bewegung */
+    --t-farbe: 160ms ease-out;
+    --t-panel: 200ms ease-out;
+  }
+
+  @media (max-width: 767px) {
+    :root {
+      --spalten-abstand: 16px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    :root {
+      --kopf-hoehe: 64px;
+    }
+  }
+}

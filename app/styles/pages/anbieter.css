@@ -1,0 +1,1148 @@
+@layer pages {
+  .auswahl {
+    max-width: 760px;
+    padding: var(--a-5) var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    box-shadow: inset 6px 0 0 var(--sky);
+    border-radius: var(--r-4);
+  }
+
+  .auswahl > * + * {
+    margin-top: var(--a-3);
+  }
+
+  .auswahl h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Verzeichnis und Filter */
+  .filterleiste {
+    display: grid;
+    gap: var(--a-5);
+    padding: var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    box-shadow: var(--schatten-karte);
+    border-radius: var(--r-4);
+  }
+
+  .filterleiste__zeile {
+    display: grid;
+    gap: var(--a-5) var(--a-7);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    .filterleiste__zeile {
+      grid-template-columns: auto auto;
+      justify-content: start;
+    }
+  }
+
+  .filterleiste__fuss {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--a-4) var(--a-5);
+    padding-top: var(--a-4);
+    border-top: 1px solid var(--line);
+  }
+
+  .filterleiste__ergebnis {
+    display: flex;
+    align-items: center;
+    gap: var(--a-4);
+  }
+
+  .filterleiste__treffer {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    max-width: none;
+  }
+
+  .filterhinweis {
+    margin-block: var(--a-5);
+    max-width: 78ch;
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+  }
+
+  .segmente {
+    min-width: 0;
+  }
+
+  .segmente legend {
+    margin-bottom: 6px;
+  }
+
+  .segmente__reihe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--a-2);
+  }
+
+  .segment {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+
+  .segment__eingabe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .segment__text {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 var(--a-4);
+    border: 2px solid var(--line);
+    border-radius: var(--r-pille);
+    background: var(--white);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    line-height: 1.2;
+    transition:
+      background-color var(--t-farbe),
+      border-color var(--t-farbe),
+      color var(--t-farbe);
+  }
+
+  .segment:hover .segment__text {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .segment__eingabe:checked + .segment__text {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+  }
+
+  .segment__eingabe:focus-visible + .segment__text {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  /* Kartenraster der Verzeichnisseite */
+  .kartenraster_breit {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr));
+  }
+
+  .kartenraster__eintrag {
+    display: flex;
+    min-width: 0;
+  }
+
+  .kartenraster__eintrag > .softwarekarte {
+    flex: 1;
+  }
+
+  .werbelabel {
+    max-width: none;
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .abschnitt_inline {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .abschnitt_inline .abschnitt__nummer {
+    display: block;
+    margin-bottom: var(--a-2);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--sky);
+    letter-spacing: -0.02em;
+    user-select: none;
+  }
+
+  .abschnitt_inline .abschnitt__inhalt > h2 {
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  }
+
+  .herkunft {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-2) var(--a-3);
+    margin-bottom: var(--a-4);
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+  }
+
+  .herkunft__text {
+    color: var(--ink-soft);
+  }
+
+  .preiszeilen {
+    margin: 0 0 var(--a-4);
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .preiszeilen li {
+    padding: var(--a-3) 0;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-ui);
+    font-size: var(--fs-body);
+  }
+
+  .preishinweis {
+    margin-top: var(--a-2);
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+    max-width: 66ch;
+  }
+
+  .einschaetzung {
+    padding: var(--a-5);
+    background: var(--mist);
+    border-inline-start: 4px solid var(--primary);
+  }
+
+  .einschaetzung__abzeichen {
+    display: inline-block;
+    margin-bottom: var(--a-3);
+    padding: 4px 10px;
+    border-radius: var(--r-2);
+    background: var(--primary);
+    color: var(--white);
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .einschaetzung__text {
+    max-width: 64ch;
+    font-size: 1.125rem;
+  }
+
+  .einschaetzung__hinweis {
+    margin-top: var(--a-4);
+    padding-top: var(--a-3);
+    border-top: 1px solid var(--line);
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 700;
+    color: var(--ink);
+    max-width: 64ch;
+  }
+
+  .quellenliste {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .quellenliste li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--a-3) 0;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+  }
+
+  .quellenliste__titel {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .quellenzeit {
+    font-size: var(--fs-label);
+    color: var(--ink-soft);
+  }
+
+  .verwandt {
+    display: grid;
+    gap: var(--a-5);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .verwandt__titel {
+    margin-bottom: var(--a-2);
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .verwandt__liste li {
+    padding: 6px 0;
+    font-family: var(--font-ui);
+    font-weight: 700;
+  }
+
+  .rueckweg {
+    margin-top: var(--a-6);
+  }
+
+  /* Werbebanner (nur bei aktivem Partner) */
+  .werbebanner {
+    margin-top: var(--a-6);
+    padding: var(--a-3);
+    border: 1px solid var(--line);
+    background: var(--white);
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .werbebanner__label {
+    margin-bottom: var(--a-2);
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .werbebanner__link {
+    display: block;
+  }
+
+  .werbebanner img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bewertungsblock {
+    display: flex;
+    flex-direction: column;
+    gap: var(--a-4);
+    margin-bottom: var(--a-5);
+    padding: var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-2);
+  }
+
+  .bewertungsblock__kopf {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-3) var(--a-5);
+  }
+
+  .bewertungsblock__stand {
+    max-width: 48ch;
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+  }
+
+  .bewertungsblock__titel {
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .kriterienbalken {
+    display: grid;
+    gap: var(--a-3);
+  }
+
+  .kriterienbalken__zeile {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px var(--a-4);
+    align-items: center;
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+  }
+
+  .kriterienbalken__label {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .kriterienbalken__wert {
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .kriterienbalken__spur {
+    grid-column: 1 / -1;
+    height: 8px;
+    border-radius: var(--r-2);
+    background: var(--mist);
+    overflow: hidden;
+  }
+
+  .kriterienbalken__fuell {
+    display: block;
+    height: 100%;
+    background: var(--primary);
+  }
+
+  @media (min-width: 640px) {
+    .kriterienbalken__zeile {
+      grid-template-columns: minmax(0, 220px) minmax(0, 1fr) 72px;
+    }
+
+    .kriterienbalken__spur {
+      grid-column: auto;
+    }
+
+    .kriterienbalken__wert {
+      text-align: end;
+    }
+  }
+
+  /* Review Seite: Kopf */
+  .produktkopf {
+    background: var(--mist);
+    border-bottom: 1px solid var(--line);
+    padding-block: clamp(24px, 4vw, 48px);
+  }
+
+  .produktkopf__innen {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: var(--a-4) var(--a-5);
+    align-items: center;
+  }
+
+  @media (min-width: 640px) {
+    .produktkopf__innen {
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: var(--a-5) var(--a-6);
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .produktkopf__innen {
+      grid-template-columns: 136px minmax(0, 1fr) 300px;
+    }
+  }
+
+  .produktkopf__logo {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-4);
+    box-shadow: var(--schatten-karte);
+  }
+
+  .produktkopf__logo img {
+    display: block;
+    width: auto;
+    max-width: 78%;
+    height: auto;
+    max-height: 64%;
+    object-fit: contain;
+  }
+
+  .produktkopf__initial {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--primary);
+  }
+
+  .produktkopf__text {
+    min-width: 0;
+  }
+
+  .produktkopf__text > * + * {
+    margin-top: var(--a-3);
+  }
+
+  /* Lange Wörter: Die Schrift schrumpft, bis das längste Wort in die Textspalte neben dem Logo passt (--abzug = Breite von Rand, Logo und Lücken). */
+  .produktkopf__h1 {
+    --abzug: 150px;
+    font-size: min(clamp(1.875rem, 1.2rem + 2.6vw, 3.25rem), calc((100vw - var(--abzug)) / (var(--wl, 1) * 0.64)));
+    letter-spacing: -0.03em;
+    line-height: 1.06;
+  }
+
+  @media (min-width: 640px) {
+    .produktkopf__h1 {
+      --abzug: 240px;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .produktkopf__h1 {
+      --abzug: 640px;
+    }
+  }
+
+  .produktkopf__kurz {
+    max-width: 62ch;
+    font-size: 1.125rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  .produktkopf__marken {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-2) var(--a-3);
+    max-width: none;
+  }
+
+  /* In der schmalen Textspalte neben dem Logo dürfen lange Chips umbrechen */
+  .produktkopf__marken .chip {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .produktkopf__datum {
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    color: var(--ink-soft);
+  }
+
+  .produktkopf__bewertung {
+    max-width: none;
+  }
+
+  .produktkopf__aktionen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--a-3);
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: 640px) and (max-width: 1099px) {
+    .produktkopf__aktionen {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .produktkopf__aktionen .knopf_breit {
+      width: auto;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .produktkopf__aktionen {
+      grid-column: auto;
+    }
+  }
+
+  .produktkopf__pruefen {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 700;
+  }
+
+  /* Tab Leiste */
+  .produktnav {
+    position: sticky;
+    top: var(--kopf-hoehe);
+    z-index: 50;
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 6px 16px -14px rgba(10, 37, 64, 0.35);
+  }
+
+  .produktnav__liste {
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .produktnav__liste::-webkit-scrollbar {
+    display: none;
+  }
+
+  .produktnav__link {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    padding: 0 var(--a-4);
+    border-bottom: 3px solid transparent;
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition:
+      color var(--t-farbe),
+      border-color var(--t-farbe);
+  }
+
+  .produktnav__link:hover {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .produktnav__link[aria-current="location"] {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+  }
+
+  /* Inhalt: Hauptspalte und klebender Rand */
+  .produktraster {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--a-6) var(--a-7);
+    padding-block: var(--a-6) var(--a-8);
+    align-items: start;
+  }
+
+  @media (min-width: 1100px) {
+    .produktraster {
+      grid-template-columns: minmax(0, 1fr) 320px;
+    }
+  }
+
+  .produkthaupt {
+    display: flex;
+    flex-direction: column;
+    gap: var(--a-5);
+    min-width: 0;
+  }
+
+  .produktblock {
+    padding: clamp(20px, 3vw, 36px);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-4);
+    box-shadow: var(--schatten-karte);
+    /* html hat schon scroll-padding unter dem Kopf. Dazu kommt die Tab Leiste. */
+    scroll-margin-top: 64px;
+  }
+
+  .produktblock_weiter {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .produktblock_weiter > h2 {
+    margin-bottom: var(--a-4);
+    font-size: 1.5rem;
+  }
+
+  .produktblock__kopf {
+    margin-bottom: var(--a-5);
+  }
+
+  .produktblock__kopf h2 {
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    line-height: 1.15;
+  }
+
+  .produktblock__text {
+    margin-top: var(--a-2);
+    max-width: 68ch;
+    color: var(--ink-soft);
+  }
+
+  .produktblock__lead {
+    margin-bottom: var(--a-5);
+    max-width: 62ch;
+  }
+
+  .produktblock__cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-3);
+    margin-top: var(--a-5);
+    max-width: none;
+  }
+
+  .herkunft {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--a-2) var(--a-3);
+    margin-bottom: var(--a-4);
+  }
+
+  /* Faktenkacheln im Überblick */
+  .faktenkacheln {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--a-3);
+    margin: 0 0 var(--a-5);
+  }
+
+  @media (min-width: 900px) {
+    .faktenkacheln {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  .faktenkachel {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: var(--a-4);
+    background: var(--mist);
+    border-radius: var(--r-2);
+  }
+
+  .faktenkachel .stationsmarken {
+    flex-wrap: wrap;
+  }
+
+  .faktenkachel dt {
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .faktenkachel dd {
+    margin: 0;
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  /* Funktionen */
+  .funktionsliste {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--a-3);
+  }
+
+  @media (min-width: 760px) {
+    .funktionsliste {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .funktionsliste__punkt {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--a-3);
+    padding: var(--a-4);
+    background: var(--base);
+    border-radius: var(--r-2);
+    line-height: 1.5;
+  }
+
+  .funktionsliste__punkt .icon {
+    margin-top: 2px;
+    color: var(--ok);
+  }
+
+  /* Preise */
+  .preisbanner {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: none;
+    margin-bottom: var(--a-4);
+    padding: var(--a-5);
+    border-radius: var(--r-4);
+    background: var(--night);
+    color: var(--mist);
+  }
+
+  .preisbanner__label {
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sky);
+  }
+
+  .preisbanner__wert {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .preisbanner__wert strong {
+    font-weight: 800;
+    color: var(--white);
+  }
+
+  .preiskarten {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+    gap: var(--a-3);
+    margin-bottom: var(--a-4);
+  }
+
+  .preiskarte {
+    padding: var(--a-4);
+    border: 1px solid var(--line);
+    border-radius: var(--r-4);
+    background: var(--white);
+    line-height: 1.5;
+  }
+
+  .preiskarte strong {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+  }
+
+  /* Eignung */
+  .eignungskarten {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--a-4);
+  }
+
+  @media (min-width: 760px) {
+    .eignungskarten {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .eignungskarte {
+    padding: var(--a-5);
+    border-radius: var(--r-4);
+  }
+
+  .eignungskarte_ja {
+    background: var(--ok-fill);
+  }
+
+  .eignungskarte_nein {
+    background: var(--warn-fill);
+  }
+
+  .eignungskarte__titel {
+    display: flex;
+    align-items: center;
+    gap: var(--a-2);
+    margin-bottom: var(--a-3);
+    font-family: var(--font-ui);
+    font-size: 1.0625rem;
+    font-weight: 800;
+  }
+
+  .eignungskarte_ja .eignungskarte__titel {
+    color: var(--ok);
+  }
+
+  .eignungskarte_nein .eignungskarte__titel {
+    color: var(--warn);
+  }
+
+  .eignungskarte__liste {
+    display: grid;
+    gap: var(--a-3);
+  }
+
+  .eignungskarte__liste li {
+    position: relative;
+    padding-inline-start: var(--a-5);
+    line-height: 1.55;
+  }
+
+  .eignungskarte__liste li::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 2px;
+    top: 0.62em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .eignungskarte_ja .eignungskarte__liste li::before {
+    color: var(--ok);
+  }
+
+  .eignungskarte_nein .eignungskarte__liste li::before {
+    color: var(--warn);
+  }
+
+  /* Grenzen */
+  .grenzenliste {
+    border-top: 1px solid var(--line);
+  }
+
+  .grenzenliste__punkt {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--a-3);
+    padding-block: var(--a-4);
+    border-bottom: 1px solid var(--line);
+    line-height: 1.55;
+  }
+
+  .grenzenliste__punkt .icon {
+    margin-top: 2px;
+    color: var(--warn);
+  }
+
+  /* Vertrag */
+  .vertragskarte {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--a-3);
+    padding: var(--a-5);
+    background: var(--mist);
+    border-radius: var(--r-4);
+  }
+
+  /* Datentabelle */
+  .datentabelle {
+    margin: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .datentabelle__zeile {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px var(--a-5);
+    padding-block: var(--a-3);
+    border-bottom: 1px solid var(--line);
+  }
+
+  @media (min-width: 640px) {
+    .datentabelle__zeile {
+      grid-template-columns: 240px minmax(0, 1fr);
+    }
+  }
+
+  .datentabelle dt {
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+
+  .datentabelle dd {
+    margin: 0;
+    line-height: 1.5;
+    min-width: 0;
+  }
+
+  .datentabelle__klein {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    color: var(--ink-soft);
+  }
+
+  /* Hersteller: Korrekturhinweis */
+  .claimkarte {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--a-4) var(--a-5);
+    margin-top: var(--a-5);
+    padding: var(--a-5);
+    background: var(--mist);
+    border-radius: var(--r-4);
+  }
+
+  .claimkarte > div {
+    flex: 1 1 320px;
+  }
+
+  .claimkarte__titel {
+    margin-bottom: var(--a-1);
+    font-family: var(--font-ui);
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .claimkarte p {
+    max-width: 60ch;
+    font-size: var(--fs-small);
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  /* Bewertung: Leerzustand */
+  .leerkarte {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--a-4);
+    padding: var(--a-5);
+    background: var(--base);
+    border-radius: var(--r-4);
+  }
+
+  .leerkarte__icon {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: 52px;
+    height: 52px;
+    border-radius: var(--r-2);
+    background: var(--primary);
+    color: var(--white);
+  }
+
+  .leerkarte__titel {
+    margin-bottom: var(--a-2);
+    font-family: var(--font-ui);
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .leerkarte p {
+    max-width: 62ch;
+    color: var(--ink-soft);
+  }
+
+  .leerkarte .knopf_gruppe {
+    margin-top: var(--a-4);
+  }
+
+  .leerkarte__link {
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 700;
+  }
+
+  /* Alternativen */
+  .kartenraster_zwei {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (min-width: 700px) {
+    .kartenraster_zwei {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  /* Rand und feste Leiste */
+  .produktrand {
+    display: none;
+  }
+
+  @media (min-width: 1100px) {
+    .produktrand {
+      display: block;
+      position: sticky;
+      top: calc(var(--kopf-hoehe) + 72px);
+    }
+  }
+
+  .produktrand__karte {
+    display: grid;
+    gap: var(--a-3);
+    padding: var(--a-5);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-4);
+    box-shadow: var(--schatten-hoch);
+  }
+
+  .produktrand__karte > p {
+    max-width: none;
+  }
+
+  .produktrand__label {
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .produktrand__preis {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  .produktrand__klein {
+    font-family: var(--font-ui);
+    font-size: var(--fs-label);
+    color: var(--ink-soft);
+  }
+
+  .produktrand__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 700;
+  }
+
+  .produktleiste {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 56;
+    padding: var(--a-2) var(--rand) calc(var(--a-2) + env(safe-area-inset-bottom, 0px));
+    background: var(--white);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -8px 20px -14px rgba(10, 37, 64, 0.4);
+  }
+
+  @media (min-width: 1024px) {
+    .produktleiste {
+      display: none;
+    }
+  }
+
+  /* Auf Review Seiten ersetzt die Herstellerleiste die allgemeine Leiste */
+  body:has(.produktseite) .mobilleiste {
+    display: none;
+  }
+
+  /* Schmale Handys: eine Spalte bei den Fakten, und sehr lange Wörter dürfen als Ausnahme umbrechen (ohne Trennstrich) */
+  @media (max-width: 420px) {
+    .produkthaupt {
+      overflow-wrap: anywhere;
+    }
+  }
+
+  @media (max-width: 359px) {
+    .faktenkacheln {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}

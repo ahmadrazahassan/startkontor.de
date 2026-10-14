@@ -1,0 +1,160 @@
+@layer base {
+  html {
+    background: var(--base);
+    scroll-padding-top: calc(var(--kopf-hoehe) + 16px);
+    scroll-behavior: smooth;
+    font-synthesis: none;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+    overflow-wrap: normal;
+    word-break: normal;
+    line-break: auto;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: var(--base);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: 1.7;
+    font-weight: 400;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  main {
+    flex: 1 0 auto;
+    background: var(--base);
+    display: block;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--ink);
+    text-wrap: balance;
+    hyphens: manual;
+    letter-spacing: -0.005em;
+  }
+
+  /* Kein Trennen von Wörtern: --wl (Länge des längsten Wortes) begrenzt die Schriftgröße. 0,64 em je Zeichen ist ein vorsichtiger Schnitt der DM Sans in Schwarz. */
+  h1 {
+    font-size: min(var(--fs-h1), calc((100vw - 2 * var(--rand)) / (var(--wl, 1) * 0.64)));
+    line-height: 1.08;
+    letter-spacing: -0.012em;
+  }
+
+  h2 {
+    font-size: var(--fs-h2);
+    line-height: 1.15;
+    letter-spacing: -0.008em;
+  }
+
+  h3 {
+    font-size: var(--fs-h3);
+    line-height: 1.25;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-ui);
+    font-size: var(--fs-h4);
+    line-height: 1.35;
+    font-weight: 700;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+    max-width: var(--lesebreite);
+  }
+
+  strong,
+  b {
+    font-weight: 700;
+  }
+
+  small {
+    font-size: var(--fs-small);
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    transition: color var(--t-farbe), text-decoration-thickness var(--t-farbe);
+  }
+
+  a:hover {
+    color: var(--primary-hover);
+    text-decoration-thickness: 2.5px;
+  }
+
+  a:active {
+    color: var(--primary-active);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--sky);
+    color: var(--ink);
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: var(--a-6) 0;
+  }
+
+  table {
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Lange Adressen dürfen als Ausnahme umbrechen. Wörter bleiben sonst ungetrennt. */
+  .adresse {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  /* Listen im Fließtext: quadratische Aufzählungszeichen */
+  .fliesstext ul,
+  .fliesstext ol {
+    padding-inline-start: 0;
+    list-style: none;
+    max-width: var(--lesebreite);
+  }
+
+  .fliesstext ul > li,
+  .fliesstext ol > li {
+    position: relative;
+    padding-inline-start: 1.5em;
+    margin-block: 0.5em;
+  }
+
+  .fliesstext ul > li::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0.1em;
+    inset-block-start: 0.72em;
+    width: 0.5em;
+    height: 0.5em;
+    background: var(--primary);
+  }
+}

@@ -1,0 +1,25 @@
+@layer components {
+  .portalhero__offenlegung { margin: 18px auto 0; max-width: 67ch; font-size: .75rem; line-height: 1.6; color: var(--ink-soft); }
+  .portalhero__offenlegung a { white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
+  .affiliatepartner { padding-block: 48px; background: var(--mist); border-block: 1px solid var(--line); }
+  .affiliatepartner__kopf { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 28px; }
+  .affiliatepartner__kopf > div { max-width: 75ch; }
+  .affiliatepartner__kopf h2 { margin-top: 8px; font-size: 1.75rem; }
+  .affiliatepartner__kopf > div > p:last-child { margin-top: 12px; color: var(--ink-soft); font-size: .9375rem; line-height: 1.7; }
+  .affiliatepartner__kopf > a { font-size: .8125rem; }
+  .affiliatepartner__liste { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .affiliatepartner__karte { display: grid; gap: 24px; padding: 24px; border: 1px solid var(--line); border-radius: 12px; background: #fff; min-width: 0; }
+  .affiliatepartner__identitaet { display: flex; gap: 18px; align-items: center; min-width: 0; }
+  .affiliatepartner__identitaet img { width: 88px; height: 44px; object-fit: contain; flex-shrink: 0; }
+  .affiliatepartner__identitaet h3 { font-size: 1.0625rem; }
+  .affiliatepartner__identitaet p { margin-top: 4px; color: var(--ink-soft); font-size: .6875rem; line-height: 1.5; }
+  .affiliatepartner__aktionen { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .affiliatepartner__profil { display: inline-flex; align-items: center; gap: 6px; font-size: .75rem; min-height: 40px; }
+  .knopf__werbung { font-size: .75rem; font-weight: 400; padding-left: 8px; border-left: 1px solid currentColor; }
+  .produktkopf__affiliatehinweis { width: min(var(--max), calc(100% - 2 * var(--rand))); max-width: none; margin: 16px auto 0; color: var(--ink-soft); font-size: .75rem; line-height: 1.6; }
+  .produktkopf__affiliatehinweis a { text-decoration: underline; text-underline-offset: 3px; }
+  .fuss__partner { color: #c5d5e3; font-size: .75rem; line-height: 1.6; margin-top: 12px; }
+  .fuss__partner a { text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 1023px) { .affiliatepartner__liste { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 639px) { .affiliatepartner__liste { grid-template-columns: minmax(0, 1fr); } .affiliatepartner__karte { padding: 20px; gap: 18px; } .affiliatepartner__kopf h2 { font-size: 1.5rem; } }
+}

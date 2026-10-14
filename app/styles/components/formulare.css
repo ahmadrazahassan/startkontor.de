@@ -1,0 +1,291 @@
+@layer components {
+  .haken__eingabe,
+  .kachel__eingabe,
+  .segment__eingabe {
+    appearance: none;
+    border-radius: 0;
+  }
+
+  .formular {
+    display: grid;
+    gap: var(--a-5);
+    max-width: 640px;
+  }
+
+  .feld {
+    display: grid;
+    gap: 6px;
+  }
+
+  .feld__label {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: var(--fs-small);
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  .feld__eingabe {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 14px;
+    border: 2px solid var(--field);
+    border-radius: var(--r-4);
+    background: var(--white);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: 1.4;
+    transition: border-color var(--t-farbe);
+  }
+
+  .feld__eingabe::placeholder {
+    color: #5c6f82;
+    opacity: 1;
+  }
+
+  textarea.feld__eingabe {
+    min-height: 168px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+
+  .feld__eingabe:hover {
+    border-color: var(--ink-soft);
+  }
+
+  .feld__eingabe:focus,
+  .feld__eingabe:focus-visible {
+    border-color: var(--primary);
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  .feld__eingabe[aria-invalid="true"] {
+    border-color: var(--error);
+  }
+
+  .feld__hilfe {
+    font-size: var(--fs-small);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: none;
+  }
+
+  .feld__fehler {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 700;
+    line-height: 1.45;
+    color: var(--error);
+    max-width: none;
+  }
+
+  .feld__fehler .icon {
+    margin-top: 2px;
+  }
+
+  /* Quadratisches Kontrollkästchen */
+  .haken {
+    position: relative;
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: var(--a-3);
+    align-items: start;
+    cursor: pointer;
+    min-height: 44px;
+  }
+
+  .haken__eingabe {
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .haken__box {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
+    border: 2px solid var(--field);
+    border-radius: var(--r-2);
+    background: var(--white);
+    color: transparent;
+    transition:
+      background-color var(--t-farbe),
+      border-color var(--t-farbe);
+  }
+
+  .haken:hover .haken__box {
+    border-color: var(--primary);
+  }
+
+  .haken__eingabe:checked + .haken__box {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+  }
+
+  .haken__eingabe:focus-visible + .haken__box {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  .haken__eingabe[aria-invalid="true"] + .haken__box {
+    border-color: var(--error);
+  }
+
+  .haken__text {
+    font-size: var(--fs-small);
+    line-height: 1.55;
+    padding-top: 2px;
+  }
+
+  /* Auswahlkachel (Planer): rechteckig, Primärrand und Häkchenquadrat bei Auswahl */
+  .kacheln {
+    display: grid;
+    gap: var(--a-3);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (min-width: 640px) {
+    .kacheln {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .kachel {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+
+  .kachel__eingabe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .kachel__inhalt {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-height: 72px;
+    height: 100%;
+    padding: var(--a-4) 56px var(--a-4) var(--a-4);
+    border: 2px solid var(--field);
+    border-radius: var(--r-4);
+    background: var(--white);
+    transition:
+      background-color var(--t-farbe),
+      border-color var(--t-farbe);
+  }
+
+  .kachel:hover .kachel__inhalt {
+    border-color: var(--primary);
+  }
+
+  .kachel__titel {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    line-height: 1.35;
+  }
+
+  .kachel__text {
+    font-size: var(--fs-small);
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  .kachel__marke {
+    position: absolute;
+    top: var(--a-3);
+    inset-inline-end: var(--a-3);
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--field);
+    border-radius: var(--r-2);
+    background: var(--white);
+    color: transparent;
+    transition:
+      background-color var(--t-farbe),
+      border-color var(--t-farbe);
+  }
+
+  .kachel__eingabe:checked ~ .kachel__inhalt {
+    border-color: var(--primary);
+    background: var(--mist);
+  }
+
+  .kachel__eingabe:checked ~ .kachel__marke {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+  }
+
+  .kachel__eingabe:focus-visible ~ .kachel__inhalt {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  /* Honigtopf: für Menschen unsichtbar und nicht erreichbar */
+  .honigtopf {
+    position: absolute;
+    inset-inline-start: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .meldung {
+    display: flex;
+    gap: var(--a-3);
+    align-items: flex-start;
+    padding: var(--a-4);
+    border-radius: var(--r-2);
+    border-inline-start: 4px solid var(--ok);
+    background: var(--ok-fill);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-size: var(--fs-small);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .meldung_fehler {
+    border-inline-start-color: var(--error);
+    background: var(--error-fill);
+  }
+
+  .meldung p {
+    max-width: none;
+  }
+
+  /* Newsletter Block */
+  .newsletterblock {
+    padding: clamp(24px, 4vw, 48px);
+    background: var(--white);
+    color: var(--ink);
+    border-radius: var(--r-2);
+  }
+
+  .newsletterblock .formular {
+    max-width: 560px;
+  }
+}
