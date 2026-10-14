@@ -1,0 +1,49 @@
+{
+  "_hinweis": "Kennzahlen der Startseite. Externe Werte stammen vom Statistischen Bundesamt und stehen mit Quelle und Berichtsjahr hier. Alle Werte zum Verzeichnis und zu Sage werden in lib/zahlen.ts aus den Softwareprofilen berechnet. Die Sage Einstiegspreise sind den Preisangaben der jeweiligen Profile entnommen (Herstellerangaben, Prüfdatum im Profil). Es gibt keine geschätzten oder erfundenen Werte.",
+  "markt": {
+    "kleinUndMittel": {
+      "wert": "99,3 %",
+      "text": "der Unternehmen in Deutschland sind kleine und mittlere Unternehmen. Das sind rund 3,2 Millionen.",
+      "quelle": "Statistisches Bundesamt, Kleine und mittlere Unternehmen, Berichtsjahr 2024, ausgewählte Wirtschaftsbereiche ohne Bau",
+      "url": "https://www.destatis.de/DE/Themen/Branchen-Unternehmen/Unternehmen/Kleine-Unternehmen-Mittlere-Unternehmen/aktuell-beschaeftigte.html"
+    },
+    "beschaeftigte": {
+      "wert": "54 %",
+      "text": "der Beschäftigten arbeiten in kleinen und mittleren Unternehmen.",
+      "quelle": "Statistisches Bundesamt, Kleine und mittlere Unternehmen, Berichtsjahr 2024",
+      "url": "https://www.destatis.de/DE/Themen/Branchen-Unternehmen/Unternehmen/Kleine-Unternehmen-Mittlere-Unternehmen/aktuell-beschaeftigte.html"
+    },
+    "cloud": {
+      "wert": "54 %",
+      "text": "der Unternehmen mit mindestens 10 Beschäftigten nutzten 2025 bezahlte IT Dienste aus der Cloud.",
+      "quelle": "Statistisches Bundesamt, Pressemitteilung zur Cloud Nutzung in Unternehmen, Berichtsjahr 2025",
+      "url": "https://www.presseportal.de/pm/32102/6164556"
+    },
+    "cloudNachGroesse": {
+      "titel": "Cloud Nutzung nach Unternehmensgröße",
+      "untertitel": "Anteil der Unternehmen, die 2025 bezahlte Cloud Dienste nutzten",
+      "quelle": "Statistisches Bundesamt, Berichtsjahr 2025",
+      "url": "https://www.presseportal.de/pm/32102/6164556",
+      "werte": [
+        { "label": "Klein", "klasse": "10 bis 49 Beschäftigte", "prozent": 51 },
+        { "label": "Mittel", "klasse": "50 bis 249 Beschäftigte", "prozent": 65 },
+        { "label": "Groß", "klasse": "ab 250 Beschäftigten", "prozent": 86 }
+      ]
+    }
+  },
+  "sage": {
+    "_hinweis": "Einstiegspreise je Programm, wörtlich aus den Preisangaben der Profile. Pauschal: Betrag je Monat für das genannte Paket. Je Nutzer: Betrag je Nutzer oder Beschäftigtem und Monat.",
+    "pauschal": [
+      { "slug": "sage-50-handwerk", "paket": "Essential, 1 Benutzer", "betrag": 19.9 },
+      { "slug": "sage-payroll", "paket": "Essentials, 5 Beschäftigte", "betrag": 20 },
+      { "slug": "sage-active", "paket": "Starter, 5 Nutzer", "betrag": 25 },
+      { "slug": "sage-hr-payroll", "paket": "Essentials, 5 Beschäftigte", "betrag": 40 }
+    ],
+    "jeNutzer": [
+      { "slug": "sage-hr", "paket": "Basis, je Beschäftigtem", "betrag": 4.5 },
+      { "slug": "sage-sales-management", "paket": "Professional, ab 5 Nutzern", "betrag": 55 },
+      { "slug": "sage-100", "paket": "Warenwirtschaft", "betrag": 56 }
+    ],
+    "richtpreis": { "slug": "sage-intacct", "paket": "Standard, Richtpreis netto", "betrag": 1390 }
+  }
+}
