@@ -1,0 +1,129 @@
+@layer pages {
+  /* Grafiken im Softwareprofil: ruhige Karten, Animation nur als Verbesserung (scrollgesteuert, ohne Skript) */
+  .ag { display: grid; gap: 20px; }
+  .ag-karte { position: relative; display: flex; flex-direction: column; gap: 16px; min-width: 0; padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--white); box-shadow: 0 3px 12px #0a254008; }
+  .ag-titel { margin: 0; font-size: 1.0625rem; font-weight: 700; color: var(--ink); }
+  .ag-untertitel { margin: -10px 0 0; font-size: .8125rem; color: var(--ink-soft); }
+  .ag-hinweis { margin: auto 0 0; font-size: .8125rem; line-height: 1.55; color: var(--ink-soft); }
+  .ag-hinweis a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+  .ag-paar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .ag-paar:has(> :only-child) { grid-template-columns: minmax(0, 1fr); }
+  .ag-drei { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+
+  /* Transparenzwert */
+  .ag-transparenz { display: grid; grid-template-columns: 200px minmax(0, 1fr); grid-template-areas: "ring text" "ring kriterien"; column-gap: 40px; row-gap: 20px; align-items: start; background: linear-gradient(135deg, #f4f9fd 0%, #ffffff 60%); }
+  .ag-ring { grid-area: ring; position: relative; width: 200px; height: 200px; }
+  .ag-ring__svg { width: 100%; height: 100%; }
+  .ag-ring__spur { fill: none; stroke: #dcebf6; stroke-width: 10; }
+  .ag-ring__fuell { fill: none; stroke: url(#ag-verlauf); stroke-width: 10; stroke-linecap: round; }
+  .ag-ring__mitte { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
+  .ag-ring__zahl { font-size: 3.25rem; line-height: 1; font-weight: 700; letter-spacing: -.04em; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .ag-ring__von { margin-top: 4px; font-size: .8125rem; color: var(--ink-soft); }
+  .ag-transparenz__text { grid-area: text; display: grid; gap: 10px; }
+  .ag-transparenz__einordnung { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 1rem; }
+  .ag-transparenz .ag-hinweis { margin: 0; max-width: 56ch; }
+  .ag-kriterien { grid-area: kriterien; display: grid; gap: 4px 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; padding: 0; }
+  .ag-kriterium { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "label wert" "spur spur" "grund grund"; gap: 4px 12px; padding: 12px; border-radius: 10px; transition: background-color 160ms ease-out; }
+  .ag-kriterium:hover { background: #eef5fb; }
+  .ag-kriterium__label { grid-area: label; font-size: .9375rem; font-weight: 600; }
+  .ag-kriterium__wert { grid-area: wert; font-size: .9375rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .ag-kriterium__wert small { font-size: .75rem; font-weight: 400; color: var(--ink-soft); }
+  .ag-kriterium__spur { grid-area: spur; display: block; height: 8px; border-radius: 4px; background: #e3eef7; overflow: hidden; }
+  .ag-kriterium__fuell { display: block; height: 100%; width: var(--w); border-radius: 4px; background: linear-gradient(90deg, #7aacdc, #095fbb); transform-origin: left; }
+  .ag-kriterium[data-stufe="mittel"] .ag-kriterium__fuell { background: linear-gradient(90deg, #9cc4ec, #4b8fd6); }
+  .ag-kriterium[data-stufe="niedrig"] .ag-kriterium__fuell { background: linear-gradient(90deg, #f4c04f, #e09a00); }
+  .ag-kriterium__grund { grid-area: grund; font-size: .8125rem; color: var(--ink-soft); }
+
+  /* Preisposition */
+  .ag-position { display: grid; gap: 14px; }
+  .ag-position__kopf { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+  .ag-position__titel { margin: 0; font-size: .875rem; color: var(--ink-soft); }
+  .ag-umschalter { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--mist); }
+  .ag-umschalter button { padding: 6px 12px; border: 0; border-radius: 999px; background: transparent; color: var(--ink-soft); font: inherit; font-size: .8125rem; font-weight: 600; cursor: pointer; transition: background-color 160ms ease-out, color 160ms ease-out; }
+  .ag-umschalter button[aria-pressed="true"] { background: var(--white); color: var(--primary); box-shadow: 0 1px 3px rgba(10, 37, 64, 0.15); }
+  .ag-umschalter button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+  .ag-strip { position: relative; height: calc(64px + var(--bahnen, 1) * 22px); margin-inline: 12px; }
+  .ag-strip__spur { position: absolute; left: -12px; right: -12px; top: 44px; height: 4px; border-radius: 2px; background: linear-gradient(90deg, #cfe2f2, #e6f0f8); }
+  .ag-strip__median { position: absolute; top: 24px; bottom: 22px; width: 0; border-left: 2px dashed #8fb3d4; }
+  .ag-strip__median span { position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); padding: 2px 8px; border-radius: 6px; background: var(--mist); color: var(--ink-soft); font-size: .6875rem; font-weight: 600; white-space: nowrap; }
+  .ag-punkt { position: absolute; top: calc(38px + var(--bahn, 0) * 22px); width: 16px; height: 16px; margin-left: -8px; border: 3px solid var(--white); border-radius: 50%; background: #7aacdc; box-shadow: 0 1px 4px rgba(10, 37, 64, 0.3); transition: transform 160ms ease-out, background-color 160ms ease-out; }
+  .ag-punkt:hover, .ag-punkt:focus-visible { z-index: 3; transform: scale(1.35); background: var(--primary); }
+  .ag-punkt:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+  .ag-punkt::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(4px); padding: 5px 9px; border-radius: 8px; background: var(--night); color: var(--white); font-size: .75rem; font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 140ms ease-out, transform 140ms ease-out; }
+  .ag-punkt:hover::after, .ag-punkt:focus-visible::after { opacity: 1; transform: translateX(-50%); }
+  .ag-punkt_aktuell { z-index: 2; width: 24px; height: 24px; margin-left: -12px; margin-top: -4px; border-width: 4px; background: var(--primary); box-shadow: 0 0 0 6px rgba(9, 95, 187, 0.18), 0 4px 10px rgba(9, 95, 187, 0.5); }
+  .ag-punkt_aktuell::after { opacity: 1; transform: translateX(-50%); background: var(--primary); bottom: calc(100% + 10px); }
+  .ag-punkt[data-rand="links"]::after { left: -8px; transform: translateY(4px); }
+  .ag-punkt[data-rand="rechts"]::after { left: auto; right: -8px; transform: translateY(4px); }
+  .ag-punkt[data-rand="links"]:hover::after, .ag-punkt[data-rand="links"]:focus-visible::after, .ag-punkt_aktuell[data-rand="links"]::after { transform: none; }
+  .ag-punkt[data-rand="rechts"]:hover::after, .ag-punkt[data-rand="rechts"]:focus-visible::after, .ag-punkt_aktuell[data-rand="rechts"]::after { transform: none; }
+  .ag-strip__achse { position: absolute; left: -12px; right: -12px; bottom: -2px; display: flex; justify-content: space-between; font-size: .75rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .ag-position__text { margin: 0; font-size: .9375rem; line-height: 1.6; }
+
+  /* Tarifstufen */
+  .ag-tarife { flex: 1; display: grid; align-content: center; gap: 22px; margin: 0; padding: 0; }
+  .ag-tarif { display: grid; grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr) 5.5rem; align-items: center; gap: 12px; }
+  .ag-tarif__name { display: grid; font-size: .9375rem; font-weight: 600; line-height: 1.25; }
+  .ag-tarif__name small { font-size: .75rem; font-weight: 400; color: var(--ink-soft); }
+  .ag-tarif__spur { display: block; height: 30px; border-radius: 8px; background: #eaf2f9; overflow: hidden; }
+  .ag-tarif__fuell { display: block; height: 100%; width: var(--w); border-radius: 8px; background: linear-gradient(90deg, #7aacdc, #095fbb); transform-origin: left; }
+  .ag-tarif__wert { text-align: right; font-size: .9375rem; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  /* Phasen: senkrechte Zeitleiste */
+  .ag-phasen { position: relative; display: grid; gap: 4px; margin: 4px 0 0; padding: 0; }
+  .ag-phasen::before { content: ""; position: absolute; left: 16px; top: 22px; bottom: 22px; width: 3px; border-radius: 2px; background: #dcebf6; }
+  .ag-phase { position: relative; }
+  .ag-phase__link { position: relative; display: flex; align-items: center; gap: 14px; padding: 5px 8px 5px 0; border-radius: 10px; text-decoration: none; color: var(--ink-soft); }
+  .ag-phase__punkt { position: relative; flex: none; display: grid; place-items: center; width: 34px; height: 34px; border: 2px solid #c3d9ec; border-radius: 50%; background: var(--white); font-size: .8125rem; font-weight: 700; color: var(--ink-soft); transition: transform 160ms ease-out; }
+  .ag-phase__name { font-size: .9375rem; line-height: 1.25; }
+  .ag-phase[data-aktiv="ja"] .ag-phase__punkt { border-color: var(--primary); background: linear-gradient(180deg, #3f92e8, #095fbb 60%, #064891); color: var(--white); box-shadow: 0 6px 14px -6px rgba(9, 95, 187, 0.7); }
+  .ag-phase[data-aktiv="ja"] .ag-phase__name { color: var(--ink); font-weight: 700; }
+  .ag-phase__link:hover .ag-phase__punkt { transform: scale(1.1); }
+  .ag-phase__link:hover .ag-phase__name { color: var(--primary); }
+  .ag-phase__link:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+  /* Vertrag */
+  .ag-vertrag { display: grid; gap: 8px; }
+  .ag-vertrag span { display: flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 14px; border-radius: 10px; background: #eef3f8; color: #8aa0b4; font-size: .875rem; font-weight: 600; line-height: 1.2; }
+  .ag-vertrag[data-zustand="ja"] [data-zeichen="ja"] { background: var(--ok-fill); color: var(--ok); }
+  .ag-vertrag[data-zustand="nein"] [data-zeichen="nein"] { background: var(--warn-fill); color: var(--warn); }
+  .ag-vertrag[data-zustand="offen"] [data-zeichen="offen"] { background: var(--secondary-active); color: var(--ink); }
+  .ag-vertrag__text { margin: 0; font-size: .875rem; line-height: 1.55; color: var(--ink); }
+
+  /* Zahlen */
+  .ag-zahlen { display: grid; gap: 14px; margin: 0; padding: 0; }
+  .ag-zahl { display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); grid-template-areas: "wert label" "spur spur"; align-items: baseline; gap: 4px 10px; }
+  .ag-zahl__wert { grid-area: wert; font-size: 1.75rem; line-height: 1; font-weight: 700; letter-spacing: -.03em; color: var(--primary); font-variant-numeric: tabular-nums; }
+  .ag-zahl__label { grid-area: label; font-size: .875rem; font-weight: 600; }
+  .ag-zahl__spur { grid-area: spur; display: block; height: 6px; border-radius: 3px; background: #e3eef7; overflow: hidden; }
+  .ag-zahl__fuell { display: block; height: 100%; width: var(--w); border-radius: 3px; background: linear-gradient(90deg, #7aacdc, #095fbb); transform-origin: left; }
+
+  /* Animation: scrollgesteuert, wo der Browser es kann. Sonst steht sofort der Endzustand da. */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .ag-kriterium__fuell, .ag-tarif__fuell, .ag-zahl__fuell { animation: ag-wachsen linear both; animation-timeline: view(); animation-range: entry 0% entry 90%; }
+      .ag-ring__fuell { animation: ag-ring linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+      @keyframes ag-wachsen { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+      @keyframes ag-ring { from { stroke-dasharray: 0 var(--umfang); } to { stroke-dasharray: var(--ziel) var(--umfang); } }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .ag-paar, .ag-drei { grid-template-columns: minmax(0, 1fr); }
+    .ag-kriterien { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 767px) {
+    .ag-karte { padding: 20px; border-radius: 14px; }
+    .ag-transparenz { grid-template-columns: minmax(0, 1fr); grid-template-areas: "ring" "text" "kriterien"; justify-items: center; }
+    .ag-transparenz__text, .ag-kriterien { width: 100%; justify-items: start; }
+    .ag-ring { width: 170px; height: 170px; }
+    .ag-ring__zahl { font-size: 2.75rem; }
+    .ag-tarif { grid-template-columns: minmax(0, 7rem) minmax(0, 1fr) 4.75rem; gap: 8px; }
+  }
+}
+
+@layer pages {
+  .produktkopf__transparenz { display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; padding: 4px 10px; border-radius: 999px; background: var(--mist); color: var(--ink-soft); font-size: .75rem; text-decoration: none; }
+  .produktkopf__transparenz strong { color: var(--ink); font-size: .8125rem; }
+  .produktkopf__transparenz:hover { background: var(--secondary-active); text-decoration: none; }
+}

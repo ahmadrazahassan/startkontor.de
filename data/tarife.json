@@ -1,0 +1,470 @@
+{
+  "_hinweis": "Tarifstufen für die Grafik im Softwareprofil. Jede Stufe stammt aus den Preiszeilen des Profils (preis.zeilen und preis.anker). Es wird der erste genannte Betrag je Stufe übernommen, ohne Aktionen. lib/analyse.test.ts prüft, dass jeder Betrag dort wörtlich vorkommt.",
+  "profile": {
+    "billomat": {
+      "einheit": "im Monat, bei monatlicher Zahlung",
+      "stufen": [
+        {
+          "name": "Professional",
+          "betrag": 29
+        },
+        {
+          "name": "Business",
+          "betrag": 39
+        },
+        {
+          "name": "Enterprise",
+          "betrag": 119
+        }
+      ]
+    },
+    "fastbill": {
+      "einheit": "im Monat, bei monatlicher Zahlung",
+      "stufen": [
+        {
+          "name": "Solo",
+          "betrag": 10
+        },
+        {
+          "name": "Plus",
+          "betrag": 15
+        },
+        {
+          "name": "Pro",
+          "betrag": 30
+        },
+        {
+          "name": "Premium",
+          "betrag": 59,
+          "zusatz": "ab"
+        }
+      ]
+    },
+    "lexware-office": {
+      "einheit": "im Monat",
+      "stufen": [
+        {
+          "name": "S",
+          "betrag": 7.9
+        },
+        {
+          "name": "M",
+          "betrag": 12.9
+        },
+        {
+          "name": "L",
+          "betrag": 21.9
+        },
+        {
+          "name": "XL",
+          "betrag": 32.9
+        }
+      ]
+    },
+    "sage-active": {
+      "einheit": "im Monat",
+      "stufen": [
+        {
+          "name": "Starter",
+          "betrag": 25,
+          "zusatz": "5 Nutzer"
+        },
+        {
+          "name": "Essentials",
+          "betrag": 49,
+          "zusatz": "10 Nutzer"
+        }
+      ]
+    },
+    "sevdesk": {
+      "einheit": "im Monat, bei 24 Monaten Laufzeit",
+      "stufen": [
+        {
+          "name": "Rechnung",
+          "betrag": 12.9
+        },
+        {
+          "name": "Buchhaltung",
+          "betrag": 25.9
+        },
+        {
+          "name": "Buchhaltung Pro",
+          "betrag": 34.9
+        }
+      ]
+    },
+    "sage-hr-payroll": {
+      "einheit": "im Monat für 5 Beschäftigte",
+      "stufen": [
+        {
+          "name": "Essentials",
+          "betrag": 40
+        },
+        {
+          "name": "Standard",
+          "betrag": 60
+        },
+        {
+          "name": "Premium",
+          "betrag": 80
+        }
+      ]
+    },
+    "sage-payroll": {
+      "einheit": "im Monat inklusive 5 Beschäftigter",
+      "stufen": [
+        {
+          "name": "Essentials",
+          "betrag": 20
+        },
+        {
+          "name": "Standard",
+          "betrag": 30
+        },
+        {
+          "name": "Premium",
+          "betrag": 40
+        }
+      ]
+    },
+    "centralstationcrm": {
+      "einheit": "im Monat",
+      "stufen": [
+        {
+          "name": "Starter",
+          "betrag": 0,
+          "zusatz": "3 Nutzer"
+        },
+        {
+          "name": "Team",
+          "betrag": 24,
+          "zusatz": "3 Nutzer"
+        },
+        {
+          "name": "Small Office",
+          "betrag": 75,
+          "zusatz": "10 Nutzer"
+        },
+        {
+          "name": "Business",
+          "betrag": 149,
+          "zusatz": "20 Nutzer"
+        },
+        {
+          "name": "Enterprise",
+          "betrag": 289,
+          "zusatz": "40 Nutzer"
+        }
+      ]
+    },
+    "hubspot-sales-hub": {
+      "einheit": "je Lizenz und Monat",
+      "stufen": [
+        {
+          "name": "Starter",
+          "betrag": 7,
+          "zusatz": "ab"
+        },
+        {
+          "name": "Professional",
+          "betrag": 90
+        },
+        {
+          "name": "Enterprise",
+          "betrag": 150
+        }
+      ]
+    },
+    "superoffice-crm": {
+      "einheit": "je Nutzer und Monat, bei jährlicher Zahlung",
+      "stufen": [
+        {
+          "name": "Starter",
+          "betrag": 45
+        },
+        {
+          "name": "Core",
+          "betrag": 65
+        },
+        {
+          "name": "Growth",
+          "betrag": 95
+        },
+        {
+          "name": "Plus",
+          "betrag": 130
+        },
+        {
+          "name": "Super",
+          "betrag": 160
+        }
+      ]
+    },
+    "sage-100": {
+      "einheit": "je Nutzer und Monat, bei jährlicher Rechnungsstellung",
+      "stufen": [
+        {
+          "name": "Warenwirtschaft",
+          "betrag": 56,
+          "zusatz": "ab"
+        },
+        {
+          "name": "Rechnungswesen",
+          "betrag": 58,
+          "zusatz": "ab"
+        },
+        {
+          "name": "Produktion",
+          "betrag": 90,
+          "zusatz": "ab"
+        }
+      ]
+    },
+    "sage-50-handwerk": {
+      "einheit": "im Monat, bei jährlicher Rechnungsstellung",
+      "stufen": [
+        {
+          "name": "Essential",
+          "betrag": 19.9,
+          "zusatz": "1 Benutzer"
+        },
+        {
+          "name": "Enterprise",
+          "betrag": 59,
+          "zusatz": "unbegrenzte Benutzer"
+        }
+      ]
+    },
+    "microsoft-dynamics-365-business-central": {
+      "einheit": "je Nutzer und Monat, bei jährlicher Abrechnung",
+      "stufen": [
+        {
+          "name": "Essentials",
+          "betrag": 69.3
+        },
+        {
+          "name": "Premium",
+          "betrag": 95.3
+        },
+        {
+          "name": "Team Members",
+          "betrag": 6.9
+        }
+      ]
+    },
+    "easybill": {
+      "einheit": "im Monat, bei monatlicher Zahlung",
+      "stufen": [
+        {
+          "name": "Free",
+          "betrag": 0
+        },
+        {
+          "name": "Starter",
+          "betrag": 12
+        },
+        {
+          "name": "Professional",
+          "betrag": 39,
+          "zusatz": "ab"
+        },
+        {
+          "name": "Premium",
+          "betrag": 45,
+          "zusatz": "ab"
+        }
+      ]
+    },
+    "orgamax-buchhaltung": {
+      "einheit": "im Monat, regulär",
+      "stufen": [
+        {
+          "name": "S",
+          "betrag": 25.9
+        },
+        {
+          "name": "M",
+          "betrag": 35.9
+        },
+        {
+          "name": "L",
+          "betrag": 55.9
+        }
+      ]
+    },
+    "papierkram": {
+      "einheit": "im Monat",
+      "stufen": [
+        {
+          "name": "Free",
+          "betrag": 0
+        },
+        {
+          "name": "S",
+          "betrag": 12.9,
+          "zusatz": "ab"
+        },
+        {
+          "name": "M",
+          "betrag": 24.9,
+          "zusatz": "ab"
+        },
+        {
+          "name": "L",
+          "betrag": 49.9,
+          "zusatz": "ab"
+        }
+      ]
+    },
+    "accountable": {
+      "einheit": "im Monat, bei monatlicher Zahlung",
+      "stufen": [
+        {
+          "name": "Rechnungen Free",
+          "betrag": 0
+        },
+        {
+          "name": "Rechnungen Plus",
+          "betrag": 12.4
+        },
+        {
+          "name": "Buchhaltung",
+          "betrag": 24.9
+        },
+        {
+          "name": "Steuern",
+          "betrag": 37.4
+        }
+      ]
+    },
+    "clockodo": {
+      "einheit": "je Nutzer und Monat",
+      "stufen": [
+        {
+          "name": "Basic",
+          "betrag": 4
+        },
+        {
+          "name": "Pro",
+          "betrag": 10
+        },
+        {
+          "name": "Pro Plus",
+          "betrag": 12
+        }
+      ]
+    },
+    "hrlab": {
+      "einheit": "je Nutzer und Monat, ab 30 Nutzern",
+      "stufen": [
+        {
+          "name": "Core",
+          "betrag": 6
+        },
+        {
+          "name": "Core Premium",
+          "betrag": 7
+        }
+      ]
+    },
+    "absence-io": {
+      "einheit": "je Nutzer und Monat",
+      "stufen": [
+        {
+          "name": "Starter",
+          "betrag": 2.99
+        },
+        {
+          "name": "Pro",
+          "betrag": 4.99
+        },
+        {
+          "name": "Complete",
+          "betrag": 7.99
+        }
+      ]
+    },
+    "cobra-crm": {
+      "einheit": "je Nutzer und Monat",
+      "stufen": [
+        {
+          "name": "Cloud Essential",
+          "betrag": 36,
+          "zusatz": "ab"
+        },
+        {
+          "name": "Cloud Grow",
+          "betrag": 54,
+          "zusatz": "ab"
+        },
+        {
+          "name": "Cloud Max",
+          "betrag": 79,
+          "zusatz": "ab"
+        }
+      ]
+    },
+    "salesforce-sales-cloud": {
+      "einheit": "je Nutzer und Monat",
+      "stufen": [
+        {
+          "name": "Starter Suite",
+          "betrag": 25
+        },
+        {
+          "name": "Pro Suite",
+          "betrag": 100
+        },
+        {
+          "name": "Core",
+          "betrag": 195
+        }
+      ]
+    },
+    "jtl-wawi": {
+      "einheit": "im Monat",
+      "stufen": [
+        {
+          "name": "JTL Start",
+          "betrag": 0,
+          "zusatz": "ab"
+        },
+        {
+          "name": "JTL Advanced",
+          "betrag": 119,
+          "zusatz": "ab"
+        },
+        {
+          "name": "JTL Pro",
+          "betrag": 369,
+          "zusatz": "ab"
+        }
+      ]
+    },
+    "plentyone": {
+      "einheit": "im Monat",
+      "stufen": [
+        {
+          "name": "Lite",
+          "betrag": 59,
+          "zusatz": "ab"
+        },
+        {
+          "name": "Lite+",
+          "betrag": 99,
+          "zusatz": "ab"
+        },
+        {
+          "name": "Expand",
+          "betrag": 149,
+          "zusatz": "ab"
+        },
+        {
+          "name": "Scale",
+          "betrag": 229,
+          "zusatz": "ab"
+        }
+      ]
+    }
+  }
+}

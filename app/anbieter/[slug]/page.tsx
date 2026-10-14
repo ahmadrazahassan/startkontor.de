@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Akkordeon } from "@/components/akkordeon";
-import { Bewertungsanzeige, Kriterienbalken } from "@/components/bewertung";
+import { Bewertungsanzeige, Kriterienbalken, Sterne } from "@/components/bewertung";
 import { Brotkrumen } from "@/components/brotkrumen";
 import { Chip, StationenMarken } from "@/components/chips";
 import { H1 } from "@/components/h1";
@@ -12,15 +12,19 @@ import { JsonLd } from "@/components/json-ld";
 import { KnopfLink } from "@/components/knopf";
 import { Produktnavigation } from "@/components/produkt-navigation";
 import type { Produktpunkt } from "@/components/produkt-navigation";
+import { SoftwareGrafiken } from "@/components/software-grafiken";
 import { SoftwareKarte } from "@/components/software-karte";
 import { SoftwareMedienGalerie } from "@/components/software-medien";
 import { AuswahlhilfeKarte } from "@/components/auswahlhilfe-karte";
 import { Werbebanner } from "@/components/werbebanner";
 import { wlStil } from "@/components/wort-stil";
+import { transparenzwert } from "@/lib/analyse";
+import { preisPositionFuer, tarifeFuer } from "@/lib/analyse-daten";
 import { holeLogo } from "@/lib/bilder";
 import {
   anbieter,
   anbieterFuerBaustein,
+  bausteine,
   bewertungen,
   getBaustein,
   getStation,
@@ -30,6 +34,7 @@ import {
   partner,
   startseite,
   softwareReviews,
+  stationen as alleStationenListe,
   ui,
 } from "@/lib/daten";
 import { formatiereIso } from "@/lib/datum";
@@ -102,6 +107,8 @@ export default async function Review({ params }: Props) {
   const verwandteLeitfaeden = leitfaedenFuerAnbieter(a.slug);
   const alternativen = anbieterFuerBaustein(a.baustein).filter((x) => x.slug !== a.slug);
   const stationen = a.stationen.map(getStation);
+  const transparenz = transparenzwert({ ...a, herstellerprofil: Boolean(profil), analyse: Boolean(analyse) });
+  const kategorienNamen = Object.fromEntries(bausteine.map((b) => [b.slug, b.kurzname]));
   const f = (vorlage: string) => fuelle(vorlage, { name: a.name, kategorie: baustein.name });
 
   const linkKopf = linkFuer(a, `profil-${a.slug}-kopf`, partner);
@@ -149,6 +156,7 @@ export default async function Review({ params }: Props) {
 
   const punkte: Produktpunkt[] = [
     { id: "ueberblick", titel: r.tabs.ueberblick },
+    { id: "grafiken", titel: "Grafiken" },
     ...(medien ? [{ id: "einblicke", titel: medien.video ? "Bilder & Video" : "Bilder" }] : []),
     ...(analyse ? [{ id: "analyse", titel: "Analyse" }] : []),
     { id: "funktionen", titel: r.tabs.funktionen },
@@ -200,6 +208,11 @@ export default async function Review({ params }: Props) {
               <p className="produktkopf__preislabel">{r.kopf.preis}</p>
               <p className="produktkopf__preis">{nbsp(preisKurz)}</p>
               {bewertung ? <Bewertungsanzeige wert={bewertung.gesamt} von={r.von} groesse="klein" /> : null}
+              <a href="#grafiken" className="produktkopf__transparenz" aria-label={`Transparenzwert ${transparenz.gesamt.toLocaleString("de-DE", { minimumFractionDigits: 1 })} von 5, zu den Grafiken`}>
+                <span>Transparenzwert</span>
+                <Sterne wert={transparenz.gesamt} groesse={13} />
+                <strong>{transparenz.gesamt.toLocaleString("de-DE", { minimumFractionDigits: 1 })}</strong>
+              </a>
             </div>
           </div>
           {linkKopf.werbung ? <p className="produktkopf__affiliatehinweis">Affiliatehinweis: Wenn Sie über einen gekennzeichneten Link ein Angebot nutzen, können wir eine Provision erhalten. <Link href="/redaktion/werbung">Mehr zur Finanzierung</Link></p> : null}
@@ -244,6 +257,17 @@ export default async function Review({ params }: Props) {
                 </p>
                 <p className="einschaetzung__hinweis">{ui.labels.keinEigenerTest}</p>
               </div>
+            </Block>
+
+            <Block id="grafiken" titel={`${a.name} in Grafiken`} text="Aus den belegten Angaben dieses Profils berechnet. Es ist kein eigener Test und keine Qualitätsnote.">
+              <SoftwareGrafiken
+                anbieter={a}
+                transparenz={transparenz}
+                tarife={tarifeFuer(a.slug)}
+                position={preisPositionFuer(a.slug)}
+                kategorien={kategorienNamen}
+                alleStationen={alleStationenListe.map((st) => ({ slug: st.slug, nummer: st.nummer, name: st.name }))}
+              />
             </Block>
 
             {medien ? <Block id="einblicke" titel={medien.video ? "Bilder und Produktvideo" : "Einblicke in die Software"} text="Sehen Sie sich die Benutzeroberfläche und ausgewählte Arbeitsabläufe an."><SoftwareMedienGalerie name={a.name} medien={medien} /></Block> : null}

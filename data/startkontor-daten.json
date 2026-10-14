@@ -1373,7 +1373,7 @@
           "nummer": "01",
           "titel": "Welche Anbieter aufgenommen werden",
           "absaetze": [
-            "Aufgenommen werden Programme, die in Deutschland angeboten werden, für kleine und mittlere Unternehmen infrage kommen und sich über öffentliche Quellen belegen lassen. Wir sammeln dreißig Anbieter in fünf Bausteinen. Das ist ein Startbestand, keine Marktübersicht.",
+            "Aufgenommen werden Programme, die in Deutschland angeboten werden, für kleine und mittlere Unternehmen infrage kommen und sich über öffentliche Quellen belegen lassen. Wir sammeln Anbieter in fünf Bausteinen. Das ist ein Startbestand, keine Marktübersicht.",
             "Die Aufnahme sagt nichts über Qualität. Auch Programme ohne veröffentlichten Preis führen wir, sofern ihre Funktionen bei der Auswahl eine Rolle spielen."
           ]
         },
@@ -1426,6 +1426,15 @@
           "titel": "Wie Fehler korrigiert werden",
           "absaetze": [
             "Hinweise auf Fehler prüfen wir an der Primärquelle. Stimmt die Angabe nicht, korrigieren wir sie und vermerken Datum und Grund der Änderung auf der Seite."
+          ]
+        },
+        {
+          "nummer": "09",
+          "titel": "Wie der Transparenzwert entsteht",
+          "absaetze": [
+            "Jedes Softwareprofil zeigt einen Transparenzwert von 1,0 bis 5,0. Er misst, wie gut Preis, Vertrag und Herkunft eines Programms öffentlich belegt sind. Er bewertet nicht die Qualität des Programms und ist keine Nutzerbewertung. Ein niedriger Wert bedeutet zum Beispiel, dass der Hersteller keinen Preis veröffentlicht, nicht, dass die Software schlecht ist.",
+            "Sechs Kriterien fließen zu gleichen Teilen ein. Preisangabe: veröffentlicht 5, auf Anfrage 2, nicht verifiziert 1. Preisstufen: drei oder mehr Zeilen mit Betrag 5, zwei Zeilen 4, nur ein Einstiegspreis 3. Vertragsangaben: Kündbarkeit ausdrücklich belegt 5, nicht belegt, aber ein Vertragstext vorhanden 3. Grenzen: drei oder mehr benannt 5, zwei 4, eine 3. Quellenlage: drei oder mehr Quellen 5, zwei 4, eine 3. Herstellerangaben: Unternehmen und Standort belegt 5, nur der Marktbezug belegt 3.",
+            "Der Gesamtwert ist der Mittelwert der sechs Kriterien, auf eine Nachkommastelle gerundet. Die Berechnung folgt für alle Programme denselben Regeln. Provisionen und Partnerschaften gehen nicht ein. Die Grafik zum Einstiegspreis ordnet den ersten bezahlten Tarif in eine Gruppe vergleichbarer Programme ein. Der Rang gilt nur für den Preis und sagt nichts über die Qualität."
           ]
         }
       ],
