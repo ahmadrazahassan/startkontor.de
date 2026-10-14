@@ -8,35 +8,63 @@ import { verzeichnisZahlen, zahlenQuelle, type Preiszeile } from "@/lib/zahlen";
 const z = zahlenQuelle.markt;
 const nummer = (n: number) => n.toLocaleString("de-DE");
 
-function Zahl({ wert, text, quelle, url }: { wert: string; text: string; quelle?: string; url?: string }) {
+/** Versetzte Karte: Zahl oben, Punkt und Beschriftung unten. */
+function Kachel({ wert, label, text, quelle, url }: { wert: string; label: string; text?: string; quelle?: string; url?: string }) {
   return (
-    <li className="gross">
-      <p className="gross__wert">{wert}</p>
-      <div className="gross__text">
-        <p>{text}</p>
-        {quelle && url ? <a href={url} target="_blank" rel="noopener noreferrer">{quelle}</a> : null}
+    <li className="kz-kachel">
+      <p className="kz-kachel__text">{text}</p>
+      <div className="kz-kachel__karte">
+        <p className="kz-zahl">{wert}</p>
+        <p className="kz-label"><span className="kz-punkt" aria-hidden="true" />{label}</p>
+      </div>
+      {quelle && url ? <a className="kz-quelle" href={url} target="_blank" rel="noopener noreferrer">{quelle}</a> : null}
+    </li>
+  );
+}
+
+/** Vollbreite Karte: große Zahl links, Beschriftung und optional Balken rechts. */
+function Zeile({ wert, label, anteil }: { wert: string; label: string; anteil?: number }) {
+  return (
+    <li className="kz-zeile">
+      <p className="kz-zahl kz-zahl_fett">{wert}</p>
+      <div className="kz-zeile__seite">
+        <p className="kz-label"><span className="kz-punkt" aria-hidden="true" />{label}</p>
+        {anteil !== undefined ? <span className="kz-spur" aria-hidden="true"><span className="kz-spur__fuellung" style={{ width: `${anteil}%` }} /></span> : null}
       </div>
     </li>
   );
 }
 
-function Rangliste({ titel, untertitel, zeilen, max, einheit, median }: { titel: string; untertitel: string; zeilen: Preiszeile[]; max: number; einheit: string; median: string }) {
+function Kopf({ id, label, titel, text, link }: { id: string; label: string; titel: string; text: string; link?: { href: string; text: string } }) {
   return (
-    <figure className="rang">
-      <figcaption className="rang__kopf">
+    <header className="kz-kopf">
+      <p className="kz-eyebrow"><span className="kz-punkt" aria-hidden="true" />{label}</p>
+      <h2 id={id} className="kz-titel">{titel}</h2>
+      <div className="kz-kopf__unten">
+        <p className="kz-lead">{text}</p>
+        {link ? <Link href={link.href} className="textlink">{link.text}<Icon name="arrowRight" groesse={18} /></Link> : null}
+      </div>
+    </header>
+  );
+}
+
+function Rangliste({ titel, untertitel, zeilen, max, median, einheit }: { titel: string; untertitel: string; zeilen: Preiszeile[]; max: number; median: string; einheit: string }) {
+  return (
+    <figure className="kz-rang">
+      <figcaption className="kz-rang__kopf">
         <strong>{titel}</strong>
         <span>{untertitel}</span>
       </figcaption>
-      <ol className="rang__liste liste_ohne">
+      <ol className="kz-rang__liste liste_ohne">
         {zeilen.map((r) => (
-          <li key={r.slug} className="rang__zeile">
-            <Link href={r.href} className="rang__name" title={r.paket}>{r.name}</Link>
-            <span className="rang__spur" aria-hidden="true"><span className="rang__fuellung" style={{ width: `${Math.max(2, (r.betrag / max) * 100)}%` }} /></span>
-            <span className="rang__wert">{r.text}</span>
+          <li key={r.slug} className="kz-rang__zeile">
+            <Link href={r.href} className="kz-rang__name" title={r.paket}>{r.name}</Link>
+            <span className="kz-rang__spur" aria-hidden="true"><span style={{ width: `${Math.max(2, (r.betrag / max) * 100)}%` }} /></span>
+            <span className="kz-rang__wert">{r.text}</span>
           </li>
         ))}
       </ol>
-      <p className="rang__fuss">Mittlerer Wert (Median): <strong>{median}</strong> {einheit}. Pakete und Nutzerzahlen unterscheiden sich, der Name zeigt beim Darüberfahren das Paket.</p>
+      <p className="kz-rang__fuss">Median: <strong>{median}</strong> {einheit}. Das Paket sehen Sie beim Darüberfahren mit der Maus.</p>
     </figure>
   );
 }
@@ -51,116 +79,80 @@ export function ZahlenBereich() {
   const hoechster = Math.max(...v.kategorien.map((k) => k.anteil));
 
   return (
-    <>
-      {/* Markt: große Zahlen und Säulen mit Trennlinien */}
-      <section className="band band_nebel zahlenband" aria-labelledby="zahlen-titel">
-        <div className="huelle">
-          <div className="zahlenkopf">
-            <p className="eyebrow">Zahlen und Daten</p>
-            <h2 id="zahlen-titel">Kleine Unternehmen prägen den Markt, Cloudsoftware setzt sich durch</h2>
-            <p className="lead">Amtliche Zahlen zeigen, für wen Geschäftssoftware gebaut wird und wie verbreitet sie bereits ist.</p>
-          </div>
-
-          <ul className="grossraster liste_ohne">
-            <Zahl {...z.kleinUndMittel} />
-            <Zahl {...z.beschaeftigte} />
-            <Zahl {...z.cloud} />
-            <Zahl wert={String(v.gesamt)} text={`Programme in ${v.kategorienAnzahl} Kategorien mit eigenem Softwareprofil, von Rechnung bis Warenwirtschaft.`} />
+    <section className="band band_weiss kz" aria-label="Zahlen und Daten">
+      <div className="huelle kz__huelle">
+        {/* 1. Markt */}
+        <div className="kz-block" aria-labelledby="zahlen-titel">
+          <Kopf id="zahlen-titel" label="Zahlen und Daten" titel="Kleine Unternehmen prägen den Markt, Cloudsoftware setzt sich durch" text="Amtliche Zahlen zeigen, für wen Geschäftssoftware gebaut wird und wie verbreitet sie bereits ist." />
+          <ul className="kz-versetzt kz-versetzt_drei liste_ohne">
+            <Kachel {...z.kleinUndMittel} wert={z.kleinUndMittel.wert} label="Anteil kleiner und mittlerer Unternehmen" text="Rund 3,2 Millionen Unternehmen in ausgewählten Wirtschaftsbereichen, ohne Bau." quelle="Statistisches Bundesamt, 2024" />
+            <Kachel {...z.beschaeftigte} label="Beschäftigte in kleinen und mittleren Unternehmen" text="Mehr als die Hälfte aller Beschäftigten arbeitet nicht in Großunternehmen." quelle="Statistisches Bundesamt, 2024" />
+            <Kachel {...z.cloud} label="Unternehmen mit bezahlten Cloud Diensten" text="Unternehmen mit mindestens 10 Beschäftigten, Stand 2025." quelle="Statistisches Bundesamt, 2025" />
           </ul>
 
-          <figure className="riesen">
-            <p className="riesen__titel">Nach Unternehmensgröße: {z.cloudNachGroesse.untertitel}</p>
-            <ul className="riesen__spalten liste_ohne">
+          <div className="kz-unterblock">
+            <h3 className="kz-unterblock__titel">Cloud Nutzung nach Unternehmensgröße</h3>
+            <ul className="kz-zeilen liste_ohne">
               {z.cloudNachGroesse.werte.map((w) => (
-                <li key={w.label} className="riesen__spalte">
-                  <span className="riesen__label">{w.label}<small>{w.klasse}</small></span>
-                  <span className="riesen__flaeche">
-                    <span className="riesen__wert">{w.prozent}%</span>
-                    <span className="riesen__fuellung" style={{ height: `${w.prozent}%` }} />
-                  </span>
+                <Zeile key={w.label} wert={`${w.prozent} %`} label={`${w.label}, ${w.klasse}`} anteil={w.prozent} />
+              ))}
+            </ul>
+            <p className="kz-fuss">Je kleiner das Unternehmen, desto seltener wird bezahlte Cloudsoftware genutzt. Der Preisvergleich lohnt sich daher gerade für Einsteiger. Quelle: <a href={z.cloudNachGroesse.url} target="_blank" rel="noopener noreferrer">{z.cloudNachGroesse.quelle}</a>.</p>
+          </div>
+        </div>
+
+        {/* 2. Verzeichnis */}
+        <div className="kz-block" aria-labelledby="verzeichnis-zahlen-titel">
+          <Kopf id="verzeichnis-zahlen-titel" label="Unser Verzeichnis in Zahlen" titel={`${v.preis.anteilVeroeffentlicht}\u00a0Prozent der Programme nennen einen Preis`} text={`Alle Werte werden direkt aus den ${v.gesamt} Softwareprofilen berechnet. Stand ist das Prüfdatum im jeweiligen Profil.`} link={{ href: "/anbieter", text: "Alle Programme" }} />
+
+          <div className="kz-unterblock kz-unterblock_ohne">
+            <h3 className="kz-unterblock__titel">Preistransparenz nach Kategorie</h3>
+            <ul className="kz-hoehen liste_ohne">
+              {v.kategorien.map((k, i) => (
+                <li key={k.slug} className={`kz-hoehe${k.anteil === hoechster ? " kz-hoehe_spitze" : ""}${i % 2 ? " kz-hoehe_dunkel" : ""}`} style={{ "--a": k.anteil } as React.CSSProperties}>
+                  <p className="kz-zahl">{k.anteil} %</p>
+                  <p className="kz-label"><span className="kz-punkt" aria-hidden="true" />{k.label}<small>{k.mitPreis} von {k.anzahl} Programmen</small></p>
                 </li>
               ))}
             </ul>
-            <figcaption className="riesen__quelle">
-              Quelle: <a href={z.cloudNachGroesse.url} target="_blank" rel="noopener noreferrer">{z.cloudNachGroesse.quelle}</a>. Je kleiner das Unternehmen, desto seltener Cloudsoftware. Der Preisvergleich lohnt sich daher gerade für Einsteiger.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      {/* Verzeichnis: Stufendiagramm mit Skala, Stapelbalken mit Legende */}
-      <section className="band band_weiss zahlenband" aria-labelledby="verzeichnis-zahlen-titel">
-        <div className="huelle">
-          <div className="portalabschnittkopf">
-            <div>
-              <p className="eyebrow">Unser Verzeichnis in Zahlen</p>
-              <h2 id="verzeichnis-zahlen-titel">{v.preis.anteilVeroeffentlicht} Prozent der Programme nennen einen Preis</h2>
-              <p>Die Werte werden direkt aus den {v.gesamt} Softwareprofilen berechnet. Stand ist das Prüfdatum im jeweiligen Profil.</p>
-            </div>
-            <Link href="/anbieter" className="textlink">Alle Programme<Icon name="arrowRight" groesse={18} /></Link>
+            <p className="kz-fuss">Anteil der Programme mit veröffentlichtem Preis laut deutscher Herstellerseite.</p>
           </div>
 
-          <div className="diagrammpaar">
-            <figure className="stufen">
-              <figcaption className="stufen__kopf"><strong>Preistransparenz nach Kategorie</strong><span>Anteil der Programme mit veröffentlichtem Preis</span></figcaption>
-              <div className="stufen__feld">
-                <ul className="stufen__spalten liste_ohne">
-                  {v.kategorien.map((k) => (
-                    <li key={k.slug} className={`stufe${k.anteil === hoechster ? " stufe_spitze" : ""}`} style={{ height: `${Math.max(k.anteil, 4)}%` }}>
-                      <span className="stufe__wert">{k.anteil}%</span>
-                      <span className="stufe__zaehler">{k.mitPreis} von {k.anzahl}</span>
-                      <span className="stufe__label">{k.label}</span>
-                    </li>
-                  ))}
-                </ul>
-                <ol className="stufen__skala liste_ohne" aria-hidden="true"><li>100</li><li>75</li><li>50</li><li>25</li><li>0</li></ol>
-              </div>
-            </figure>
-
-            <figure className="stapelblock">
-              <figcaption className="stufen__kopf"><strong>Preisangaben im Verzeichnis</strong><span>Laut deutscher Herstellerseite, {v.gesamt} Programme</span></figcaption>
-              <ul className="stapelzahlen liste_ohne">
-                {teile.map((t) => <li key={t.k} style={{ flexGrow: t.n }}>{t.n}</li>)}
-              </ul>
-              <div className="stapel" role="img" aria-label={teile.map((t) => `${t.label}: ${t.n} von ${v.gesamt}`).join(", ")}>
-                {teile.map((t) => <span key={t.k} className={`stapel__teil stapel__teil_${t.k}`} style={{ flexGrow: t.n }} />)}
-              </div>
-              <ul className="legende liste_ohne">
-                {teile.map((t) => <li key={t.k}><span className={`legende__punkt stapel__teil_${t.k}`} aria-hidden="true" />{t.label} ({t.n})</li>)}
-              </ul>
-              <p className="stapelblock__fuss">Monatlich kündbar laut Hersteller: {v.kuendbar.ja} Programme, ausdrücklich nicht: {v.kuendbar.nein}. Bei {v.kuendbar.offen} Programmen ist die Frist nicht belegt und bleibt im Profil offen. Kostenlosen Einstieg oder eine kostenlose Edition bieten {v.gratis.length} Programme: {v.gratis.join(", ")}.</p>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      {/* Einstiegspreise aller Hersteller */}
-      <section className="band band_nebel zahlenband" aria-labelledby="preise-zahlen-titel">
-        <div className="huelle">
-          <div className="portalabschnittkopf">
-            <div>
-              <p className="eyebrow">Einstiegspreise im Vergleich</p>
-              <h2 id="preise-zahlen-titel">Was der Einstieg kostet: {v.pauschal.zeilen.length + v.jeNutzer.zeilen.length} Programme im Preisvergleich</h2>
-              <p>Pauschalpreise und Preise je Nutzer stehen getrennt, jeweils vom niedrigsten zum höchsten Betrag. Die Reihenfolge ist keine Qualitätswertung. Preise sind Herstellerangaben, Aktionen sind nicht eingerechnet.</p>
-            </div>
-            <Link href="/anbieter?preis=veroeffentlicht" className="textlink">Programme mit Preis<Icon name="arrowRight" groesse={18} /></Link>
-          </div>
-
-          <ul className="grossraster grossraster_drei liste_ohne">
-            <Zahl wert={v.pauschal.medianText.replace(" Euro", "")} text={`Euro im Monat: mittlerer Einstieg bei Programmen mit Pauschalpreis (${v.pauschal.zeilen.length} Programme).`} />
-            <Zahl wert={v.jeNutzer.medianText.replace(" Euro", "")} text={`Euro je Nutzer und Monat: mittlerer Einstieg bei Programmen mit Preis je Nutzer (${v.jeNutzer.zeilen.length} Programme).`} />
-            <Zahl wert={String(v.gratis.length)} text="Programme mit kostenlosem Einstieg oder kostenloser Edition." />
+          <ul className="kz-zeilen liste_ohne">
+            <Zeile wert={String(v.gesamt)} label={`Programme in ${v.kategorienAnzahl} Kategorien`} />
+            <Zeile wert={String(v.kuendbar.ja)} label="Programme laut Hersteller monatlich kündbar" />
+            <Zeile wert={String(v.gratis.length)} label="Programme mit kostenlosem Einstieg oder Edition" />
           </ul>
 
-          <div className="diagrammpaar">
-            <Rangliste titel="Pauschalpreis je Monat" untertitel="Erstes bezahltes Paket, Finanzen, Lohn und Betrieb" zeilen={v.pauschal.zeilen} max={v.pauschal.max} einheit="Euro im Monat" median={v.pauschal.medianText} />
-            <Rangliste titel="Preis je Nutzer und Monat" untertitel="Erstes bezahltes Paket, Personal, Vertrieb und Betrieb" zeilen={v.jeNutzer.zeilen} max={v.jeNutzer.max} einheit="je Nutzer und Monat" median={v.jeNutzer.medianText} />
+          <div className="kz-unterblock kz-unterblock_ohne">
+            <h3 className="kz-unterblock__titel">Preisangaben im Verzeichnis</h3>
+            <div className="kz-stapel" role="img" aria-label={teile.map((t) => `${t.label}: ${t.n} von ${v.gesamt}`).join(", ")}>
+              {teile.map((t) => (
+                <span key={t.k} className={`kz-stapel__teil kz-stapel__teil_${t.k}`} style={{ flexGrow: t.n }}><b>{t.n}</b><i>{t.label}</i></span>
+              ))}
+            </div>
+            <p className="kz-fuss">Monatlich kündbar laut Hersteller: {v.kuendbar.ja}, ausdrücklich nicht: {v.kuendbar.nein}, bei {v.kuendbar.offen} Programmen ist die Frist nicht belegt und bleibt im Profil offen. Kostenlosen Einstieg bieten {v.gratis.join(", ")}.</p>
           </div>
-          <p className="zahlenhinweis">
+        </div>
+
+        {/* 3. Einstiegspreise */}
+        <div className="kz-block" aria-labelledby="preise-zahlen-titel">
+          <Kopf id="preise-zahlen-titel" label="Einstiegspreise im Vergleich" titel={`Was der Einstieg kostet: ${v.pauschal.zeilen.length + v.jeNutzer.zeilen.length}\u00a0Programme im Preisvergleich`} text="Pauschalpreise und Preise je Nutzer stehen getrennt, jeweils vom niedrigsten zum höchsten Betrag. Die Reihenfolge ist keine Qualitätswertung. Preise sind Herstellerangaben, Aktionen sind nicht eingerechnet." link={{ href: "/anbieter?preis=veroeffentlicht", text: "Programme mit Preis" }} />
+
+          <ul className="kz-zeilen liste_ohne">
+            <Zeile wert={v.pauschal.medianText.replace(" Euro", " €")} label={`Mittlerer Einstieg im Monat, ${v.pauschal.zeilen.length} Programme mit Pauschalpreis`} />
+            <Zeile wert={v.jeNutzer.medianText.replace(" Euro", " €")} label={`Mittlerer Einstieg je Nutzer und Monat, ${v.jeNutzer.zeilen.length} Programme`} />
+          </ul>
+
+          <div className="kz-raenge">
+            <Rangliste titel="Pauschalpreis je Monat" untertitel="Erstes bezahltes Paket, Finanzen, Lohn und Betrieb" zeilen={v.pauschal.zeilen} max={v.pauschal.max} median={v.pauschal.medianText} einheit="im Monat" />
+            <Rangliste titel="Preis je Nutzer und Monat" untertitel="Erstes bezahltes Paket, Personal, Vertrieb und Betrieb" zeilen={v.jeNutzer.zeilen} max={v.jeNutzer.max} median={v.jeNutzer.medianText} einheit="je Nutzer und Monat" />
+          </div>
+          <p className="kz-fuss kz-fuss_breit">
             Außerhalb dieser Skala liegen {v.darueber.map((r) => `${r.name} (${r.text} im Monat, ${r.paket})`).join(" und ")}. {nummer(v.gesamt - v.pauschal.zeilen.length - v.jeNutzer.zeilen.length - v.darueber.length)} weitere Programme erscheinen hier nicht als Rangliste, weil der Hersteller keinen Preis nennt, Preise nur auf Anfrage vergibt oder ihn nur im kostenlosen Tarif nennt. Maßgeblich sind immer die aktuellen Konditionen beim Hersteller.
           </p>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
