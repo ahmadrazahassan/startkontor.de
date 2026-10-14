@@ -16,6 +16,7 @@ import { KnopfLink } from "@/components/knopf";
 import { NewsletterBlock } from "@/components/newsletter-block";
 import { SoftwareKarte } from "@/components/software-karte";
 import { Strecke } from "@/components/strecke";
+import { TarifExplorerBereich } from "@/components/tarif-explorer-bereich";
 import { ZahlenBereich } from "@/components/zahlen-bereich";
 import {
   anbieterFuerBaustein,
@@ -200,6 +201,7 @@ export default function Startseite() {
 
       {/* Kennzahlen: Markt, Verzeichnis, Sage */}
       <ZahlenBereich />
+      <TarifExplorerBereich />
 
       {/* 3. Programme nach Kategorie */}
       <section id="kategorien" className="band kategorienbereich kat-bereich" aria-labelledby="kategorien-titel">

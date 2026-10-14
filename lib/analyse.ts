@@ -86,7 +86,7 @@ export function transparenzwert(e: TransparenzEingabe): Transparenz {
   return { gesamt, einordnung, kriterien };
 }
 
-export type Tarifstufe = { name: string; betrag: number; zusatz?: string };
+export type Tarifstufe = { name: string; betrag: number; jaehrlich?: number; ab?: boolean; zusatz?: string; merkmale?: string[] };
 export type Tarife = { einheit: string; stufen: Tarifstufe[] };
 
 /** Deutsche Schreibweise eines Betrags: 7,90 oder 29 oder 1.390. */
@@ -152,4 +152,22 @@ export function profilzahlen(a: Pick<Anbieter, "funktionen" | "grenzen" | "frage
   ];
   const maximum = Math.max(...wert.map((w) => w.wert), 1);
   return wert.map((w) => ({ ...w, maximum }));
+}
+
+/** Teilt "je Nutzer und Monat, bei jährlicher Zahlung" in die Einheit und den Zusatz. */
+export function einheitTeile(einheit: string): { einheit: string; zusatz: string } {
+  const i = einheit.indexOf(", ");
+  return i === -1 ? { einheit, zusatz: "" } : { einheit: einheit.slice(0, i), zusatz: einheit.slice(i + 2) };
+}
+
+/** Ersparnis bei jährlicher Zahlung in Prozent, gerundet. Null, wenn der Hersteller keinen jährlichen Betrag nennt. */
+export function ersparnisProzent(stufe: Tarifstufe): number | null {
+  if (stufe.jaehrlich === undefined || stufe.betrag <= 0 || stufe.jaehrlich >= stufe.betrag) return null;
+  return Math.round(((stufe.betrag - stufe.jaehrlich) / stufe.betrag) * 100);
+}
+
+/** Die Stufe, auf die sich der Einstiegspreis des Profils bezieht: die im Preisanker genannte, sonst die erste bezahlte. */
+export function einstiegsstufe(stufen: Tarifstufe[], anker: string | undefined): Tarifstufe {
+  const genannt = anker ? stufen.find((s) => anker.includes(s.name)) : undefined;
+  return genannt ?? stufen.find((s) => s.betrag > 0) ?? stufen[0];
 }

@@ -36,6 +36,7 @@ import "./styles/pages/recht.css";
 import "./styles/pages/knoepfe-glanz.css";
 import "./styles/pages/kat.css";
 import "./styles/pages/grafiken.css";
+import "./styles/pages/preise.css";
 import "./styles/utilities.css";
 import "./styles/print.css";
 import { Analytics } from "@vercel/analytics/react";

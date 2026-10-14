@@ -12,13 +12,15 @@ import { JsonLd } from "@/components/json-ld";
 import { KnopfLink } from "@/components/knopf";
 import { Produktnavigation } from "@/components/produkt-navigation";
 import type { Produktpunkt } from "@/components/produkt-navigation";
+import { PreisTarife } from "@/components/preis-tarife";
 import { SoftwareGrafiken } from "@/components/software-grafiken";
+import { TarifFallback } from "@/components/tarif-fallback";
 import { SoftwareKarte } from "@/components/software-karte";
 import { SoftwareMedienGalerie } from "@/components/software-medien";
 import { AuswahlhilfeKarte } from "@/components/auswahlhilfe-karte";
 import { Werbebanner } from "@/components/werbebanner";
 import { wlStil } from "@/components/wort-stil";
-import { transparenzwert } from "@/lib/analyse";
+import { einstiegsstufe, transparenzwert } from "@/lib/analyse";
 import { preisPositionFuer, tarifeFuer } from "@/lib/analyse-daten";
 import { holeLogo } from "@/lib/bilder";
 import {
@@ -41,7 +43,7 @@ import { formatiereIso } from "@/lib/datum";
 import { faqSeite } from "@/lib/jsonld";
 import { nbsp } from "@/lib/nbsp";
 import { linkFuer } from "@/lib/partner";
-import { datenzeilen, erzeugeFaq, fuelle, hebeBetraegeHervor, istPreiszeile } from "@/lib/produkt";
+import { datenzeilen, erzeugeFaq, fuelle, istPreiszeile } from "@/lib/produkt";
 import { metaFuer } from "@/lib/seo";
 import { softwareKarteTexte, softwareKarte } from "@/lib/software-ansicht";
 import { softwareMedien } from "@/lib/software-medien";
@@ -85,14 +87,6 @@ function Block({ id, titel, text, children }: { id: string; titel: string; text?
   );
 }
 
-function Betraege({ text }: { text: string }) {
-  return (
-    <>
-      {hebeBetraegeHervor(text).map((s, i) => (s.fett ? <strong key={i}>{nbsp(s.text)}</strong> : <span key={i}>{nbsp(s.text)}</span>))}
-    </>
-  );
-}
-
 export default async function Review({ params }: Props) {
   const { slug } = await params;
   const a = anbieter.find((x) => x.slug === slug);
@@ -107,6 +101,7 @@ export default async function Review({ params }: Props) {
   const verwandteLeitfaeden = leitfaedenFuerAnbieter(a.slug);
   const alternativen = anbieterFuerBaustein(a.baustein).filter((x) => x.slug !== a.slug);
   const stationen = a.stationen.map(getStation);
+  const tarife = tarifeFuer(a.slug);
   const transparenz = transparenzwert({ ...a, herstellerprofil: Boolean(profil), analyse: Boolean(analyse) });
   const kategorienNamen = Object.fromEntries(bausteine.map((b) => [b.slug, b.kurzname]));
   const f = (vorlage: string) => fuelle(vorlage, { name: a.name, kategorie: baustein.name });
@@ -145,7 +140,6 @@ export default async function Review({ params }: Props) {
     t: r.faq,
   });
 
-  const planKarten = (a.preis.zeilen ?? []).filter(istPreiszeile);
   const preisNotizen = (a.preis.zeilen ?? []).filter((z) => !istPreiszeile(z));
 
   const quelleDatum = (
@@ -263,7 +257,7 @@ export default async function Review({ params }: Props) {
               <SoftwareGrafiken
                 anbieter={a}
                 transparenz={transparenz}
-                tarife={tarifeFuer(a.slug)}
+                tarife={tarife}
                 position={preisPositionFuer(a.slug)}
                 kategorien={kategorienNamen}
                 alleStationen={alleStationenListe.map((st) => ({ slug: st.slug, nummer: st.nummer, name: st.name }))}
@@ -295,57 +289,48 @@ export default async function Review({ params }: Props) {
             </Block>
 
             {/* 3. Preise */}
-            <Block id="preise" titel={f(r.preiseTitel)} text={r.preiseText}>
-              <div className="herkunft">
-                <Chip ton="nebel">{ui.labels.herstellerangabe}</Chip>
-                <span className="herkunft__text">
+            <section id="preise" className="produktblock tp band_nacht" aria-labelledby="preise-titel">
+              <header className="tp-kopf">
+                <p className="tp-eyebrow"><Icon name="plus" groesse={14} />Preise</p>
+                <h2 id="preise-titel" className="tp-titel">
+                  <span>{tarife ? `Tarife von ${a.name},` : `Preise von ${a.name},`}</span>
+                  <span>{tarife ? "klar aufgeschlüsselt." : "auf einen Blick."}</span>
+                </h2>
+              </header>
+
+              {tarife ? (
+                <PreisTarife name={a.name} stufen={tarife.stufen} einheit={tarife.einheit} hervorgehoben={einstiegsstufe(tarife.stufen, a.preis.anker).name} cta={{ href: linkPreise.href, werbung: linkPreise.werbung, label: ziel(linkPreise) }} />
+              ) : (
+                <TarifFallback name={a.name} status={a.preis.status} statusText={preisStatusText} anker={a.preis.anker} zeilen={a.preis.zeilen ?? []} cta={{ href: linkPreise.href, werbung: linkPreise.werbung, label: ziel(linkPreise) }} />
+              )}
+
+              <div className="tp-fuss">
+                <p>
+                  <Chip ton="nebel">{ui.labels.herstellerangabe}</Chip>{" "}
                   {quelleDatum}
                   {": "}
-                  <a href={a.quellen[0]?.url ?? a.zielUrl} target="_blank" rel="noopener noreferrer" className="adresse">
+                  <a href={a.quellen[0]?.url ?? a.zielUrl} target="_blank" rel="noopener noreferrer">
                     {a.quellen[0]?.titel ?? t.herstellerseite}
                     <span className="visuell_versteckt"> ({ui.barrierefreiheit.externLink})</span>
                   </a>
-                </span>
-              </div>
-
-              <p className="preisbanner">
-                <span className="preisbanner__label">{ui.labels.preisanker}</span>
-                <span className="preisbanner__wert">
-                  {a.preis.status === "veroeffentlicht" && a.preis.anker ? <Betraege text={a.preis.anker} /> : preisStatusText}
-                </span>
-              </p>
-
-              {planKarten.length > 0 ? (
-                <ul className="preiskarten liste_ohne">
-                  {planKarten.map((z) => (
-                    <li key={z} className="preiskarte">
-                      <Betraege text={z} />
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              {preisNotizen.length > 0 ? (
-                <ul className="preiszeilen">
-                  {preisNotizen.map((z) => (
-                    <li key={z}>
-                      <Inline text={z} />
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              {a.preis.hinweis ? (
-                <p className="preishinweis">
-                  <Inline text={a.preis.hinweis} />
                 </p>
-              ) : null}
-              {a.preis.status === "veroeffentlicht" ? <p className="preishinweis">{ui.labels.nettoHinweis}</p> : null}
-
-              <p className="produktblock__cta">
-                <KnopfLink href={linkPreise.href} extern werbung={linkPreise.werbung} icon="external">
-                  {ziel(linkPreise)}
-                </KnopfLink>
-              </p>
-            </Block>
+                {tarife && preisNotizen.length > 0 ? (
+                  <ul className="tp-fuss__notizen">
+                    {preisNotizen.map((z) => (
+                      <li key={z}>
+                        <Inline text={z} />
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                {a.preis.hinweis ? (
+                  <p>
+                    <Inline text={a.preis.hinweis} />
+                  </p>
+                ) : null}
+                {a.preis.status === "veroeffentlicht" && !preisNotizen.some((z) => /netto|Umsatzsteuer/i.test(z)) ? <p>{ui.labels.nettoHinweis}</p> : null}
+              </div>
+            </section>
 
             {/* 4. Eignung */}
             <Block id="eignung" titel={f(r.eignungTitel)}>

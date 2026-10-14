@@ -3,7 +3,7 @@ import test from "node:test";
 import tarifeRoh from "../data/tarife.json" with { type: "json" };
 import zahlenRoh from "../data/zahlen.json" with { type: "json" };
 import { anbieter } from "./daten.ts";
-import { betragText, logPosition, median, preisposition, profilzahlen, transparenzwert, type PreisGruppe, type Tarife } from "./analyse.ts";
+import { betragText, einheitTeile, ersparnisProzent, einstiegsstufe, logPosition, median, preisposition, profilzahlen, transparenzwert, type PreisGruppe, type Tarife } from "./analyse.ts";
 
 const basis = {
   preis: { status: "veroeffentlicht" as const, anker: "10 Euro", zeilen: ["Basic 10 Euro", "Plus 20 Euro", "Pro 30 Euro"] },
@@ -90,4 +90,33 @@ test("Hilfen: Median, logarithmische Position, Betragsschreibweise, Profilzahlen
   const z = profilzahlen({ funktionen: ["a", "b"], grenzen: ["a"], fragen: ["a", "b", "c"], quellen: [] });
   assert.deepEqual(z.map((x) => x.wert), [2, 1, 3, 0]);
   assert.equal(z[0].maximum, 3);
+});
+
+test("Tarifstufen: Merkmale und jährliche Beträge stehen wörtlich im Profil", () => {
+  const profile = tarifeRoh.profile as Record<string, Tarife>;
+  for (const [slug, tarif] of Object.entries(profile)) {
+    const a = anbieter.find((x) => x.slug === slug);
+    assert.ok(a, slug);
+    const text = [a.preis.anker ?? "", ...(a.preis.zeilen ?? []), ...a.funktionen, ...a.grenzen].join(" | ");
+    for (const s of tarif.stufen) {
+      for (const m of s.merkmale ?? []) assert.ok(text.includes(m), `${slug} ${s.name}: Merkmal "${m}" steht nicht im Profil`);
+      if (s.jaehrlich !== undefined) {
+        assert.ok(s.jaehrlich <= s.betrag, `${slug} ${s.name}: jährlicher Betrag über dem monatlichen`);
+        const gefunden = s.jaehrlich === 0 || new RegExp(`(^|[^\\d.,])${betragText(s.jaehrlich).replace(/[.,]/g, (z) => `\\${z}`)} Euro`).test(text);
+        assert.ok(gefunden, `${slug} ${s.name}: jährlicher Betrag ${betragText(s.jaehrlich)} steht nicht im Preistext`);
+      }
+    }
+  }
+});
+
+test("Tarifhilfen: Einheit, Ersparnis und Einstiegsstufe", () => {
+  assert.deepEqual(einheitTeile("je Nutzer und Monat, bei jährlicher Zahlung"), { einheit: "je Nutzer und Monat", zusatz: "bei jährlicher Zahlung" });
+  assert.deepEqual(einheitTeile("im Monat"), { einheit: "im Monat", zusatz: "" });
+  assert.equal(ersparnisProzent({ name: "x", betrag: 29, jaehrlich: 19 }), 34);
+  assert.equal(ersparnisProzent({ name: "x", betrag: 29 }), null);
+  assert.equal(ersparnisProzent({ name: "x", betrag: 0, jaehrlich: 0 }), null);
+  const stufen = [{ name: "Free", betrag: 0 }, { name: "Plus", betrag: 12 }, { name: "Pro", betrag: 30 }];
+  assert.equal(einstiegsstufe(stufen, "Plus ab 12 Euro").name, "Plus");
+  assert.equal(einstiegsstufe(stufen, "Preis auf Anfrage").name, "Plus");
+  assert.equal(einstiegsstufe(stufen, undefined).name, "Plus");
 });

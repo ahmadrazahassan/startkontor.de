@@ -1,0 +1,132 @@
+@layer pages {
+  /* Preisdarstellung: dunkle Fläche, große Preise, Tarifkarten mit Checkliste */
+  .tp {
+    --tp-text: #e6edf6;
+    --tp-gedimmt: #8e9bad;
+    --tp-linie: rgba(255, 255, 255, 0.09);
+    position: relative;
+    isolation: isolate;
+    container-type: inline-size;
+    display: grid;
+    gap: 36px;
+    padding: clamp(28px, 5vw, 64px);
+    border: 1px solid var(--tp-linie);
+    border-radius: 28px;
+    background:
+      radial-gradient(110% 70% at 50% -12%, rgba(63, 146, 232, 0.2) 0%, rgba(63, 146, 232, 0) 58%),
+      linear-gradient(180deg, #0b1a2e 0%, #08121f 100%);
+    color: var(--tp-text);
+    overflow: hidden;
+  }
+  .tp::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .35; mix-blend-mode: overlay; pointer-events: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.55'/></svg>"); }
+  .tp.produktblock { padding: clamp(24px, 4vw, 44px); background:
+      radial-gradient(110% 70% at 50% -12%, rgba(63, 146, 232, 0.2) 0%, rgba(63, 146, 232, 0) 58%),
+      linear-gradient(180deg, #0b1a2e 0%, #08121f 100%); box-shadow: 0 30px 60px -36px rgba(10, 37, 64, 0.6); border: 1px solid var(--tp-linie); border-radius: 28px; }
+
+  .tp-kopf { display: grid; justify-items: center; gap: 14px; text-align: center; }
+  .tp-eyebrow { display: inline-flex; align-items: center; gap: 8px; margin: 0; font-size: .8125rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #b4c1d2; }
+  .tp .tp-titel { margin: 0; font-size: clamp(2.25rem, 5.6vw, 4.25rem); line-height: 1.04; font-weight: 500; letter-spacing: -.04em; color: #ffffff; text-wrap: balance; }
+  .tp-titel span { display: block; }
+  .tp-titel span:last-child { color: var(--tp-gedimmt); }
+  .tp-lead { margin: 6px 0 0; max-width: 40rem; font-size: 1.0625rem; line-height: 1.6; color: var(--tp-gedimmt); }
+
+  .tp-inhalt { display: grid; gap: 32px; }
+
+  /* Umschalter */
+  .tp-umschalter { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; }
+  .tp-umschalter__text { padding: 4px 2px; border: 0; background: none; color: var(--tp-gedimmt); font: inherit; font-size: 1.0625rem; font-weight: 500; cursor: pointer; transition: color 160ms ease-out; }
+  .tp-umschalter__text[aria-pressed="true"] { color: #ffffff; }
+  .tp-schalter { position: relative; width: 60px; height: 34px; padding: 0; border: 1px solid var(--tp-linie); border-radius: 999px; background: rgba(255, 255, 255, 0.06); cursor: pointer; transition: background-color 200ms ease-out; }
+  .tp-schalter__knopf { position: absolute; top: 4px; left: 4px; width: 24px; height: 24px; border-radius: 8px; background: linear-gradient(180deg, #d9e2ee, #a9b6c7); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .tp-schalter[aria-checked="true"] { background: rgba(63, 146, 232, 0.3); }
+  .tp-schalter[aria-checked="true"] .tp-schalter__knopf { transform: translateX(26px); }
+  .tp-schalter:focus-visible, .tp-umschalter__text:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
+  .tp-umschalter__chip { padding: 6px 12px; border: 1px solid var(--tp-linie); border-radius: 8px; background: rgba(255, 255, 255, 0.05); color: #c6d2e1; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+
+  /* Raster und Karten */
+  .tp-raster { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 215px), 1fr)); gap: 20px; align-items: stretch; }
+  .tp-raster[data-anzahl="2"] { max-width: 820px; margin-inline: auto; width: 100%; }
+  .tp-raster[data-anzahl="1"] { max-width: 420px; margin-inline: auto; width: 100%; }
+  .tp-karte { position: relative; display: flex; flex-direction: column; gap: 14px; min-width: 0; padding: 28px; border: 1px solid var(--tp-linie); border-radius: 22px; background: rgba(255, 255, 255, 0.03); transition: border-color 220ms ease-out, background-color 220ms ease-out, transform 220ms ease-out; }
+  .tp-karte:hover { border-color: rgba(255, 255, 255, 0.18); }
+  .tp-karte_hervor { border-color: rgba(255, 255, 255, 0.16); background: rgba(255, 255, 255, 0.065); box-shadow: 0 40px 70px -40px rgba(63, 146, 232, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08); }
+  .tp-karte__kopf { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; min-height: 36px; }
+  .tp .tp-karte__name { margin: 0; font-size: 1.75rem; line-height: 1.1; font-weight: 500; letter-spacing: -.02em; color: #ffffff; overflow-wrap: break-word; }
+  .tp-chip { flex: none; padding: 6px 10px; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; background: rgba(255, 255, 255, 0.08); color: #cfd9e6; font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+
+  .tp-preis { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 8px 0 0; }
+  .tp-preis__ab { font-size: 1rem; color: var(--tp-gedimmt); }
+  .tp-preis__zahl { font-size: clamp(2.75rem, 5vw, 4.25rem); line-height: 1; font-weight: 500; letter-spacing: -.045em; color: #ffffff; font-variant-numeric: tabular-nums; }
+  .tp-preis__zahl_text { font-size: clamp(1.5rem, 2.6vw, 2rem); letter-spacing: -.02em; line-height: 1.2; }
+  .tp-preis__einheit { font-size: .9375rem; color: var(--tp-gedimmt); }
+  .tp-karte__notiz { margin: 0; min-height: 1.5em; font-size: .875rem; line-height: 1.5; color: var(--tp-gedimmt); }
+  .tp-karte__notiz s { color: #6f7d90; margin-right: 6px; }
+  .tp-karte__notiz b { color: #86e0b0; font-weight: 600; }
+
+  .tp-knopf { display: grid; justify-items: center; gap: 4px; margin-top: 6px; }
+  .tp-knopf .knopf { min-height: 52px; font-size: 1rem; }
+  .tp-knopf .knopf__text { white-space: nowrap; }
+  .tp-knopf__werbung { font-size: .6875rem; line-height: 16px; color: var(--tp-gedimmt); }
+
+  .tp-liste { display: grid; gap: 14px; margin: 10px 0 0; padding: 0; }
+  .tp-liste li { display: flex; align-items: flex-start; gap: 12px; font-size: 1rem; line-height: 1.45; color: #a6b2c2; }
+  .tp-liste .icon { flex: none; margin-top: 2px; color: #7d8aa0; }
+  .tp-karte_hervor .tp-liste li { color: #f1f5fa; }
+  .tp-karte_hervor .tp-liste .icon { color: #ffffff; }
+
+  /* Karte ohne Tarifstufen */
+  .tp-karte_einzeln { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: 20px 56px; align-items: start; max-width: 960px; margin-inline: auto; width: 100%; }
+  .tp-einzeln__links { display: grid; gap: 14px; }
+  .tp-karte_einzeln .tp-liste { margin: 0; align-self: center; }
+
+  /* Fuß mit Herkunft und Hinweisen */
+  .tp-fuss { display: grid; justify-items: center; gap: 10px; max-width: 52rem; margin-inline: auto; text-align: center; font-size: .875rem; line-height: 1.6; color: var(--tp-gedimmt); }
+  .tp-fuss p { margin: 0; }
+  .tp-fuss a { color: #cfe0f2; text-decoration: underline; text-underline-offset: 3px; }
+  .tp-fuss a:hover { color: #ffffff; }
+  .tp-fuss .chip { border-color: var(--tp-linie); background: rgba(255, 255, 255, 0.06); color: #c6d2e1; }
+  .tp-fuss__notizen { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
+
+  /* Startseite: Tarif Explorer */
+  .tp_start { margin-block: 24px; }
+  .te { display: grid; gap: 22px; }
+  .te-filter, .te-programme { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .te-filter button { padding: 8px 14px; border: 1px solid var(--tp-linie); border-radius: 999px; background: transparent; color: var(--tp-gedimmt); font: inherit; font-size: .875rem; font-weight: 600; cursor: pointer; transition: background-color 160ms ease-out, color 160ms ease-out, border-color 160ms ease-out; }
+  .te-filter button:hover { color: #ffffff; border-color: rgba(255, 255, 255, 0.25); }
+  .te-filter button[aria-pressed="true"] { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: #ffffff; }
+  .te-programm { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid var(--tp-linie); border-radius: 12px; background: rgba(255, 255, 255, 0.03); color: #c6d2e1; font: inherit; font-size: .9375rem; font-weight: 600; cursor: pointer; transition: background-color 160ms ease-out, border-color 160ms ease-out, transform 160ms ease-out; }
+  .te-programm img { display: block; width: auto; height: 22px; max-width: 80px; object-fit: contain; border-radius: 4px; background: #ffffff; padding: 2px; box-sizing: content-box; }
+  .te-programm:hover { background: rgba(255, 255, 255, 0.07); transform: translateY(-1px); }
+  .te-programm[aria-pressed="true"] { background: #ffffff; border-color: #ffffff; color: var(--night); box-shadow: 0 10px 24px -12px rgba(255, 255, 255, 0.5); }
+  .te-filter button:focus-visible, .te-programm:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
+  .te-ergebnis { display: grid; gap: 24px; margin-top: 8px; padding-top: 28px; border-top: 1px solid var(--tp-linie); animation: te-ein 320ms ease-out both; }
+  .te-kopf { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 24px; }
+  .te-kopf__titel { margin: 0; font-size: 1.375rem; font-weight: 600; color: #ffffff; letter-spacing: -.01em; }
+  .te-kopf__link { display: inline-flex; align-items: center; gap: 6px; font-size: .9375rem; font-weight: 600; color: #cfe0f2; text-decoration: underline; text-underline-offset: 4px; }
+  .te-kopf__link:hover { color: #ffffff; }
+  .te-hinweis { margin: 0; text-align: center; font-size: .8125rem; color: var(--tp-gedimmt); }
+  @keyframes te-ein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+  @container (min-width: 1000px) {
+    .tp-raster[data-anzahl="5"] { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+    .tp-raster[data-anzahl="5"] .tp-karte { padding: 22px; }
+    .tp-raster[data-anzahl="5"] .tp-karte__name { font-size: 1.375rem; }
+    .tp-raster[data-anzahl="5"] .tp-karte__kopf { min-height: 72px; align-content: flex-start; }
+    .tp-raster[data-anzahl="5"] .tp-preis__zahl { font-size: 2.75rem; }
+    .tp-raster[data-anzahl="5"] .tp-liste li { font-size: .9375rem; }
+    .tp-raster[data-anzahl="5"] .knopf { padding-inline: 8px; gap: 6px; font-size: .9375rem; }
+  }
+  @media (max-width: 899px) {
+    .tp-karte_einzeln { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
+  }
+  @media (max-width: 639px) {
+    .tp { border-radius: 22px; gap: 28px; }
+    .tp-karte { padding: 24px; border-radius: 18px; }
+    .tp .tp-karte__name { font-size: 1.5rem; }
+    .te-programm { padding: 8px 12px; font-size: .875rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tp-schalter, .tp-schalter__knopf, .tp-karte, .te-programm { transition: none; }
+    .te-ergebnis { animation: none; }
+  }
+}

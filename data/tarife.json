@@ -1,20 +1,29 @@
 {
-  "_hinweis": "Tarifstufen für die Grafik im Softwareprofil. Jede Stufe stammt aus den Preiszeilen des Profils (preis.zeilen und preis.anker). Es wird der erste genannte Betrag je Stufe übernommen, ohne Aktionen. lib/analyse.test.ts prüft, dass jeder Betrag dort wörtlich vorkommt.",
+  "_hinweis": "Tarifstufen für Preisdarstellungen. Jede Stufe stammt aus den Preiszeilen des Profils (preis.zeilen und preis.anker). betrag ist der Betrag bei monatlicher Zahlung, jaehrlich nur dort, wo der Hersteller beide Beträge nennt. merkmale sind wörtliche Textstellen aus dem Profil (Preiszeilen, Funktionen, Grenzen). ab steht für einen Startpreis. lib/analyse.test.ts prüft jeden Wert gegen den Profiltext.",
   "profile": {
     "billomat": {
       "einheit": "im Monat, bei monatlicher Zahlung",
       "stufen": [
         {
           "name": "Professional",
-          "betrag": 29
+          "betrag": 29,
+          "jaehrlich": 19,
+          "merkmale": [
+            "ein Nutzer und 30 Rechnungen im Monat"
+          ]
         },
         {
           "name": "Business",
-          "betrag": 39
+          "betrag": 39,
+          "jaehrlich": 29,
+          "merkmale": [
+            "DATEVconnect und Bankverknüpfung"
+          ]
         },
         {
           "name": "Enterprise",
-          "betrag": 119
+          "betrag": 119,
+          "jaehrlich": 99
         }
       ]
     },
@@ -23,20 +32,30 @@
       "stufen": [
         {
           "name": "Solo",
-          "betrag": 10
+          "betrag": 10,
+          "jaehrlich": 9
         },
         {
           "name": "Plus",
-          "betrag": 15
+          "betrag": 15,
+          "jaehrlich": 14
         },
         {
           "name": "Pro",
-          "betrag": 30
+          "betrag": 30,
+          "jaehrlich": 27,
+          "merkmale": [
+            "Wiederkehrende Rechnungen"
+          ]
         },
         {
           "name": "Premium",
           "betrag": 59,
-          "zusatz": "ab"
+          "ab": true,
+          "jaehrlich": 53,
+          "merkmale": [
+            "Automatische Belegverarbeitung"
+          ]
         }
       ]
     },
@@ -45,19 +64,31 @@
       "stufen": [
         {
           "name": "S",
-          "betrag": 7.9
+          "betrag": 7.9,
+          "merkmale": [
+            "Belege ab Stufe S"
+          ]
         },
         {
           "name": "M",
-          "betrag": 12.9
+          "betrag": 12.9,
+          "merkmale": [
+            "Ausgangsrechnungen ab Stufe M"
+          ]
         },
         {
           "name": "L",
-          "betrag": 21.9
+          "betrag": 21.9,
+          "merkmale": [
+            "Einnahmenüberschussrechnung und Umsatzsteuervoranmeldung ab Stufe L"
+          ]
         },
         {
           "name": "XL",
-          "betrag": 32.9
+          "betrag": 32.9,
+          "merkmale": [
+            "Programmierschnittstelle und besondere Rechnungstypen in XL"
+          ]
         }
       ]
     },
@@ -67,12 +98,23 @@
         {
           "name": "Starter",
           "betrag": 25,
-          "zusatz": "5 Nutzer"
+          "zusatz": "5 Nutzer",
+          "merkmale": [
+            "5 Nutzer",
+            "300 Rechnungen im Monat"
+          ]
         },
         {
           "name": "Essentials",
           "betrag": 49,
-          "zusatz": "10 Nutzer"
+          "zusatz": "10 Nutzer",
+          "merkmale": [
+            "10 Nutzer",
+            "500 Rechnungen im Monat",
+            "2 Beschäftigte für Lohn und Personal",
+            "doppelte Buchführung mit SKR03 und SKR04",
+            "Lohnabrechnung mit Meldungen und Mitarbeiterportal"
+          ]
         }
       ]
     },
@@ -98,15 +140,33 @@
       "stufen": [
         {
           "name": "Essentials",
-          "betrag": 40
+          "betrag": 40,
+          "merkmale": [
+            "5 Beschäftigte",
+            "automatische Lohnabrechnung mit Meldungen",
+            "Schichtplanung"
+          ]
         },
         {
           "name": "Standard",
-          "betrag": 60
+          "betrag": 60,
+          "merkmale": [
+            "5 Beschäftigte",
+            "komplexere Lohnfälle mit Sonderlöhnen",
+            "Mehrmandantenfähigkeit",
+            "Controlling"
+          ]
         },
         {
           "name": "Premium",
-          "betrag": 80
+          "betrag": 80,
+          "merkmale": [
+            "5 Beschäftigte",
+            "Korrektursimulation",
+            "Projektzeiterfassung",
+            "Zielsystem",
+            "Recruiting"
+          ]
         }
       ]
     },
@@ -115,15 +175,29 @@
       "stufen": [
         {
           "name": "Essentials",
-          "betrag": 20
+          "betrag": 20,
+          "merkmale": [
+            "inklusive 5 Beschäftigter"
+          ]
         },
         {
           "name": "Standard",
-          "betrag": 30
+          "betrag": 30,
+          "merkmale": [
+            "inklusive 5 Beschäftigter",
+            "Portal zur Einführung neuer Beschäftigter",
+            "Arbeitszeiten",
+            "Genehmigungen"
+          ]
         },
         {
           "name": "Premium",
-          "betrag": 40
+          "betrag": 40,
+          "merkmale": [
+            "inklusive 5 Beschäftigter",
+            "Schichtplanung",
+            "Spesen per App"
+          ]
         }
       ]
     },
@@ -133,27 +207,44 @@
         {
           "name": "Starter",
           "betrag": 0,
-          "zusatz": "3 Nutzer"
+          "zusatz": "3 Nutzer",
+          "merkmale": [
+            "bis 3 Nutzer",
+            "200 Kontakte"
+          ]
         },
         {
           "name": "Team",
           "betrag": 24,
-          "zusatz": "3 Nutzer"
+          "zusatz": "3 Nutzer",
+          "merkmale": [
+            "3 Nutzer",
+            "3.000 Kontakte"
+          ]
         },
         {
           "name": "Small Office",
           "betrag": 75,
-          "zusatz": "10 Nutzer"
+          "zusatz": "10 Nutzer",
+          "merkmale": [
+            "10 Nutzer"
+          ]
         },
         {
           "name": "Business",
           "betrag": 149,
-          "zusatz": "20 Nutzer"
+          "zusatz": "20 Nutzer",
+          "merkmale": [
+            "20 Nutzer"
+          ]
         },
         {
           "name": "Enterprise",
           "betrag": 289,
-          "zusatz": "40 Nutzer"
+          "zusatz": "40 Nutzer",
+          "merkmale": [
+            "40 Nutzer"
+          ]
         }
       ]
     },
@@ -163,7 +254,7 @@
         {
           "name": "Starter",
           "betrag": 7,
-          "zusatz": "ab"
+          "ab": true
         },
         {
           "name": "Professional",
@@ -180,15 +271,24 @@
       "stufen": [
         {
           "name": "Starter",
-          "betrag": 45
+          "betrag": 45,
+          "merkmale": [
+            "Kontakte und Aktivitäten"
+          ]
         },
         {
           "name": "Core",
-          "betrag": 65
+          "betrag": 65,
+          "merkmale": [
+            "Pipeline, Projekte, Service, Automatisierung"
+          ]
         },
         {
           "name": "Growth",
-          "betrag": 95
+          "betrag": 95,
+          "merkmale": [
+            "stärkere Prozesse in Vertrieb und Service"
+          ]
         },
         {
           "name": "Plus",
@@ -206,17 +306,29 @@
         {
           "name": "Warenwirtschaft",
           "betrag": 56,
-          "zusatz": "ab"
+          "ab": true,
+          "merkmale": [
+            "Aufträgen, Bestellungen, Kommissionierung"
+          ]
         },
         {
           "name": "Rechnungswesen",
           "betrag": 58,
-          "zusatz": "ab"
+          "ab": true,
+          "merkmale": [
+            "Finanzbuchhaltung, Anlagenbuchhaltung, Kostenrechnung",
+            "DATEV Austausch"
+          ]
         },
         {
           "name": "Produktion",
           "betrag": 90,
-          "zusatz": "ab"
+          "ab": true,
+          "merkmale": [
+            "Fertigungssteuerung",
+            "Kalkulation vor und nach der Fertigung",
+            "enthält das Warenwirtschaftspaket"
+          ]
         }
       ]
     },
@@ -226,12 +338,23 @@
         {
           "name": "Essential",
           "betrag": 19.9,
-          "zusatz": "1 Benutzer"
+          "zusatz": "1 Benutzer",
+          "merkmale": [
+            "für einen Benutzer",
+            "Angebote, Aufträge und Rechnungen",
+            "E-Rechnungen als ZUGFeRD 2.1 und XRechnung"
+          ]
         },
         {
           "name": "Enterprise",
           "betrag": 59,
-          "zusatz": "unbegrenzte Benutzer"
+          "zusatz": "unbegrenzte Benutzer",
+          "merkmale": [
+            "für unbegrenzte Benutzer",
+            "Teilrechnungen",
+            "Schlussrechnungen",
+            "Terminkalender"
+          ]
         }
       ]
     },
@@ -240,11 +363,17 @@
       "stufen": [
         {
           "name": "Essentials",
-          "betrag": 69.3
+          "betrag": 69.3,
+          "merkmale": [
+            "Finanzmanagement, Einkauf, Lager und Projekte"
+          ]
         },
         {
           "name": "Premium",
-          "betrag": 95.3
+          "betrag": 95.3,
+          "merkmale": [
+            "Dienstverwaltung und Fertigung"
+          ]
         },
         {
           "name": "Team Members",
@@ -257,21 +386,29 @@
       "stufen": [
         {
           "name": "Free",
-          "betrag": 0
+          "betrag": 0,
+          "jaehrlich": 0,
+          "merkmale": [
+            "drei Kontakte",
+            "begrenztes monatliches Dokumentenkontingent"
+          ]
         },
         {
           "name": "Starter",
-          "betrag": 12
+          "betrag": 12,
+          "jaehrlich": 9
         },
         {
           "name": "Professional",
           "betrag": 39,
-          "zusatz": "ab"
+          "ab": true,
+          "jaehrlich": 25
         },
         {
           "name": "Premium",
           "betrag": 45,
-          "zusatz": "ab"
+          "ab": true,
+          "jaehrlich": 37
         }
       ]
     },
@@ -302,17 +439,17 @@
         {
           "name": "S",
           "betrag": 12.9,
-          "zusatz": "ab"
+          "ab": true
         },
         {
           "name": "M",
           "betrag": 24.9,
-          "zusatz": "ab"
+          "ab": true
         },
         {
           "name": "L",
           "betrag": 49.9,
-          "zusatz": "ab"
+          "ab": true
         }
       ]
     },
@@ -321,19 +458,23 @@
       "stufen": [
         {
           "name": "Rechnungen Free",
-          "betrag": 0
+          "betrag": 0,
+          "jaehrlich": 0
         },
         {
           "name": "Rechnungen Plus",
-          "betrag": 12.4
+          "betrag": 12.4,
+          "jaehrlich": 9.9
         },
         {
           "name": "Buchhaltung",
-          "betrag": 24.9
+          "betrag": 24.9,
+          "jaehrlich": 19.9
         },
         {
           "name": "Steuern",
-          "betrag": 37.4
+          "betrag": 37.4,
+          "jaehrlich": 29.9
         }
       ]
     },
@@ -359,7 +500,10 @@
       "stufen": [
         {
           "name": "Core",
-          "betrag": 6
+          "betrag": 6,
+          "merkmale": [
+            "mindestens 30 Nutzer"
+          ]
         },
         {
           "name": "Core Premium",
@@ -376,7 +520,10 @@
         },
         {
           "name": "Pro",
-          "betrag": 4.99
+          "betrag": 4.99,
+          "merkmale": [
+            "Zeiterfassung und digitale Personalakte"
+          ]
         },
         {
           "name": "Complete",
@@ -390,17 +537,17 @@
         {
           "name": "Cloud Essential",
           "betrag": 36,
-          "zusatz": "ab"
+          "ab": true
         },
         {
           "name": "Cloud Grow",
           "betrag": 54,
-          "zusatz": "ab"
+          "ab": true
         },
         {
           "name": "Cloud Max",
           "betrag": 79,
-          "zusatz": "ab"
+          "ab": true
         }
       ]
     },
@@ -427,17 +574,17 @@
         {
           "name": "JTL Start",
           "betrag": 0,
-          "zusatz": "ab"
+          "ab": true
         },
         {
           "name": "JTL Advanced",
           "betrag": 119,
-          "zusatz": "ab"
+          "ab": true
         },
         {
           "name": "JTL Pro",
           "betrag": 369,
-          "zusatz": "ab"
+          "ab": true
         }
       ]
     },
@@ -447,22 +594,22 @@
         {
           "name": "Lite",
           "betrag": 59,
-          "zusatz": "ab"
+          "ab": true
         },
         {
           "name": "Lite+",
           "betrag": 99,
-          "zusatz": "ab"
+          "ab": true
         },
         {
           "name": "Expand",
           "betrag": 149,
-          "zusatz": "ab"
+          "ab": true
         },
         {
           "name": "Scale",
           "betrag": 229,
-          "zusatz": "ab"
+          "ab": true
         }
       ]
     }
