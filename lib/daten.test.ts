@@ -59,8 +59,8 @@ test("Anbieter: alphabetisch, jeder genau einmal, keine Preisbeträge in Listenf
   }
 });
 
-test("Fester Datenstand: nur die vier freigegebenen Affiliatepartner aktiv", () => {
-  assert.deepEqual(daten.partner.anbieter.filter((p) => p.aktiv).map((p) => p.schluessel).sort(), ["odoo", "pipedrive", "sage", "weclapp"]);
+test("Fester Datenstand: nur die drei freigegebenen Affiliatepartner aktiv", () => {
+  assert.deepEqual(daten.partner.anbieter.filter((p) => p.aktiv).map((p) => p.schluessel).sort(), ["odoo", "pipedrive", "weclapp"]);
   assert.equal(leitfaeden.every((l) => l.veroeffentlicht === null), true);
 });
 

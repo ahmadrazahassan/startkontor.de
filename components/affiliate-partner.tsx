@@ -4,13 +4,12 @@ import { KnopfLink } from "@/components/knopf";
 import { holeLogo } from "@/lib/bilder";
 import { anbieterNachSlug, partner } from "@/lib/daten";
 import { istLive, linkFuer } from "@/lib/partner";
-import { listeMitUnd } from "@/lib/produkt";
 
 export function AffiliatePartner() {
   const aktive = partner.filter(istLive);
   if (!aktive.length) return null;
   return <section id="affiliatepartner" className="affiliatepartner" aria-labelledby="affiliatepartner-titel"><div className="huelle">
-    <div className="affiliatepartner__kopf"><div><p className="eyebrow">Werbung & Transparenz</p><h2 id="affiliatepartner-titel">Unsere Affiliatepartner</h2><p>Unsere Teilnahme an den Partnerprogrammen von {listeMitUnd(aktive.map((p) => p.name))} ist freigegeben. Über gekennzeichnete Links können wir eine Provision erhalten. Unsere redaktionellen Einschätzungen bleiben unabhängig.</p></div><Link href="/redaktion/werbung" className="textlink">So finanzieren wir Startkontor<Icon name="arrowRight" groesse={16} /></Link></div>
+    <div className="affiliatepartner__kopf"><div><p className="eyebrow">Werbung & Transparenz</p><h2 id="affiliatepartner-titel">Unsere Affiliatepartner</h2><p>Unsere Teilnahme an den Partnerprogrammen von Pipedrive, weclapp und Odoo ist freigegeben. Über gekennzeichnete Links können wir eine Provision erhalten. Unsere redaktionellen Einschätzungen bleiben unabhängig.</p></div><Link href="/redaktion/werbung" className="textlink">So finanzieren wir Startkontor<Icon name="arrowRight" groesse={16} /></Link></div>
     <ul className="affiliatepartner__liste liste_ohne">{aktive.map((p) => {
       const a = anbieterNachSlug.get(p.produkte[0]);
       if (!a) return null;

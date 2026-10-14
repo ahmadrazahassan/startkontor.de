@@ -111,7 +111,7 @@ Mail templates use the website colors, the real inline Startkontor logo, a dark 
 
 ## Partner links and banners
 
-Pipedrive, weclapp, Odoo and Sage (Impact tracking link, unchanged, deep links off) are active through `data/affiliate-partner.json`, based on the operator's confirmation. Their supplied links keep the original parameters and carry visible German advertising disclosures and `rel="sponsored"`. Other programs, including Sage, remain inactive. A partner is live only when `aktiv` is `true` **and** its `zielLink` no longer contains `{{`. Until then outbound links go straight to the manufacturer (`zielUrl`) and no affiliate banners appear. Account ownership and attribution must still be verified in the respective partner dashboards.
+Pipedrive, weclapp and Odoo are active through `data/affiliate-partner.json`, based on the operator's confirmation. Their supplied links keep the original parameters and carry visible German advertising disclosures and `rel="sponsored"`. Other programs, including Sage, remain inactive. A partner is live only when `aktiv` is `true` **and** its `zielLink` no longer contains `{{`. Until then outbound links go straight to the manufacturer (`zielUrl`) and no affiliate banners appear. Account ownership and attribution must still be verified in the respective partner dashboards.
 
 To switch one on:
 
