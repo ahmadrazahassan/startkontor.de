@@ -18,6 +18,7 @@ import { SoftwareKarte } from "@/components/software-karte";
 import { Strecke } from "@/components/strecke";
 import { TarifExplorerBereich } from "@/components/tarif-explorer-bereich";
 import { ZahlenBereich } from "@/components/zahlen-bereich";
+import { Werbebanner } from "@/components/werbebanner";
 import {
   anbieterFuerBaustein,
   anbieterNachSlug,
@@ -54,6 +55,11 @@ function karteChips(a: Anbieter): KarteChip[] {
 }
 
 const PFAD_MOTIVE = ["softwarevergleich", "software-planung", "vertragscheck"] as const;
+const SAGE_STARTBANNER = [
+  { satz: "erp", titel: "ERP und Warenwirtschaft", kennung: "startseite-sage-erp" },
+  { satz: "hr", titel: "Personal und Lohn", kennung: "startseite-sage-hr" },
+  { satz: "intacct", titel: "Finanzmanagement", kennung: "startseite-sage-intacct" },
+] as const;
 
 export default function Startseite() {
   const s = seiten.start;
@@ -270,6 +276,24 @@ export default function Startseite() {
               };
             })}
           />
+        </div>
+      </section>
+
+      <section className="band band_nebel sage-startwerbung" aria-labelledby="sage-startwerbung-titel">
+        <div className="huelle">
+          <div className="startkopf">
+            <p className="eyebrow">Anzeige</p>
+            <h2 id="sage-startwerbung-titel">Lösungen von Sage für unterschiedliche Aufgaben</h2>
+            <p className="lead">Drei offizielle Kampagnen von Sage zu ERP, Personal und Finanzmanagement.</p>
+          </div>
+          <ul className="sage-startwerbung__raster liste_ohne">
+            {SAGE_STARTBANNER.map((banner) => (
+              <li key={banner.satz}>
+                <p className="sage-startwerbung__titel">{banner.titel}</p>
+                <Werbebanner platzierung={{ art: "startseite", satz: banner.satz }} kennung={banner.kennung} />
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

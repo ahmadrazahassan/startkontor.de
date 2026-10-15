@@ -94,3 +94,17 @@ test("Banner nur bei live Partner und erlaubter Platzierung", () => {
   assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: fremd }, partnerDaten), null);
   assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: hr }, [sage(false, "https://sage.example/c/1")]), null);
 });
+
+test("jedes Sage-Profil erhält eine aktive thematische Bannerkampagne", () => {
+  const sageProfile = [...anbieterNachSlug.values()].filter((anbieter) => anbieter.partner === "sage");
+  assert.ok(sageProfile.length > 0);
+  for (const anbieter of sageProfile) {
+    assert.ok(bannerSatzFuer({ art: "anbieterakte", anbieter }, partnerDaten), `Kein Banner für ${anbieter.slug}`);
+  }
+});
+
+test("Startseite kann mehrere freigegebene Kampagnen getrennt ausspielen", () => {
+  for (const satz of ["hr", "erp", "intacct"] as const) {
+    assert.equal(bannerSatzFuer({ art: "startseite", satz }, partnerDaten)?.satz, satz);
+  }
+});

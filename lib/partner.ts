@@ -44,6 +44,7 @@ export function linkFuer(
 
 export type BannerPlatzierung =
   | { art: "anbieterakte"; anbieter: Pick<Anbieter, "slug" | "baustein" | "partner"> }
+  | { art: "startseite"; satz: "hr" | "erp" | "intacct" }
   | { art: "baustein"; baustein: string };
 
 /** Welcher Bannersatz darf auf dieser Seite stehen (laut werbemittel.einsatz)? Null, wenn keiner. */
@@ -51,6 +52,7 @@ export function bannerSatzFuer(platzierung: BannerPlatzierung, partner: Partner[
   const sage = partner.find((p) => p.schluessel === "sage");
   if (!sage || !istLive(sage) || !sage.werbemittel) return null;
   const passt = (satz: string) => (sage.werbemittel?.saetze[satz] ? { partner: sage, satz } : null);
+  if (platzierung.art === "startseite") return passt(platzierung.satz);
   if (platzierung.art === "baustein") {
     return platzierung.baustein === "betrieb" ? passt("operations") : null;
   }
@@ -59,5 +61,6 @@ export function bannerSatzFuer(platzierung: BannerPlatzierung, partner: Partner[
   if (["sage-100", "sage-50-handwerk"].includes(a.slug)) return passt("erp");
   if (a.slug === "sage-intacct") return passt("intacct");
   if (["personal", "lohn"].includes(a.baustein)) return passt("hr");
-  return null;
+  // Für weitere Sage-Produkte ohne eigene Creative-Kampagne nutzen wir den allgemeinen ERP-Bannersatz.
+  return passt("erp");
 }

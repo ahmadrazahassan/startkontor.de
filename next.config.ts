@@ -4,7 +4,7 @@ const istProduktion = process.env.NODE_ENV === "production";
 
 const csp = [
   "default-src 'self'",
-  "img-src 'self' data:",
+  "img-src 'self' data: https://a.impactradius-go.com",
   "font-src 'self'",
   "style-src 'self' 'unsafe-inline'",
   // Next.js Hydrierung braucht Inline Skripte. Im Entwicklungsmodus zusätzlich eval (Fast Refresh).

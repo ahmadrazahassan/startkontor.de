@@ -1470,7 +1470,7 @@
         },
         {
           "titel": "Banner",
-          "text": "Werbebanner stammen unverändert vom jeweiligen Anbieter, stehen sichtbar getrennt von redaktionellen Inhalten und sind mit Werbung beschriftet. Sage-Banner werden direkt von Impact ausgeliefert. Dabei entsteht schon beim Anzeigen des Bildes eine Verbindung zu diesem Partnernetzwerk."
+          "text": "Werbebanner stammen unverändert vom jeweiligen Anbieter, stehen sichtbar getrennt von redaktionellen Inhalten und sind mit Werbung beschriftet. Banner von Sage werden direkt von Impact ausgeliefert. Dabei entsteht schon beim Anzeigen des Bildes eine Verbindung zu diesem Partnernetzwerk."
         }
       ],
       "partnerstatus": {
@@ -1686,9 +1686,9 @@
           "id": "links",
           "titel": "Externe Links, Partnerlinks und Werbebanner",
           "absaetze": [
-            "Normale externe Anbieterlinks übertragen erst beim Anklicken Daten an das Ziel. Sage-Werbebanner werden als Bild direkt von Impact geladen, damit wir die Originalmotive nicht kopieren oder auf unserem Server speichern. Dabei erhält Impact technische Verbindungsdaten wie Ihre IP Adresse und Browserangaben. Die Bildanfrage sendet keine Startkontor-Seitenadresse mit.",
+            "Normale externe Anbieterlinks übertragen erst beim Anklicken Daten an das Ziel. Werbebanner von Sage werden als Bild direkt von Impact geladen, damit wir die Originalmotive nicht kopieren oder auf unserem Server speichern. Dabei erhält Impact technische Verbindungsdaten wie Ihre IP Adresse und Browserangaben. Die Bildanfrage sendet keine Seitenadresse von Startkontor mit.",
             "Ein als Werbung gekennzeichneter Partnerlink führt über das Partnernetzwerk und enthält eine feste Anzeigenkennung. Beim Klick verarbeitet Impact technische Verbindungsdaten, um den Klick Startkontor zuzuordnen. Sage oder sein Partnernetzwerk können beim anschließenden Besuch Cookies oder ähnliche Kennungen verwenden, um einen späteren Abschluss zuzuordnen und eine Provision abzurechnen. Angaben aus Formularen oder Ihrem Bausteinplan werden nicht an den Partnerlink angehängt.",
-            "Für die Banner laden wir ausschließlich das jeweilige Bild von Impact. Ein zusätzlicher Anzeigen- oder Impression-Pixel wird nicht eingebunden. Der Klick führt über den zum Motiv gehörenden Trackinglink aus dem Sage-Export. Die Bilddateien liegen nicht auf unserem Server."
+            "Für die Banner laden wir ausschließlich das jeweilige Bild von Impact. Ein zusätzlicher Pixel zur Messung von Anzeigen oder Einblendungen wird nicht eingebunden. Der Klick führt über den zum Motiv gehörenden Trackinglink aus dem Export von Sage. Die Bilddateien liegen nicht auf unserem Server."
           ],
           "hinweis": "Die Einbindung externer Banner erfolgt ohne Impression-Pixel. Datenschutzangaben und Grundlage der Verarbeitung sind vor jeder Änderung am Abrufverhalten neu zu prüfen."
         },
