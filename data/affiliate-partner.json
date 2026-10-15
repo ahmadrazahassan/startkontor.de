@@ -1,7 +1,24 @@
 {
-  "stand": "2026-10-14",
-  "freigabebasis": "Der Betreiber hat die Zulassung für diese drei Partnerprogramme bestätigt und die zu verwendenden Links bereitgestellt.",
+  "stand": "2026-10-15",
+  "freigabebasis": "Der Betreiber hat die Zulassung für diese vier Partnerprogramme bestätigt und die zu verwendenden Links bereitgestellt.",
   "partner": [
+    {
+      "schluessel": "sage",
+      "name": "Sage",
+      "produkte": [
+        "sage-active",
+        "sage-hr-payroll",
+        "sage-payroll",
+        "sage-hr",
+        "sage-sales-management",
+        "sage-100",
+        "sage-50-handwerk",
+        "sage-intacct"
+      ],
+      "netzwerk": "direkt",
+      "aktiv": true,
+      "zielLink": "https://sagegmbh.sjv.io/DWr9Ld"
+    },
     {
       "schluessel": "pipedrive",
       "name": "Pipedrive",

@@ -26,7 +26,7 @@ Requires Node 24.x. `npm run dev` and `npm run build` first regenerate `public/s
 | `data/startseite.json` | German copy of the review portal homepage (hero, search, logo strip, categories, review anatomy, manufacturer band) and of the review page labels. Numbers in braces are filled from the data. |
 | `data/software-erweiterungen.json` | 17 additional researched profiles, integrated into the collective directory of 47 programs. |
 | `data/software-medien.json` | Official manufacturer images and videos, with source URLs and version notes. |
-| `data/affiliate-partner.json` | The three affiliate partnerships confirmed by the operator, with the supplied exact links. |
+| `data/affiliate-partner.json` | The four affiliate partnerships confirmed by the operator, with the supplied exact links. |
 | `data/begriffe.json` | Term overrides on top of the data file ("Anbieterakte" becomes "Review", the menu item "Anbieter" becomes "Software Reviews", "Bausteine" becomes "Kategorien"; the planner keeps its name "Bausteinplaner"). Each entry has `pfad`, `alt` and `neu`. If the data file changes and `alt` is no longer in the text, the build fails and tells you which entry to adjust. `data/startkontor-daten.json` itself stays untouched. |
 | `data/hersteller.json` | Company and location per provider (legal name, city, country) with source link and check date. Shown in the "Über den Hersteller" block of each review. Taken from the manufacturers' Impressum pages; for HubSpot, Microsoft, Odoo, Personio, HiBob and Factorial from their own contact, facts or press pages (no directly retrievable Impressum). Re-check before launch. |
 | `data/bewertungen.json` | Editorial ratings per provider slug. Ships empty, so no stars are shown anywhere (see "Review portal and ratings"). |
@@ -111,7 +111,7 @@ Mail templates use the website colors, the real inline Startkontor logo, a dark 
 
 ## Partner links and banners
 
-Pipedrive, weclapp and Odoo are active through `data/affiliate-partner.json`, based on the operator's confirmation. Their supplied links keep the original parameters and carry visible German advertising disclosures and `rel="sponsored"`. Other programs, including Sage, remain inactive. A partner is live only when `aktiv` is `true` **and** its `zielLink` no longer contains `{{`. Until then outbound links go straight to the manufacturer (`zielUrl`) and no affiliate banners appear. Account ownership and attribution must still be verified in the respective partner dashboards.
+Sage, Pipedrive, weclapp and Odoo are active through `data/affiliate-partner.json`, based on the operator's confirmation. Their supplied links keep the original parameters and carry visible German advertising disclosures and `rel="sponsored"`. Sage uses the approved Impact short link exactly as provided; click attribution is reported in the Sage/Impact partner dashboard. A partner is live only when `aktiv` is `true` **and** its `zielLink` no longer contains `{{`. Until then outbound links go straight to the manufacturer (`zielUrl`) and no affiliate banners appear. Account ownership and attribution must still be verified in the respective partner dashboards.
 
 To switch one on:
 

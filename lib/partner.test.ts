@@ -14,9 +14,22 @@ const sage = (aktiv: boolean, zielLink: string): Partner => ({
   werbemittel: { programmId: 1, saetze: {}, einsatz: [] },
 });
 
-test("im ausgelieferten Datenstand sind genau die drei freigegebenen Partner live", () => {
+test("im ausgelieferten Datenstand sind genau die vier freigegebenen Partner live", () => {
   assert.ok(partnerDaten.length > 0);
-  assert.deepEqual(partnerDaten.filter(istLive).map((p) => p.schluessel).sort(), ["odoo", "pipedrive", "weclapp"]);
+  assert.deepEqual(partnerDaten.filter(istLive).map((p) => p.schluessel).sort(), ["odoo", "pipedrive", "sage", "weclapp"]);
+});
+
+test("Sage CTAs verwenden den genehmigten Impact-Kurzlink unverändert", () => {
+  const sage = partnerDaten.find((p) => p.schluessel === "sage")!;
+  assert.equal(sage.zielLink, "https://sagegmbh.sjv.io/DWr9Ld");
+  assert.equal(sage.produkte.length, 8);
+  for (const slug of sage.produkte) {
+    const anbieter = anbieterNachSlug.get(slug)!;
+    const link = linkFuer(anbieter, `profil-${slug}-kopf`, partnerDaten);
+    assert.equal(link.href, "https://sagegmbh.sjv.io/DWr9Ld");
+    assert.equal(link.werbung, true);
+    assert.equal(link.partner, "sage");
+  }
 });
 
 test("Freigegebene Direktlinks behalten sämtliche Betreiberparameter in jeder Platzierung", () => {
@@ -42,7 +55,7 @@ test("live nur mit aktiv UND ausgefülltem Link", () => {
 
 test("ohne live Partner geht jeder Link direkt zum Hersteller, ohne Werbung", () => {
   const a = anbieterNachSlug.get("sage-100")!;
-  const l = linkFuer(a, "profil-sage-100-kopf", partnerDaten);
+  const l = linkFuer(a, "profil-sage-100-kopf", partnerDaten.filter((p) => p.schluessel !== "sage"));
   assert.equal(l.href, a.zielUrl);
   assert.equal(l.werbung, false);
   assert.equal(l.partner, null);
