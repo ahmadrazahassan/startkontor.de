@@ -962,37 +962,21 @@
     --k-schein: rgba(255, 255, 255, 0.62);
   }
 
-  .sage-startwerbung__raster {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    justify-items: center;
-    gap: var(--a-5);
-    margin: 0;
-    padding: 0;
+  .werbebanner_startseite {
+    margin-inline: auto;
   }
 
-  .sage-startwerbung__titel {
-    margin-bottom: var(--a-2);
-    font-family: var(--font-ui);
-    font-size: var(--fs-small);
-    font-weight: 700;
-    text-align: center;
+  .werbebanner_startseite[data-format="970x250"] {
+    width: min(994px, 100%);
+    margin: clamp(32px, 4vw, 56px) auto 0;
   }
 
-  .sage-startwerbung .werbebanner_startseite {
-    width: 324px;
-    max-width: 100%;
-    margin-top: 0;
+  .werbebanner_startseite[data-format="728x90"] {
+    width: min(752px, 100%);
+    margin: clamp(32px, 4vw, 56px) auto 0;
   }
 
-  .sage-startwerbung .werbebanner__link {
-    width: 300px;
-  }
-
-  @media (max-width: 900px) {
-    .sage-startwerbung__raster {
-      grid-template-columns: minmax(0, 1fr);
-      gap: var(--a-4);
-    }
+  .werbebanner_startseite .werbebanner__link {
+    width: 100%;
   }
 }

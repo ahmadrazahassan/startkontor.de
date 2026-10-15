@@ -31,3 +31,19 @@ test("die vier 300x250 Anzeigen gehören zur passenden Sage-Kampagne", () => {
     assert.equal(anzeige.labels, label);
   }
 });
+
+test("die Startseitenmotive sind deutschsprachige Originalbanner in den passenden Formaten", () => {
+  const expected = new Map([
+    [3723308, { label: "Sage Operations", width: 970, height: 250 }],
+    [3723307, { label: "Sage Operations", width: 728, height: 90 }],
+    [3723304, { label: "Sage Operations", width: 300, height: 250 }],
+  ]);
+  for (const [id, details] of expected) {
+    const anzeige = sageAnzeigeFuer(id);
+    assert.ok(anzeige);
+    assert.equal(anzeige.labels, details.label);
+    assert.equal(anzeige.width, details.width);
+    assert.equal(anzeige.height, details.height);
+    assert.equal(anzeige.language, "GERMAN");
+  }
+});

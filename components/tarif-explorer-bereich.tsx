@@ -7,6 +7,7 @@ import { tarifeFuer } from "@/lib/analyse-daten";
 import { holeLogo } from "@/lib/bilder";
 import { anbieter, bausteine, partner } from "@/lib/daten";
 import { linkFuer } from "@/lib/partner";
+import { Werbebanner } from "@/components/werbebanner";
 
 export function TarifExplorerBereich() {
   const eintraege: TarifEintrag[] = anbieter
@@ -46,6 +47,11 @@ export function TarifExplorerBereich() {
           </header>
           <TarifExplorer eintraege={eintraege} kategorien={bausteine.map((b) => ({ slug: b.slug, label: b.kurzname }))} />
         </div>
+        <Werbebanner
+          platzierung={{ art: "startseite", satz: "operations" }}
+          kennung="startseite-sage-operations-tarife"
+          groesse="970x250"
+        />
       </div>
     </section>
   );

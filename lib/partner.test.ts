@@ -103,8 +103,8 @@ test("jedes Sage-Profil erhält eine aktive thematische Bannerkampagne", () => {
   }
 });
 
-test("Startseite kann mehrere freigegebene Kampagnen getrennt ausspielen", () => {
-  for (const satz of ["hr", "erp", "intacct"] as const) {
+test("Startseite kann freigegebene Kampagnen an passenden Stellen ausspielen", () => {
+  for (const satz of ["hr", "erp", "intacct", "operations"] as const) {
     assert.equal(bannerSatzFuer({ art: "startseite", satz }, partnerDaten)?.satz, satz);
   }
 });

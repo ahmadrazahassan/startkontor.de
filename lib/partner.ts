@@ -44,7 +44,7 @@ export function linkFuer(
 
 export type BannerPlatzierung =
   | { art: "anbieterakte"; anbieter: Pick<Anbieter, "slug" | "baustein" | "partner"> }
-  | { art: "startseite"; satz: "hr" | "erp" | "intacct" }
+  | { art: "startseite"; satz: "hr" | "erp" | "intacct" | "operations" }
   | { art: "baustein"; baustein: string };
 
 /** Welcher Bannersatz darf auf dieser Seite stehen (laut werbemittel.einsatz)? Null, wenn keiner. */
