@@ -234,6 +234,20 @@ export type PartnerWerbemittel = {
   saetze: Record<string, { landing: string; alt: string; anzeigen: Record<string, number> }>;
   einsatz: { seite: string; satz: string }[];
 };
+export type SageWerbeanzeige = {
+  adId: number;
+  status: string;
+  name: string;
+  labels: string;
+  width: number;
+  height: number;
+  language: string;
+  alt: string;
+  landingPage: string;
+  trackingLink: string;
+  imageUrl: string;
+  hostedBy: string;
+};
 export type Partner = {
   schluessel: string;
   name: string;

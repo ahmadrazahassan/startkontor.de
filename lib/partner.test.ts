@@ -83,13 +83,14 @@ test("Anbieter ohne Partner bleibt direkt, auch wenn andere Partner live sind", 
 
 test("Banner nur bei live Partner und erlaubter Platzierung", () => {
   const a = anbieterNachSlug.get("sage-100")!;
-  assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: a }, partnerDaten), null);
-  const live = [sage(true, "https://sage.example/c/1")];
-  assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: a }, live)?.satz, "erp");
-  assert.equal(bannerSatzFuer({ art: "baustein", baustein: "betrieb" }, live)?.satz, "operations");
-  assert.equal(bannerSatzFuer({ art: "baustein", baustein: "finanzen" }, live), null);
+  assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: a }, partnerDaten)?.satz, "erp");
+  assert.equal(bannerSatzFuer({ art: "baustein", baustein: "betrieb" }, partnerDaten)?.satz, "operations");
+  assert.equal(bannerSatzFuer({ art: "baustein", baustein: "finanzen" }, partnerDaten), null);
   const hr = anbieterNachSlug.get("sage-hr")!;
-  assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: hr }, live)?.satz, "hr");
+  assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: hr }, partnerDaten)?.satz, "hr");
+  const intacct = anbieterNachSlug.get("sage-intacct")!;
+  assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: intacct }, partnerDaten)?.satz, "intacct");
   const fremd = anbieterNachSlug.get("personio")!;
-  assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: fremd }, live), null);
+  assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: fremd }, partnerDaten), null);
+  assert.equal(bannerSatzFuer({ art: "anbieterakte", anbieter: hr }, [sage(false, "https://sage.example/c/1")]), null);
 });

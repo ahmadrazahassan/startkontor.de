@@ -332,6 +332,8 @@ export default async function Review({ params }: Props) {
               </div>
             </section>
 
+            <Werbebanner platzierung={{ art: "anbieterakte", anbieter: a }} kennung={`profil-${a.slug}`} />
+
             {/* 4. Eignung */}
             <Block id="eignung" titel={f(r.eignungTitel)}>
               <div className="eignungskarten">
@@ -574,7 +576,6 @@ export default async function Review({ params }: Props) {
                   </li>
                 ))}
               </ul>
-              <Werbebanner platzierung={{ art: "anbieterakte", anbieter: a }} kennung={`profil-${a.slug}`} />
             </Block>
 
             {/* Weiterlesen */}

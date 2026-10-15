@@ -13,8 +13,13 @@ export function aktiviereAffiliatePartner(daten: Daten): void {
     };
     if (url.protocol !== "https:" || url.hostname !== erlaubteHosts[partner.schluessel]) throw new Error(`Ungültiger Partnerlink: ${partner.schluessel}`);
     const vorhanden = daten.partner.anbieter.findIndex((p) => p.schluessel === partner.schluessel);
-    if (vorhanden >= 0) daten.partner.anbieter[vorhanden] = structuredClone(partner);
-    else daten.partner.anbieter.push(structuredClone(partner));
+    const bestehenderPartner = vorhanden >= 0 ? daten.partner.anbieter[vorhanden] : null;
+    const aktivierterPartner = structuredClone(partner);
+    if (!aktivierterPartner.werbemittel && bestehenderPartner?.werbemittel) {
+      aktivierterPartner.werbemittel = structuredClone(bestehenderPartner.werbemittel);
+    }
+    if (vorhanden >= 0) daten.partner.anbieter[vorhanden] = aktivierterPartner;
+    else daten.partner.anbieter.push(aktivierterPartner);
     for (const slug of partner.produkte) {
       const anbieter = daten.anbieter.find((a) => a.slug === slug);
       if (!anbieter) throw new Error(`Affiliatepartner ohne Softwareprofil: ${slug}`);
@@ -26,5 +31,9 @@ export function aktiviereAffiliatePartner(daten: Daten): void {
   const faq = daten.faq.find((f) => f.id === "finanzierung");
   if (faq) faq.antwort = "Startkontor ist Affiliatepartner von Sage, Pipedrive, weclapp und Odoo. Wenn Sie über einen als Werbung gekennzeichneten Partnerlink ein Angebot nutzen, können wir eine Provision erhalten. Eine Provision beeinflusst weder die Inhalte noch die Reihenfolge. Die aktuellen Partnerschaften und unsere Regeln stehen unter Werbung und Partner.";
   const links = daten.seiten.datenschutz.abschnitte.find((a) => a.id === "links");
-  if (links?.absaetze) links.absaetze[1] = "Ein als Werbung gekennzeichneter Partnerlink enthält feste Zuordnungskennungen für das Partnerprogramm. Nach Ihrem Klick können der Anbieter oder sein Partnernetzwerk Cookies oder ähnliche Kennungen setzen und Ihre IP Adresse verarbeiten, um Besuche oder Abschlüsse unserem Partnerkonto zuzuordnen und eine Provision abzurechnen. Die Links werden ohne Angaben aus Formularen oder Ihrem Bausteinplan aufgerufen.";
+  if (links?.absaetze) {
+    links.absaetze[0] = "Normale externe Anbieterlinks übertragen erst beim Anklicken Daten an das Ziel. Sage-Werbebanner werden als Bild direkt von Impact geladen, damit wir die Originalmotive nicht kopieren oder auf unserem Server speichern. Dabei erhält Impact technische Verbindungsdaten wie Ihre IP Adresse und Browserangaben. Die Bildanfrage sendet keine Startkontor-Seitenadresse mit.";
+    links.absaetze[1] = "Ein als Werbung gekennzeichneter Partnerlink führt über das Partnernetzwerk und enthält eine feste Anzeigenkennung. Beim Klick verarbeitet Impact technische Verbindungsdaten, um den Klick Startkontor zuzuordnen. Sage oder sein Partnernetzwerk können beim anschließenden Besuch Cookies oder ähnliche Kennungen verwenden, um einen späteren Abschluss zuzuordnen und eine Provision abzurechnen. Angaben aus Formularen oder Ihrem Bausteinplan werden nicht an den Partnerlink angehängt.";
+    links.absaetze[2] = "Für die Banner laden wir ausschließlich das jeweilige Bild von Impact. Ein zusätzlicher Anzeigen- oder Impression-Pixel wird nicht eingebunden. Der Klick führt über den zum Motiv gehörenden Trackinglink aus dem Sage-Export. Die Bilddateien liegen nicht auf unserem Server.";
+  }
 }

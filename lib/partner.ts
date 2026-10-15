@@ -50,22 +50,14 @@ export type BannerPlatzierung =
 export function bannerSatzFuer(platzierung: BannerPlatzierung, partner: Partner[]): { partner: Partner; satz: string } | null {
   const sage = partner.find((p) => p.schluessel === "sage");
   if (!sage || !istLive(sage) || !sage.werbemittel) return null;
+  const passt = (satz: string) => (sage.werbemittel?.saetze[satz] ? { partner: sage, satz } : null);
   if (platzierung.art === "baustein") {
-    return platzierung.baustein === "betrieb" ? { partner: sage, satz: "operations" } : null;
+    return platzierung.baustein === "betrieb" ? passt("operations") : null;
   }
   const a = platzierung.anbieter;
   if (a.partner !== "sage") return null;
-  if (["sage-100", "sage-50-handwerk"].includes(a.slug)) return { partner: sage, satz: "erp" };
-  if (a.slug === "sage-intacct") return { partner: sage, satz: "intacct" };
-  if (["personal", "lohn"].includes(a.baustein)) return { partner: sage, satz: "hr" };
+  if (["sage-100", "sage-50-handwerk"].includes(a.slug)) return passt("erp");
+  if (a.slug === "sage-intacct") return passt("intacct");
+  if (["personal", "lohn"].includes(a.baustein)) return passt("hr");
   return null;
-}
-
-/** Link eines Banners: Impact Tiefenlink auf die Landingpage des Bannersatzes. Nur bei live Partner aufrufen. */
-export function bannerLink(partner: Partner, landing: string, platzierung: string): string {
-  if (partner.netzwerk === "Impact") {
-    const trenner = partner.zielLink.includes("?") ? "&" : "?";
-    return `${partner.zielLink}${trenner}u=${encodeURIComponent(landing)}&subId1=${encodeURIComponent(platzierung)}`;
-  }
-  return partner.zielLink;
 }

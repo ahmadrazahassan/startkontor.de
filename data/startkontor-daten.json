@@ -710,7 +710,7 @@
         "zielLink": "{{SAGE_NETZWERKLINK_FUER_DIESE_DOMAIN}}",
         "tiefenlink": "Der Netzwerklink nimmt die Zielseite im Parameter u entgegen. Die Platzierung wird als subId1 angehängt, zum Beispiel profil-sage-100-kopf. Beides vor dem Einsatz beim Sage Partnermanagement bestätigen lassen.",
         "werbemittel": {
-          "hinweis": "Offizielle Sage Banner aus dem Export vom 13. Oktober 2026. Unverändert verwenden. Nur einsetzen, wenn die Domain im Sage Programm freigegeben ist. Bilddateien lokal ausliefern, nicht von Impact nachladen.",
+          "hinweis": "Offizielle Sage Banner aus dem bereitgestellten Impact-Export. Nur aktive Motive und die dazugehörigen Trackinglinks exakt verwenden. Bilder direkt von Impact laden, nicht auf Startkontor speichern.",
           "programmId": 27498,
           "saetze": {
             "hr": {
@@ -1470,7 +1470,7 @@
         },
         {
           "titel": "Banner",
-          "text": "Werbebanner stammen unverändert vom jeweiligen Anbieter, stehen sichtbar getrennt von redaktionellen Inhalten und sind mit Werbung beschriftet. Sie werden von unserem eigenen Server ausgeliefert, damit vor einem Klick keine Verbindung zu Dritten entsteht."
+          "text": "Werbebanner stammen unverändert vom jeweiligen Anbieter, stehen sichtbar getrennt von redaktionellen Inhalten und sind mit Werbung beschriftet. Sage-Banner werden direkt von Impact ausgeliefert. Dabei entsteht schon beim Anzeigen des Bildes eine Verbindung zu diesem Partnernetzwerk."
         }
       ],
       "partnerstatus": {
@@ -1686,11 +1686,11 @@
           "id": "links",
           "titel": "Externe Links, Partnerlinks und Werbebanner",
           "absaetze": [
-            "Solange Sie einen Link zu einem Anbieter nicht anklicken, werden keine Daten an diesen Anbieter übertragen. Nach dem Klick gilt die Datenschutzerklärung des geöffneten Angebots.",
-            "Ist ein Link als Werbung gekennzeichnet, kann er über ein Partnernetzwerk laufen. Das Netzwerk und der Anbieter können dabei Cookies oder ähnliche Kennungen setzen und Ihre IP Adresse verarbeiten, um den Besuch Startkontor zuzuordnen und eine Provision abzurechnen. Wir hängen an den Link nur eine Kennung der Stelle an, an der Sie geklickt haben. Sie enthält nichts über Ihre Person.",
-            "Werbebanner liefern wir von unserem eigenen Server aus. Vor einem Klick besteht keine Verbindung zum Partner."
+            "Normale externe Anbieterlinks übertragen erst beim Anklicken Daten an das Ziel. Sage-Werbebanner werden als Bild direkt von Impact geladen, damit wir die Originalmotive nicht kopieren oder auf unserem Server speichern. Dabei erhält Impact technische Verbindungsdaten wie Ihre IP Adresse und Browserangaben. Die Bildanfrage sendet keine Startkontor-Seitenadresse mit.",
+            "Ein als Werbung gekennzeichneter Partnerlink führt über das Partnernetzwerk und enthält eine feste Anzeigenkennung. Beim Klick verarbeitet Impact technische Verbindungsdaten, um den Klick Startkontor zuzuordnen. Sage oder sein Partnernetzwerk können beim anschließenden Besuch Cookies oder ähnliche Kennungen verwenden, um einen späteren Abschluss zuzuordnen und eine Provision abzurechnen. Angaben aus Formularen oder Ihrem Bausteinplan werden nicht an den Partnerlink angehängt.",
+            "Für die Banner laden wir ausschließlich das jeweilige Bild von Impact. Ein zusätzlicher Anzeigen- oder Impression-Pixel wird nicht eingebunden. Der Klick führt über den zum Motiv gehörenden Trackinglink aus dem Sage-Export. Die Bilddateien liegen nicht auf unserem Server."
           ],
-          "hinweis": "Wird ein Banner doch von einem fremden Server geladen, muss dieser Abschnitt geändert und die Rechtsgrundlage neu bewertet werden."
+          "hinweis": "Die Einbindung externer Banner erfolgt ohne Impression-Pixel. Datenschutzangaben und Grundlage der Verarbeitung sind vor jeder Änderung am Abrufverhalten neu zu prüfen."
         },
         {
           "id": "empfaenger",

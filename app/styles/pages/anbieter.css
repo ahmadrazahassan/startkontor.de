@@ -308,8 +308,9 @@
     margin-top: var(--a-6);
     padding: var(--a-3);
     border: 1px solid var(--line);
+    border-radius: var(--r-2);
     background: var(--white);
-    width: fit-content;
+    width: 324px;
     max-width: 100%;
   }
 
@@ -325,11 +326,16 @@
 
   .werbebanner__link {
     display: block;
+    width: 300px;
+    max-width: 100%;
   }
 
   .werbebanner img {
+    display: block;
+    width: 100%;
     max-width: 100%;
     height: auto;
+    border-radius: var(--r-1);
   }
 
   .bewertungsblock {
