@@ -51,24 +51,59 @@ export function partnerFuer(anbieter: Pick<Anbieter, "partner">, partner: Partne
   return partner.find((p) => p.schluessel === anbieter.partner) ?? null;
 }
 
+/** Seitenpfad als Kennung: "/" → "startseite", sonst der Pfad ohne Schrägstriche am Rand, nur a-z, 0-9, /, _ und -, höchstens 100 Zeichen. */
+export function bereinigeSeite(pfad: string | null | undefined): string | null {
+  if (pfad == null) return null;
+  const sauber = pfad
+    .toLowerCase()
+    .replace(/[^a-z0-9/_-]+/g, "-")
+    .replace(/\/{2,}/g, "/")
+    .slice(0, 100)
+    .replace(/^[/-]+|[/-]+$/g, "");
+  return sauber || "startseite";
+}
+
+export type ImpactHerkunft = { platzierung: string | null; seite: string | null; art: "textlink" | "banner" };
+
+/**
+ * Hängt die Impact-Kennungen an einen Trackinglink: sharedid = Website, subId1 = Platzierung, subId2 = Seite, subId3 = Linkart.
+ * Lange Links (/c/…) aus dem Werbemittel-Export tragen keine Media Property, dort ergänzen wir partnerpropertyid,
+ * sonst landet der Klick in Impact ohne Website. Die Kurzlinks aus "Create a link" enthalten sie bereits.
+ */
+export function mitImpactKennungen(link: string, p: Pick<Partner, "impact">, herkunft: ImpactHerkunft): string {
+  const url = new URL(link);
+  const zusatz = new URLSearchParams();
+  if (p.impact && url.pathname.startsWith("/c/") && !url.searchParams.has("partnerpropertyid")) {
+    zusatz.set("partnerpropertyid", String(p.impact.medienEigenschaft));
+  }
+  if (p.impact) zusatz.set("sharedid", p.impact.website);
+  const platzierung = bereinigePlatzierung(herkunft.platzierung);
+  if (platzierung) zusatz.set("subId1", platzierung);
+  const seite = bereinigeSeite(herkunft.seite);
+  if (seite) zusatz.set("subId2", seite);
+  zusatz.set("subId3", herkunft.art);
+  return `${link}${link.includes("?") ? "&" : "?"}${zusatz.toString()}`;
+}
+
 /**
  * Die tatsächliche Zieladresse beim Partner (nur serverseitig in der Weiterleitung verwendet).
- * Impact: Zielseite im Parameter u (URL kodiert, Tiefenlink auf die Produktseite), Platzierung als subId1.
- * Der Kurzlink des Betreibers bleibt dabei unverändert, es werden nur Parameter angehängt.
+ * Impact: der im Konto erzeugte Produktlink (Zielseite hinterlegt). Fehlt er, der Kurzlink des Betreibers mit
+ * Tiefenlink im Parameter u. Dazu Website, Platzierung, Seite und Linkart als Kennungen (siehe mitImpactKennungen).
+ * Der Kurzlink selbst bleibt unverändert, es werden nur Parameter angehängt.
  * Alle anderen Partner: der freigegebene Link zeichengetreu.
  */
 export function partnerZielFuer(
   anbieter: Pick<Anbieter, "partner" | "zielUrl" | "slug">,
   platzierung: string,
   partner: Partner[],
+  seite: string | null = null,
 ): { url: string; partner: string } | null {
   const p = partnerFuer(anbieter, partner);
   if (!p || !istLive(p)) return null;
   if (p.netzwerk === "Impact") {
-    const trenner = p.zielLink.includes("?") ? "&" : "?";
-    const sub = bereinigePlatzierung(platzierung);
-    const url = `${p.zielLink}${trenner}u=${encodeURIComponent(anbieter.zielUrl)}${sub ? `&subId1=${encodeURIComponent(sub)}` : ""}`;
-    return { url, partner: p.schluessel };
+    const produktLink = p.produktLinks?.[anbieter.slug];
+    const basis = produktLink ?? `${p.zielLink}${p.zielLink.includes("?") ? "&" : "?"}u=${encodeURIComponent(anbieter.zielUrl)}`;
+    return { url: mitImpactKennungen(basis, p, { platzierung, seite, art: "textlink" }), partner: p.schluessel };
   }
   return { url: p.zielLink, partner: p.schluessel };
 }

@@ -1,5 +1,5 @@
 {
-  "stand": "2026-10-15",
+  "stand": "2026-10-20",
   "freigabebasis": "Der Betreiber hat die Zulassung für diese vier Partnerprogramme bestätigt und die zu verwendenden Links bereitgestellt.",
   "partner": [
     {
@@ -17,7 +17,24 @@
       ],
       "netzwerk": "Impact",
       "aktiv": true,
-      "zielLink": "https://sagegmbh.sjv.io/DWr9Ld"
+      "zielLink": "https://sagegmbh.sjv.io/DWr9Ld",
+      "impact": {
+        "programm": "Sage Germany",
+        "programmId": 27498,
+        "partnerId": 7969203,
+        "medienEigenschaft": 9006402,
+        "website": "startkontor.de"
+      },
+      "produktLinks": {
+        "sage-active": "https://sagegmbh.sjv.io/enMjaO",
+        "sage-hr-payroll": "https://sagegmbh.sjv.io/oN3JGO",
+        "sage-payroll": "https://sagegmbh.sjv.io/gRK5LA",
+        "sage-hr": "https://sagegmbh.sjv.io/0G7zXR",
+        "sage-sales-management": "https://sagegmbh.sjv.io/n43VjA",
+        "sage-100": "https://sagegmbh.sjv.io/bkzQvv",
+        "sage-50-handwerk": "https://sagegmbh.sjv.io/vD3m1v",
+        "sage-intacct": "https://sagegmbh.sjv.io/4aDMRn"
+      }
     },
     {
       "schluessel": "pipedrive",

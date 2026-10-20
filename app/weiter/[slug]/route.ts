@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import { weiterleitungFuerAnbieter } from "@/lib/weiterleitung";
+import { seiteAusReferer, weiterleitungFuerAnbieter } from "@/lib/weiterleitung";
 import { antwortFuer } from "@/lib/weiterleitung-http";
 
 export const dynamic = "force-dynamic";
@@ -12,6 +12,7 @@ export async function GET(req: NextRequest, { params }: Kontext) {
   return antwortFuer(
     weiterleitungFuerAnbieter(slug, {
       platzierung: req.nextUrl.searchParams.get("p"),
+      seite: seiteAusReferer(req.headers.get("referer"), req.headers.get("host") ?? req.nextUrl.host),
       userAgent: req.headers.get("user-agent"),
       zaehlen: true,
     }),

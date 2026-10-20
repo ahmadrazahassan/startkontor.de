@@ -256,6 +256,10 @@ export type Partner = {
   aktiv: boolean;
   zielLink: string;
   werbemittel?: PartnerWerbemittel;
+  /** Nur Impact: Programm, eigenes Partnerkonto und die Website (Media Property), der jeder Klick zugeordnet wird */
+  impact?: { programm: string; programmId: number; partnerId: number; medienEigenschaft: number; website: string };
+  /** Nur Impact: im Impact-Konto erzeugte Trackinglinks je Produkt, die Zielseite ist im Link hinterlegt */
+  produktLinks?: Record<string, string>;
 };
 
 export type BildPlatz = { id: string; datei: string; format: string; einsatz: string; alt: string };

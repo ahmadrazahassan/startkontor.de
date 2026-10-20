@@ -1,24 +1,48 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { istMaschinell, weiterleitungFuerAnbieter, weiterleitungFuerBanner } from "./weiterleitung.ts";
+import { istMaschinell, seiteAusReferer, weiterleitungFuerAnbieter, weiterleitungFuerBanner } from "./weiterleitung.ts";
 import { partner as partnerDaten, anbieterNachSlug } from "./daten.ts";
 import { sageAnzeigenNachId } from "./sage-werbemittel.ts";
 import { antwortFuer } from "./weiterleitung-http.ts";
 
 const BROWSER = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36";
-const anfrage = (platzierung: string | null = "profil-sage-hr-payroll-kopf", userAgent: string | null = BROWSER, zaehlen = true) => ({ platzierung, userAgent, zaehlen });
+const anfrage = (platzierung: string | null = "profil-sage-hr-payroll-kopf", userAgent: string | null = BROWSER, zaehlen = true, seite: string | null = null) => ({ platzierung, userAgent, zaehlen, seite });
 
-test("Sage Klick: 302 auf den Impact Kurzlink mit Tiefenlink auf die Produktseite und Platzierung als subId1", () => {
-  const a = anbieterNachSlug.get("sage-hr-payroll")!;
-  const r = weiterleitungFuerAnbieter("sage-hr-payroll", anfrage());
+test("Sage Klick: 302 auf den Impact-Produktlink mit Website, Platzierung, Seite und Linkart als Kennungen", () => {
+  const r = weiterleitungFuerAnbieter("sage-hr-payroll", anfrage("profil-sage-hr-payroll-kopf", BROWSER, true, "anbieter/sage-hr-payroll"));
   assert.equal(r.status, 302);
   if (r.status !== 302) return;
   const url = new URL(r.ort);
   assert.equal(url.origin, "https://sagegmbh.sjv.io");
-  assert.equal(url.pathname, "/DWr9Ld");
-  assert.equal(url.searchParams.get("u"), a.zielUrl);
+  assert.equal(url.pathname, "/oN3JGO");
+  assert.equal(url.searchParams.has("u"), false, "Zielseite steckt im Produktlink");
+  assert.equal(url.searchParams.get("sharedid"), "startkontor.de");
   assert.equal(url.searchParams.get("subId1"), "profil-sage-hr-payroll-kopf");
-  assert.deepEqual(r.protokoll, { ereignis: "partnerklick", partner: "sage", ziel: "sage-hr-payroll", platzierung: "profil-sage-hr-payroll-kopf" });
+  assert.equal(url.searchParams.get("subId2"), "anbieter/sage-hr-payroll");
+  assert.equal(url.searchParams.get("subId3"), "textlink");
+  assert.deepEqual(r.protokoll, { ereignis: "partnerklick", partner: "sage", ziel: "sage-hr-payroll", platzierung: "profil-sage-hr-payroll-kopf", seite: "anbieter/sage-hr-payroll" });
+});
+
+test("Herkunftsseite nur aus dem Referer der eigenen Website, ohne Parameter", () => {
+  assert.equal(seiteAusReferer("https://www.startkontor.de/anbieter/sage-100/?utm_source=x#preise", "www.startkontor.de"), "anbieter/sage-100");
+  assert.equal(seiteAusReferer("https://www.startkontor.de/", "www.startkontor.de"), "startseite");
+  assert.equal(seiteAusReferer("https://WWW.startkontor.de/Kategorien/Lohn", "www.startkontor.de"), "kategorien/lohn");
+  assert.equal(seiteAusReferer("https://evil.example/anbieter/sage-100/", "www.startkontor.de"), null);
+  assert.equal(seiteAusReferer("https://startkontor.de.evil.example/", "startkontor.de"), null);
+  assert.equal(seiteAusReferer("kein url", "www.startkontor.de"), null);
+  assert.equal(seiteAusReferer(null, "www.startkontor.de"), null);
+  assert.equal(seiteAusReferer("https://www.startkontor.de/x", null), null);
+  assert.match(seiteAusReferer(`https://www.startkontor.de/${"a/".repeat(200)}<script>`, "www.startkontor.de")!, /^[a-z0-9/_-]{1,100}$/);
+});
+
+test("Alle Sage-Produkte haben einen eigenen Impact-Produktlink", () => {
+  const sage = partnerDaten.find((p) => p.schluessel === "sage")!;
+  for (const slug of sage.produkte) {
+    const r = weiterleitungFuerAnbieter(slug, anfrage(`profil-${slug}-kopf`));
+    assert.equal(r.status, 302, slug);
+    if (r.status !== 302) continue;
+    assert.ok(r.ort.startsWith(`${sage.produktLinks![slug]}?`), slug);
+  }
 });
 
 test("Direktpartner: Zieladresse unverändert, ohne zusätzliche Parameter", () => {
@@ -39,24 +63,31 @@ test("Unbekannter Anbieter, Anbieter ohne Partner und nicht aktiver Partner: 404
   assert.equal(weiterleitungFuerBanner("3723304", anfrage(), ohneSage).status, 404);
 });
 
-test("kein offener Redirect: manipulierte Platzierung verändert nur subId1, nie das Ziel", () => {
-  const r = weiterleitungFuerAnbieter("sage-100", anfrage("https://evil.example/&u=x"));
+test("kein offener Redirect: manipulierte Platzierung und Seite verändern nur die Kennungen, nie das Ziel", () => {
+  const r = weiterleitungFuerAnbieter("sage-100", anfrage("https://evil.example/&u=x", BROWSER, true, "https://evil.example/?u=x&subId1=y"));
   assert.equal(r.status, 302);
   if (r.status !== 302) return;
   const url = new URL(r.ort);
   assert.equal(url.origin, "https://sagegmbh.sjv.io");
-  assert.equal(url.searchParams.getAll("u").length, 1);
-  assert.equal(url.searchParams.get("u"), anbieterNachSlug.get("sage-100")!.zielUrl);
+  assert.equal(url.pathname, "/bkzQvv");
+  assert.equal(url.searchParams.has("u"), false);
+  assert.equal(url.searchParams.getAll("subId1").length, 1);
   assert.match(url.searchParams.get("subId1")!, /^[a-z0-9_-]+$/);
+  assert.match(url.searchParams.get("subId2")!, /^[a-z0-9/_-]+$/);
 });
 
-test("Banner Klick: 302 auf den unveränderten Trackinglink der Anzeige plus subId1", () => {
+test("Banner Klick: Trackinglink der Anzeige plus Media Property, Website und Kennungen", () => {
   const anzeige = sageAnzeigenNachId.get(3723304)!;
-  const r = weiterleitungFuerBanner("3723304", anfrage("startseite-sage-operations-tarife"));
+  const r = weiterleitungFuerBanner("3723304", anfrage("startseite-sage-operations-tarife", BROWSER, true, "startseite"));
   assert.equal(r.status, 302);
   if (r.status !== 302) return;
-  assert.equal(r.ort, `${anzeige.trackingLink}?subId1=startseite-sage-operations-tarife`);
-  assert.deepEqual(r.protokoll, { ereignis: "partnerklick", partner: "sage", ziel: "banner:3723304", platzierung: "startseite-sage-operations-tarife" });
+  assert.equal(
+    r.ort,
+    `${anzeige.trackingLink}?partnerpropertyid=9006402&sharedid=startkontor.de&subId1=startseite-sage-operations-tarife&subId2=startseite&subId3=banner`,
+  );
+  assert.deepEqual(r.protokoll, { ereignis: "partnerklick", partner: "sage", ziel: "banner:3723304", platzierung: "startseite-sage-operations-tarife", seite: "startseite" });
+  const ohneSeite = weiterleitungFuerBanner("3723304", anfrage("x"));
+  assert.equal(ohneSeite.status === 302 && new URL(ohneSeite.ort).searchParams.has("subId2"), false);
 });
 
 test("Banner: nur bekannte, aktive Anzeigen-IDs, nur Ziffern", () => {
@@ -109,10 +140,10 @@ test("HTTP Antwort: 302, nie zwischenspeichern, nicht indexieren", () => {
 
     const zaehlend = antwortFuer(weiterleitungFuerAnbieter("sage-100", anfrage("profil-sage-100-kopf")));
     assert.equal(zaehlend.status, 302);
-    assert.match(zaehlend.headers.get("location")!, /^https:\/\/sagegmbh\.sjv\.io\/DWr9Ld\?u=/);
+    assert.match(zaehlend.headers.get("location")!, /^https:\/\/sagegmbh\.sjv\.io\/bkzQvv\?sharedid=startkontor\.de&subId1=/);
     assert.equal(zeilen.length, 1);
     const eintrag = JSON.parse(zeilen[0]);
-    assert.deepEqual(Object.keys(eintrag).sort(), ["ereignis", "partner", "platzierung", "zeit", "ziel"]);
+    assert.deepEqual(Object.keys(eintrag).sort(), ["ereignis", "partner", "platzierung", "seite", "zeit", "ziel"]);
     assert.equal(eintrag.partner, "sage");
 
     const fehlt = antwortFuer({ status: 404 });
