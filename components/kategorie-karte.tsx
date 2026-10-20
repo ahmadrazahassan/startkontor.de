@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Icon } from "@/components/icons";
 import type { SoftwareKarteDaten } from "@/components/software-karte";
+import { relFuer } from "@/lib/partner";
 
 export type KarteChip = { text: string; ton?: "ok" };
 
@@ -32,7 +33,7 @@ export function KategorieKarte({ karte, chips }: { karte: SoftwareKarteDaten; ch
             <a
               href={karte.hersteller.href}
               target="_blank"
-              rel={werbung ? "sponsored noopener noreferrer" : "noopener noreferrer"}
+              rel={relFuer(werbung)}
               className="knopf knopf_primaer knopf_klein"
               aria-label={`${werbung ? "Werbung: " : ""}${karte.name}: Zur Website des Herstellers (neuer Tab)`}
             >

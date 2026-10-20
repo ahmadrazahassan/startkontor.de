@@ -111,7 +111,16 @@ Mail templates use the website colors, the real inline Startkontor logo, a dark 
 
 ## Partner links and banners
 
-Sage, Pipedrive, weclapp and Odoo are active through `data/affiliate-partner.json`, based on the operator's confirmation. Their supplied links keep the original parameters and carry visible German advertising disclosures and `rel="sponsored"`. Sage uses the approved Impact short link exactly as provided; click attribution is reported in the Sage/Impact partner dashboard. A partner is live only when `aktiv` is `true` **and** its `zielLink` no longer contains `{{`. Until then outbound links go straight to the manufacturer (`zielUrl`) and no affiliate banners appear. Account ownership and attribution must still be verified in the respective partner dashboards.
+Sage, Pipedrive, weclapp and Odoo are active through `data/affiliate-partner.json`, based on the operator's confirmation. Their supplied links keep the original parameters and carry visible German advertising disclosures and `rel="sponsored"`. Sage uses the approved Impact short link exactly as provided (plus the Impact deep link parameter `u` and the placement as `subId1`); click attribution is reported in the Sage/Impact partner dashboard. A partner is live only when `aktiv` is `true` **and** its `zielLink` no longer contains `{{`. Until then outbound links go straight to the manufacturer (`zielUrl`) and no affiliate banners appear. Account ownership and attribution must still be verified in the respective partner dashboards.
+
+### How a click travels (`/weiter/`)
+
+Marked links never point at the network directly. A link on a page is `/weiter/{provider-slug}?p={placement}` (text buttons) or `/weiter/banner/{ad-id}?p={placement}` (Sage banners). The route handlers in `app/weiter/` answer with an instant 302 to the partner link taken from `data/affiliate-partner.json` or the vetted Sage export (`lib/weiterleitung.ts`). Visitors see `startkontor.de/weiter/…` on hover, the real target is never part of the page, the response is `no-store` and `noindex`, and `/weiter/` is disallowed in `robots.txt`. Only the provider slug or an ad id is accepted, never a free URL, so there is no open redirect.
+
+* Links carry `rel="sponsored nofollow noopener"` and **no** `noreferrer`. The partner network needs the referring domain (`startkontor.de`) to attribute a click to the registered property; with `noreferrer` the Referer was empty. Only the domain is sent (`Referrer-Policy: strict-origin-when-cross-origin`), never the page address. Ordinary external links keep `noreferrer`.
+* Sage text buttons deep link to the product page of the provider via the Impact parameter `u`, so "Sage HR & Payroll" lands on the Sage HR & Payroll page and not on the Sage home page.
+* Crawlers, link previews, scripts and `HEAD` requests are redirected to the plain manufacturer page, not to the partner link, and are not counted, so they cannot create invalid clicks in the network.
+* Every counted click writes one JSON line to the host's server log (`{"ereignis":"partnerklick","partner":"sage","ziel":"banner:3723304","platzierung":"…","zeit":"…"}`), without IP address, browser string or cookie. In Vercel: Project → Logs, filter for `partnerklick`. Use this to compare with the numbers in Impact.
 
 To switch one on:
 

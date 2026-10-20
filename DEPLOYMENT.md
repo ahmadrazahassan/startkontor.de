@@ -35,7 +35,7 @@ Vor der öffentlichen Freigabe `config/betreiber.json` mit den echten Betreibera
 
 Im DNS die Website auf den gewählten Hoster zeigen lassen, HTTPS aktivieren und die alternative `www` Adresse auf die Hauptadresse umleiten. Bestehende Mail-DNS-Einträge von IONOS und Resend erhalten.
 
-Nach dem Deployment Canonical, Sitemap, Kontaktzustellung, Double Opt in und Abmeldung mit einer eigenen Testadresse überprüfen. Affiliate-Links im jeweiligen Partnerkonto auf die Domain und das eigene Konto prüfen. Eine GitHub-Veröffentlichung ist keine Website-Veröffentlichung und keine Affiliate-Freigabe.
+Nach dem Deployment Canonical, Sitemap, Kontaktzustellung, Double Opt in und Abmeldung mit einer eigenen Testadresse überprüfen. Affiliate-Links im jeweiligen Partnerkonto auf die Domain und das eigene Konto prüfen. Gekennzeichnete Links laufen über `/weiter/…` auf startkontor.de. Jeder gezählte Klick steht als Zeile `partnerklick` im Vercel-Protokoll (Project → Logs). Beim Partner (Impact: Properties) muss `startkontor.de` als Website eingetragen sein, sonst kann der Klick der Domain nicht zugeordnet werden. Eine GitHub-Veröffentlichung ist keine Website-Veröffentlichung und keine Affiliate-Freigabe.
 
 ## Monatsbrief
 

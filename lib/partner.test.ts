@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { bannerSatzFuer, istLive, linkFuer } from "./partner.ts";
+import { bannerSatzFuer, bereinigePlatzierung, istLive, linkFuer, partnerZielFuer, relFuer, weiterleitungsPfadBanner } from "./partner.ts";
 import { partner as partnerDaten, anbieterNachSlug } from "./daten.ts";
 import type { Partner } from "./typen.ts";
 
@@ -19,16 +19,20 @@ test("im ausgelieferten Datenstand sind genau die vier freigegebenen Partner liv
   assert.deepEqual(partnerDaten.filter(istLive).map((p) => p.schluessel).sort(), ["odoo", "pipedrive", "sage", "weclapp"]);
 });
 
-test("Sage CTAs verwenden den genehmigten Impact-Kurzlink unverändert", () => {
+test("Sage CTAs laufen über die eigene Weiterleitung und enden beim genehmigten Impact-Kurzlink mit Tiefenlink", () => {
   const sage = partnerDaten.find((p) => p.schluessel === "sage")!;
   assert.equal(sage.zielLink, "https://sagegmbh.sjv.io/DWr9Ld");
+  assert.equal(sage.netzwerk, "Impact");
   assert.equal(sage.produkte.length, 8);
   for (const slug of sage.produkte) {
     const anbieter = anbieterNachSlug.get(slug)!;
     const link = linkFuer(anbieter, `profil-${slug}-kopf`, partnerDaten);
-    assert.equal(link.href, "https://sagegmbh.sjv.io/DWr9Ld");
+    assert.equal(link.href, `/weiter/${slug}?p=profil-${slug}-kopf`);
     assert.equal(link.werbung, true);
     assert.equal(link.partner, "sage");
+    const ziel = partnerZielFuer(anbieter, `profil-${slug}-kopf`, partnerDaten)!;
+    assert.equal(ziel.url, `https://sagegmbh.sjv.io/DWr9Ld?u=${encodeURIComponent(anbieter.zielUrl)}&subId1=profil-${slug}-kopf`);
+    assert.equal(ziel.partner, "sage");
   }
 });
 
@@ -38,11 +42,27 @@ test("Freigegebene Direktlinks behalten sämtliche Betreiberparameter in jeder P
     const p = partnerDaten.find((x) => x.schluessel === slug)!;
     for (const platzierung of ["start-entdecken", "profil-kopf", "profil-leiste", "verzeichnis"]) {
       const l = linkFuer(a, platzierung, partnerDaten);
-      assert.equal(l.href, p.zielLink);
+      assert.equal(l.href, `/weiter/${slug}?p=${platzierung}`);
       assert.equal(l.werbung, true);
       assert.equal(l.partner, slug);
+      assert.equal(partnerZielFuer(a, platzierung, partnerDaten)!.url, p.zielLink);
     }
   }
+});
+
+test("Werbelinks senden die Herkunftsdomain mit, normale externe Links nicht", () => {
+  assert.equal(relFuer(true), "sponsored nofollow noopener");
+  assert.equal(relFuer(false), "noopener noreferrer");
+  assert.ok(!relFuer(true).includes("noreferrer"));
+});
+
+test("Platzierungskennung wird bereinigt", () => {
+  assert.equal(bereinigePlatzierung("Profil Sage-100 / Kopf"), "profil-sage-100-kopf");
+  assert.equal(bereinigePlatzierung("<script>x</script>"), "script-x-script");
+  assert.equal(bereinigePlatzierung("a".repeat(200))?.length, 64);
+  assert.equal(bereinigePlatzierung(""), null);
+  assert.equal(bereinigePlatzierung(null), null);
+  assert.equal(weiterleitungsPfadBanner(3723304, "startseite-sage-operations-tarife"), "/weiter/banner/3723304?p=startseite-sage-operations-tarife");
 });
 
 test("live nur mit aktiv UND ausgefülltem Link", () => {
@@ -59,18 +79,18 @@ test("ohne live Partner geht jeder Link direkt zum Hersteller, ohne Werbung", ()
   assert.equal(l.href, a.zielUrl);
   assert.equal(l.werbung, false);
   assert.equal(l.partner, null);
+  assert.equal(partnerZielFuer(a, "profil-sage-100-kopf", partnerDaten.filter((p) => p.schluessel !== "sage")), null);
 });
 
 test("Impact Tiefenlink: Ziel im Parameter u, Platzierung als subId1", () => {
   const a = anbieterNachSlug.get("sage-100")!;
+  const z = partnerZielFuer(a, "profil-sage-100-kopf", [sage(true, "https://sage.example/c/1")])!;
+  assert.equal(z.url, `https://sage.example/c/1?u=${encodeURIComponent(a.zielUrl)}&subId1=profil-sage-100-kopf`);
+  const mitQuery = partnerZielFuer(a, "x", [sage(true, "https://sage.example/c/1?a=b")])!;
+  assert.ok(mitQuery.url.startsWith("https://sage.example/c/1?a=b&u="));
   const l = linkFuer(a, "profil-sage-100-kopf", [sage(true, "https://sage.example/c/1")]);
-  assert.equal(
-    l.href,
-    `https://sage.example/c/1?u=${encodeURIComponent(a.zielUrl)}&subId1=profil-sage-100-kopf`,
-  );
+  assert.equal(l.href, "/weiter/sage-100?p=profil-sage-100-kopf");
   assert.equal(l.werbung, true);
-  const mitQuery = linkFuer(a, "x", [sage(true, "https://sage.example/c/1?a=b")]);
-  assert.ok(mitQuery.href.startsWith("https://sage.example/c/1?a=b&u="));
 });
 
 test("Anbieter ohne Partner bleibt direkt, auch wenn andere Partner live sind", () => {

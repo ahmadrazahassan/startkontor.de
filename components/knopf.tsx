@@ -3,6 +3,7 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { Icon } from "@/components/icons";
 import type { IconName } from "@/components/icons";
 import { ui } from "@/lib/daten";
+import { relFuer } from "@/lib/partner";
 
 type Variante = "primaer" | "sekundaer" | "tertiaer";
 
@@ -51,7 +52,7 @@ export function KnopfLink(
 ) {
   const { href, extern, werbung, ariaLabel } = props;
   if (extern || werbung) {
-    const rel = werbung ? "sponsored noopener noreferrer" : "noopener noreferrer";
+    const rel = relFuer(Boolean(werbung));
     return (
       <a href={href} className={klassen(props)} target="_blank" rel={rel} aria-label={ariaLabel}>
         <Inhalt icon={props.icon ?? "external"} iconLinks={props.iconLinks}>

@@ -1,6 +1,7 @@
 // Preiskarte für Programme ohne Tarifstufen: Einstiegspreis, Hinweise des Herstellers und Knopf im gleichen Stil.
 
 import { Icon } from "@/components/icons";
+import { relFuer } from "@/lib/partner";
 
 type Props = {
   name: string;
@@ -48,7 +49,7 @@ export function TarifFallback({ name, status, statusText, anker, zeilen: alleZei
             <a
               href={cta.href}
               target="_blank"
-              rel={cta.werbung ? "sponsored noopener noreferrer" : "noopener noreferrer"}
+              rel={relFuer(cta.werbung)}
               className="knopf knopf_primaer knopf_breit"
               aria-label={`${cta.werbung ? "Werbung: " : ""}${name}: ${cta.label} (neuer Tab)`}
             >

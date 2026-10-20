@@ -3,6 +3,7 @@ import { Icon } from "@/components/icons";
 import { Bewertungsanzeige } from "@/components/bewertung";
 import { wlStil } from "@/components/wort-stil";
 import { nbsp } from "@/lib/nbsp";
+import { relFuer } from "@/lib/partner";
 
 export type SoftwareKarteDaten = {
   slug: string;
@@ -60,7 +61,7 @@ export function SoftwareKarte({ karte, texte, ebene = 3, variante = "kachel" }: 
           </Link>
           {karte.hersteller ? (
             <div className="softwarekarte__hersteller">
-              <a href={karte.hersteller.href} target="_blank" rel={karte.hersteller.werbung ? "sponsored noopener noreferrer" : "noopener noreferrer"} className="knopf knopf_primaer knopf_klein softwarekarte__website" aria-label={`${karte.hersteller.werbung ? "Werbung: " : ""}${karte.name}: Zur Website des Herstellers (neuer Tab)`}>
+              <a href={karte.hersteller.href} target="_blank" rel={relFuer(karte.hersteller.werbung)} className="knopf knopf_primaer knopf_klein softwarekarte__website" aria-label={`${karte.hersteller.werbung ? "Werbung: " : ""}${karte.name}: Zur Website des Herstellers (neuer Tab)`}>
                 <span className="knopf__text">Zur Website</span><Icon name="external" groesse={16} />
               </a>
               {karte.hersteller.werbung ? <span className="softwarekarte__werbung">Werbung</span> : null}

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Icon } from "@/components/icons";
 import { betragText, einheitTeile, ersparnisProzent, type Tarifstufe } from "@/lib/analyse";
+import { relFuer } from "@/lib/partner";
 
 export type TarifCta = { href: string; werbung: boolean; label: string };
 
@@ -69,7 +70,7 @@ export function PreisTarife({ name, stufen, einheit, hervorgehoben, cta }: Props
                 <a
                   href={cta.href}
                   target="_blank"
-                  rel={cta.werbung ? "sponsored noopener noreferrer" : "noopener noreferrer"}
+                  rel={relFuer(cta.werbung)}
                   className={hervor ? "knopf knopf_primaer knopf_breit" : "knopf knopf_sekundaer knopf_breit"}
                   aria-label={`${cta.werbung ? "Werbung: " : ""}${name}, ${s.name}: ${cta.label} (neuer Tab)`}
                 >
